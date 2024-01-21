@@ -1,0 +1,20 @@
+
+.carousel-caption{
+    width:100%;
+    height:100%;
+    left:0;
+    bottom:0;   
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 5px;
+    padding-left: 150px;
+    padding-bottom: 20px;
+    background-color:rgba(0,0,0,0.5);
+}
+
+.body{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}

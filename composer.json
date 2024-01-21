@@ -1,0 +1,6 @@
+{
+    "require": {
+        "emarref/jwt": "^1.0",
+        "guzzlehttp/guzzle": "^7.0"
+    }
+}

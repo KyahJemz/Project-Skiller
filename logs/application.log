@@ -1,0 +1,240 @@
+[2024-01-21 02:05:25] INFO: -
+[2024-01-21 02:05:25] INFO: -
+[2024-01-21 02:05:25] INFO: New Access
+[2024-01-21 02:05:25] INFO: -
+[2024-01-21 02:05:25] INFO: Accessed [dashboard]
+[2024-01-21 02:05:45] INFO: -
+[2024-01-21 02:05:45] INFO: -
+[2024-01-21 02:05:45] INFO: New Access
+[2024-01-21 02:05:45] INFO: -
+[2024-01-21 02:05:45] INFO: Accessed [dashboard]
+[2024-01-21 02:06:10] INFO: -
+[2024-01-21 02:06:10] INFO: -
+[2024-01-21 02:06:10] INFO: New Access
+[2024-01-21 02:06:10] INFO: -
+[2024-01-21 02:06:10] INFO: Accessed [dashboard]
+[2024-01-21 02:06:13] INFO: -
+[2024-01-21 02:06:13] INFO: -
+[2024-01-21 02:06:13] INFO: New Access
+[2024-01-21 02:06:13] INFO: -
+[2024-01-21 02:06:13] INFO: Accessed [home]
+[2024-01-21 02:06:15] INFO: -
+[2024-01-21 02:06:15] INFO: -
+[2024-01-21 02:06:15] INFO: New Access
+[2024-01-21 02:06:15] INFO: -
+[2024-01-21 02:06:15] INFO: Accessed [login]
+[2024-01-21 02:06:17] INFO: -
+[2024-01-21 02:06:17] INFO: -
+[2024-01-21 02:06:18] INFO: New Access
+[2024-01-21 02:06:18] INFO: -
+[2024-01-21 02:06:18] INFO: Accessed [login]
+[2024-01-21 02:06:18] INFO: Successfully validated Google Sign-In token
+[2024-01-21 02:06:18] INFO: No rows were affected. Update may not have found a matching row.
+[2024-01-21 02:06:18] INFO: -
+[2024-01-21 02:06:18] INFO: -
+[2024-01-21 02:06:18] INFO: New Access
+[2024-01-21 02:06:18] INFO: -
+[2024-01-21 02:06:18] INFO: Accessed [dashboard]
+[2024-01-21 02:06:30] INFO: -
+[2024-01-21 02:06:30] INFO: -
+[2024-01-21 02:06:30] INFO: New Access
+[2024-01-21 02:06:30] INFO: -
+[2024-01-21 02:06:30] INFO: Accessed [dashboard]
+[2024-01-21 02:06:47] INFO: -
+[2024-01-21 02:06:47] INFO: -
+[2024-01-21 02:06:47] INFO: New Access
+[2024-01-21 02:06:47] INFO: -
+[2024-01-21 02:06:47] INFO: Accessed [dashboard]
+[2024-01-21 02:06:57] INFO: -
+[2024-01-21 02:06:57] INFO: -
+[2024-01-21 02:06:57] INFO: New Access
+[2024-01-21 02:06:57] INFO: -
+[2024-01-21 02:06:57] INFO: Accessed [dashboard]
+[2024-01-21 02:07:12] INFO: -
+[2024-01-21 02:07:12] INFO: -
+[2024-01-21 02:07:12] INFO: New Access
+[2024-01-21 02:07:12] INFO: -
+[2024-01-21 02:07:12] INFO: Accessed [home]
+[2024-01-21 02:07:14] INFO: -
+[2024-01-21 02:07:14] INFO: -
+[2024-01-21 02:07:14] INFO: New Access
+[2024-01-21 02:07:14] INFO: -
+[2024-01-21 02:07:14] INFO: Accessed [login]
+[2024-01-21 02:07:16] INFO: -
+[2024-01-21 02:07:16] INFO: -
+[2024-01-21 02:07:16] INFO: New Access
+[2024-01-21 02:07:16] INFO: -
+[2024-01-21 02:07:16] INFO: Accessed [login]
+[2024-01-21 02:07:16] INFO: Successfully validated Google Sign-In token
+[2024-01-21 02:07:16] INFO: No rows were affected. Update may not have found a matching row.
+[2024-01-21 02:07:16] INFO: -
+[2024-01-21 02:07:16] INFO: -
+[2024-01-21 02:07:16] INFO: New Access
+[2024-01-21 02:07:16] INFO: -
+[2024-01-21 02:07:16] INFO: Accessed [dashboard]
+[2024-01-21 02:58:22] INFO: -
+[2024-01-21 02:58:22] INFO: -
+[2024-01-21 02:58:22] INFO: New Access
+[2024-01-21 02:58:22] INFO: -
+[2024-01-21 02:58:22] INFO: Accessed [dashboard]
+[2024-01-21 02:58:23] INFO: -
+[2024-01-21 02:58:23] INFO: -
+[2024-01-21 02:58:23] INFO: New Access
+[2024-01-21 02:58:23] INFO: -
+[2024-01-21 02:58:23] INFO: Accessed [course]
+[2024-01-21 02:58:24] INFO: -
+[2024-01-21 02:58:24] INFO: -
+[2024-01-21 02:58:24] INFO: New Access
+[2024-01-21 02:58:24] INFO: -
+[2024-01-21 02:58:24] ERROR: 404 - Page not found [scores]
+[2024-01-21 02:58:26] INFO: -
+[2024-01-21 02:58:26] INFO: -
+[2024-01-21 02:58:26] INFO: New Access
+[2024-01-21 02:58:26] INFO: -
+[2024-01-21 02:58:26] INFO: Accessed [course]
+[2024-01-21 02:58:26] INFO: -
+[2024-01-21 02:58:26] INFO: -
+[2024-01-21 02:58:26] INFO: New Access
+[2024-01-21 02:58:26] INFO: -
+[2024-01-21 02:58:26] INFO: Accessed [dashboard]
+[2024-01-21 02:58:27] INFO: -
+[2024-01-21 02:58:27] INFO: -
+[2024-01-21 02:58:27] INFO: New Access
+[2024-01-21 02:58:27] INFO: -
+[2024-01-21 02:58:27] INFO: Accessed [course]
+[2024-01-21 02:58:28] INFO: -
+[2024-01-21 02:58:28] INFO: -
+[2024-01-21 02:58:28] INFO: New Access
+[2024-01-21 02:58:28] INFO: -
+[2024-01-21 02:58:28] INFO: Accessed [dashboard]
+[2024-01-21 02:58:28] INFO: -
+[2024-01-21 02:58:28] INFO: -
+[2024-01-21 02:58:28] INFO: New Access
+[2024-01-21 02:58:28] INFO: -
+[2024-01-21 02:58:28] INFO: Accessed [course]
+[2024-01-21 02:58:28] INFO: -
+[2024-01-21 02:58:28] INFO: -
+[2024-01-21 02:58:28] INFO: New Access
+[2024-01-21 02:58:28] INFO: -
+[2024-01-21 02:58:28] INFO: Accessed [dashboard]
+[2024-01-21 02:58:29] INFO: -
+[2024-01-21 02:58:29] INFO: -
+[2024-01-21 02:58:29] INFO: New Access
+[2024-01-21 02:58:29] INFO: -
+[2024-01-21 02:58:29] INFO: Accessed [course]
+[2024-01-21 02:58:29] INFO: -
+[2024-01-21 02:58:29] INFO: -
+[2024-01-21 02:58:29] INFO: New Access
+[2024-01-21 02:58:29] INFO: -
+[2024-01-21 02:58:29] INFO: Accessed [dashboard]
+[2024-01-21 02:58:30] INFO: -
+[2024-01-21 02:58:30] INFO: -
+[2024-01-21 02:58:30] INFO: New Access
+[2024-01-21 02:58:30] INFO: -
+[2024-01-21 02:58:30] INFO: Accessed [course]
+[2024-01-21 03:25:19] INFO: -
+[2024-01-21 03:25:19] INFO: -
+[2024-01-21 03:25:19] INFO: New Access
+[2024-01-21 03:25:19] INFO: -
+[2024-01-21 03:25:19] INFO: Accessed [dashboard]
+[2024-01-21 03:25:22] INFO: -
+[2024-01-21 03:25:22] INFO: -
+[2024-01-21 03:25:22] INFO: New Access
+[2024-01-21 03:25:22] INFO: -
+[2024-01-21 03:25:22] INFO: Accessed [course]
+[2024-01-21 03:25:23] INFO: -
+[2024-01-21 03:25:23] INFO: -
+[2024-01-21 03:25:23] INFO: New Access
+[2024-01-21 03:25:23] INFO: -
+[2024-01-21 03:25:23] INFO: Accessed [course]
+[2024-01-21 03:30:01] INFO: -
+[2024-01-21 03:30:01] INFO: -
+[2024-01-21 03:30:01] INFO: New Access
+[2024-01-21 03:30:01] INFO: -
+[2024-01-21 03:30:01] INFO: Accessed [home]
+[2024-01-21 03:30:18] INFO: -
+[2024-01-21 03:30:18] INFO: -
+[2024-01-21 03:30:18] INFO: New Access
+[2024-01-21 03:30:18] INFO: -
+[2024-01-21 03:30:18] INFO: Accessed [home]
+[2024-01-21 03:30:19] INFO: -
+[2024-01-21 03:30:19] INFO: -
+[2024-01-21 03:30:19] INFO: New Access
+[2024-01-21 03:30:19] INFO: -
+[2024-01-21 03:30:19] INFO: Accessed [login]
+[2024-01-21 03:30:27] INFO: -
+[2024-01-21 03:30:27] INFO: -
+[2024-01-21 03:30:27] INFO: New Access
+[2024-01-21 03:30:27] INFO: -
+[2024-01-21 03:30:27] INFO: Accessed [login]
+[2024-01-21 03:30:27] INFO: Successfully validated Google Sign-In token
+[2024-01-21 03:30:27] INFO: No rows were affected. Update may not have found a matching row.
+[2024-01-21 03:30:27] INFO: -
+[2024-01-21 03:30:27] INFO: -
+[2024-01-21 03:30:27] INFO: New Access
+[2024-01-21 03:30:27] INFO: -
+[2024-01-21 03:30:27] INFO: Accessed [dashboard]
+[2024-01-21 03:44:14] INFO: -
+[2024-01-21 03:44:14] INFO: -
+[2024-01-21 03:44:14] INFO: New Access
+[2024-01-21 03:44:14] INFO: -
+[2024-01-21 03:44:14] INFO: Accessed [home]
+[2024-01-21 03:44:19] INFO: -
+[2024-01-21 03:44:19] INFO: -
+[2024-01-21 03:44:19] INFO: New Access
+[2024-01-21 03:44:19] INFO: -
+[2024-01-21 03:44:19] INFO: Accessed [login]
+[2024-01-21 03:44:23] INFO: -
+[2024-01-21 03:44:23] INFO: -
+[2024-01-21 03:44:23] INFO: New Access
+[2024-01-21 03:44:23] INFO: -
+[2024-01-21 03:44:23] INFO: Accessed [login]
+[2024-01-21 03:44:23] INFO: Successfully validated Google Sign-In token
+[2024-01-21 03:44:23] INFO: No rows were affected. Update may not have found a matching row.
+[2024-01-21 03:44:23] INFO: -
+[2024-01-21 03:44:23] INFO: -
+[2024-01-21 03:44:23] INFO: New Access
+[2024-01-21 03:44:23] INFO: -
+[2024-01-21 03:44:23] INFO: Accessed [dashboard]
+[2024-01-21 03:45:12] INFO: -
+[2024-01-21 03:45:12] INFO: -
+[2024-01-21 03:45:12] INFO: New Access
+[2024-01-21 03:45:12] INFO: -
+[2024-01-21 03:45:12] INFO: Accessed [dashboard]
+[2024-01-21 03:45:25] INFO: -
+[2024-01-21 03:45:25] INFO: -
+[2024-01-21 03:45:25] INFO: New Access
+[2024-01-21 03:45:25] INFO: -
+[2024-01-21 03:45:25] INFO: Accessed [home]
+[2024-01-21 03:45:26] INFO: -
+[2024-01-21 03:45:26] INFO: -
+[2024-01-21 03:45:26] INFO: New Access
+[2024-01-21 03:45:26] INFO: -
+[2024-01-21 03:45:26] INFO: Accessed [login]
+[2024-01-21 03:45:32] INFO: -
+[2024-01-21 03:45:32] INFO: -
+[2024-01-21 03:45:32] INFO: New Access
+[2024-01-21 03:45:32] INFO: -
+[2024-01-21 03:45:32] INFO: Accessed [login]
+[2024-01-21 03:45:32] INFO: Successfully validated Google Sign-In token
+[2024-01-21 03:45:32] INFO: No rows were affected. Update may not have found a matching row.
+[2024-01-21 03:45:32] INFO: -
+[2024-01-21 03:45:32] INFO: -
+[2024-01-21 03:45:32] INFO: New Access
+[2024-01-21 03:45:32] INFO: -
+[2024-01-21 03:45:32] INFO: Accessed [dashboard]
+[2024-01-21 03:45:36] INFO: -
+[2024-01-21 03:45:36] INFO: -
+[2024-01-21 03:45:36] INFO: New Access
+[2024-01-21 03:45:36] INFO: -
+[2024-01-21 03:45:36] INFO: Accessed [course]
+[2024-01-21 04:22:25] INFO: -
+[2024-01-21 04:22:25] INFO: -
+[2024-01-21 04:22:25] INFO: New Access
+[2024-01-21 04:22:25] INFO: -
+[2024-01-21 04:22:25] INFO: Accessed [course]
+[2024-01-21 04:22:26] INFO: -
+[2024-01-21 04:22:26] INFO: -
+[2024-01-21 04:22:26] INFO: New Access
+[2024-01-21 04:22:26] INFO: -
+[2024-01-21 04:22:26] INFO: Accessed [course]
