@@ -31,15 +31,8 @@ spl_autoload_register(function ($class) {
 
 // Other Files
 $logger = new Logger();
-$logger->log('-', 'info');
-$logger->log('-', 'info');
 $logger->log('New Access', 'info');
-$logger->log('-', 'info');
-
 
 $router = new Router($logger);
 $router->route();
-
-
-
 ?>

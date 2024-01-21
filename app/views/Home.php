@@ -1,4 +1,4 @@
-<body class="body">
+<body class="body bg-body-secondary">
     <main id="Home">
         <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -67,7 +67,7 @@
 
         <div class="container marketing">
 
-            <div class="row row-cols-1 row-cols-md-2 align-items-md-center" id="Features">
+            <div class="row row-cols-1 row-cols-md-2 align-items-md-center bg-body-tertiary mt-5 px-5 rounded-3" id="Features">
                 <div class="col d-flex flex-column align-items-start gap-2">
                     <h2 class="fw-bold text-body-emphasis">Skiller: Tutorial System</h2>
                     <p class="text-body-secondary">The Skiller Tutorial System caters to senior high school students, specifically focusing on the subject of General Mathematics. Aligned with the K-12 curriculum mandated by the Department of Education in the Philippines, the platform is tailored to meet the academic needs of senior high school learners. By adhering to the curriculum guidelines, Skiller Tutorial System ensures comprehensive coverage of relevant topics, providing a structured and supportive online learning environment for students to excel in their General Mathematics studies.</p>
@@ -116,7 +116,7 @@
                 </div>
             </div>
 
-            <div id="AboutUs" class="row p-5">
+            <div id="AboutUs" class="row p-5  bg-body-tertiary mt-5 px-5 rounded-3">
                 <div class="row">
                     <div class="col-lg-4 d-flex flex-column" >
                         <image src="<?php echo BASE_URL . 'images/m1.jpg'?>" alt="image" class="bd-placeholder-img rounded-circle m-auto border" width="140" height="140"/>
@@ -148,7 +148,7 @@
                 </div>
             </div>
 
-            <div class="row featurette mb-5" id="Lessons">
+            <div class="row featurette mb-2 bg-body-tertiary mt-5 p-5 rounded-3" id="Lessons">
                 <div class="col-md-8">
                     <h2 class="featurette-heading fw-normal lh-1">Week 1: Introduction to Functions</h2>
                     <p class="lead">During the initial week, students embark on a foundational exploration of functions. The primary focus lies in representing real-life scenarios through mathematical functions. This involves acquiring the skills to evaluate functions for specific inputs and performing basic operations on them. The week also introduces the concept of function composition, providing students with problem-solving tools for a wide array of scenarios involving functions.</p>
@@ -157,7 +157,7 @@
                     <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400" height="400" src="<?php echo BASE_URL . 'images/l1.png'?>" alt="image" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"/>
                 </div>
             </div>
-            <div class="row featurette mb-5">
+            <div class="row featurette mb-2 bg-body-tertiary p-5 rounded-3">
                 <div class="col-md-8 order-md-2">
                     <h2 class="featurette-heading fw-normal lh-1">Week 2: Rational Functions and Equations</h2>
                     <p class="lead">In the second week, attention shifts to a specific class of functions – rational functions. Students delve into the practical aspect of representing real-world situations through rational functions. The curriculum distinguishes between rational functions, equations, and inequalities, offering a nuanced understanding. Problem-solving skills are honed through the application of these functions, and students master the representation and analysis of rational functions through graphs.</p>
@@ -166,7 +166,7 @@
                     <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400" height="400" src="<?php echo BASE_URL . 'images/l2.png'?>" alt="image" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"/>
                 </div>
             </div>
-            <div class="row featurette mb-5">
+            <div class="row featurette mb-2 bg-body-tertiary p-5 rounded-3">
                 <div class="col-md-8">
                     <h2 class="featurette-heading fw-normal lh-1">Week 3: Inverse Functions</h2>
                     <p class="lead">Week three introduces the intriguing world of inverse functions. Students explore the application of one-to-one functions in representing real-life situations and determining their inverses. Graphical representation becomes a focal point, providing a visual grasp of inverse relationships. This week cultivates problem-solving proficiency, enabling students to navigate challenges involving inverse functions with confidence.</p>
@@ -175,7 +175,7 @@
                     <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400" height="400" src="<?php echo BASE_URL . 'images/l3.png'?>" alt="image" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"/>
                 </div>
             </div>
-            <div class="row featurette mb-5">
+            <div class="row featurette mb-2 bg-body-tertiary p-5 rounded-3">
                 <div class="col-md-8 order-md-2">
                     <h2 class="featurette-heading fw-normal lh-1">Week 4: Exponential Functions and Logarithmic Functions</h2>
                     <p class="lead">The fourth week delves into the exponential and logarithmic realms. Students learn to translate real-world situations into the language of exponential functions and logarithms. The curriculum distinguishes between different types of equations and inequalities within these functions. Graphical analysis becomes crucial for understanding the behavior of exponential and logarithmic functions, reinforcing students' comprehension and problem-solving abilities in this domain.</p>
@@ -184,7 +184,7 @@
                     <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400" height="400" src="<?php echo BASE_URL . 'images/l4.png'?>" alt="image" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"/>
                 </div>
             </div>
-            <div class="row featurette mb-5">
+            <div class="row featurette mb-2 bg-body-tertiary p-5 rounded-3">
                 <div class="col-md-8">
                     <h2 class="featurette-heading fw-normal lh-1">Week 5: Financial Mathematics, Propositions, and Logic</h2>
                     <p class="lead">The final week broadens the scope, intertwining mathematical concepts with real-world applications and logical reasoning. Students explore financial mathematics, delving into topics such as simple and compound interests, annuities, stocks, bonds, and loans. Simultaneously, the curriculum introduces the symbolic representation of propositions and the logical operations associated with them. The week culminates in an exploration of validity, fallacies, and various methods of proof, fostering both mathematical and logical reasoning skills.</p>

@@ -40,8 +40,11 @@ class LessonModel {
         $query = "SELECT 
             tbl_chapter.Id as ChapterId,
             tbl_chapter.Title as ChapterTitle,
-            tbl_chapter.Code as ChapterCode,
-            tbl_lessons.Title as LessonTitle
+            tbl_chapter.Codes as ChapterCodes,
+            tbl_lessons.Id as LessonId,
+            tbl_lessons.Title as LessonTitle,
+            tbl_lessons.Objective as LessonObjective,
+            tbl_lessons.Description as LessonDescription
         FROM tbl_lessons 
         RIGHT JOIN tbl_chapter ON tbl_lessons.Chapter = tbl_chapter.Id";
     

@@ -6,10 +6,15 @@ require_once __DIR__.'/../../config/Database.php';
 
 class LoginController {
 
+    private $Error;
+
     public function index() {
         $logger = new Logger();
 
         $data['title'] = "Login";
+        if($this->Error) {
+            $data['error'] = $this->Error;
+        }
         echo '<script>const BASE_URL = "'.BASE_URL.'"</script>';
 
         include(__DIR__ . '/../views/headers/Default.php');
@@ -43,10 +48,8 @@ class LoginController {
                 $accountModel = new AccountModel($db, $logger);
 
                 $accountData = $accountModel->getAccount(['Email'=>$decodedBody['email']]);
-
-
                 if ($accountData === []){
-                    $data['error'] = "Login Failed, Account not registered!";
+                    $this->Error = "Login Failed, Account not registered!";
                     $this->index();
                 } else {
                     createSession([
@@ -68,6 +71,7 @@ class LoginController {
                     header("Location: ".BASE_URL."?page=dashboard");
                 }
             } else {
+                $this->Error = "Email verification failed, try again!";
                 $this->index();
             }
         }

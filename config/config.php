@@ -7,7 +7,7 @@ define('DB_PASSWORD', '#12Characters');
 define('DB_NAME', 'skillerdb');
 
 // Other configurations
-define('BASE_URL', 'http://localhost/project-skiller/public/');  // Adjust with your domain
+define('BASE_URL', 'http://localhost/public/');  
 define('SITE_NAME', 'Skiller: Tutorial System');
 
 // ... Other configuration constants

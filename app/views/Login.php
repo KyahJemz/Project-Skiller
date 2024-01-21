@@ -29,9 +29,17 @@
                                         </a>
                                     </div>
 
-                                    <div class="form-outline mb-4">
+                                    <div class="form-outline mb-0">
                                         <p>Sign in with your sscr.edu Email</p>
                                     </div>
+
+                                    <?php 
+                                        if (isset($data['error'])){
+                                            echo '<div class="form-outline mb-2 text-danger">';
+                                            echo '<p>'.$data['error'].'</p>';
+                                            echo '</div>';
+                                        }
+                                    ?>
 
                                     <div class="form-outline d-flex justify-content-center mb-4">
                                         <div class="g_id_signin"

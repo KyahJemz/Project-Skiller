@@ -1,1 +1,1 @@
-dashboard
+<body class="bg-body-secondary">
