@@ -88,17 +88,12 @@ class ActivityModel {
     }
 
     public function getActivityQuestions($params) {
-        $LessonId = $this->database->escape($params['ActivityId']);
+        $ActivityId = $this->database->escape($params['ActivityId']);
         $query = "SELECT 
-            tbl_activity.Id as ActivityId,
-            tbl_activity.Lesson_Id as ActivityLessonId,
-            tbl_activity.Title as ActivityTitle,
-            tbl_activity.Description as ActivityDescription,
-            tbl_activity.Notes as ActivityNotes,
-            tbl_activity.CreatedAt as ActivityCreatedAt,
-            tbl_activity.UpdatedAt as ActivityUpdatedAt
-        FROM tbl_activity 
-        WHERE tbl_activity.Id = $LessonId";
+            *
+        FROM tbl_questions 
+        WHERE tbl_questions.Activity_Id = $ActivityId
+        ORDER BY RAND()";
     
         $stmt = $this->database->prepare($query);
     

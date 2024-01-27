@@ -4,7 +4,7 @@ require_once __DIR__.'/../models/AccountModel.php';
 require_once __DIR__.'/../models/ActivityModel.php';
 require_once __DIR__.'/../../config/Database.php';
 
-class ActivityController {
+class ResultController {
 
     public function index($item = null) {
         $logger = new Logger();
@@ -38,6 +38,19 @@ class ActivityController {
         include(__DIR__ . '/../views/activity.php');
         include(__DIR__ . '/../views/footers/Default.php');
     }
+
+    public function action() {
+        $token = filter_input(INPUT_GET, 'token', FILTER_SANITIZE_STRING);
+        $token = sanitizeInput($token);
+
+        $decodedBody = null;
+        
+        $logger = new Logger();
+    
+      
+    }
+
+
 }
 
 ?>

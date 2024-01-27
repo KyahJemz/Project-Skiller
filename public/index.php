@@ -21,6 +21,7 @@ require_once '../classes/Logger.php';
 // UTILS LOAD
 require_once '../utils/input_validation.php';
 require_once '../utils/session.php';
+require_once '../utils/date_format.php';
 
 // SESSION START
 session_start();
@@ -36,6 +37,7 @@ spl_autoload_register(function ($class) {
 // Other Files
 $logger = new Logger();
 
+// MAIN START
 $router = new Router($logger);
 $router->route();
 

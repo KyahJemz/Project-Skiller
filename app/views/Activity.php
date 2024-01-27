@@ -11,7 +11,7 @@
                 </ol>
               </nav>
         </div>
-        <div class="row p-4 bg-white rounded-3 d-flex flex-column">
+        <div class="row p-4 bg-white rounded-3 d-flex flex-column align-items-center">
 
             <h3><?php echo $data['Activity'][0]['ActivityTitle'];?></h3>
             <p><?php echo $data['Activity'][0]['ChapterTitle'];?>: <?php echo $data['Activity'][0]['LessonTitle'];?></p>
@@ -34,9 +34,13 @@
             <!-- HasRecentProgress -->
             <?php 
                 if(empty($data['Progress'])) {
-                    echo '<a class="btn btn-primary" href="">Take Assessment</a>';
+                    echo '<div class="w-25">';
+                    echo '<a class="btn btn-primary" href="'.BASE_URL.'?page=assessment&item='.$data['Progress'][0]['ActivityId'].'">Take Assessment</a>';
+                    echo '</div>';
                 } else {
-                    echo '<a class="btn btn-primary" href="">Continue Last Attempt - '.$data['Progress'][0]['ActivityLastAttempt'].'</a>';
+                    echo '<div class="w-25">';
+                    echo '  <a class="btn btn-primary" href="'.BASE_URL.'?page=assessment&item='.$data['Progress'][0]['ActivityId'].'">Continue Last Attempt<br><span class="font-italic">'.toFullDateAndTime($data['Progress'][0]['ActivityLastAttempt']).'</span></a>';
+                    echo '</div>';
                 }
             ?>
 
