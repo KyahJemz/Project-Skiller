@@ -5,6 +5,10 @@
 //            v1.0              //
 // ############################ //
 
+
+// START -----------------------// 
+
+
 // COMPOSER LOAD
 require '../vendor/autoload.php';
 
@@ -31,8 +35,11 @@ spl_autoload_register(function ($class) {
 
 // Other Files
 $logger = new Logger();
-$logger->log('New Access', 'info');
 
 $router = new Router($logger);
 $router->route();
+
+
+// END -----------------------// 
+
 ?>

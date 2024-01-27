@@ -37,7 +37,7 @@ class Router {
 
         } else {
             $this->logger->log('404 - Page not found ['.$page.']', 'error');
-            include('../app/views/error/404.php');
+            include('../app/views/error/NotFound.php');
         }
     }
 }
