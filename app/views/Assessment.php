@@ -37,21 +37,21 @@
                     }
                     echo '    <div class="row">';
                     echo '        <div class="col">';
-                    echo '            <input class="form-check-input cursor-pointer" value="'.$value['QuestionOptions'][0].'" type="radio" name="'.$value['QuestionId'].'" id="'.$value['QuestionId'].'-1" required '.($data['Answers'][$index][0] === $value['QuestionOptions'][0] ? 'checked' : '').'>';
+                    echo '            <input class="form-check-input cursor-pointer" value="'.$value['QuestionOptions'][0].'" type="radio" name="'.$value['QuestionId'].'" id="'.$value['QuestionId'].'-1" required '.(isset($data['Answers'][$index][0]) && $data['Answers'][$index][0] === $value['QuestionOptions'][0] ? 'checked' : '').'>';
                     echo '            <label class="form-check-label cursor-pointer" for="'.$value['QuestionId'].'-1">'.$value['QuestionOptions'][0].'</label>';
                     echo '        </div>';
                     echo '        <div class="col">';
-                    echo '            <input class="form-check-input cursor-pointer" value="'.$value['QuestionOptions'][1].'" type="radio" name="'.$value['QuestionId'].'" id="'.$value['QuestionId'].'-2" required '.($data['Answers'][$index][0] === $value['QuestionOptions'][1] ? 'checked' : '').'>';
+                    echo '            <input class="form-check-input cursor-pointer" value="'.$value['QuestionOptions'][1].'" type="radio" name="'.$value['QuestionId'].'" id="'.$value['QuestionId'].'-2" required '.(isset($data['Answers'][$index][0]) && $data['Answers'][$index][0] === $value['QuestionOptions'][1] ? 'checked' : '').'>';
                     echo '            <label class="form-check-label cursor-pointer" for="'.$value['QuestionId'].'-2">'.$value['QuestionOptions'][1].'</label>';
                     echo '        </div>';
                     echo '    </div>';
                     echo '    <div class="row mt-3">';
                     echo '        <div class="col">';
-                    echo '            <input class="form-check-input cursor-pointer" value="'.$value['QuestionOptions'][2].'" type="radio" name="'.$value['QuestionId'].'" id="'.$value['QuestionId'].'-3" required '.($data['Answers'][$index][0] === $value['QuestionOptions'][2] ? 'checked' : '').'>';
+                    echo '            <input class="form-check-input cursor-pointer" value="'.$value['QuestionOptions'][2].'" type="radio" name="'.$value['QuestionId'].'" id="'.$value['QuestionId'].'-3" required '.(isset($data['Answers'][$index][0]) && $data['Answers'][$index][0] === $value['QuestionOptions'][2] ? 'checked' : '').'>';
                     echo '            <label class="form-check-label cursor-pointer" for="'.$value['QuestionId'].'-3">'.$value['QuestionOptions'][2].'</label>';
                     echo '        </div>';
                     echo '        <div class="col">';
-                    echo '            <input class="form-check-input cursor-pointer" value="'.$value['QuestionOptions'][3].'" type="radio" name="'.$value['QuestionId'].'" id="'.$value['QuestionId'].'-4" required '.($data['Answers'][$index][0] === $value['QuestionOptions'][3] ? 'checked' : '').'>';
+                    echo '            <input class="form-check-input cursor-pointer" value="'.$value['QuestionOptions'][3].'" type="radio" name="'.$value['QuestionId'].'" id="'.$value['QuestionId'].'-4" required '.(isset($data['Answers'][$index][0]) && $data['Answers'][$index][0] === $value['QuestionOptions'][3] ? 'checked' : '').'>';
                     echo '            <label class="form-check-label cursor-pointer" for="'.$value['QuestionId'].'-4">'.$value['QuestionOptions'][3].'</label>';
                     echo '        </div>';
                     echo '    </div>';

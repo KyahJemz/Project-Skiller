@@ -2,6 +2,7 @@
 
 require_once __DIR__.'/../models/AccountModel.php';
 require_once __DIR__.'/../models/ActivityModel.php';
+require_once __DIR__.'/../models/ProgressModel.php';
 require_once __DIR__.'/../../config/Database.php';
 
 class ResultController {
@@ -22,6 +23,11 @@ class ResultController {
             header('Location: '.BASE_URL.'?page=NotFound');
             exit;
         }
+
+        $data['PastAttempts'] = $activityModel->getActivityResults([
+            'Activity_Id'=>$db->escape($data['Result'][0]['Activity_Id']),
+            'Account_Id'=>$db->escape($data['Result'][0]['Account_Id'])
+        ]);
 
         $data['Activity'] = $activityModel->getActivity(['ActivityId'=>$db->escape($data['Result'][0]['Activity_Id'])]);
 
@@ -58,6 +64,8 @@ class ResultController {
 
             $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
             $activityModel = new ActivityModel($db, $logger);
+            $progressModel = new ProgressModel($db, $logger);
+
 
             $Activity =  $activityModel->getActivity(['ActivityId'=>$db->escape($item)]);
 
@@ -110,6 +118,12 @@ class ResultController {
                     ];
                 }
             }
+
+            $progressModel->AddMyProgress([
+                'Lesson_Id'=>$db->escape($LessonId),
+                'Activity_Id'=>$db->escape($ActivityId),
+                'Account_Id'=>$db->escape($_SESSION['User_Id'])
+            ]);
 
             $Id = $activityModel->createActivityResult([
                 'ActivityId'=>$db->escape($ActivityId),

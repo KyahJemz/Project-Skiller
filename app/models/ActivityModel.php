@@ -57,6 +57,7 @@ class ActivityModel {
             tbl_activity.Title as ActivityTitle,
             tbl_activity.Description as ActivityDescription,
             tbl_activity.Notes as ActivityNotes,
+            tbl_activity.IsViewSummary as ActivityIsViewSummary,
             tbl_activity.CreatedAt as ActivityCreatedAt,
             tbl_activity.UpdatedAt as ActivityUpdatedAt
         FROM tbl_activity 
@@ -193,6 +194,37 @@ class ActivityModel {
             *
         FROM tbl_results 
         WHERE tbl_results.Id = $ResultId";
+    
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return [];
+        }
+    
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        if (!$result) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return [];
+        }
+    
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+    
+        $stmt->close();
+    
+        return $data;
+    }
+
+    public function getActivityResults($params) {
+        $ActivityId = $this->database->escape($params['Activity_Id']);
+        $AccountId = $this->database->escape($params['Account_Id']);
+        $query = "SELECT 
+            *
+        FROM tbl_results 
+        WHERE tbl_results.Activity_Id = $ActivityId AND tbl_results.Account_Id = $AccountId ";
     
         $stmt = $this->database->prepare($query);
     

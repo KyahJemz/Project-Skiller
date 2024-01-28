@@ -34,10 +34,11 @@ class ActivityController {
         } else {
             $data['CanTake'] = false;
             if (!empty($data['Result'])) {
-                foreach ($data['Result'] as $value) {
-                    if ((int)$value['IsRetake'] === 1) {
-                        $data['CanTake'] = true;
-                    }
+                $lastResult = end($data['Result']);
+                $lastResultValue = $lastResult['IsRetake'];
+
+                if ((int)$lastResultValue === 1) {
+                    $data['CanTake'] = true;
                 }
             } else {
                 $data['CanTake'] = true;

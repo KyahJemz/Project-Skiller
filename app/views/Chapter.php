@@ -1,8 +1,19 @@
 <body class="bg-body-secondary d-flex flex-column justify-content-between h-100">
     <div class="container flex-fill">
-        <h3><?php echo $data['Chapter'][0]['ChapterTitle'];?></h3>
-        <p>Chapter <?php echo $data['Chapter'][0]['ChapterId'];?>: <?php echo $data['Chapter'][0]['ChapterTitle'];?></p>
 
+        <div class="row">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=course';?>">Course</a></li>
+                  <li class="breadcrumb-item active"><?php echo $data['Chapter'][0]['ChapterTitle'];?></li>
+                </ol>
+              </nav>
+        </div>
+
+        <div class="row">
+            <h3><?php echo $data['Chapter'][0]['ChapterTitle'];?></h3>
+            <p>Chapter <?php echo $data['Chapter'][0]['ChapterId'];?>: <?php echo $data['Chapter'][0]['ChapterTitle'];?></p>
+        </div>
 
         <div class="accordion " id="accordionPanelsStayOpenExample">
 
