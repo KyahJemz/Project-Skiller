@@ -22,7 +22,7 @@ class LoginController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function action() {
+    public function action($item = null) {
         $token = filter_input(INPUT_GET, 'token', FILTER_SANITIZE_STRING);
         $token = sanitizeInput($token);
         $client = new Client();

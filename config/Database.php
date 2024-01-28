@@ -29,7 +29,7 @@ class Database {
     }
 
     public function escape($value) {
-        return $this->connection->real_escape_string($value);
+        return htmlspecialchars($this->connection->real_escape_string($value), ENT_QUOTES, 'UTF-8');
     }
 
     public function prepare($sql) {

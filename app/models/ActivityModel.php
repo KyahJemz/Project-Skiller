@@ -152,7 +152,210 @@ class ActivityModel {
         return $data;
     }
 
+    public function createActivityResult($params) {
+        $ActivityId = $this->database->escape($params['ActivityId']);
+        $LessonId = $this->database->escape($params['LessonId']);
+        $AccountId = $this->database->escape($params['AccountId']);
+        $Score = $this->database->escape($params['Score']);
+        $Summary = $params['Summary'];
+        $Total = $this->database->escape($params['Total']);
+    
+        $query = "INSERT INTO tbl_results (Activity_Id, Lesson_Id, Account_Id, Score, Summary, Total) 
+                  VALUES (?, ?, ?, ?, ?, ?)";
+    
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return false;
+        }
+    
+        $stmt->bind_param('iiisss', $ActivityId, $LessonId, $AccountId, $Score, $Summary, $Total);
+    
+        $stmt->execute();
+    
+        if ($stmt->error) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return false;
+        }
+    
+        $insertedId = $stmt->insert_id;
+    
+        $stmt->close();
+    
+        return $insertedId;
+    }
 
+    public function getActivityResult($params) {
+        $ResultId = $this->database->escape($params['ResultId']);
+        $query = "SELECT 
+            *
+        FROM tbl_results 
+        WHERE tbl_results.Id = $ResultId";
+    
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return [];
+        }
+    
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        if (!$result) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return [];
+        }
+    
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+    
+        $stmt->close();
+    
+        return $data;
+    }
 
+    public function getActivityResultFromActivityId($params){
+        $ActivityId = $this->database->escape($params['ActivityId']);
+        $AccountId = $this->database->escape($params['AccountId']);
+        $query = "SELECT 
+            tbl_results.Id as Id,
+            tbl_results.IsRetake as IsRetake
+        FROM tbl_results 
+        WHERE tbl_results.Activity_Id = $ActivityId AND tbl_results.Account_Id = $AccountId";
+    
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return [];
+        }
+    
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        if (!$result) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return [];
+        }
+    
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+    
+        $stmt->close();
+    
+        return $data;
+    }
 
+    public function deleteActivityInProgress($params) {
+        $ActivityId = $this->database->escape($params['ActivityId']);
+        $LessonId = $this->database->escape($params['LessonId']);
+        $AccountId = $this->database->escape($params['AccountId']);
+    
+        $query = "DELETE FROM tbl_inprogress WHERE Activity_Id = ? AND Lesson_Id = ? AND Account_Id = ?";
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return false;
+        }
+    
+        $stmt->bind_param('iii', $ActivityId, $LessonId, $AccountId);
+        $stmt->execute();
+    
+        if ($stmt->error) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return false;
+        }
+    
+        $stmt->close();
+    
+        return true;
+    }
+
+    public function createActivityInProgress($params) {
+        $ActivityId = $this->database->escape($params['ActivityId']);
+        $LessonId = $this->database->escape($params['LessonId']);
+        $AccountId = $this->database->escape($params['AccountId']);
+        $Questions = $params['Questions'];
+        $Answers = $params['Answers'];
+    
+        $existingRecordId = $this->getExistingRecordId($ActivityId, $LessonId, $AccountId);
+    
+        if ($existingRecordId !== false) {
+            return $this->updateActivityInProgress($ActivityId, $LessonId, $AccountId, $Questions, $Answers);
+        } else {
+            return $this->insertActivityInProgress($ActivityId, $LessonId, $AccountId, $Questions, $Answers);
+        }
+    }
+    
+    private function getExistingRecordId($ActivityId, $LessonId, $AccountId) {
+        $query = "SELECT Activity_Id FROM tbl_inprogress WHERE Activity_Id = ? AND Lesson_Id = ? AND Account_Id = ? LIMIT 1";
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return false;
+        }
+    
+        $stmt->bind_param('iii', $ActivityId, $LessonId, $AccountId);
+        $stmt->execute();
+    
+        $recordExists = $stmt->fetch();
+    
+        $stmt->close();
+    
+        return $recordExists ? true : false;
+    }
+    
+    private function insertActivityInProgress($ActivityId, $LessonId, $AccountId, $Questions, $Answers) {
+        $query = "INSERT INTO tbl_inprogress (Activity_Id, Lesson_Id, Account_Id, Questions, Answers) 
+                  VALUES (?, ?, ?, ?, ?)";
+    
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return false;
+        }
+    
+        $stmt->bind_param('iiiss', $ActivityId, $LessonId, $AccountId, $Questions, $Answers);
+        $stmt->execute();
+    
+        if ($stmt->error) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return false;
+        }
+    
+        $stmt->close();
+    
+        return true;
+    }
+    
+    private function updateActivityInProgress($ActivityId, $LessonId, $AccountId, $Questions, $Answers) {
+        $query = "UPDATE tbl_inprogress SET Questions = ?, Answers = ? WHERE Activity_Id = ? AND Lesson_Id = ? AND Account_Id = ?";
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return false;
+        }
+    
+        $stmt->bind_param('ssiii', $Questions, $Answers, $ActivityId, $LessonId, $AccountId);
+        $stmt->execute();
+    
+        if ($stmt->error) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return false;
+        }
+    
+        $stmt->close();
+    
+        return true;
+    }
 }

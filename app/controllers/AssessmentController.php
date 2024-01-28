@@ -24,10 +24,6 @@ class AssessmentController {
         }
 
         $rawQuestions = $activityModel->getActivityQuestions(['ActivityId'=>$db->escape($item)]);
-        // if($rawQuestions === []){
-        //     header('Location: '.BASE_URL.'?page=NotFound');
-        //     exit;
-        // }
 
         $data['Questions'] = [];
         $data['Answers'] = [];
@@ -50,14 +46,9 @@ class AssessmentController {
 
         $data['Progress'] = $activityModel->getActivityHasProgress(['ActivityId'=>$db->escape($item), 'AccountId'=>$db->escape($_SESSION['User_Id'])]);
         if(!empty($data['Progress'] )) {
-            $data['Questions'] = $data['Progress'][0]['ActivityQuestions'];
-            $data['Answers'] = $data['Progress'][0]['ActivityAnswers'];
+            $data['Questions'] = json_decode($data['Progress'][0]['ActivityQuestions'], true);
+            $data['Answers'] = json_decode($data['Progress'][0]['ActivityAnswers'], true);
         }
-
-
-        
-        // echo '<pre>'; print_r($data['Activities']); echo '</pre>';
-        // echo '<pre>'; print_r($data['Lessons']); echo '</pre>';
 
         $data['title'] = "Skiller - ".$data['Activity'][0]['ActivityTitle'];
  
@@ -67,7 +58,79 @@ class AssessmentController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
+    public function action($item = null) {
+        $logger = new Logger();
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
+            if (!isset($_POST['ActivityId'])) {
+                echo json_encode(['status' => 'error', 'message' => 'Invalid data or validation failed']);
+                exit;
+            } 
+
+            $ActivityId = null;
+            $LessonId = null;
+            $Questions = [];
+            $Answers = [];
+
+            $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+            $activityModel = new ActivityModel($db, $logger);
+
+            $Activity =  $activityModel->getActivity(['ActivityId'=>$db->escape($item)]);
+
+            $ActivityHistory =  $activityModel->getActivity(['ActivityId'=>$db->escape($item)]);
+            
+            $rawQuestions = $activityModel->getActivityQuestions(['ActivityId'=>$db->escape($item)]);
+
+            $data['Questions'] = [];
+
+            foreach ($rawQuestions as $value) {
+                $data['Questions'][$value['Id']] = [
+                    'Question' => $value['Question'],
+                    'QuestionOption1' => $value['Option1'],
+                    'QuestionOption2' => $value['Option2'],
+                    'QuestionOption3' => $value['Option3'],
+                    'QuestionOption4' => $value['Option4'],
+                    'QuestionPoints' => $value['Points'],
+                    'QuestionImage' => $value['Image']
+                ];
+            }
+
+            foreach ($_POST as $key => $value) {
+                $filteredKey = sanitizeInput($key);
+                $filteredValue = sanitizeInput($value);
+            
+                if ($filteredKey === "ActivityId") {
+                    $ActivityId = (int)$filteredValue;
+                } elseif ($filteredKey === "LessonId") {
+                    $LessonId = (int)$filteredValue;
+                } else {
+                    $Questions[] = [
+                        'QuestionId' => $filteredKey,
+                        'Question' => $data['Questions'][$filteredKey]['Question'],
+                        'QuestionOptions' => [
+                            $data['Questions'][$filteredKey]['QuestionOption1'],
+                            $data['Questions'][$filteredKey]['QuestionOption2'],
+                            $data['Questions'][$filteredKey]['QuestionOption3'],
+                            $data['Questions'][$filteredKey]['QuestionOption4'],
+                        ],
+                        'QuestionPoints' => $data['Questions'][$filteredKey]['QuestionPoints'],
+                        'QuestionImage' => $data['Questions'][$filteredKey]['QuestionImage']
+                    ];
+                    $Answers[] = [$value];
+                }
+            }
+
+            $activityModel->createActivityInProgress([
+                'ActivityId'=>$db->escape($ActivityId),
+                'LessonId'=>$db->escape($LessonId),
+                'AccountId'=>$db->escape($_SESSION['User_Id']),
+                'Questions'=>json_encode($Questions),
+                'Answers'=>json_encode($Answers),
+            ]);
+
+            echo json_encode(['status' => 'success']);
+        }
+    }
 }
 
 ?>

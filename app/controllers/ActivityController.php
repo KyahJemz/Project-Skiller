@@ -25,12 +25,26 @@ class ActivityController {
 
         $data['Progress'] = $activityModel->getActivityHasProgress(['ActivityId'=>$db->escape($item), 'AccountId'=>$db->escape($_SESSION['User_Id'])]);
 
-        // echo '<pre>'; print_r($data['Activity']); echo '</pre>';
+        $data['Result'] = $activityModel->getActivityResultFromActivityId(['ActivityId'=>$db->escape($item), 'AccountId'=>$db->escape($_SESSION['User_Id'])]);
+        
+        $data['CanTake'] = false;
 
-        // $data['Progress'] = $lessonModel->getLessonsOnly(); to follow to display ko muna
+        if (!empty($data['Progress'])) {
+            $data['CanTake'] = true;
+        } else {
+            $data['CanTake'] = false;
+            if (!empty($data['Result'])) {
+                foreach ($data['Result'] as $value) {
+                    if ((int)$value['IsRetake'] === 1) {
+                        $data['CanTake'] = true;
+                    }
+                }
+            } else {
+                $data['CanTake'] = true;
+            }
+        }
 
-
-
+    
         $data['title'] = "Skiller - ".$data['Activity'][0]['ActivityTitle'];
  
         include(__DIR__ . '/../views/headers/Default.php');

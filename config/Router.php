@@ -26,7 +26,7 @@ class Router {
             $controller = new $controllerClass();
 
             if ($action) {
-                $controller->action();
+                $controller->action($item);
             } else {
                 if ($item !== '') {
                     $controller->index($item);
