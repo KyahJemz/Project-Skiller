@@ -79,44 +79,31 @@
                 <h3>Your Progress: </h3>
                 <?php 
                     $TotalProgressPercentage = number_format(((isset($data['Progress']['FullProgress']) ? $data['Progress']['FullProgress'] : 0) / max($data['Progress']['FullProgressTotal'], 1)) * 100, 2);
-                    echo '<div class="progress">';
-                    echo '    <div class="progress-bar bg-primary" role="progressbar" style="width: '.number_format(((isset($data['Progress']['ChapterProgress'][1]) ? $data['Progress']['ChapterProgress'][1] : 0) / max($data['Progress']['ChapterProgressTotal'][1], 1)) * 100, 2).'%" aria-valuenow="'.(isset($data['Progress']['ChapterProgress'][1]) ? $data['Progress']['ChapterProgress'][1] : 0).'" aria-valuemin="0" aria-valuemax="'.$data['Progress']['ChapterProgressTotal'][1].'"></div>';
-                    echo '    <div class="progress-bar bg-success" role="progressbar" style="width: '.number_format(((isset($data['Progress']['ChapterProgress'][2]) ? $data['Progress']['ChapterProgress'][2] : 0) / max($data['Progress']['ChapterProgressTotal'][2], 1)) * 100, 2).'%" aria-valuenow="'.(isset($data['Progress']['ChapterProgress'][2]) ? $data['Progress']['ChapterProgress'][2] : 0).'" aria-valuemin="0" aria-valuemax="'.$data['Progress']['ChapterProgressTotal'][2].'"></div>';
-                    echo '    <div class="progress-bar bg-danger" role="progressbar" style="width: '.number_format(((isset($data['Progress']['ChapterProgress'][3]) ? $data['Progress']['ChapterProgress'][3] : 0) / max($data['Progress']['ChapterProgressTotal'][3], 1)) * 100, 2).'%" aria-valuenow="'.(isset($data['Progress']['ChapterProgress'][3]) ? $data['Progress']['ChapterProgress'][3] : 0).'" aria-valuemin="0" aria-valuemax="'.$data['Progress']['ChapterProgressTotal'][3].'"></div>';
-                    echo '    <div class="progress-bar bg-warning" role="progressbar" style="width: '.number_format(((isset($data['Progress']['ChapterProgress'][4]) ? $data['Progress']['ChapterProgress'][4] : 0) / max($data['Progress']['ChapterProgressTotal'][4], 1)) * 100, 2).'%" aria-valuenow="'.(isset($data['Progress']['ChapterProgress'][4]) ? $data['Progress']['ChapterProgress'][4] : 0).'" aria-valuemin="0" aria-valuemax="'.$data['Progress']['ChapterProgressTotal'][4].'"></div>';
-                    echo '    <div class="progress-bar bg-info" role="progressbar" style="width: '.number_format(((isset($data['Progress']['ChapterProgress'][5]) ? $data['Progress']['ChapterProgress'][5] : 0) / max($data['Progress']['ChapterProgressTotal'][5], 1)) * 100, 2).'%" aria-valuenow="'.(isset($data['Progress']['ChapterProgress'][5]) ? $data['Progress']['ChapterProgress'][5] : 0).'" aria-valuemin="0" aria-valuemax="'.$data['Progress']['ChapterProgressTotal'][5].'"></div>';
-
-                    // echo '    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="'.(isset($data['Progress']['FullProgress']) ? $data['Progress']['FullProgress'] : 0).'" aria-valuemin="0" aria-valuemax="'.$data['Progress']['FullProgressTotal'].'" style="width: '.$TotalProgressPercentage.'%"></div>';
+                    echo '<div class="progress p-0">';
+                    $TotalChaptersCount = sizeof($data['Chapters']);
+                    foreach ($data['Chapters'] as $chapter) {
+                        $ChapterPercentage = number_format(((isset($data['Progress']['ChapterProgress'][$chapter["Id"]]) ? $data['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($data['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
+                        $adjustedWidth = (int)($ChapterPercentage * ((100 / $TotalChaptersCount)/100));
+                        echo '<div class="progress-bar '.getNextBgColor().'" role="progressbar" style="width: '.$adjustedWidth.'%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><strong>'.$ChapterPercentage.'%</strong></div>';
+                    }
                     echo '</div>';
-                ?>
+                    echo '<p class="mb-3 mt-2">Overall progress: <strong>'.$TotalProgressPercentage.'%</strong><p>';
 
-                <?php 
-                    foreach ($data['Chapters'] as $row) {
-                        $ChapterProgress = number_format(((isset($data['Progress']['ChapterProgress'][$row["Id"]]) ? $data['Progress']['ChapterProgress'][$row["Id"]] : 0) / max($data['Progress']['ChapterProgressTotal'][$row["Id"]], 1)) * 100, 2);
-                        echo '<div class="accordion-item mb-2">';
-                        echo '    <h2 class="accordion-header">';
-                        echo '    <button class="accordion-button '.((int)$ChapterProgress === 100 ? "collapsed" : "").'" type="button" data-bs-toggle="collapse" data-bs-target="#a'.$row['Id'].'" aria-expanded="'.((int)$ChapterProgress === 100 ? "true" : "false").'" aria-controls="a'.$row['Id'].'">';
-                        echo $row['Title'] . ' - Progress: ' . $ChapterProgress . '%';
-                        echo '    </button>';
-                        echo '    </h2>';
-                        echo '    <div id="a'.$row['Id'].'" class="accordion-collapse collapse '.((int)$ChapterProgress === 100 ? "" : "show").'">';
-                        echo '        <div class="accordion-body">';
-                        foreach ($data['Lessons'] as $row2){
-                            if ($row2['ChapterId'] === $row['Id']){
-                                $LessonProgress = number_format(((isset($data['Progress']['LessonProgress'][$row2["LessonId"]]) ? $data['Progress']['LessonProgress'][$row2["LessonId"]] : 0) / max($data['Progress']['LessonProgressTotal'][$row2["LessonId"]], 1)) * 100, 2);
-                                echo '<strong class="pb-2">'.$row2['LessonTitle'].'</strong>' . ' - Progress: ' . $LessonProgress . '%';
-                                echo '</br>';
-                                echo $row2['LessonDescription'];
-                                echo '</br>';
-                                echo '<a class="btn btn-primary class="mt-2" href="'.BASE_URL.'?page=lessons&item='.$row2['LessonId'].'">View</a>';
-                                echo '</br></br>';
+
+                    echo '<div class="row">';
+                    foreach ($data['Chapters'] as $chapter) {
+                        echo '<h5><a href="'.BASE_URL.'?page=chapter&item='.$chapter['Id'].'"><span class="badge ' . getNextBgColor() . '">#</span>' . $chapter['Title'] . '</a></h5>';
+                        echo '<div class="row px-5">';
+                        echo '<ul class="ml-5 px-5">';
+                        foreach ($data['Lessons'] as $lesson) {
+                            if ($lesson['ChapterId'] === $chapter['Id']) {
+                                echo '<li><p class="ml-5">' . $lesson['LessonTitle'] . '</p></li>';
                             }
                         }
-                        echo '              Scope: '.$row['Codes'];
-                        echo '        </div>';
-                        echo '    </div>';
+                        echo '</ul>';
                         echo '</div>';
                     }
+                    echo '</div>';
                 ?>
             </div>
         </div>
