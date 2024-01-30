@@ -3,20 +3,43 @@
 
         <div class="row p-4 bg-white rounded-3 d-flex flex-column">
 
-            <h3>Scores</h3>
-           
+            <h3 class="mb-4">Assessment Scores</h3>
+
+            <div class="row mb-2">
+                
+                <?php 
+                    if(!empty($data['Activities'][0])) {
+                        $TotalActivities = 0;
+                        $TotalScore = 0;
+                        $TotalItems = 0;
+                        foreach ($data['Activities'] as $row){
+                            $TotalScore += (int)$row['Score'];
+                            $TotalItems += (int)$row['Total'];
+                            $TotalActivities += 1;
+                        }
+                    }
+                    $ScoreAverage = number_format(($TotalScore / max($TotalItems, 1)) * 100, 2);
+                    echo '<p>You scored <strong>'.$TotalScore.'</strong> out of <strong>'.$TotalItems.'</strong> total items in <strong>'.$TotalActivities.'</strong> assessments, with an average of <strong>'.$ScoreAverage.'%</strong></p>';
+                ?>
+            </div>
 
             <!-- ACTIVITIES -->
             <?php 
                 if(!empty($data['Activities'][0])) {
-                    echo '<h5 class="mt-4">Activities</h5>';
                     echo '<ul class="list-group">';
                     foreach ($data['Activities'] as $row){
-                        echo '<li class="list-group-item py-3"><a href="'.BASE_URL.'?page=activity&item='.$row['ActivityId'].'">'.$row['ActivityTitle']. '</a></li>';
+                        echo '<li class="list-group-item py-3">';
+                        echo '      <div class="row">';
+                        echo '              <div class="col"><strong><a href="'.BASE_URL.'?page=activity&item='.$row['ActivityId'].'">'.$row['ActivityTitle']. '</a></strong></div>';
+                        echo '              <div class="col">Score: <strong>'.$row['Score'].'/'.$row['Total'].'</strong></div>';
+                        echo '      </div>';
+                        echo '      <div class="row">';
+                        echo '              <div>'.$row['LessonTitle'].'</p>';
+                        echo '      </div>';
+                        echo '</li>';
                     }
                     echo '</ul>';
                 }
             ?>
-
         </div>
     </div>
