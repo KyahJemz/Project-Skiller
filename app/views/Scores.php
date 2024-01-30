@@ -17,9 +17,12 @@
                             $TotalItems += (int)$row['Total'];
                             $TotalActivities += 1;
                         }
+                        $ScoreAverage = number_format(($TotalScore / max($TotalItems, 1)) * 100, 2);
+                        echo '<p>You scored <strong>'.$TotalScore.'</strong> out of <strong>'.$TotalItems.'</strong> total items in <strong>'.$TotalActivities.'</strong> assessments, with an total average of <strong>'.$ScoreAverage.'%</strong></p>';
+                    } else {
+                        echo '<p>All of your finished assessments can be viewed here. Don\'t see anything? Then start taking assessments.</p>';
                     }
-                    $ScoreAverage = number_format(($TotalScore / max($TotalItems, 1)) * 100, 2);
-                    echo '<p>You scored <strong>'.$TotalScore.'</strong> out of <strong>'.$TotalItems.'</strong> total items in <strong>'.$TotalActivities.'</strong> assessments, with an average of <strong>'.$ScoreAverage.'%</strong></p>';
+                    
                 ?>
             </div>
 

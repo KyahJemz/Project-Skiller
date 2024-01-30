@@ -16,8 +16,19 @@ class Router {
 
         $action = filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING) ?? '';
 
+        if ($page === "home" || $page === "login") {} else {
+            if(!(isLoggedIn())){
+                header("Location: ".BASE_URL.'?page=login');
+                exit;
+            }
+        }
+
         $controllerClass = ucfirst($page) . 'Controller';
         $controllerFile = '../app/controllers/' . $controllerClass . '.php';
+
+        if ($page === "logout"){
+            logout();
+        }
 
         if (file_exists($controllerFile)) {
             require_once $controllerFile;

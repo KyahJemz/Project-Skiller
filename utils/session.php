@@ -1,7 +1,7 @@
 <?php
 
 function isLoggedIn() {
-    return isset($_SESSION['user_id']);
+    return isset($_SESSION['User_Id']);
 }
 
 function createSession($params){
@@ -17,17 +17,8 @@ function createSession($params){
 
 function logout() {
 
-    unset($_SESSION['user_id']);
-    unset($_SESSION['user_email']);
-    unset($_SESSION['user_name']);
-    unset($_SESSION['User_Id']);
-    unset($_SESSION['User_Email']);
-    unset($_SESSION['User_Image']);
-    unset($_SESSION['User_FirstName']);
-    unset($_SESSION['User_MiddleName']);
-    unset($_SESSION['User_LastName']);
-    unset($_SESSION['User_Group']);
-    unset($_SESSION['User_Role']);
+    session_unset();
+    session_destroy();
 
     header("Location: ".BASE_URL);
     exit();
