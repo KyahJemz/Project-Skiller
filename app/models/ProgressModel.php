@@ -1,8 +1,5 @@
 <?php
 
-require_once __DIR__.'/../models/LessonModel.php';
-require_once __DIR__.'/../models/ActivityModel.php';
-
 class ProgressModel {
 
     private $database; 
@@ -15,12 +12,25 @@ class ProgressModel {
 
     public function getAllMyProgress($params) {
         $AccountId = $this->database->escape($params['Account_Id']);
-        $query = "SELECT 
-            *
-        FROM tbl_progress 
-        WHERE tbl_progress.Account_Id = $AccountId ";
-    
-        $stmt = $this->database->prepare($query);
+
+        $query1 = "SELECT 
+            chapter.Id as Cid,
+            lesson.Id as Lid,
+        null as Aid
+        FROM tbl_chapter as chapter
+        RIGHT JOIN tbl_lessons as lesson ON chapter.Id = lesson.Chapter_Id
+        
+        UNION
+        
+        SELECT 
+            chapter.Id as Cid,
+            lesson.Id as Lid,
+            activity.Id as Aid
+        FROM tbl_chapter as chapter
+        RIGHT JOIN tbl_lessons as lesson ON chapter.Id = lesson.Chapter_Id
+        LEFT JOIN tbl_activity as activity ON lesson.Id = activity.Lesson_Id";
+
+        $stmt = $this->database->prepare($query1);
     
         if (!$stmt) {
             $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
@@ -36,17 +46,72 @@ class ProgressModel {
             return [];
         }
     
-        $data = $result->fetch_all(MYSQLI_ASSOC);
+        $data1 = $result->fetch_all(MYSQLI_ASSOC);
     
         $stmt->close();
 
-        $Progress = [];
-        foreach ($data as $value) {
-            
+        $query2 = "SELECT 
+            progress.Account_Id as AccId,
+            progress.Lesson_Id as Lid,
+            lesson.Chapter_Id as Cid,
+            progress.Activity_Id as Aid
+        FROM tbl_progress as progress
+        LEFT JOIN tbl_lessons as lesson ON progress.Lesson_Id = lesson.Id
+        LEFT JOIN tbl_chapter as chapter ON lesson.Chapter_Id = chapter.Id
+        WHERE progress.Account_Id = $AccountId";
+
+        $stmt = $this->database->prepare($query2);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return [];
+        }
+    
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        if (!$result) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return [];
+        }
+    
+        $data2 = $result->fetch_all(MYSQLI_ASSOC);
+    
+        $stmt->close();
+
+        $FullProgressTotal = count($data1);
+        $ChapterProgressTotal = [];
+        $LessonProgressTotal = [];
+
+        foreach ($data1 as $value) {
+            $ChapterProgressTotal[$value['Cid']] = isset($ChapterProgressTotal[$value['Cid']]) ? $ChapterProgressTotal[$value['Cid']] + 1 : 1;
+
+            $LessonProgressTotal[$value['Lid']] = isset($LessonProgressTotal[$value['Lid']]) ? $LessonProgressTotal[$value['Lid']] + 1 : 1;
         }
 
-        
-        // return $data;
+        $FullProgress = 0;
+        $ChapterProgress = [];
+        $LessonProgress = [];
+
+        foreach ($data2 as $value) {
+            $ChapterProgress[$value['Cid']] = isset($ChapterProgress[$value['Cid']]) ? $ChapterProgress[$value['Cid']] + 1 : 1;
+
+            $LessonProgress[$value['Lid']] = isset($LessonProgress[$value['Lid']]) ? $LessonProgress[$value['Lid']] + 1 : 1;
+
+            $FullProgress += 1;
+        }
+
+        $Progress = [
+            'FullProgress' => $FullProgress,
+            'ChapterProgress' => $ChapterProgress,
+            'LessonProgress' => $LessonProgress,
+            'FullProgressTotal' => $FullProgressTotal,
+            'ChapterProgressTotal' => $ChapterProgressTotal,
+            'LessonProgressTotal' => $LessonProgressTotal
+        ];
+
+        return $Progress;
     }
 
     public function AddMyProgress($params) {

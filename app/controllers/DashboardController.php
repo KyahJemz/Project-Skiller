@@ -11,8 +11,5 @@ class DashboardController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-
-
-    
 }
 ?>

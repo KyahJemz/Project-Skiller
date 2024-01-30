@@ -35,6 +35,8 @@ class LessonsController {
             'Account_Id'=>$db->escape($_SESSION['User_Id'])
         ]);
 
+        $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$_SESSION['User_Id']]);
+
         $data['title'] = "Skiller - ".$data['Lessons'][0]['LessonTitle'];
  
         include(__DIR__ . '/../views/headers/Default.php');

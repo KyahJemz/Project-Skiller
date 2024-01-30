@@ -13,19 +13,21 @@
         <div class="row">
             <h3><?php echo $data['Chapter'][0]['ChapterTitle'];?></h3>
             <p>Chapter <?php echo $data['Chapter'][0]['ChapterId'];?>: <?php echo $data['Chapter'][0]['ChapterTitle'];?></p>
+            <p>Progress: <?php echo number_format(((isset($data['Progress']['ChapterProgress'][$data['Chapter'][0]['ChapterId']]) ? $data['Progress']['ChapterProgress'][$data['Chapter'][0]['ChapterId']] : 0) / max($data['Progress']['ChapterProgressTotal'][$data['Chapter'][0]['ChapterId']], 1)) * 100, 2).'%'  ?></p>
         </div>
 
         <div class="accordion " id="accordionPanelsStayOpenExample">
 
             <?php 
                 foreach ($data['Chapter'] as $row) {
+                    $LessonProgress = number_format(((isset($data['Progress']['LessonProgress'][$row["LessonId"]]) ? $data['Progress']['LessonProgress'][$row['LessonId']] : 0) / max($data['Progress']['LessonProgressTotal'][$row["LessonId"]], 1)) * 100, 2);
                     echo '<div class="accordion-item mb-2">';
                     echo '    <h2 class="accordion-header">';
-                    echo '    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#a'.$row['LessonId'].'" aria-expanded="true" aria-controls="a'.$row['LessonId'].'">';
-                    echo '        Lesson: '.$row['LessonTitle'] . ' - Progress: 20%';
+                    echo '    <button class="accordion-button '.((int)$LessonProgress === 100 ? "collapsed" : "").'" type="button" data-bs-toggle="collapse" data-bs-target="#a'.$row['LessonId'].'" aria-expanded="'.((int)$LessonProgress === 100 ? "true" : "false").'" aria-controls="a'.$row['LessonId'].'">';
+                    echo $row['LessonTitle'] . ' - Progress: '.$LessonProgress.'%';
                     echo '    </button>';
                     echo '    </h2>';
-                    echo '    <div id="a'.$row['LessonId'].'" class="accordion-collapse collapse show">';
+                    echo '    <div id="a'.$row['LessonId'].'" class="accordion-collapse collapse '.((int)$LessonProgress === 100 ? "" : "show").'">';
                     echo '        <div class="accordion-body">';
                    
                     if(!empty($row['LessonDescription']))

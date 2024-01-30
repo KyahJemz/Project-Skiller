@@ -2,6 +2,7 @@
 
 require_once __DIR__.'/../models/AccountModel.php';
 require_once __DIR__.'/../models/LessonModel.php';
+require_once __DIR__.'/../models/ProgressModel.php';
 require_once __DIR__.'/../../config/Database.php';
 
 class ChapterController {
@@ -16,12 +17,15 @@ class ChapterController {
         
         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         $lessonModel = new LessonModel($db, $logger);
+        $progressModel = new ProgressModel($db, $logger);
 
         $data['Chapter'] = $lessonModel->getChapterFull(['ChapterId'=>$db->escape($item)]);
         if($data['Chapter'] === []){
             header('Location: '.BASE_URL.'?page=NotFound');
             exit;
         }
+
+        $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$_SESSION['User_Id']]);
 
         $data['title'] = "Skiller - Course";
  

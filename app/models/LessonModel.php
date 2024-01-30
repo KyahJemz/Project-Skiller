@@ -115,6 +115,7 @@ class LessonModel {
             tbl_chapter.Title as ChapterTitle,
             tbl_chapter.Codes as ChapterCodes,
             tbl_lessons.Title as LessonTitle,
+            tbl_lessons.Id as LessonId,
             tbl_lessons.Objective as LessonObjective,
             tbl_lessons.Description as LessonDescription,
             tbl_lessons.Image as LessonImage,

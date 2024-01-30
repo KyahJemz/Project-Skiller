@@ -46,6 +46,46 @@ class ActivityModel {
         return $data;
     }
 
+    public function getActivitiesResults($params) {
+        $AccountId = $this->database->escape($params['Account_Id']);
+        $query = "SELECT 
+            tbl_results.Id as ResultId,
+            tbl_results.Score as Score,
+            tbl_results.Total as Total,
+            tbl_results.Timestamp as Timestamp,
+            tbl_activity.Id as ActivityId,
+            tbl_activity.Title as ActivityTitle,
+            tbl_lessons.Id as LessonId,
+            tbl_lessons.Title as LessonTitle,
+            tbl_lessons.Chapter_Id as ChapterId
+        FROM tbl_results
+        LEFT JOIN tbl_lessons ON tbl_results.Lesson_Id = tbl_lessons.Id
+        LEFT JOIN tbl_activity ON tbl_results.Activity_Id = tbl_activity.Id
+        WHERE tbl_results.Account_Id = $AccountId";
+    
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return [];
+        }
+    
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        if (!$result) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return [];
+        }
+    
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+    
+        $stmt->close();
+    
+        return $data;
+    }
+
     public function getActivity($params) {
         $ActivityId = $this->database->escape($params['ActivityId']);
         $query = "SELECT 

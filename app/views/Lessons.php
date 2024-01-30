@@ -14,6 +14,7 @@
 
             <h3><?php echo $data['Lessons'][0]['LessonTitle'];?></h3>
             <p>Chapter <?php echo $data['Lessons'][0]['ChapterId'];?>: <?php echo $data['Lessons'][0]['ChapterTitle'];?></p>
+            <p>Progress: <?php echo number_format(((isset($data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']]) ? $data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']] : 0) / max($data['Progress']['LessonProgressTotal'][$data['Lessons'][0]['LessonId']], 1)) * 100, 2).'%'  ?></p>
 
             <!-- OBJECTIVES -->
             <?php 
