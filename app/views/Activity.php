@@ -31,31 +31,35 @@
                 }
             ?>
 
+            <?php 
+                if($data['CanTake'] !== true){
+                    $lastResult = end($data['Result']);
+                    $lastResultId = $lastResult['Id'];
+                    header('Location: ' . BASE_URL . '?page=result&item=' . $lastResultId);
+                    exit;
+                }
+            ?>
+
             <!-- HasRecentProgress -->
             <?php 
-            if($data['CanTake'] === true){
-                if(empty($data['Progress'])) {
-                    if(empty($data['Result'])) {
-                        echo '<div class="w-25">';
-                        echo '<a class="btn btn-primary" href="'.BASE_URL.'?page=assessment&item='.$data['Activity'][0]['ActivityId'].'">Take Assessment</a>';
+                if($data['CanTake'] === true){
+                    if(empty($data['Progress'])) {
+                        if(empty($data['Result'])) {
+                            echo '<div class="w-25">';
+                            echo '<a class="btn btn-primary" href="'.BASE_URL.'?page=assessment&item='.$data['Activity'][0]['ActivityId'].'">Take Assessment</a>';
+                            echo '</div>';
+                        } else {
+                            echo '<div class="w-25">';
+                        echo '<a class="btn btn-primary" href="'.BASE_URL.'?page=assessment&item='.$data['Activity'][0]['ActivityId'].'">Retake Assessment</a>';
                         echo '</div>';
+                        }
+                        
                     } else {
                         echo '<div class="w-25">';
-                    echo '<a class="btn btn-primary" href="'.BASE_URL.'?page=assessment&item='.$data['Activity'][0]['ActivityId'].'">Retake Assessment</a>';
-                    echo '</div>';
+                        echo '  <a class="btn btn-primary" href="'.BASE_URL.'?page=assessment&item='.$data['Progress'][0]['ActivityId'].'">Continue Last Attempt<br><span class="font-italic">'.toFullDateAndTime($data['Progress'][0]['ActivityLastAttempt']).'</span></a>';
+                        echo '</div>';
                     }
-                    
-                } else {
-                    echo '<div class="w-25">';
-                    echo '  <a class="btn btn-primary" href="'.BASE_URL.'?page=assessment&item='.$data['Progress'][0]['ActivityId'].'">Continue Last Attempt<br><span class="font-italic">'.toFullDateAndTime($data['Progress'][0]['ActivityLastAttempt']).'</span></a>';
-                    echo '</div>';
                 }
-            } else {
-                $lastResult = end($data['Result']);
-                $lastResultId = $lastResult['Id'];
-                header('Location: ' . BASE_URL . '?page=result&item=' . $lastResultId);
-                exit;
-            }   
             ?>
 
         </div>

@@ -1,5 +1,5 @@
 <?php 
-    $data['title'] = "Skiller: Page Not Found";
+    $data['title'] = "Skiller: Access Not Allowed";
 
     include(__DIR__ . '/../headers/Default.php');
     if (isLoggedIn()) {
@@ -15,14 +15,14 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL.'?page=Dashboard'?>">Dashboard</a></li>
-                    <li class="breadcrumb-item active">Not Found</li>
+                    <li class="breadcrumb-item active">Not Allowed</li>
                 </ol>
             </nav>
         </div>
 
         <div class="row p-4 rounded-3 bg-white">
-            <h3>Page Not Found</h3>
-            <p>This page could not be found or is not a valid page. If this was a mistake, please contact the system administrators.</p>
+            <h3>Access Not Allowed!</h3>
+            <p>This page is inaccessible or cannot be accessed with your current role. If this was a mistake, kindly contact the system administrators.</p>
         </div>
     </div>
 <?php 

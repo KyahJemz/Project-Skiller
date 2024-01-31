@@ -75,36 +75,43 @@
                 <p>The Skiller Tutorial System caters to senior high school students, specifically focusing on the subject of General Mathematics. Aligned with the K-12 curriculum mandated by the Department of Education in the Philippines, the platform is tailored to meet the academic needs of senior high school learners. By adhering to the curriculum guidelines, Skiller Tutorial System ensures comprehensive coverage of relevant topics, providing a structured and supportive online learning environment for students to excel in their General Mathematics studies.</p>
             </div>
 
-            <div class="row p-3 rounded-3">
-                <h3>Your Progress: </h3>
-                <?php 
-                    $TotalProgressPercentage = number_format(((isset($data['Progress']['FullProgress']) ? $data['Progress']['FullProgress'] : 0) / max($data['Progress']['FullProgressTotal'], 1)) * 100, 2);
-                    echo '<div class="progress p-0">';
-                    $TotalChaptersCount = sizeof($data['Chapters']);
-                    foreach ($data['Chapters'] as $chapter) {
-                        $ChapterPercentage = number_format(((isset($data['Progress']['ChapterProgress'][$chapter["Id"]]) ? $data['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($data['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
-                        $adjustedWidth = (int)($ChapterPercentage * ((100 / $TotalChaptersCount)/100));
-                        echo '<div class="progress-bar '.getNextBgColor().'" role="progressbar" style="width: '.$adjustedWidth.'%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><strong>'.$ChapterPercentage.'%</strong></div>';
-                    }
-                    echo '</div>';
-                    echo '<p class="mb-3 mt-2">Overall progress: <strong>'.$TotalProgressPercentage.'%</strong><p>';
-
-
-                    echo '<div class="row">';
-                    foreach ($data['Chapters'] as $chapter) {
-                        echo '<h5><a href="'.BASE_URL.'?page=chapter&item='.$chapter['Id'].'"><span class="badge ' . getNextBgColor() . '">#</span>' . $chapter['Title'] . '</a></h5>';
-                        echo '<div class="row px-5">';
-                        echo '<ul class="ml-5 px-5">';
-                        foreach ($data['Lessons'] as $lesson) {
-                            if ($lesson['ChapterId'] === $chapter['Id']) {
-                                echo '<li><p class="ml-5">' . $lesson['LessonTitle'] . '</p></li>';
-                            }
+            <?php if ($_SESSION['User_Role'] === "Teacher") { ?>
+                   
+            <?php } elseif ($_SESSION['User_Role'] === "Administrator"){ ?>
+                
+            <?php } else { ?>
+                <div class="row p-3 rounded-3">
+                    <h3>Your Progress: </h3>
+                    <?php 
+                        $TotalProgressPercentage = number_format(((isset($data['Progress']['FullProgress']) ? $data['Progress']['FullProgress'] : 0) / max($data['Progress']['FullProgressTotal'], 1)) * 100, 2);
+                        echo '<div class="progress p-0">';
+                        $TotalChaptersCount = sizeof($data['Chapters']);
+                        foreach ($data['Chapters'] as $chapter) {
+                            $ChapterPercentage = number_format(((isset($data['Progress']['ChapterProgress'][$chapter["Id"]]) ? $data['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($data['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
+                            $adjustedWidth = (int)($ChapterPercentage * ((100 / $TotalChaptersCount)/100));
+                            echo '<div class="progress-bar '.getNextBgColor().'" role="progressbar" style="width: '.$adjustedWidth.'%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><strong>'.$ChapterPercentage.'%</strong></div>';
                         }
-                        echo '</ul>';
                         echo '</div>';
-                    }
-                    echo '</div>';
-                ?>
-            </div>
+                        echo '<p class="mb-3 mt-2">Overall progress: <strong>'.$TotalProgressPercentage.'%</strong><p>';
+
+
+                        echo '<div class="row">';
+                        foreach ($data['Chapters'] as $chapter) {
+                            echo '<h5><a href="'.BASE_URL.'?page=chapter&item='.$chapter['Id'].'"><span class="badge ' . getNextBgColor() . '">#</span>' . $chapter['Title'] . '</a></h5>';
+                            echo '<div class="row px-5">';
+                            echo '<ul class="ml-5 px-5">';
+                            foreach ($data['Lessons'] as $lesson) {
+                                if ($lesson['ChapterId'] === $chapter['Id']) {
+                                    echo '<li><p class="ml-5">' . $lesson['LessonTitle'] . '</p></li>';
+                                }
+                            }
+                            echo '</ul>';
+                            echo '</div>';
+                        }
+                        echo '</div>';
+                    ?>
+                </div>
+            <?php } ?>
+
         </div>
     </div>

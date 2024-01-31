@@ -10,6 +10,66 @@ class AccountModel {
         $this->logger = $logger;
     }
 
+    public function getAccountById($params){
+        $AccountId = $this->database->escape($params['Account_Id']);
+        $query = "SELECT 
+            *
+        FROM tbl_accounts 
+        WHERE tbl_accounts.Id = $AccountId";
+    
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return [];
+        }
+    
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        if (!$result) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return [];
+        }
+    
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+    
+        $stmt->close();
+    
+        return $data;
+    }
+
+    public function getAccountByGroup($params){
+        $Group = $this->database->escape($params['Group']);
+        $query = "SELECT 
+            *
+        FROM tbl_accounts 
+        WHERE tbl_accounts.Group = $Group";
+    
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return [];
+        }
+
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        if (!$result) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return [];
+        }
+    
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+    
+        $stmt->close();
+    
+        return $data;
+    }
+
     public function getAccount($params) {
         $query = "SELECT * FROM tbl_accounts WHERE 1";
 
@@ -33,7 +93,6 @@ class AccountModel {
             $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
             return [];
         }
-
 
         if ($params['Email']) {
             $stmt->bind_param("s", $params['Email']);
