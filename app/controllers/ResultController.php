@@ -34,11 +34,19 @@ class ResultController {
         $data['Summary'] = json_decode($data['Result'][0]['Summary']);
 
         $data['title'] = "Skiller - Assessment Result";
+
+        echo '<script>';
+        echo 'const BASE_URL=`'.BASE_URL.'`;';
+        echo '</script>';
  
         include(__DIR__ . '/../views/headers/Default.php');
         include(__DIR__ . '/../views/headers/SignedIn.php');
         include(__DIR__ . '/../views/result.php');
         include(__DIR__ . '/../views/footers/Default.php');
+    }
+
+    public function indexTeacher($item = null) {
+        $this->index($item);
     }
 
     public function action($item = null) {
@@ -144,6 +152,46 @@ class ResultController {
             exit;
         }
     }
+
+    public function actionTeacher($item = null){
+        $logger = new Logger();
+    
+        $jsonPayload = file_get_contents("php://input");
+
+        $data = json_decode($jsonPayload, true);
+
+        if ($data === null) {
+            http_response_code(400);
+            exit;
+        } else {
+            if (!isset($data['ToState']) || !isset($data['Id'])) {
+                echo "Error: Required fields are missing in the JSON payload.";
+                http_response_code(400);
+                exit;
+            }
+            $ToState = sanitizeInput(filter_var($data['ToState'], FILTER_SANITIZE_STRING ));
+            $Id = sanitizeInput(filter_var($data['Id'], FILTER_SANITIZE_NUMBER_INT));
+
+            $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+            $activityModel = new ActivityModel($db, $logger);
+
+            if ($data['ToState'] === "Enable"){
+                $activityModel->updateResultRetake([
+                    'Value'=>'1',
+                    'Id'=>$Id
+                ]);
+            } else {
+                $activityModel->updateResultRetake([
+                    'Value'=>'0',
+                    'Id'=>$Id
+                ]);
+            }
+            echo json_encode(['success' => true]);
+            http_response_code(200);
+            exit();
+        }
+    }
+
 }
 
 ?>

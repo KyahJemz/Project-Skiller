@@ -11,6 +11,14 @@ class HomeController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
+    public function indexTeacher() {
+        $this->index();
+    }
+
+    public function indexAdministrator() {
+        $this->index();
+    }
+
 
 
     

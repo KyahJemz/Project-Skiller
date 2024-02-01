@@ -11,6 +11,11 @@ class LoginController {
     public function index() {
         $logger = new Logger();
 
+        if(isLoggedIn()){
+            header("Location: ".BASE_URL."?page=dashboard");
+            exit;
+        }
+
         $data['title'] = "Login";
         if($this->Error) {
             $data['error'] = $this->Error;
@@ -20,6 +25,14 @@ class LoginController {
         include(__DIR__ . '/../views/headers/Default.php');
         include(__DIR__ . '/../views/login.php');
         include(__DIR__ . '/../views/footers/Default.php');
+    }
+
+    public function indexTeacher() {
+        $this->index();
+    }
+
+    public function indexAdministrator() {
+        $this->index();
     }
 
     public function action($item = null) {
@@ -52,23 +65,28 @@ class LoginController {
                     $this->Error = "Login Failed, Account not registered!";
                     $this->index();
                 } else {
-                    createSession([
-                        'User_Id' => $accountData[0]['Id'],
-                        'User_Email' => $decodedBody['email'],
-                        'User_Image' => $decodedBody['picture'],
-                        'User_FirstName' => $decodedBody['given_name'],
-                        'User_MiddleName' => "",
-                        'User_LastName' => $decodedBody['family_name'],
-                        'User_Group' => $accountData[0]['Group'],
-                        'User_Role' => $accountData[0]['Role']
-                    ]);
-                    $accountData = $accountModel->updateAccount([
-                        'Id'=>$accountData[0]['Id'],
-                        'Image' => $decodedBody['picture'],
-                        'FirstName' => $decodedBody['given_name'],
-                        'LastName' => $decodedBody['family_name'],
-                    ]);
-                    header("Location: ".BASE_URL."?page=dashboard");
+                    if($accountData[0]['Disabled'] === 0){
+                        createSession([
+                            'User_Id' => $accountData[0]['Id'],
+                            'User_Email' => $decodedBody['email'],
+                            'User_Image' => $decodedBody['picture'],
+                            'User_FirstName' => $decodedBody['given_name'],
+                            'User_MiddleName' => "",
+                            'User_LastName' => $decodedBody['family_name'],
+                            'User_Group' => $accountData[0]['Group'],
+                            'User_Role' => $accountData[0]['Role']
+                        ]);
+                        $accountData = $accountModel->updateAccount([
+                            'Id'=>$accountData[0]['Id'],
+                            'Image' => $decodedBody['picture'],
+                            'FirstName' => $decodedBody['given_name'],
+                            'LastName' => $decodedBody['family_name'],
+                        ]);
+                        header("Location: ".BASE_URL."?page=dashboard");
+                    } else {
+                        $this->Error = "Login Failed, Account disabled!";
+                        $this->index();
+                    }
                 }
             } else {
                 $this->Error = "Email verification failed, try again!";

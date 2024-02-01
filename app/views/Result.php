@@ -1,16 +1,29 @@
 <body class="bg-body-secondary d-flex flex-column justify-content-between h-100">
     <div class="container flex-fill">
 
-        <div class="row">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=course';?>">Course</a></li>
-                    <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=chapter&item='.$data['Activity'][0]['ChapterId'];?>"><?php echo $data['Activity'][0]['ChapterTitle'];?></a></li>
-                    <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=lessons&item='.$data['Activity'][0]['LessonId'];?>"><?php echo $data['Activity'][0]['LessonTitle'];?></a></li>
-                    <li class="breadcrumb-item active"><?php echo $data['Activity'][0]['ActivityTitle'];?></li>
-                </ol>
-            </nav>
-        </div>
+        <?php if ($_SESSION['User_Role'] === "Teacher" || $_SESSION['User_Role'] === "Administrator") {?>
+            <div class="row">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=students';?>">My Students</a></li>
+                      <li class="breadcrumb-item"><a class="text-dark" href="#" onclick="window.history.go(-2)">Profile</a></li>
+                      <li class="breadcrumb-item"><a class="text-dark" href="#" onclick="window.history.back()">Assessments</a></li>
+                      <li class="breadcrumb-item active">Result</li>
+                    </ol>
+                  </nav>
+            </div>
+        <?php } else {?>
+            <div class="row">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=course';?>">Course</a></li>
+                        <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=chapter&item='.$data['Activity'][0]['ChapterId'];?>"><?php echo $data['Activity'][0]['ChapterTitle'];?></a></li>
+                        <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=lessons&item='.$data['Activity'][0]['LessonId'];?>"><?php echo $data['Activity'][0]['LessonTitle'];?></a></li>
+                        <li class="breadcrumb-item active"><?php echo $data['Activity'][0]['ActivityTitle'];?></li>
+                    </ol>
+                </nav>
+            </div>
+        <?php }?>
 
         <div class="row mb-4 p-4 bg-white rounded-3 d-flex flex-column align-items-center">
 
@@ -54,6 +67,14 @@
                 echo '<p>Scored <span class="' . $colorClass . '"><strong>' . $score .'</strong></span> out of <strong>'. $total .' items</strong>, with an average of <span class="' . $colorClass . '"><strong>'.$averageScore.'%</strong></span></p>';
 
                 echo '<p>Retakes: <strong>' . (sizeof($data['PastAttempts']) - 1) . '</strong></p>';
+
+                if ($_SESSION['User_Role'] === "Teacher" || $_SESSION['User_Role'] === "Administrator"){
+                    if($lastResult['IsRetake'] === 0){
+                        echo '<div><button id="ResultRetakeBtn" class="btn btn-danger" data-tostate="Enable" data-result="'.$lastResult['Id'].'">Enable Retake</button></div>';
+                    } else {
+                        echo '<div><button id="ResultRetakeBtn" class="btn btn-danger" data-tostate="Disable" data-result="'.$lastResult['Id'].'">Disable Retake</button></div>';
+                    }
+                }
             ?>
         </div>
 

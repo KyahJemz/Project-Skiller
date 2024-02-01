@@ -53,6 +53,25 @@ class ActivityController {
         include(__DIR__ . '/../views/activity.php');
         include(__DIR__ . '/../views/footers/Default.php');
     }
+
+    public function indexTeacher($item = null) {
+        $logger = new Logger();
+
+        if (empty($item)) {
+            header('Location: '.BASE_URL.'?page=NotFound');
+            exit;
+        }
+        
+        $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        $activityModel = new ActivityModel($db, $logger);
+
+        $data['Result'] = $activityModel->getActivityResult(['ResultId'=>$db->escape($item)]);
+        if($data['Activity'] === []){
+            header('Location: '.BASE_URL.'?page=NotFound');
+            exit;
+        }
+    }
+
 }
 
 ?>

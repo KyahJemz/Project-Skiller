@@ -47,3 +47,7 @@ pre {
     z-index: 10;
     background-color: white;
 }
+
+#StudentsHeader{
+    gap: 20px;
+}

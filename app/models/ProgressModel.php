@@ -142,5 +142,48 @@ class ProgressModel {
     
         return true;
     }
+
+    public function ClearProgress($params) {
+        $AccountId = $this->database->escape($params['Account_Id']);
+        
+        $stmt1 = $this->database->prepare("DELETE FROM tbl_progress WHERE Account_Id = ?");
+        $stmt1->bind_param('i', $AccountId);
+        $stmt1->execute();
+    
+        if ($stmt1->error) {
+            $this->logger->log('Error executing first query: ' . $stmt1->error, 'error');
+            $stmt1->close();
+            return false;
+        }
+    
+        $stmt1->close();
+    
+        $stmt2 = $this->database->prepare("DELETE FROM tbl_results WHERE Account_Id = ?");
+        $stmt2->bind_param('i', $AccountId);
+        $stmt2->execute();
+    
+        if ($stmt2->error) {
+            $this->logger->log('Error executing second query: ' . $stmt2->error, 'error');
+            $stmt2->close();
+            return false;
+        }
+    
+        $stmt2->close();
+    
+        $stmt3 = $this->database->prepare("DELETE FROM tbl_inprogress WHERE Account_Id = ?");
+        $stmt3->bind_param('i', $AccountId);
+        $stmt3->execute();
+    
+        if ($stmt3->error) {
+            $this->logger->log('Error executing third query: ' . $stmt3->error, 'error');
+            $stmt3->close();
+            return false;
+        }
+    
+        $stmt3->close();
+    
+        return true;
+    }
+    
 }
 ?>

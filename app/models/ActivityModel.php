@@ -49,19 +49,23 @@ class ActivityModel {
     public function getActivitiesResults($params) {
         $AccountId = $this->database->escape($params['Account_Id']);
         $query = "SELECT 
-            tbl_results.Id as ResultId,
-            tbl_results.Score as Score,
-            tbl_results.Total as Total,
-            tbl_results.Timestamp as Timestamp,
-            tbl_activity.Id as ActivityId,
-            tbl_activity.Title as ActivityTitle,
-            tbl_lessons.Id as LessonId,
-            tbl_lessons.Title as LessonTitle,
-            tbl_lessons.Chapter_Id as ChapterId
-        FROM tbl_results
-        LEFT JOIN tbl_lessons ON tbl_results.Lesson_Id = tbl_lessons.Id
-        LEFT JOIN tbl_activity ON tbl_results.Activity_Id = tbl_activity.Id
-        WHERE tbl_results.Account_Id = $AccountId";
+            results.Id as ResultId,
+            results.Score as Score,
+            results.Total as Total,
+            results.Timestamp as Timestamp,
+            activity.Id as ActivityId,
+            activity.Title as ActivityTitle,
+            lessons.Id as LessonId,
+            lessons.Title as LessonTitle,
+            lessons.Chapter_Id as ChapterId
+        FROM tbl_results AS results
+        LEFT JOIN tbl_lessons AS lessons ON results.Lesson_Id = lessons.Id
+        LEFT JOIN tbl_activity AS activity ON results.Activity_Id = activity.Id
+        WHERE results.Id IN (
+            SELECT MAX(tbl_results.Id) as ResultId
+            FROM tbl_results
+            WHERE tbl_results.Account_Id = $AccountId
+            GROUP BY tbl_results.Activity_Id, tbl_results.Lesson_Id, tbl_results.Account_Id)";
     
         $stmt = $this->database->prepare($query);
     
@@ -126,6 +130,32 @@ class ActivityModel {
         $stmt->close();
     
         return $data;
+    }
+
+    public function updateResultRetake($params){
+        $Value = $this->database->escape($params['Value']);
+        $Id = $this->database->escape($params['Id']);
+
+        $query = "UPDATE tbl_results SET IsRetake = ? WHERE Id = ?";
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return false;
+        }
+    
+        $stmt->bind_param('ii', $Value, $Id);
+        $stmt->execute();
+    
+        if ($stmt->error) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return false;
+        }
+    
+        $stmt->close();
+    
+        return true;
     }
 
     public function getActivityQuestions($params) {

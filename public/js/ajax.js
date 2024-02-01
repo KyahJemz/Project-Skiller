@@ -1,4 +1,3 @@
-
 export default class AjaxRequest {
     static sendRequest(data, url) {
         return new Promise((resolve, reject) => {
@@ -16,9 +15,11 @@ export default class AjaxRequest {
                 return response.json();
             })
             .then(data => {
-                console.log('--Server Response--',data); // For Logs
+                console.log('--Server Response Success--', data); // For Logs
+                resolve(data);
             })
             .catch(error => {
+                console.log('--Server Response Error--', error); // For Logs
                 reject(error);
             });
         });

@@ -40,6 +40,35 @@ class AccountModel {
         return $data;
     }
 
+    public function getGroups(){
+        $query = "SELECT DISTINCT 
+            tbl_accounts.Group
+          FROM tbl_accounts 
+          WHERE tbl_accounts.Role = 'Teacher'";
+    
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return [];
+        }
+    
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        if (!$result) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return [];
+        }
+    
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+    
+        $stmt->close();
+    
+        return $data;
+    }
+
     public function getAccountByGroup($params){
         $Group = $this->database->escape($params['Group']);
         $query = "SELECT 
@@ -129,50 +158,65 @@ class AccountModel {
 
         $setColumns = [];
         $setValues = [];
+        $bindingString = "";
 
-        if ($params['FirstName']) {
+        if (isset($params['FirstName'])) {
             $setColumns[] = "FirstName = ?";
             $setValues[] = $params['FirstName'];
+            $bindingString .= "s";
         }
 
-        if ($params['MiddleName']) {
+        if (isset($params['MiddleName'])) {
             $setColumns[] = "MiddleName = ?";
             $setValues[] = $params['MiddleName'];
+            $bindingString .= "s";
         }
 
-        if ($params['LastName']) {
+        if (isset($params['LastName'])) {
             $setColumns[] = "LastName = ?";
             $setValues[] = $params['LastName'];
+            $bindingString .= "s";
         }
 
-        if ($params['Email']) {
+        if (isset($params['Email'])) {
             $setColumns[] = "Email = ?";
             $setValues[] = $params['Email'];
+            $bindingString .= "s";
         }
 
-        if ($params['Role']) {
+        if (isset($params['Role'])) {
             $setColumns[] = "Role = ?";
             $setValues[] = $params['Role'];
+            $bindingString .= "s";
         }
 
-        if ($params['Group']) {
-            $setColumns[] = "`Group` = ?"; 
-            $setValues[] = $params['Group'];
+        if (isset($params['Group'])) {
+            $setColumns[] = "Group = ?"; 
+            $setValues[] = (int)$params['Group'];
+            $bindingString .= "i";
         }
-    
 
-        if ($params['Image']) {
+        if (isset($params['Disabled'])) {
+            $setColumns[] = "Disabled = ?"; 
+            $setValues[] = (int)$params['Disabled'];
+            $bindingString .= "i";
+        }
+
+        if (isset($params['Image'])) {
             $setColumns[] = "Image = ?";
             $setValues[] = $params['Image'];
+            $bindingString .= "s";
         }
 
         if (!empty($setColumns)) {
             $query .= ' ' . implode(', ', $setColumns);
             $query .= " WHERE Id = ?";
 
-            $bindingString = str_repeat('s', count($setValues) + 1);
+            $setValues[] = (int)$params['Id'];
+            $bindingString .= "i";
 
-            $setValues[] = $params['Id'];
+            $this->logger->log('query: '.$query, 'info');
+            $this->logger->log('bindingString: '.$bindingString, 'info');
 
             $stmt = $this->database->prepare($query);
 
@@ -199,6 +243,34 @@ class AccountModel {
         } else {
             return [];
         }
+    }
+
+    public function addAccount($params){
+        $Email = $this->database->escape($params['Email']);
+        $Role = $this->database->escape($params['Role']);
+        $Group = $this->database->escape($params['Group']);
+    
+        $query = "INSERT IGNORE INTO tbl_accounts (Email, Role, `Group`) 
+                  VALUES ('$Email', '$Role', $Group)";
+    
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return false;
+        }
+    
+        $stmt->execute();
+    
+        if ($stmt->error) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return false;
+        }
+    
+        $stmt->close();
+    
+        return true;
     }
 
 }

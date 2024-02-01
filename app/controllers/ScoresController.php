@@ -20,6 +20,22 @@ class ScoresController {
         include(__DIR__ . '/../views/scores.php');
         include(__DIR__ . '/../views/footers/Default.php');
     }
+
+    public function indexTeacher($item = null) {
+        $logger = new Logger();
+        
+        $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        $activityModel = new ActivityModel($db, $logger);
+
+        $data['Activities'] = $activityModel->getActivitiesResults(['Account_Id'=>$item]);
+
+        $data['title'] = "Skiller - Scores";
+ 
+        include(__DIR__ . '/../views/headers/Default.php');
+        include(__DIR__ . '/../views/headers/SignedIn.php');
+        include(__DIR__ . '/../views/scores.php');
+        include(__DIR__ . '/../views/footers/Default.php');
+    }
 }
 
 ?>
