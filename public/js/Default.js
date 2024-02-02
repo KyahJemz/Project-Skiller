@@ -153,3 +153,34 @@ if(ProfileDisableAccountButton) {
             });
     })
 }
+
+// ASSESSMENT VIEW RESULT 
+let AssessmentViewSummaryBtn = document.getElementById('AssessmentViewSummaryBtn');
+if(AssessmentViewSummaryBtn) {
+    AssessmentViewSummaryBtn.addEventListener('click', async ()=>{
+        console.log("Clicked");
+        AssessmentViewSummaryBtn.disabled = true;
+        AssessmentViewSummaryBtn.innerHTML = "...";
+        let Id = AssessmentViewSummaryBtn.dataset.activity;
+        let ToState = AssessmentViewSummaryBtn.dataset.tostate;
+        let data = {
+            'ToState': ToState,
+            'Id': Id
+        };
+
+        AjaxRequest.sendRequest(data, BASE_URL + "?page=activity&action=true")
+            .then(response => {
+               window.location.reload();
+            })
+            .catch(error => {
+                if(ToState === 1) {
+                    AssessmentViewSummaryBtn.innerHTML = "Enable View Result";
+                } else {
+                    AssessmentViewSummaryBtn.innerHTML = "Disable View Result";
+                }
+            })
+            .finally(() => {
+                AssessmentViewSummaryBtn.disabled = false;
+            });
+    })
+}

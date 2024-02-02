@@ -158,6 +158,32 @@ class ActivityModel {
         return true;
     }
 
+    public function updateActivityViewResults($params){
+        $ToState = $this->database->escape($params['ToState']);
+        $Id = $this->database->escape($params['Id']);
+
+        $query = "UPDATE tbl_activity SET IsViewSummary = ? WHERE Id = ?";
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return false;
+        }
+    
+        $stmt->bind_param('ii', $ToState, $Id);
+        $stmt->execute();
+    
+        if ($stmt->error) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return false;
+        }
+    
+        $stmt->close();
+    
+        return true;
+    }
+
     public function getActivityQuestions($params) {
         $ActivityId = $this->database->escape($params['ActivityId']);
         $query = "SELECT 

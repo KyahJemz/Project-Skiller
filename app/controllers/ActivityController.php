@@ -66,9 +66,43 @@ class ActivityController {
         $activityModel = new ActivityModel($db, $logger);
 
         $data['Result'] = $activityModel->getActivityResult(['ResultId'=>$db->escape($item)]);
-        if($data['Activity'] === []){
+        if($data['Result'] === []){
             header('Location: '.BASE_URL.'?page=NotFound');
             exit;
+        }
+    }
+
+    public function actionTeacher($item = null){
+        $logger = new Logger();
+    
+        $jsonPayload = file_get_contents("php://input");
+
+        $data = json_decode($jsonPayload, true);
+
+        if ($data === null) {
+            http_response_code(400);
+            exit;
+        } else {
+            if (!isset($data['ToState']) || !isset($data['Id'])) {
+                echo "Error: Required fields are missing in the JSON payload.";
+                http_response_code(400);
+                exit;
+            }
+            $ToState = sanitizeInput(filter_var($data['ToState'], FILTER_SANITIZE_NUMBER_INT ));
+            $Id = sanitizeInput(filter_var($data['Id'], FILTER_SANITIZE_NUMBER_INT));
+
+            $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+            
+            $activityModel = new ActivityModel($db, $logger);
+            $activityModel->updateActivityViewResults([
+                'Id' => $db->escape($Id),
+                'ToState' => $db->escape($ToState)
+            ]);
+
+            echo json_encode(['success' => true]);
+            http_response_code(200);
+            exit();
+            
         }
     }
 

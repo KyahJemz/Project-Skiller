@@ -58,6 +58,57 @@ class AssessmentController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
+    public function indexTeacher($item = null){
+        $logger = new Logger();
+
+        if (empty($item)) {
+            header('Location: '.BASE_URL.'?page=NotFound');
+            exit;
+        }
+        
+        $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        $activityModel = new ActivityModel($db, $logger);
+
+        $data['Activity'] = $activityModel->getActivity(['ActivityId'=>$db->escape($item)]);
+        if($data['Activity'] === []){
+            header('Location: '.BASE_URL.'?page=NotFound');
+            exit;
+        }
+
+        $rawQuestions = $activityModel->getActivityQuestions(['ActivityId'=>$db->escape($item)]);
+
+        $data['Questions'] = [];
+        $data['Answers'] = [];
+
+        foreach ($rawQuestions as $value) {
+            $data['Questions'][] = [
+                'QuestionId' => $value['Id'],
+                'Question' => $value['Question'],
+                'QuestionOptions' => [
+                    $value['Option1'],
+                    $value['Option2'],
+                    $value['Option3'],
+                    $value['Option4'],
+                ],
+                'QuestionPoints' => $value['Points'],
+                'QuestionImage' => $value['Image'],
+                'QuestionAnswer' => $value['Answer']
+            ];
+            $data['Answers'][] = $value['Answer'];
+        }
+
+        $data['title'] = "Skiller - ".$data['Activity'][0]['ActivityTitle'];
+
+        echo '<script>';
+        echo 'const BASE_URL=`'.BASE_URL.'`;';
+        echo '</script>';
+ 
+        include(__DIR__ . '/../views/headers/Default.php');
+        include(__DIR__ . '/../views/headers/SignedIn.php');
+        include(__DIR__ . '/../views/assessment.php');
+        include(__DIR__ . '/../views/footers/Default.php');
+    }
+
     public function action($item = null) {
         $logger = new Logger();
         if ($_SERVER["REQUEST_METHOD"] === "POST") {

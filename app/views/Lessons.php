@@ -14,7 +14,9 @@
 
             <h3><?php echo $data['Lessons'][0]['LessonTitle'];?></h3>
             <p>Chapter <?php echo $data['Lessons'][0]['ChapterId'];?>: <?php echo $data['Lessons'][0]['ChapterTitle'];?></p>
-            <p>Progress: <?php echo number_format(((isset($data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']]) ? $data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']] : 0) / max($data['Progress']['LessonProgressTotal'][$data['Lessons'][0]['LessonId']], 1)) * 100, 2).'%'  ?></p>
+            <?php if ($_SESSION['User_Role'] === "Student") { ?>
+                <p>Progress: <?php echo number_format(((isset($data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']]) ? $data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']] : 0) / max($data['Progress']['LessonProgressTotal'][$data['Lessons'][0]['LessonId']], 1)) * 100, 2).'%'  ?></p>
+            <?php } ?>
 
             <!-- OBJECTIVES -->
             <?php 
@@ -46,13 +48,24 @@
 
             <!-- ACTIVITIES -->
             <?php 
-                if(!empty($data['Activities'][0])) {
-                    echo '<h5 class="mt-4">Activities</h5>';
-                    echo '<ul class="list-group">';
-                    foreach ($data['Activities'] as $row){
-                        echo '<li class="list-group-item py-3"><a href="'.BASE_URL.'?page=activity&item='.$row['ActivityId'].'">'.$row['ActivityTitle']. '</a></li>';
+                if($_SESSION['User_Role'] === "Student") {
+                    if(!empty($data['Activities'][0])) {
+                        echo '<h5 class="mt-4">Activities</h5>';
+                        echo '<ul class="list-group">';
+                        foreach ($data['Activities'] as $row){
+                            echo '<li class="list-group-item py-3"><a href="'.BASE_URL.'?page=activity&item='.$row['ActivityId'].'">'.$row['ActivityTitle']. '</a></li>';
+                        }
+                        echo '</ul>';
                     }
-                    echo '</ul>';
+                } else {
+                    if(!empty($data['Activities'][0])) {
+                        echo '<h5 class="mt-4">Activities</h5>';
+                        echo '<ul class="list-group">';
+                        foreach ($data['Activities'] as $row){
+                            echo '<li class="list-group-item py-3"><a href="'.BASE_URL.'?page=assessment&item='.$row['ActivityId'].'">'.$row['ActivityTitle']. '</a></li>';
+                        }
+                        echo '</ul>';
+                    }
                 }
             ?>
 

@@ -48,7 +48,7 @@
                             <a class="btn btn-primary px-3" href="<?php echo BASE_URL.'?page=scores&item='.$data['id'] ?>">View Assessments</a>
                         </div>
                         <div class="">
-                            <button id="ProfileResetAccountButton" class="btn btn-danger px-3" data-account="<?php echo $data['id']?>">Reset Account Progress</button>
+                            <button data-bs-toggle="modal" data-bs-target="#modalConfirmation" class="btn btn-danger px-3">Reset Account Progress</button>
                             <button id="ProfileDisableAccountButton" class="btn btn-danger px-3" data-account="<?php echo $data['id']?>" data-currentstate="<?php echo $data['disabled'] ?>"><?php echo $data['disabled']===0?'Disable':'Enable' ?> Account</button>
                         </div>
                     </div>
@@ -81,5 +81,23 @@
             <?php 
                 }
             ?>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalConfirmation" tabindex="-1" aria-labelledby="modalConfirmationLabel" aria-hidden="true">
+        <div class="modal-dialog" action="#" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalConfirmationLabel">Action Confirmation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to clear the students progress?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                    <button type="button" class="btn btn-primary" id="ProfileResetAccountButton" data-account="<?php echo $data['id']?>">Yes</button>
+                </div>
+            </div> 
         </div>
     </div>
