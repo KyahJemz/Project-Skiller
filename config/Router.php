@@ -81,7 +81,7 @@ class Router {
     }
 
     private function validatePage($page) {
-        $allowedPages = ['home', 'login', 'logout', 'dashboard', 'activity', 'assessment', 'chapter', 'course', 'lessons', 'profile', 'result', 'scores', 'students'];
+        $allowedPages = ['home', 'login', 'logout', 'dashboard', 'activity', 'assessment', 'chapter', 'course', 'lessons', 'profile', 'result', 'scores', 'students', 'accounts'];
         $this->logger->log($page, 'info');
         if (!in_array($page, $allowedPages)) {
             $this->redirect(self::ERROR_FORBIDDEN);

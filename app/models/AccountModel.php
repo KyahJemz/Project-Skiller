@@ -102,17 +102,17 @@ class AccountModel {
     public function getAccount($params) {
         $query = "SELECT * FROM tbl_accounts WHERE 1";
 
-        if ($params['Email']) {
+        if (isset($params['Email'])) {
             $query .= " AND Email = ?";
-        } elseif ($params['FirstName']) {
+        } elseif (isset($params['FirstName'])) {
             $query .= " AND FirstName = ?";
-        } elseif ($params['LastName']) {
+        } elseif (isset($params['LastName'])) {
             $query .= " AND LastName = ?";
-        } elseif ($params['MiddleName']) {
+        } elseif (isset($params['MiddleName'])) {
             $query .= " AND MiddleName = ?";
-        } elseif ($params['Role']) {
+        } elseif (isset($params['Role'])) {
             $query .= " AND Role = ?";
-        } elseif ($params['Group']) {
+        } elseif (isset($params['Group'])) {
             $query .= " AND Group = ?";
         }
 
@@ -123,17 +123,17 @@ class AccountModel {
             return [];
         }
 
-        if ($params['Email']) {
+        if (isset($params['Email'])) {
             $stmt->bind_param("s", $params['Email']);
-        } elseif ($params['FirstName']) {
+        } elseif (isset($params['FirstName'])) {
             $stmt->bind_param("s", $params['FirstName']);
-        } elseif ($params['LastName']) {
+        } elseif (isset($params['LastName'])) {
             $stmt->bind_param("s", $params['LastName']);
-        } elseif ($params['MiddleName']) {
+        } elseif (isset($params['MiddleName'])) {
             $stmt->bind_param("s", $params['MiddleName']);
-        } elseif ($params['Role']) {
+        } elseif (isset($params['Role'])) {
             $stmt->bind_param("s", $params['Role']);
-        } elseif ($params['Group']) {
+        } elseif (isset($params['Group'])) {
             $stmt->bind_param("s", $params['Group']);
         }
 
