@@ -1,6 +1,6 @@
 <body class="bg-body-secondary d-flex flex-column justify-content-between h-100">
     <div class="container flex-fill">
-        <?php if ($_SESSION['User_Role'] === "Teacher") {?>
+        <?php if ($_SESSION['User_Role'] === "Teacher" || $_SESSION['User_Role'] === "Administrator") {?>
             <div class="row">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
@@ -40,7 +40,7 @@
                 if ($data['role'] === "Student") {
             ?>
                 <?php 
-                    if ($_SESSION['User_Role'] === "Teacher") {
+                    if ($_SESSION['User_Role'] === "Teacher" || $_SESSION['User_Role'] === "Administrator") {
                 ?>
                     <h4 class="row mt-5 border-top pt-3">Actions</h4>
                     <div class="d-flex justify-content-between">
@@ -79,6 +79,20 @@
                         ?>
                     </div>
             <?php 
+                } else {
+                    if ($_SESSION['User_Role'] === "Teacher" || $_SESSION['User_Role'] === "Administrator") {
+            ?>
+                        <h4 class="row mt-5 border-top pt-3">Actions</h4>
+                        <div class="d-flex justify-content-between">
+                            <div class="mr-auto">
+
+                            </div>
+                            <div class="">
+                                <button id="ProfileDisableAccountButton" class="btn btn-danger px-3" data-account="<?php echo $data['id']?>" data-currentstate="<?php echo $data['disabled'] ?>"><?php echo $data['disabled']===0?'Disable':'Enable' ?> Account</button>
+                            </div>
+                        </div>
+            <?php 
+                    }
                 }
             ?>
         </div>

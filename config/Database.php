@@ -39,5 +39,17 @@ class Database {
     public function close() {
         $this->connection->close();
     }
+
+    public function begin_transaction() {
+        return $this->connection->begin_transaction();
+    }
+
+    public function commit() {
+        return $this->connection->commit();
+    }
+
+    public function rollback() {
+        return $this->connection->rollback();
+    }
 }
 ?>

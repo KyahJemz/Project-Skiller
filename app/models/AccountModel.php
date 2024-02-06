@@ -249,10 +249,16 @@ class AccountModel {
         $Email = $this->database->escape($params['Email']);
         $Role = $this->database->escape($params['Role']);
         $Group = $this->database->escape($params['Group']);
-    
-        $query = "INSERT IGNORE INTO tbl_accounts (Email, Role, `Group`) 
-                  VALUES ('$Email', '$Role', $Group)";
-    
+
+        $query ="";
+        if(empty($Group)){
+            $query = "INSERT INTO tbl_accounts (Email, Role) 
+            VALUES ('$Email', '$Role')";
+        } else {
+            $query = "INSERT INTO tbl_accounts (Email, Role, `Group`) 
+            VALUES ('$Email', '$Role', $Group)";
+        }
+
         $stmt = $this->database->prepare($query);
     
         if (!$stmt) {

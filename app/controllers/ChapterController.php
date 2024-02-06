@@ -27,11 +27,37 @@ class ChapterController {
 
         $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$_SESSION['User_Id']]);
 
+        $data['ChapterRaw'] = $lessonModel->getChapter(['ChapterId'=>$db->escape($item)]);
+
         $data['title'] = "Skiller - Course";
  
         include(__DIR__ . '/../views/headers/Default.php');
         include(__DIR__ . '/../views/headers/SignedIn.php');
         include(__DIR__ . '/../views/chapter.php');
+        include(__DIR__ . '/../views/footers/Default.php');
+    }
+
+    public function indexAdministrator($item = null) {
+        $logger = new Logger();
+
+        if (empty($item)) {
+            header('Location: '.BASE_URL.'?page=NotFound');
+            exit;
+        }
+        
+        $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        $lessonModel = new LessonModel($db, $logger);
+        $progressModel = new ProgressModel($db, $logger);
+
+        $data['Chapter'] = $lessonModel->getChapterFull(['ChapterId'=>$db->escape($item)]);
+
+        $data['ChapterRaw'] = $lessonModel->getChapter(['ChapterId'=>$db->escape($item)]);
+
+        $data['title'] = "Skiller - Lessons Management";
+ 
+        include(__DIR__ . '/../views/headers/Default.php');
+        include(__DIR__ . '/../views/headers/SignedIn.php');
+        include(__DIR__ . '/../views/lessonsManagement.php');
         include(__DIR__ . '/../views/footers/Default.php');
     }
 

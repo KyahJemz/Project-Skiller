@@ -65,47 +65,57 @@ class AccountsController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    // public function actionTeacher($item = null){
-    //     $logger = new Logger();
+    public function actionAdministrator($item = null){
+        $logger = new Logger();
     
-    //     $jsonPayload = file_get_contents("php://input");
+        $jsonPayload = file_get_contents("php://input");
 
-    //     $data = json_decode($jsonPayload, true);
+        $data = json_decode($jsonPayload, true);
 
-    //     if ($data === null) {
-    //         http_response_code(400);
-    //         exit;
-    //     } else {
-    //         if (!isset($data['Email']) || !isset($data['Group'])) {
-    //             echo "Error: Required fields are missing in the JSON payload.";
-    //             http_response_code(400);
-    //             exit;
-    //         }
-    //         $email = sanitizeInput(filter_var($data['Email'], FILTER_SANITIZE_EMAIL));
-    //         $group = sanitizeInput(filter_var($data['Group'], FILTER_SANITIZE_NUMBER_INT));
+        if ($data === null) {
+            http_response_code(400);
+            exit;
+        } else {
+            if (!isset($data['Email']) || !isset($data['Group']) || !isset($data['Type'])) {
+                echo "Error: Required fields are missing in the JSON payload.";
+                http_response_code(400);
+                exit;
+            }
+            $email = sanitizeInput(filter_var($data['Email'], FILTER_SANITIZE_EMAIL));
+            $type = sanitizeInput(filter_var($data['Type'], FILTER_SANITIZE_STRING));
+            $group = sanitizeInput(filter_var($data['Group'], FILTER_SANITIZE_NUMBER_INT));
 
-    //         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-    //         $accountModel = new AccountModel($db, $logger);
 
-    //         $isExist = $accountModel->getAccount([
-    //             'Email'=>$email
-    //         ]);
+            $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+            $accountModel = new AccountModel($db, $logger);
 
-    //         if (empty($isExist)) {
-    //             $accountModel->addAccount([
-    //                 'Email'=>$email,
-    //                 'Role'=>'Student',
-    //                 'Group'=>$group
-    //             ]);
-    //             echo json_encode(['success' => true]);
-    //             http_response_code(200);
-    //             exit();
-    //         } else {
-    //             echo json_encode(['success' => false]);
-    //             http_response_code(400);
-    //             exit();
-    //         }
-    //     }
-    // }
+            $isExist = $accountModel->getAccount([
+                'Email'=>$email
+            ]);
+
+            if (empty($isExist)) {
+                if($type ==="Teacher"){
+                    $accountModel->addAccount([
+                        'Email'=>$email,
+                        'Role'=>'Teacher',
+                        'Group'=>$group
+                    ]);
+                } elseif($type ==="Administrator"){
+                    $accountModel->addAccount([
+                        'Email'=>$email,
+                        'Role'=>'Administrator',
+                        'Group'=>null
+                    ]); 
+                }
+                echo json_encode(['success' => true]);
+                http_response_code(200);
+                exit();
+            } else {
+                echo json_encode(['success' => false]);
+                http_response_code(400);
+                exit();
+            }
+        }
+    }
 }
 ?>

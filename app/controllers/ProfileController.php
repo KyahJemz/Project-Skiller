@@ -56,6 +56,14 @@ class ProfileController {
         $this->index($item);
     }
 
+    public function indexAdministrator($item = null){
+        $this->index($item);
+    }
+
+    public function actionAdministrator($item = null){
+        $this->actionTeacher($item);
+    }
+
     public function actionTeacher($item = null) {
         $logger = new Logger();
     

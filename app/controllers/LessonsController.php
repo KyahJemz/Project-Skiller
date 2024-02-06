@@ -73,6 +73,10 @@ class LessonsController {
         include(__DIR__ . '/../views/lessons.php');
         include(__DIR__ . '/../views/footers/Default.php');
     }
+
+    public function indexAdministrator($item = null){
+        $this->indexTeacher($item);
+    }
 }
 
 ?>
