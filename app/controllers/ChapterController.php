@@ -54,6 +54,10 @@ class ChapterController {
         $data['ChapterRaw'] = $lessonModel->getChapter(['ChapterId'=>$db->escape($item)]);
 
         $data['title'] = "Skiller - Lessons Management";
+
+        echo '<script>';
+        echo 'const BASE_URL=`'.BASE_URL.'`;';
+        echo '</script>';
  
         include(__DIR__ . '/../views/headers/Default.php');
         include(__DIR__ . '/../views/headers/SignedIn.php');

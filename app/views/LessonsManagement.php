@@ -31,7 +31,7 @@
                     echo '    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a'.$row['LessonId'].'" aria-expanded="false" aria-controls="a'.$row['LessonId'].'">';
                     echo $row['LessonTitle'];
                     echo '    </button>';
-                    echo '    <button class="edit-chapter-btn btn btn-secondary" data-lessonid="'.$row['LessonId'].'" type="button" data-bs-toggle="modal" data-bs-target="#EditLesson">';
+                    echo '    <button class="edit-lesson-btn btn btn-secondary" data-lessonid="'.$row['LessonId'].'" type="button" data-bs-toggle="modal" data-bs-target="#EditLesson">';
                     echo '      Edit';
                     echo '    </button>';
                     echo '    </h2>';
@@ -41,7 +41,7 @@
                     if(!empty($row['LessonDescription']))
                     echo '          <strong class="pb-2">'.$row['LessonTitle'].'</strong>';
                     echo '          </br>';
-                    echo            $row['LessonDescription'];
+                    echo            nl2br($row['LessonDescription']);
                     echo '          </br>';
                     echo '          <a class="btn btn-primary class="mt-2" href="'.BASE_URL.'?page=lessons&item='.$row['LessonId'].'">View</a>';
                     echo '          </br></br>';
@@ -57,32 +57,51 @@
         <div class="modal-dialog" action="#" method="post">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Chapter Form</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Lesson Form</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <p id="chapter-edit-success" class="text-success"></p>
-                        <p id="student-edit-failed" class="text-danger"></p>
+                        <p id="lesson-edit-success" class="text-success"></p>
+                        <p id="lesson-edit-failed" class="text-danger"></p>
                     </div>
                     <div class="mb-3">
-                        <label for="chapter-edit-title" class="col-form-label"><strong>Chapter Title:</strong></label>
-                        <input type="text" name="chapter-edit-title" class="form-control" id="chapter-edit-title" placeholder="Title" required>
-                        <p id="chapter-edit-title-note" class="text-danger"></p>
+                        <label for="lesson-edit-title" class="col-form-label"><strong>Lesson Title:</strong></label>
+                        <input type="text" name="lesson-edit-title" class="form-control" id="lesson-edit-title" placeholder="Title" required>
+                        <p id="lesson-edit-title-note" class="text-danger"></p>
                     </div>
                     <div class="mb-3">
-                        <label for="chapter-edit-codes" class="col-form-label"><strong>Chapter Codes:</strong></label>
-                        <input type="text" name="chapter-edit-codes" class="form-control" id="chapter-edit-codes" placeholder="Optional">
-                        <p id="chapter-edit-codes-note" class="text-danger"></p>
+                        <label for="lesson-edit-description" class="col-form-label"><strong>Lesson Description:</strong></label>
+                        <textarea type="text" name="lesson-edit-description" class="form-control" id="lesson-edit-description" placeholder="Description" required></textarea>
+                        <p id="lesson-edit-description-note" class="text-danger"></p>
                     </div>
                     <div class="mb-3">
-                        <input type="text" name="chapter-edit-id" class="form-control" id="chapter-edit-id" require hidden>
+                        <label for="lesson-edit-objectives" class="col-form-label"><strong>Lesson Objectives:</strong></label>
+                        <textarea type="text" name="lesson-edit-objectives" class="form-control" id="lesson-edit-objectives" placeholder="Objectives" required></textarea>
+                        <p id="lesson-edit-objectives-note" class="text-danger"></p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lesson-edit-video" class="col-form-label"><strong>Lesson Video:</strong></label>
+                        <textarea type="text" name="lesson-edit-video" class="form-control" id="lesson-edit-video" placeholder="Video Link (optional)"></textarea>
+                        <p id="lesson-edit-video-note" class="text-danger"></p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lesson-edit-image" class="col-form-label"><strong>Lesson Image:</strong></label>
+                        <input type="file" name="lesson-edit-image" class="form-control" id="lesson-edit-image" placeholder="Image (optional)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="lesson-edit-content" class="col-form-label"><strong>Lesson Content:</strong></label>
+                        <textarea type="text" name="lesson-edit-content" class="form-control" id="lesson-edit-content" placeholder="Content (optional)"></textarea>
+                        <p id="lesson-edit-content-note" class="text-danger"></p>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="lesson-edit-id" class="form-control" id="lesson-edit-id" require hidden>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button id="ChapterDeleteBtnConfirmation" data-bs-toggle="modal" data-bs-target="#modalConfirmation" type="button" class="btn btn-danger">Delete</button>
-                    <button id="ChapterSubmitEditBtn" type="submit" class="btn btn-primary">Save Changes</button>
+                    <button id="LessonDeleteBtnConfirmation" data-bs-toggle="modal" data-bs-target="#modalConfirmation" type="button" class="btn btn-danger">Delete</button>
+                    <button id="LessonSubmitEditBtn" type="submit" class="btn btn-primary">Save Changes</button>
                 </div>
             </div> 
         </div>
@@ -92,28 +111,48 @@
         <div class="modal-dialog" action="#" method="post">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Chapter Form</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Add Lesson Form</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <p id="chapter-add-success" class="text-success"></p>
-                        <p id="chapter-add-failed" class="text-danger"></p>
+                        <p id="lesson-add-success" class="text-success"></p>
+                        <p id="lesson-add-failed" class="text-danger"></p>
                     </div>
                     <div class="mb-3">
-                        <label for="chapter-title" class="col-form-label"><strong>Chapter Title:</strong></label>
-                        <input type="text" name="chapter-title" class="form-control" id="chapter-title" placeholder="Title" required>
-                        <p id="chapter-title-note" class="text-danger"></p>
+                        <label for="lesson-title" class="col-form-label"><strong>Title:</strong></label>
+                        <input type="text" name="lesson-title" class="form-control" id="lesson-title" placeholder="Title" required>
+                        <p id="lesson-title-note" class="text-danger"></p>
                     </div>
                     <div class="mb-3">
-                        <label for="chapter-codes" class="col-form-label"><strong>Chapter Codes:</strong></label>
-                        <input type="text" name="chapter-codes" class="form-control" id="chapter-codes" placeholder="Optional">
-                        <p id="chapter-codes-note" class="text-danger"></p>
+                        <label for="lesson-description" class="col-form-label"><strong>Description:</strong></label>
+                        <textarea type="text" name="lesson-description" class="form-control" id="lesson-description" placeholder="Description" required></textarea>
+                        <p id="lesson-description-note" class="text-danger"></p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lesson-objectives" class="col-form-label"><strong>Objectives:</strong></label>
+                        <textarea type="text" name="lesson-objectives" class="form-control" id="lesson-objectives" placeholder="Objectives" required></textarea>
+                        <p id="lesson-objectives-note" class="text-danger"></p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lesson-video" class="col-form-label"><strong>Video:</strong></label>
+                        <textarea type="text" name="lesson-video" class="form-control" id="lesson-video" placeholder="Video Link (optional)"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lesson-image" class="col-form-label"><strong>Image:</strong></label>
+                        <input type="file" name="lesson-image" class="form-control" id="lesson-image" placeholder="Image (optional)">
+                    </div>
+                    <div class="mb-3">
+                        <label for="lesson-content" class="col-form-label"><strong>Content:</strong></label>
+                        <textarea type="text" name="lesson-content" class="form-control" id="lesson-content" placeholder="Content (optional)"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="lesson-chapterid" class="form-control" id="lesson-chapterid" value="<?php echo $data['ChapterRaw'][0]['Id']?>" require hidden>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button id="ChapterSubmitAddBtn" type="submit" class="btn btn-primary">Add Chapter</button>
+                    <button id="LessonSubmitAddBtn" type="submit" class="btn btn-primary">Add Lesson</button>
                 </div>
             </div> 
         </div>
@@ -127,11 +166,11 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p id="chapter-delete-confirmation">Are you sure you want to delete this chapter?</p>
+                    <p id="lesson-delete-confirmation">Are you sure you want to delete this lesson?</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                    <button type="button" class="btn btn-primary" id="ChapterDeleteBtn">Yes</button>
+                    <button type="button" class="btn btn-primary" id="LessonDeleteBtn">Yes</button>
                 </div>
             </div> 
         </div>

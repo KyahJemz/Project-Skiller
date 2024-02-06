@@ -20,14 +20,14 @@
             <?php 
                 if(!empty($data['Activity'][0]['ActivityDescription'])) {
                     echo '<h5 class="mt-4">Description</h5>';
-                    echo '<p>'.$data['Activity'][0]['ActivityDescription'].'</p>';
+                    echo '<p>'.nl2br($data['Activity'][0]['ActivityDescription']).'</p>';
                 }
             ?>
 
             <!-- NOTES -->
             <?php 
                 if(!empty($data['Activity'][0]['ActivityNotes'])) {
-                    echo '<p>Note: <span class="text-danger">'.$data['Activity'][0]['ActivityNotes'].'</span></p>';
+                    echo '<p>Note: <span class="text-danger">'.nl2br($data['Activity'][0]['ActivityNotes']).'</span></p>';
                 }
             ?>
 

@@ -22,7 +22,7 @@
             <?php 
                 if(!empty($data['Lessons'][0]['LessonObjective'])) {
                     echo '<h5 class="mt-4">Objectives</h5>';
-                    echo '<p>'.$data['Lessons'][0]['LessonObjective'].'</p>';
+                    echo '<p>'.nl2br($data['Lessons'][0]['LessonObjective']).'</p>';
                 }
             ?>
 
@@ -41,7 +41,7 @@
                 if(!empty($data['Lessons'][0]['LessonContent'])) {
                     echo '<h5 class="mt-4">Lesson</h5>';
                     echo '<div class="">';
-                    echo $data['Lessons'][0]['LessonContent'];
+                    echo '<span>'.nl2br($data['Lessons'][0]['LessonContent']).'</span>';
                     echo '</div>';
                 }
             ?>

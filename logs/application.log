@@ -1,107 +1,228 @@
-[2024-02-06 08:02:25] INFO: course
-[2024-02-06 08:02:25] INFO: Accessed [course]
-[2024-02-06 08:02:28] INFO: chapter
-[2024-02-06 08:02:28] INFO: Accessed [chapter]
-[2024-02-06 08:02:31] INFO: course
-[2024-02-06 08:02:31] INFO: Accessed [course]
-[2024-02-06 08:02:32] INFO: chapter
-[2024-02-06 08:02:32] INFO: Accessed [chapter]
-[2024-02-06 08:02:37] INFO: course
-[2024-02-06 08:02:37] INFO: Accessed [course]
-[2024-02-06 08:02:39] INFO: chapter
-[2024-02-06 08:02:39] INFO: Accessed [chapter]
-[2024-02-06 08:02:40] INFO: course
-[2024-02-06 08:02:40] INFO: Accessed [course]
-[2024-02-06 08:02:41] INFO: lessons
-[2024-02-06 08:02:41] INFO: Accessed [lessons]
-[2024-02-06 08:02:43] INFO: chapter
-[2024-02-06 08:02:43] INFO: Accessed [chapter]
-[2024-02-06 08:17:09] INFO: chapter
-[2024-02-06 08:17:09] INFO: Accessed [chapter]
-[2024-02-06 08:17:40] INFO: chapter
-[2024-02-06 08:17:40] INFO: Accessed [chapter]
-[2024-02-06 08:17:46] INFO: course
-[2024-02-06 08:17:46] INFO: Accessed [course]
-[2024-02-06 08:17:48] INFO: chapter
-[2024-02-06 08:17:48] INFO: Accessed [chapter]
-[2024-02-06 08:17:50] INFO: course
-[2024-02-06 08:17:50] INFO: Accessed [course]
-[2024-02-06 08:17:51] INFO: chapter
-[2024-02-06 08:17:51] INFO: Accessed [chapter]
-[2024-02-06 08:18:54] INFO: chapter
-[2024-02-06 08:18:54] INFO: Accessed [chapter]
-[2024-02-06 08:21:36] INFO: chapter
-[2024-02-06 08:21:36] INFO: Accessed [chapter]
-[2024-02-06 08:21:38] INFO: course
-[2024-02-06 08:21:38] INFO: Accessed [course]
-[2024-02-06 08:21:40] INFO: chapter
-[2024-02-06 08:21:40] INFO: Accessed [chapter]
-[2024-02-06 08:22:17] INFO: chapter
-[2024-02-06 08:22:17] INFO: Accessed [chapter]
-[2024-02-06 08:22:30] INFO: chapter
-[2024-02-06 08:22:30] INFO: Accessed [chapter]
-[2024-02-06 08:22:35] INFO: chapter
-[2024-02-06 08:22:35] INFO: Accessed [chapter]
-[2024-02-06 08:22:42] INFO: chapter
-[2024-02-06 08:22:42] INFO: Accessed [chapter]
-[2024-02-06 08:23:31] INFO: chapter
-[2024-02-06 08:23:31] INFO: Accessed [chapter]
-[2024-02-06 08:24:34] INFO: chapter
-[2024-02-06 08:24:34] INFO: Accessed [chapter]
-[2024-02-06 08:24:39] INFO: lessons
-[2024-02-06 08:24:39] INFO: Accessed [lessons]
-[2024-02-06 08:24:45] INFO: chapter
-[2024-02-06 08:24:45] INFO: Accessed [chapter]
-[2024-02-06 08:25:11] INFO: course
-[2024-02-06 08:25:11] INFO: Accessed [course]
-[2024-02-06 08:25:13] INFO: dashboard
-[2024-02-06 08:25:13] INFO: Accessed [dashboard]
-[2024-02-06 08:25:13] INFO: accounts
-[2024-02-06 08:25:13] INFO: Accessed [accounts]
-[2024-02-06 08:25:14] INFO: course
-[2024-02-06 08:25:14] INFO: Accessed [course]
-[2024-02-06 08:25:19] INFO: course
-[2024-02-06 08:25:19] INFO: Accessed [course]
-[2024-02-06 08:25:20] INFO: course
-[2024-02-06 08:25:20] INFO: Accessed [course]
-[2024-02-06 08:25:21] INFO: course
-[2024-02-06 08:25:21] INFO: Accessed [course]
-[2024-02-06 08:25:25] INFO: chapter
-[2024-02-06 08:25:25] INFO: Accessed [chapter]
-[2024-02-06 08:25:25] INFO: NotFound
-[2024-02-06 08:25:35] INFO: course
-[2024-02-06 08:25:35] INFO: Accessed [course]
-[2024-02-06 08:25:37] INFO: lessons
-[2024-02-06 08:25:37] INFO: Accessed [lessons]
-[2024-02-06 08:25:37] INFO: NotFound
-[2024-02-06 08:25:38] INFO: course
-[2024-02-06 08:25:38] INFO: Accessed [course]
-[2024-02-06 08:25:49] INFO: chapter
-[2024-02-06 08:25:49] INFO: Accessed [chapter]
-[2024-02-06 08:25:49] INFO: NotFound
-[2024-02-06 08:26:28] INFO: NotFound
-[2024-02-06 08:26:30] INFO: course
-[2024-02-06 08:26:30] INFO: Accessed [course]
-[2024-02-06 08:26:32] INFO: chapter
-[2024-02-06 08:26:32] INFO: Accessed [chapter]
-[2024-02-06 08:26:32] INFO: NotFound
-[2024-02-06 08:26:33] INFO: course
-[2024-02-06 08:26:33] INFO: Accessed [course]
-[2024-02-06 08:27:10] INFO: course
-[2024-02-06 08:27:10] INFO: Accessed [course]
-[2024-02-06 08:27:12] INFO: chapter
-[2024-02-06 08:27:12] INFO: Accessed [chapter]
-[2024-02-06 08:29:28] INFO: chapter
-[2024-02-06 08:29:28] INFO: Accessed [chapter]
-[2024-02-06 08:29:50] INFO: chapter
-[2024-02-06 08:29:50] INFO: Accessed [chapter]
-[2024-02-06 08:30:49] INFO: chapter
-[2024-02-06 08:30:49] INFO: Accessed [chapter]
-[2024-02-06 08:30:50] INFO: accounts
-[2024-02-06 08:30:50] INFO: Accessed [accounts]
-[2024-02-06 08:30:51] INFO: dashboard
-[2024-02-06 08:30:51] INFO: Accessed [dashboard]
-[2024-02-06 08:30:52] INFO: course
-[2024-02-06 08:30:52] INFO: Accessed [course]
-[2024-02-06 08:30:54] INFO: chapter
-[2024-02-06 08:30:54] INFO: Accessed [chapter]
+[2024-02-06 10:56:44] INFO: chapter
+[2024-02-06 10:56:44] INFO: Accessed [chapter]
+[2024-02-06 10:56:49] INFO: lessons
+[2024-02-06 10:56:49] INFO: Accessed [lessons]
+[2024-02-06 10:57:16] INFO: lessons
+[2024-02-06 10:57:16] INFO: Accessed [lessons]
+[2024-02-06 10:57:19] INFO: chapter
+[2024-02-06 10:57:19] INFO: Accessed [chapter]
+[2024-02-06 10:57:23] INFO: lessons
+[2024-02-06 10:57:23] INFO: Accessed [lessons]
+[2024-02-06 10:57:45] INFO: lessons
+[2024-02-06 10:57:45] INFO: Accessed [lessons]
+[2024-02-06 10:59:36] INFO: lessons
+[2024-02-06 10:59:36] INFO: Accessed [lessons]
+[2024-02-06 11:00:10] INFO: lessons
+[2024-02-06 11:00:10] INFO: Accessed [lessons]
+[2024-02-06 11:00:57] INFO: lessons
+[2024-02-06 11:00:57] INFO: Accessed [lessons]
+[2024-02-06 11:02:53] INFO: lessons
+[2024-02-06 11:02:53] INFO: Accessed [lessons]
+[2024-02-06 11:03:34] INFO: lessons
+[2024-02-06 11:03:34] INFO: Accessed [lessons]
+[2024-02-06 11:03:35] INFO: chapter
+[2024-02-06 11:03:35] INFO: Accessed [chapter]
+[2024-02-06 11:03:52] INFO: lessons
+[2024-02-06 11:03:52] INFO: Accessed [lessons]
+[2024-02-06 11:03:52] INFO: chapter
+[2024-02-06 11:03:52] INFO: Accessed [chapter]
+[2024-02-06 11:03:55] INFO: lessons
+[2024-02-06 11:03:55] INFO: Accessed [lessons]
+[2024-02-06 11:03:59] INFO: chapter
+[2024-02-06 11:03:59] INFO: Accessed [chapter]
+[2024-02-06 11:04:02] INFO: lessons
+[2024-02-06 11:04:02] INFO: Accessed [lessons]
+[2024-02-06 11:04:04] INFO: chapter
+[2024-02-06 11:04:04] INFO: Accessed [chapter]
+[2024-02-06 11:04:11] INFO: lessons
+[2024-02-06 11:04:11] INFO: Accessed [lessons]
+[2024-02-06 11:04:11] INFO: chapter
+[2024-02-06 11:04:11] INFO: Accessed [chapter]
+[2024-02-06 11:04:14] INFO: lessons
+[2024-02-06 11:04:14] INFO: Accessed [lessons]
+[2024-02-06 11:04:18] INFO: chapter
+[2024-02-06 11:04:18] INFO: Accessed [chapter]
+[2024-02-06 11:04:53] INFO: chapter
+[2024-02-06 11:04:53] INFO: Accessed [chapter]
+[2024-02-06 11:07:12] INFO: lessons
+[2024-02-06 11:07:12] INFO: Accessed [lessons]
+[2024-02-06 11:07:17] INFO: lessons
+[2024-02-06 11:07:17] INFO: Accessed [lessons]
+[2024-02-06 11:07:29] INFO: chapter
+[2024-02-06 11:07:29] INFO: Accessed [chapter]
+[2024-02-06 11:20:20] INFO: lessons
+[2024-02-06 11:20:20] INFO: Accessed [lessons]
+[2024-02-06 11:20:43] INFO: chapter
+[2024-02-06 11:20:43] INFO: Accessed [chapter]
+[2024-02-06 11:20:44] INFO: lessons
+[2024-02-06 11:20:44] INFO: Accessed [lessons]
+[2024-02-06 11:20:51] INFO: lessons
+[2024-02-06 11:20:51] INFO: Accessed [lessons]
+[2024-02-06 11:20:52] INFO: chapter
+[2024-02-06 11:20:52] INFO: Accessed [chapter]
+[2024-02-06 11:20:54] INFO: lessons
+[2024-02-06 11:20:54] INFO: Accessed [lessons]
+[2024-02-06 11:20:56] INFO: chapter
+[2024-02-06 11:20:56] INFO: Accessed [chapter]
+[2024-02-06 11:20:57] INFO: lessons
+[2024-02-06 11:20:57] INFO: Accessed [lessons]
+[2024-02-06 11:21:00] INFO: lessons
+[2024-02-06 11:21:00] INFO: Accessed [lessons]
+[2024-02-06 11:21:32] INFO: lessons
+[2024-02-06 11:21:32] INFO: Accessed [lessons]
+[2024-02-06 11:21:32] INFO: chapter
+[2024-02-06 11:21:32] INFO: Accessed [chapter]
+[2024-02-06 11:21:34] INFO: lessons
+[2024-02-06 11:21:34] INFO: Accessed [lessons]
+[2024-02-06 11:21:40] INFO: lessons
+[2024-02-06 11:21:40] INFO: Accessed [lessons]
+[2024-02-06 11:21:40] INFO: chapter
+[2024-02-06 11:21:40] INFO: Accessed [chapter]
+[2024-02-06 11:21:41] INFO: lessons
+[2024-02-06 11:21:41] INFO: Accessed [lessons]
+[2024-02-06 11:21:44] INFO: lessons
+[2024-02-06 11:21:44] INFO: Accessed [lessons]
+[2024-02-06 11:21:45] INFO: chapter
+[2024-02-06 11:21:45] INFO: Accessed [chapter]
+[2024-02-06 11:21:45] INFO: lessons
+[2024-02-06 11:21:45] INFO: Accessed [lessons]
+[2024-02-06 11:21:52] INFO: lessons
+[2024-02-06 11:21:52] INFO: Accessed [lessons]
+[2024-02-06 11:21:54] INFO: lessons
+[2024-02-06 11:21:54] INFO: Accessed [lessons]
+[2024-02-06 11:21:55] INFO: chapter
+[2024-02-06 11:21:55] INFO: Accessed [chapter]
+[2024-02-06 11:22:03] INFO: lessons
+[2024-02-06 11:22:03] INFO: Accessed [lessons]
+[2024-02-06 11:22:04] INFO: chapter
+[2024-02-06 11:22:04] INFO: Accessed [chapter]
+[2024-02-06 11:22:06] INFO: lessons
+[2024-02-06 11:22:06] INFO: Accessed [lessons]
+[2024-02-06 11:24:34] INFO: lessons
+[2024-02-06 11:24:34] INFO: Accessed [lessons]
+[2024-02-06 11:24:36] INFO: lessons
+[2024-02-06 11:24:36] INFO: Accessed [lessons]
+[2024-02-06 11:24:36] INFO: chapter
+[2024-02-06 11:24:36] INFO: Accessed [chapter]
+[2024-02-06 11:24:44] INFO: lessons
+[2024-02-06 11:24:44] INFO: Accessed [lessons]
+[2024-02-06 11:24:44] INFO: chapter
+[2024-02-06 11:24:44] INFO: Accessed [chapter]
+[2024-02-06 11:24:47] INFO: lessons
+[2024-02-06 11:24:47] INFO: Accessed [lessons]
+[2024-02-06 11:24:49] INFO: lessons
+[2024-02-06 11:24:49] INFO: Accessed [lessons]
+[2024-02-06 11:24:49] INFO: chapter
+[2024-02-06 11:24:49] INFO: Accessed [chapter]
+[2024-02-06 11:24:54] INFO: lessons
+[2024-02-06 11:24:54] INFO: Accessed [lessons]
+[2024-02-06 11:39:43] INFO: course
+[2024-02-06 11:39:43] INFO: Accessed [course]
+[2024-02-06 11:39:44] INFO: course
+[2024-02-06 11:39:44] INFO: Accessed [course]
+[2024-02-06 11:39:47] INFO: chapter
+[2024-02-06 11:39:47] INFO: Accessed [chapter]
+[2024-02-06 11:39:51] INFO: lessons
+[2024-02-06 11:39:51] INFO: Accessed [lessons]
+[2024-02-06 11:40:37] INFO: lessons
+[2024-02-06 11:40:37] INFO: Accessed [lessons]
+[2024-02-06 11:40:39] INFO: chapter
+[2024-02-06 11:40:39] INFO: Accessed [chapter]
+[2024-02-06 11:40:41] INFO: lessons
+[2024-02-06 11:40:41] INFO: Accessed [lessons]
+[2024-02-06 11:41:35] INFO: assessment
+[2024-02-06 11:41:35] INFO: Accessed [assessment]
+[2024-02-06 11:41:35] ERROR: Access Not Allowed
+[2024-02-06 11:41:36] INFO: lessons
+[2024-02-06 11:41:36] INFO: Accessed [lessons]
+[2024-02-06 11:41:37] INFO: assessment
+[2024-02-06 11:41:37] INFO: Accessed [assessment]
+[2024-02-06 11:41:37] ERROR: Access Not Allowed
+[2024-02-06 11:41:38] INFO: lessons
+[2024-02-06 11:41:38] INFO: Accessed [lessons]
+[2024-02-06 11:42:38] INFO: chapter
+[2024-02-06 11:42:38] INFO: Accessed [chapter]
+[2024-02-06 11:42:39] INFO: lessons
+[2024-02-06 11:42:39] INFO: Accessed [lessons]
+[2024-02-06 11:42:41] INFO: chapter
+[2024-02-06 11:42:41] INFO: Accessed [chapter]
+[2024-02-06 11:42:41] INFO: lessons
+[2024-02-06 11:42:41] INFO: Accessed [lessons]
+[2024-02-06 11:42:56] INFO: lessons
+[2024-02-06 11:42:56] INFO: Accessed [lessons]
+[2024-02-06 11:42:56] INFO: chapter
+[2024-02-06 11:42:56] INFO: Accessed [chapter]
+[2024-02-06 11:42:59] INFO: lessons
+[2024-02-06 11:42:59] INFO: Accessed [lessons]
+[2024-02-06 11:44:08] INFO: chapter
+[2024-02-06 11:44:08] INFO: Accessed [chapter]
+[2024-02-06 11:44:09] INFO: lessons
+[2024-02-06 11:44:09] INFO: Accessed [lessons]
+[2024-02-06 11:44:39] INFO: lessons
+[2024-02-06 11:44:39] INFO: Accessed [lessons]
+[2024-02-06 11:44:39] INFO: chapter
+[2024-02-06 11:44:39] INFO: Accessed [chapter]
+[2024-02-06 11:45:19] INFO: lessons
+[2024-02-06 11:45:19] INFO: Accessed [lessons]
+[2024-02-06 11:45:22] INFO: lessons
+[2024-02-06 11:45:22] INFO: Accessed [lessons]
+[2024-02-06 11:45:22] INFO: chapter
+[2024-02-06 11:45:22] INFO: Accessed [chapter]
+[2024-02-06 11:45:43] INFO: lessons
+[2024-02-06 11:45:43] INFO: Accessed [lessons]
+[2024-02-06 11:45:45] INFO: lessons
+[2024-02-06 11:45:45] INFO: Accessed [lessons]
+[2024-02-06 11:45:46] INFO: chapter
+[2024-02-06 11:45:46] INFO: Accessed [chapter]
+[2024-02-06 11:48:27] INFO: lessons
+[2024-02-06 11:48:27] INFO: Accessed [lessons]
+[2024-02-06 11:48:38] INFO: lessons
+[2024-02-06 11:48:38] INFO: Accessed [lessons]
+[2024-02-06 11:48:38] INFO: chapter
+[2024-02-06 11:48:38] INFO: Accessed [chapter]
+[2024-02-06 11:48:40] INFO: lessons
+[2024-02-06 11:48:40] INFO: Accessed [lessons]
+[2024-02-06 11:48:51] INFO: home
+[2024-02-06 11:48:51] INFO: Accessed [home]
+[2024-02-06 11:48:54] INFO: login
+[2024-02-06 11:48:54] INFO: Accessed [login]
+[2024-02-06 11:48:54] INFO: dashboard
+[2024-02-06 11:48:54] INFO: Accessed [dashboard]
+[2024-02-06 11:48:55] INFO: course
+[2024-02-06 11:48:55] INFO: Accessed [course]
+[2024-02-06 11:48:57] INFO: chapter
+[2024-02-06 11:48:57] INFO: Accessed [chapter]
+[2024-02-06 11:48:58] INFO: lessons
+[2024-02-06 11:48:58] INFO: Accessed [lessons]
+[2024-02-06 11:49:00] INFO: chapter
+[2024-02-06 11:49:00] INFO: Accessed [chapter]
+[2024-02-06 11:49:01] INFO: lessons
+[2024-02-06 11:49:01] INFO: Accessed [lessons]
+[2024-02-06 11:49:09] INFO: lessons
+[2024-02-06 11:49:09] INFO: Accessed [lessons]
+[2024-02-06 11:49:11] INFO: lessons
+[2024-02-06 11:49:11] INFO: Accessed [lessons]
+[2024-02-06 11:49:12] INFO: chapter
+[2024-02-06 11:49:12] INFO: Accessed [chapter]
+[2024-02-06 11:49:14] INFO: lessons
+[2024-02-06 11:49:14] INFO: Accessed [lessons]
+[2024-02-06 11:49:17] INFO: chapter
+[2024-02-06 11:49:17] INFO: Accessed [chapter]
+[2024-02-06 11:49:18] INFO: lessons
+[2024-02-06 11:49:18] INFO: Accessed [lessons]
+[2024-02-06 11:49:32] INFO: lessons
+[2024-02-06 11:49:32] INFO: Accessed [lessons]
+[2024-02-06 11:49:33] INFO: chapter
+[2024-02-06 11:49:33] INFO: Accessed [chapter]
+[2024-02-06 11:49:35] INFO: lessons
+[2024-02-06 11:49:35] INFO: Accessed [lessons]
+[2024-02-06 11:50:43] INFO: lessons
+[2024-02-06 11:50:43] INFO: Accessed [lessons]
+[2024-02-06 11:50:52] INFO: lessons
+[2024-02-06 11:50:52] INFO: Accessed [lessons]
+[2024-02-06 11:51:09] INFO: lessons
+[2024-02-06 11:51:09] INFO: Accessed [lessons]
+[2024-02-06 11:52:02] INFO: lessons
+[2024-02-06 11:52:02] INFO: Accessed [lessons]
+[2024-02-06 11:54:01] INFO: lessons
+[2024-02-06 11:54:01] INFO: Accessed [lessons]

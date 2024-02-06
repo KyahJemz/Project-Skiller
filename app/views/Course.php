@@ -22,7 +22,7 @@
                                 $LessonProgress = number_format(((isset($data['Progress']['LessonProgress'][$row2["LessonId"]]) ? $data['Progress']['LessonProgress'][$row2["LessonId"]] : 0) / max($data['Progress']['LessonProgressTotal'][$row2["LessonId"]], 1)) * 100, 2);
                                 echo '<strong class="pb-2">'.$row2['LessonTitle'].'</strong>' . ' - Progress: ' . $LessonProgress . '%';
                                 echo '</br>';
-                                echo $row2['LessonDescription'];
+                                echo nl2br($row2['LessonDescription']);
                                 echo '</br>';
                                 echo '<a class="btn btn-primary class="mt-2" href="'.BASE_URL.'?page=lessons&item='.$row2['LessonId'].'">View</a>';
                                 echo '</br></br>';
@@ -47,7 +47,7 @@
                             if ($row2['ChapterId'] === $row['Id']){
                                 echo '<strong class="pb-2">'.$row2['LessonTitle'].'</strong>';
                                 echo '</br>';
-                                echo $row2['LessonDescription'];
+                                echo nl2br($row2['LessonDescription']);
                                 echo '</br>';
                                 echo '<a class="btn btn-primary class="mt-2" href="'.BASE_URL.'?page=lessons&item='.$row2['LessonId'].'">View</a>';
                                 echo '</br></br>';

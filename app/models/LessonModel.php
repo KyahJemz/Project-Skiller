@@ -64,6 +64,8 @@ class LessonModel {
         return $data;
     }
 
+   
+
     public function updateChapterOnly($params) {
         $ChapterId = $this->database->escape($params['Id']);
         $ChapterTitle = $this->database->escape($params['Title']);
@@ -252,6 +254,200 @@ class LessonModel {
         return $data;
     }
 
+    public function getLessonOnly($params) {
+        $LessonId = $this->database->escape($params['Id']);
+
+        $query = "SELECT * FROM tbl_lessons WHERE Id = $LessonId LIMIT 1";
+
+        $stmt = $this->database->prepare($query);
+
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return [];
+        }
+
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if (!$result) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return [];
+        }
+
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+
+        $stmt->close();
+
+        return $data;
+    }
+
+    public function addLessonOnly($params) {
+        $fields = [];
+        $values = [];
+        $types = '';
+        $paramsToBind = [];
+    
+        foreach ($params as $key => $value) {
+            if ($value !== "" || !empty($value)) {
+                $fields[] = $key;
+                $values[] = '?';
+                $types .= $key === "Chapter_Id" ? 'i' : 's'; 
+                $paramsToBind[] = $value;
+            }
+        }
+    
+        if (empty($fields)) {
+            $this->logger->log('No fields provided for insertion.', 'error');
+            return false;
+        }
+    
+        $query = "INSERT IGNORE INTO tbl_lessons (";
+        $query .= implode(', ', $fields);
+        $query .= ") VALUES (";
+        $query .= implode(', ', $values);
+        $query .= ")";
+    
+        $stmt = $this->database->prepare($query);
+
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return false;  
+        }
+        
+        // Dynamically bind parameters using call_user_func_array
+        $bindParams = array_merge([$types], $paramsToBind);
+        $refParams = [];
+        foreach ($bindParams as $key => $value) {
+            $refParams[$key] = &$bindParams[$key];
+        }
+        call_user_func_array(array($stmt, 'bind_param'), $refParams);
+        
+        $stmt->execute();
+    
+        if ($stmt->affected_rows === -1) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return false; 
+        }
+    
+        $stmt->close();
+    
+        return true; 
+    }
+    
+    public function updateLessonOnly($params) {
+        $fieldsToUpdate = [];
+        
+        foreach ($params as $key => $value) {
+            if ($key !== 'Id' && isset($value)) {
+                $fieldsToUpdate[] = "$key = ?";
+            }
+        }
+        
+        $setClause = implode(', ', $fieldsToUpdate);
+        
+        $query = "UPDATE tbl_lessons SET $setClause WHERE Id = ?";
+        
+        $stmt = $this->database->prepare($query);
+        
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return false;  
+        }
+        
+        $valuesToBind = [];
+        $types = '';
+        foreach ($params as $key => $value) {
+            if ($key !== 'Id' && isset($value)) {
+                $valuesToBind[] = $value;
+                $types .= 's'; 
+            }
+        }
+        
+        $valuesToBind[] = $params['Id']; 
+        $types .= 'i'; 
+        $stmt->bind_param($types, ...$valuesToBind);
+        
+        $stmt->execute();
+        
+        if ($stmt->affected_rows === -1) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return false; 
+        }
+        
+        $stmt->close();
+        
+        return true; 
+    }
+
+    public function deleteLesson($params) {
+        $LessonId = $this->database->escape($params['Id']);
+    
+        $this->database->begin_transaction();
+    
+        try {
+            $query2 = "SELECT Id FROM tbl_activity WHERE Lesson_Id = $LessonId";
+            $stmt2 = $this->database->prepare($query2);
+            if (!$stmt2) {
+                $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+                return [];
+            }
+            $stmt2->execute();
+            $result2 = $stmt2->get_result();
+            if (!$result2) {
+                $this->logger->log('Error executing query: ' . $stmt2->error, 'error');
+                $stmt2->close();
+                return [];
+            }
+            $data2 = $result2->fetch_all(MYSQLI_ASSOC);
+            $stmt2->close();
+
+            $activityIds = array_column($data2, 'Id');  
+
+            if(!empty($data2)){
+                $queryTable3 = "DELETE FROM tbl_questions WHERE Activity_Id IN (" . implode(',', $activityIds) . ")";
+                $stmtTable3 = $this->database->prepare($queryTable3);
+                $stmtTable3->execute();
+                $stmtTable3->close();
+            }
+
+            $queryTable1 = "DELETE FROM tbl_inprogress WHERE Lesson_Id = $LessonId";
+            $stmtTable1 = $this->database->prepare($queryTable1);
+            $stmtTable1->execute();
+            $stmtTable1->close();
+
+            $queryTable4 = "DELETE FROM tbl_results WHERE Lesson_Id = $LessonId";
+            $stmtTable4 = $this->database->prepare($queryTable4);
+            $stmtTable4->execute();
+            $stmtTable4->close();
+
+            $queryTable5 = "DELETE FROM tbl_activity WHERE Lesson_Id = $LessonId";
+            $stmtTable5 = $this->database->prepare($queryTable5);
+            $stmtTable5->execute();
+            $stmtTable5->close();
+
+            $queryTable2 = "DELETE FROM tbl_progress WHERE Lesson_Id = $LessonId";
+            $stmtTable2 = $this->database->prepare($queryTable2);
+            $stmtTable2->execute();
+            $stmtTable2->close();
+
+            $queryTable6 = "DELETE FROM tbl_lessons WHERE Id = $LessonId";
+            $stmtTable6 = $this->database->prepare($queryTable6);
+            $stmtTable6->execute();
+            $stmtTable6->close();
+
+            $this->database->commit();
+    
+            return true; 
+        } catch (Exception $e) {
+            $this->database->rollback();
+            $this->logger->log('Error deleting records: ' . $e->getMessage(), 'error');
+            return false;
+        }
+    }
+    
     public function getChapter($params) {
         $ChapterId = $this->database->escape($params['ChapterId']);
     

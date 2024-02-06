@@ -27,7 +27,7 @@
                         if ($row2['ChapterId'] === $row['Id']){
                             echo '<strong class="pb-2">'.$row2['LessonTitle'].'</strong>';
                             echo '</br>';
-                            echo $row2['LessonDescription'];
+                            echo nl2br($row2['LessonDescription']);
                             echo '</br>';
                             echo '<a class="btn btn-primary class="mt-2" href="'.BASE_URL.'?page=lessons&item='.$row2['LessonId'].'">View</a>';
                             echo '</br></br>';
