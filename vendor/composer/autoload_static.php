@@ -13,6 +13,10 @@ class ComposerStaticInit0c1bc83d168186f0861103e57c7a5982
     );
 
     public static $prefixLengthsPsr4 = array (
+        'S' => 
+        array (
+            'SendinBlue\\Client\\' => 18,
+        ),
         'P' => 
         array (
             'Psr\\Http\\Message\\' => 17,
@@ -31,10 +35,14 @@ class ComposerStaticInit0c1bc83d168186f0861103e57c7a5982
     );
 
     public static $prefixDirsPsr4 = array (
+        'SendinBlue\\Client\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/sendinblue/api-v3-sdk/lib',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
