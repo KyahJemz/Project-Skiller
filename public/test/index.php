@@ -6,5 +6,5 @@
     //     'ReceiverEmail' => 'jameslayson.0@gmail.com'
     // ])
 
-    PDF::createPdf(['Name'=>'Stephen Regan James Layson']);
+    PDF::createPdf(['certName'=>'Stephen Regan James Layson', 'certDate'=>'January 23, 2023']);
 ?>
