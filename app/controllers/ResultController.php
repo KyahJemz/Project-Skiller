@@ -148,6 +148,14 @@ class ResultController {
                 'AccountId'=>$db->escape($_SESSION['User_Id']),
             ]);
 
+            $logger->log('Sending assessment score to ' .$Activity[0]['Email'], 'info');
+            Email::sendMail([
+                'Subject' => 'Assessment Score',
+                'ReceiverName' => $Activity[0]['FirstName'],
+                'ReceiverEmail' => $Activity[0]['Email'],
+                'Message' => 'You have completed your assessment in '.$Activity[0]['ActivityTitle'].'. You have scored '.$score.' out of '.$total.', Thank you!'
+            ]);
+
             header('Location: '.BASE_URL.'?page=result&item='.$Id);
             exit;
         }
@@ -174,16 +182,29 @@ class ResultController {
 
             $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
             $activityModel = new ActivityModel($db, $logger);
+            $Account = $activityModel
 
             if ($data['ToState'] === "Enable"){
                 $activityModel->updateResultRetake([
                     'Value'=>'1',
                     'Id'=>$Id
                 ]);
+                Email::sendMail([
+                    'Subject' => 'Assessment Retake Enabled',
+                    'ReceiverName' => $Account[0]['FirstName'],
+                    'ReceiverEmail' => $Account[0]['Email'],
+                    'Message' => 'Your assessment in '.$Account[0]['Title'].' has retake now enabled. You can now retake your assessment, Thank you!'
+                ]);
             } else {
                 $activityModel->updateResultRetake([
                     'Value'=>'0',
                     'Id'=>$Id
+                ]);
+                Email::sendMail([
+                    'Subject' => 'Assessment Retake Disabled',
+                    'ReceiverName' => $Account[0]['FirstName'],
+                    'ReceiverEmail' => $Account[0]['Email'],
+                    'Message' => 'Your assessment in '.$Account[0]['Title'].' has retake now disabled. Retake is not possible, Thank you!'
                 ]);
             }
             echo json_encode(['success' => true]);

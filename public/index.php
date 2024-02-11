@@ -13,12 +13,12 @@
 require '../vendor/autoload.php';
 
 // SYSTEM LOAD
+require_once '../classes/Logger.php';
 require_once '../config/Config.php';
 require_once '../config/Database.php';
 require_once '../config/Router.php';
 require_once '../config/Pdf.php';
 require_once '../config/Email.php';
-require_once '../classes/Logger.php';
 
 // UTILS LOAD
 require_once '../utils/input_validation.php';

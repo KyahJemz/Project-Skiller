@@ -135,7 +135,7 @@ class ActivityModel {
     public function updateResultRetake($params){
         $Value = $this->database->escape($params['Value']);
         $Id = $this->database->escape($params['Id']);
-
+    
         $query = "UPDATE tbl_results SET IsRetake = ? WHERE Id = ?";
         $stmt = $this->database->prepare($query);
     
@@ -155,8 +155,34 @@ class ActivityModel {
     
         $stmt->close();
     
-        return true;
+        $query = "SELECT 
+            * 
+        FROM tbl_results as results
+        LEFT JOIN tbl_accounts as accounts ON results.Account_Id = accounts.Id
+        LEFT JOIN tbl_activity as activity ON results.Activity_Id = activity.Id
+        WHERE results.Id = ?";
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return false;
+        }
+    
+        $stmt->bind_param('i', $Id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        $updatedRows = [];
+        while ($row = $result->fetch_assoc()) {
+            $updatedRows[] = $row;
+        }
+    
+        $stmt->close();
+    
+        return $updatedRows; 
     }
+    
+    
 
     public function updateActivityViewResults($params){
         $ToState = $this->database->escape($params['ToState']);

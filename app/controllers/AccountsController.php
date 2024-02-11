@@ -113,7 +113,7 @@ class AccountsController {
                 Email::sendMail([
                     'ReceiverName' => 'New Account',
                     'ReceiverEmail' => $email,
-                    'Message' => 'You can now login to Skiller: Tutorial System using this email, Thank you and Good Luck!'
+                    'Message' => 'You can now login to Skiller: Tutorial System using this email as an '.$type.', Thank you!'
                 ]);
 
                 exit();

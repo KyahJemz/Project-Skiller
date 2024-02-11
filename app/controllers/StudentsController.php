@@ -79,6 +79,13 @@ class StudentsController {
                     'Role'=>'Student',
                     'Group'=>$group
                 ]);
+
+                Email::sendMail([
+                    'ReceiverName' => 'New Account',
+                    'ReceiverEmail' => $email,
+                    'Message' => 'You can now login to Skiller: Tutorial System using this email, Thank you!'
+                ]);
+
                 echo json_encode(['success' => true]);
                 http_response_code(200);
                 exit();
@@ -122,6 +129,13 @@ class StudentsController {
                     'Role'=>'Student',
                     'Group'=>$group
                 ]);
+
+                Email::sendMail([
+                    'ReceiverName' => 'New Account',
+                    'ReceiverEmail' => $email,
+                    'Message' => 'You can now login to Skiller: Tutorial System using this email, Thank you!'
+                ]);
+
                 echo json_encode(['success' => true]);
                 http_response_code(200);
                 exit();

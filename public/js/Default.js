@@ -37,9 +37,6 @@ if(StudentsSubmitAddAccountBtn) {
     
         AjaxRequest.sendRequest(data, BASE_URL + "?page=students&action=true")
             .then(response => {
-                document.getElementById('student-email').value = "";
-                document.getElementById('student-group').value = "";
-                document.getElementById('student-add-success').innerHTML = "Success!";
                 setTimeout(() => {
                     window.location.reload();
                 }, 500);
@@ -85,9 +82,6 @@ if(TeachersSubmitAddAccountBtn) {
     
         AjaxRequest.sendRequest(data, BASE_URL + "?page=accounts&action=true")
             .then(response => {
-                document.getElementById('teacher-email').value = "";
-                document.getElementById('teacher-group').value = "";
-                document.getElementById('teacher-add-success').innerHTML = "Success!";
                 setTimeout(() => {
                     window.location.reload();
                 }, 500);
@@ -126,8 +120,6 @@ if(AdministratorsSubmitAddAccountBtn) {
     
         AjaxRequest.sendRequest(data, BASE_URL + "?page=accounts&action=true")
             .then(response => {
-                document.getElementById('administrator-email').value = "";
-                document.getElementById('administrator-add-success').innerHTML = "Success!";
                 setTimeout(() => {
                     window.location.reload();
                 }, 500);

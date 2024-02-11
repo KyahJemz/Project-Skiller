@@ -314,14 +314,7 @@
                     </div>
                     <div class="mb-3">
                         <label for="teacher-group" class="col-form-label"><strong>Group: </strong></label>
-                        <select id="teacher-group" class="custom-select my-1 mr-sm-2 form-control" name="teacher-group" id="inlineFormCustomSelectPref" value="<?php echo $_SESSION['User_Group']?>" required>
-                            <option value="" selected>Choose...</option>
-                            <?php 
-                                foreach ($data['groups'] as $value) {
-                                    echo '<option value="'.$value['Group'].'">Group '.$value['Group'].'</option>';
-                                }
-                            ?>
-                        </select>
+                        <input type="text" name="teacher-group" class="form-control" id="teacher-group" placeholder="group #" required>
                         <p id="teacher-group-note" class="text-danger"></p>
                     </div>
                 </div>

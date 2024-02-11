@@ -1,13 +1,18 @@
 <?php
 class Email {
+    
     static function sendMail($params){
         require_once(__DIR__ . './../vendor/autoload.php');
+
+        $logger = new Logger();
+
         $Subject = "";
         $SenderName = "Skiller - Tutorial System";
         $SenderEmail = "skiller.ts.mail@gmail.com";
         $ReceiverName = "Stephen";
         $ReceiverEmail = "jameslayson.0@gmail.com";
 
+        $Subject = "Skiller Mail";
         $Header = "Good Day,";
         $Message = "Empty Message";
         $Footer = "- Skiller Team";
@@ -16,7 +21,11 @@ class Email {
             $ReceiverName = $params['ReceiverName'];
             $ReceiverEmail = $params['ReceiverEmail'];
         } else {
-            return false;
+            return ['error'=>true, 'message'=>'Invalid Receiver'];
+        }
+
+        if(isset($params['Subject'])){
+            $Subject = $params['Subject'];
         }
 
         if(isset($params['Header'])){
@@ -35,7 +44,7 @@ class Email {
         $apiInstance = new SendinBlue\Client\Api\TransactionalEmailsApi(new GuzzleHttp\Client(), $config);
     
         $sendSmtpEmail = new \SendinBlue\Client\Model\SendSmtpEmail([
-            'subject' => 'Skiller Mail',
+            'subject' => $Subject,
             'sender' => ['name' => $SenderName, 'email' => $SenderEmail],
             'to' => [['name' => $ReceiverName, 'email' => $ReceiverEmail]],
             'htmlContent' => "
@@ -50,11 +59,13 @@ class Email {
 
         try {
             $result = $apiInstance->sendTransacEmail($sendSmtpEmail);
-            print_r($result);
+            $logger->log('Email sent to: '.$ReceiverEmail, 'info');
+            return ['success'=>true];
         } catch (Exception $e) {
-            echo $e->getMessage(), PHP_EOL;
+            $logger->log('Email sent failed to: '.$ReceiverEmail, 'error');
+            $logger->log($e->getMessage(), 'error');
             if (isset($result)) {
-                echo 'error sending email';
+                return ['error'=>true, 'message'=>$e->getMessage()];
             }
         }
     }

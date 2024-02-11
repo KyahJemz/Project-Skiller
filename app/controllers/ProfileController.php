@@ -84,10 +84,22 @@ class ProfileController {
             $Id = sanitizeInput(filter_var($data['Id'], FILTER_SANITIZE_NUMBER_INT));
 
             $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-            
+            $accountModel = new AccountModel($db, $logger);
+
+            $Account = $accountModel->getAccountById(['Account_Id'=>$db->escape($Id)]);
+            $logger->log('Sending mail to '.$Account[0]['FirstName'].' with '.$Account[0]['Email'], 'info');
+
             if($Action === "Reset") {
                 $progressModel = new ProgressModel($db, $logger);
                 $progressModel->ClearProgress(['Account_Id'=>$db->escape($Id)]);
+                
+                Email::sendMail([
+                    'Subject' => 'Account Progress Reset',
+                    'ReceiverName' => $Account[0]['FirstName'],
+                    'ReceiverEmail' => $Account[0]['Email'],
+                    'Message' => 'Your account progress has been reset. All progress are now back to 0%. you may now start your lessons and assessments, Thank you!'
+                ]);
+
                 echo json_encode(['success' => true]);
                 http_response_code(200);
                 exit();
@@ -98,17 +110,32 @@ class ProfileController {
                     exit;
                 }
                 $CurrentState = sanitizeInput(filter_var((int)$data['CurrentState'], FILTER_SANITIZE_NUMBER_INT ));
-                $accountModel = new AccountModel($db, $logger);
                 if ((int)$CurrentState === 0) {
                     $accountModel->updateAccount([
                         'Id' => $db->escape($Id),
                         'Disabled' => 1
                     ]);
+
+                    Email::sendMail([
+                        'Subject' => 'Account Disabled',
+                        'ReceiverName' => $Account[0]['FirstName'],
+                        'ReceiverEmail' => $Account[0]['Email'],
+                        'Message' => 'Your account has been disabled by your teacher/admin. you cant use your account for this time, Thank you!'
+                    ]);
+
                 } else {
                     $accountModel->updateAccount([
                         'Id' => $db->escape($Id),
                         'Disabled' => 0
                     ]);
+
+                    Email::sendMail([
+                        'Subject' => 'Account Enabled',
+                        'ReceiverName' => $Account[0]['FirstName'],
+                        'ReceiverEmail' => $Account[0]['Email'],
+                        'Message' => 'Your account has been enabled by your teacher/admin. you may now use your account, Thank you!'
+                    ]);
+
                 }
                 echo json_encode(['success' => true]);
                 http_response_code(200);
