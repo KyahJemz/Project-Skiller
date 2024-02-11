@@ -109,6 +109,13 @@ class AccountsController {
                 }
                 echo json_encode(['success' => true]);
                 http_response_code(200);
+
+                Email::sendMail([
+                    'ReceiverName' => 'New Account',
+                    'ReceiverEmail' => $email,
+                    'Message' => 'You can now login to Skiller: Tutorial System using this email, Thank you and Good Luck!'
+                ]);
+
                 exit();
             } else {
                 echo json_encode(['success' => false]);

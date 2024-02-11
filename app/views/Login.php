@@ -25,7 +25,7 @@
                                 <form>
                                     <div class="row py-2">
                                         <a href="<?php echo BASE_URL ?>" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
-                                            <svg class="bi me-2" width="300" height="100" role="img" aria-label="Bootstrap"><image href="<?php echo BASE_URL . 'images/logo.png'; ?>" width="300" height="100"/></svg>
+                                            <svg class="bi me-2" width="300" height="100" role="img" aria-label="Bootstrap"><image href="<?php echo BASE_URL . 'images/logo-full-black.png'; ?>" width="300" height="100"/></svg>
                                         </a>
                                     </div>
 
