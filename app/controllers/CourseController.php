@@ -153,5 +153,7 @@ class CourseController {
             exit();
         }
     }
+
+
 }
 ?>

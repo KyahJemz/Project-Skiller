@@ -35,7 +35,7 @@ class PDF {
         $x = ($w - $certDateWidth) / 2;
         $pdf->Cell(0, 10, $certDate, 0, 1, 'C');
 
-        $filename = __DIR__."./../public/certificates/certificate_" . date("YmdHis") . ".pdf";
+        $filename = __DIR__."./../public/certificates/certificate_" . $params['certId'] . ".pdf";
         $pdf->Output($filename, 'F');
 
         echo "Created";
