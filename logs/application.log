@@ -85,3 +85,45 @@
 [2024-02-17 00:30:02] INFO: Accessed [lessons]
 [2024-02-17 00:37:26] INFO: home
 [2024-02-17 00:37:26] INFO: Accessed [home]
+[2024-02-17 00:42:55] INFO: chapter
+[2024-02-17 00:42:55] INFO: Accessed [chapter]
+[2024-02-17 00:42:56] INFO: course
+[2024-02-17 00:42:56] INFO: Accessed [course]
+[2024-02-17 00:42:59] INFO: logout
+[2024-02-17 00:42:59] INFO: Logging Out
+[2024-02-17 00:42:59] INFO: home
+[2024-02-17 00:42:59] INFO: Accessed [home]
+[2024-02-17 00:43:00] INFO: login
+[2024-02-17 00:43:00] INFO: Accessed [login]
+[2024-02-17 00:43:11] INFO: login
+[2024-02-17 00:43:11] INFO: Accessed [login]
+[2024-02-17 00:43:11] INFO: Successfully validated Google Sign-In token
+[2024-02-17 00:43:11] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-17 00:43:11] INFO: bindingString: sssi
+[2024-02-17 00:43:11] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-17 00:43:11] INFO: dashboard
+[2024-02-17 00:43:11] INFO: Accessed [dashboard]
+[2024-02-17 00:43:18] INFO: course
+[2024-02-17 00:43:18] INFO: Accessed [course]
+[2024-02-17 00:48:12] INFO: course
+[2024-02-17 00:48:12] INFO: Accessed [course]
+[2024-02-17 00:48:28] INFO: course
+[2024-02-17 00:48:28] INFO: Accessed [course]
+[2024-02-17 00:48:31] INFO: certificate
+[2024-02-17 00:48:31] INFO: Accessed [certificate]
+[2024-02-17 00:48:36] INFO: course
+[2024-02-17 00:48:36] INFO: Accessed [course]
+[2024-02-17 00:48:37] INFO: certificate
+[2024-02-17 00:48:37] INFO: Accessed [certificate]
+[2024-02-17 00:48:39] INFO: course
+[2024-02-17 00:48:39] INFO: Accessed [course]
+[2024-02-17 00:49:34] INFO: course
+[2024-02-17 00:49:34] INFO: Accessed [course]
+[2024-02-17 00:50:09] INFO: course
+[2024-02-17 00:50:09] INFO: Accessed [course]
+[2024-02-17 00:50:37] INFO: lessons
+[2024-02-17 00:50:37] INFO: Accessed [lessons]
+[2024-02-17 00:50:38] INFO: course
+[2024-02-17 00:50:38] INFO: Accessed [course]
+[2024-02-17 00:50:46] INFO: course
+[2024-02-17 00:50:46] INFO: Accessed [course]

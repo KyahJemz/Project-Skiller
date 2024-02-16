@@ -24,7 +24,7 @@
                                 echo '</br>';
                                 echo nl2br($row2['LessonDescription']);
                                 echo '</br>';
-                                echo '<a class="btn btn-primary class="mt-2" href="'.BASE_URL.'?page=lessons&item='.$row2['LessonId'].'">View</a>';
+                                echo '<a class="btn btn-primary mt-2" href="'.BASE_URL.'?page=lessons&item='.$row2['LessonId'].'">View</a>';
                                 echo '</br></br>';
                             }
                         }
@@ -32,6 +32,10 @@
                         echo '        </div>';
                         echo '    </div>';
                         echo '</div>';
+                    }
+                    $courseProgress = number_format(((isset($data['Progress']['FullProgress']) ? $data['Progress']['FullProgress'] : 0) / max($data['Progress']['FullProgressTotal'], 1)) * 100, 2);
+                    if((int) $courseProgress === 100){
+                        echo '<a href="'.BASE_URL.'?page=certificate&item='.$_SESSION['User_Id'].'"><button class="btn btn-primary mt-3">View Certificate</button><a>';
                     }
                 } else {
                     foreach ($data['Chapters'] as $row) {
@@ -49,7 +53,7 @@
                                 echo '</br>';
                                 echo nl2br($row2['LessonDescription']);
                                 echo '</br>';
-                                echo '<a class="btn btn-primary class="mt-2" href="'.BASE_URL.'?page=lessons&item='.$row2['LessonId'].'">View</a>';
+                                echo '<a class="btn btn-primary mt-2" href="'.BASE_URL.'?page=lessons&item='.$row2['LessonId'].'">View</a>';
                                 echo '</br></br>';
                             }
                         }
