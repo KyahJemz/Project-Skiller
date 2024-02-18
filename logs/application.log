@@ -127,3 +127,872 @@
 [2024-02-17 00:50:38] INFO: Accessed [course]
 [2024-02-17 00:50:46] INFO: course
 [2024-02-17 00:50:46] INFO: Accessed [course]
+[2024-02-17 01:02:46] INFO: dashboard
+[2024-02-17 01:02:46] INFO: Accessed [dashboard]
+[2024-02-17 01:02:46] INFO: course
+[2024-02-17 01:02:46] INFO: Accessed [course]
+[2024-02-17 01:02:47] INFO: dashboard
+[2024-02-17 01:02:47] INFO: Accessed [dashboard]
+[2024-02-17 01:02:47] INFO: scores
+[2024-02-17 01:02:47] INFO: Accessed [scores]
+[2024-02-17 01:02:47] INFO: course
+[2024-02-17 01:02:47] INFO: Accessed [course]
+[2024-02-17 01:02:48] INFO: scores
+[2024-02-17 01:02:48] INFO: Accessed [scores]
+[2024-02-17 01:02:49] INFO: course
+[2024-02-17 01:02:49] INFO: Accessed [course]
+[2024-02-17 01:02:49] INFO: scores
+[2024-02-17 01:02:49] INFO: Accessed [scores]
+[2024-02-17 01:02:50] INFO: activity
+[2024-02-17 01:02:50] INFO: Accessed [activity]
+[2024-02-17 01:03:49] INFO: activity
+[2024-02-17 01:03:49] INFO: Accessed [activity]
+[2024-02-17 01:03:49] INFO: result
+[2024-02-17 01:04:05] INFO: result
+[2024-02-17 01:04:06] INFO: result
+[2024-02-17 01:04:06] INFO: result
+[2024-02-17 01:04:49] INFO: scores
+[2024-02-17 01:04:49] INFO: Accessed [scores]
+[2024-02-17 01:04:52] INFO: activity
+[2024-02-17 01:04:52] INFO: Accessed [activity]
+[2024-02-17 01:04:52] INFO: result
+[2024-02-17 01:04:53] INFO: scores
+[2024-02-17 01:04:53] INFO: Accessed [scores]
+[2024-02-17 01:04:53] INFO: activity
+[2024-02-17 01:04:53] INFO: Accessed [activity]
+[2024-02-17 01:04:53] INFO: result
+[2024-02-17 01:04:54] INFO: scores
+[2024-02-17 01:04:54] INFO: Accessed [scores]
+[2024-02-17 01:04:54] INFO: course
+[2024-02-17 01:04:54] INFO: Accessed [course]
+[2024-02-17 01:05:33] INFO: scores
+[2024-02-17 01:05:33] INFO: Accessed [scores]
+[2024-02-17 01:05:34] INFO: activity
+[2024-02-17 01:05:34] INFO: Accessed [activity]
+[2024-02-17 01:05:34] INFO: result
+[2024-02-17 01:05:34] INFO: Accessed [result]
+[2024-02-17 01:05:37] INFO: scores
+[2024-02-17 01:05:37] INFO: Accessed [scores]
+[2024-02-17 01:05:39] INFO: activity
+[2024-02-17 01:05:39] INFO: Accessed [activity]
+[2024-02-17 01:05:39] INFO: result
+[2024-02-17 01:05:39] INFO: Accessed [result]
+[2024-02-17 15:52:43] INFO: home
+[2024-02-17 15:52:43] INFO: Accessed [home]
+[2024-02-17 15:52:53] INFO: login
+[2024-02-17 15:52:53] INFO: Accessed [login]
+[2024-02-17 15:52:53] INFO: dashboard
+[2024-02-17 15:52:53] INFO: Accessed [dashboard]
+[2024-02-17 15:52:56] INFO: course
+[2024-02-17 15:52:56] INFO: Accessed [course]
+[2024-02-17 15:52:59] INFO: certificate
+[2024-02-17 15:52:59] INFO: Accessed [certificate]
+[2024-02-17 15:53:04] INFO: course
+[2024-02-17 15:53:04] INFO: Accessed [course]
+[2024-02-17 15:53:05] INFO: course
+[2024-02-17 15:53:05] INFO: Accessed [course]
+[2024-02-17 15:53:05] INFO: scores
+[2024-02-17 15:53:05] INFO: Accessed [scores]
+[2024-02-17 15:53:07] INFO: activity
+[2024-02-17 15:53:08] INFO: Accessed [activity]
+[2024-02-17 15:53:08] INFO: result
+[2024-02-17 15:53:08] INFO: Accessed [result]
+[2024-02-17 15:53:10] INFO: lessons
+[2024-02-17 15:53:10] INFO: Accessed [lessons]
+[2024-02-17 15:53:10] INFO: chapter
+[2024-02-17 15:53:10] INFO: Accessed [chapter]
+[2024-02-17 15:53:13] INFO: profile
+[2024-02-17 15:53:13] INFO: Accessed [profile]
+[2024-02-17 15:53:14] INFO: logout
+[2024-02-17 15:53:14] INFO: Logging Out
+[2024-02-17 15:53:14] INFO: home
+[2024-02-17 15:53:14] INFO: Accessed [home]
+[2024-02-17 15:53:15] INFO: login
+[2024-02-17 15:53:15] INFO: Accessed [login]
+[2024-02-17 15:53:23] INFO: login
+[2024-02-17 15:53:23] INFO: Accessed [login]
+[2024-02-17 15:53:24] INFO: Successfully validated Google Sign-In token
+[2024-02-17 15:53:24] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-17 15:53:24] INFO: bindingString: sssi
+[2024-02-17 15:53:24] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-17 15:53:24] INFO: dashboard
+[2024-02-17 15:53:24] INFO: Accessed [dashboard]
+[2024-02-17 15:53:25] INFO: accounts
+[2024-02-17 15:53:25] INFO: Accessed [accounts]
+[2024-02-17 15:53:26] INFO: dashboard
+[2024-02-17 15:53:26] INFO: Accessed [dashboard]
+[2024-02-17 15:53:27] INFO: accounts
+[2024-02-17 15:53:27] INFO: Accessed [accounts]
+[2024-02-17 15:53:30] INFO: accounts
+[2024-02-17 15:53:30] INFO: Accessed [accounts]
+[2024-02-17 15:53:31] INFO: course
+[2024-02-17 15:53:31] INFO: Accessed [course]
+[2024-02-17 16:00:20] INFO: chapter
+[2024-02-17 16:00:20] INFO: Accessed [chapter]
+[2024-02-17 16:00:21] INFO: lessons
+[2024-02-17 16:00:21] INFO: Accessed [lessons]
+[2024-02-17 16:00:23] INFO: chapter
+[2024-02-17 16:00:23] INFO: Accessed [chapter]
+[2024-02-17 16:00:30] INFO: course
+[2024-02-17 16:00:30] INFO: Accessed [course]
+[2024-02-17 16:00:32] INFO: chapter
+[2024-02-17 16:00:32] INFO: Accessed [chapter]
+[2024-02-17 16:00:33] INFO: lessons
+[2024-02-17 16:00:33] INFO: Accessed [lessons]
+[2024-02-17 16:00:45] INFO: lessons
+[2024-02-17 16:00:45] INFO: Accessed [lessons]
+[2024-02-17 16:16:29] INFO: lessons
+[2024-02-17 16:16:29] INFO: Accessed [lessons]
+[2024-02-17 16:16:33] INFO: lessons
+[2024-02-17 16:16:33] INFO: Accessed [lessons]
+[2024-02-17 16:16:34] INFO: lessons
+[2024-02-17 16:16:34] INFO: Accessed [lessons]
+[2024-02-17 16:18:04] INFO: lessons
+[2024-02-17 16:18:04] INFO: Accessed [lessons]
+[2024-02-17 16:18:18] INFO: lessons
+[2024-02-17 16:18:18] INFO: Accessed [lessons]
+[2024-02-17 16:18:40] INFO: lessons
+[2024-02-17 16:18:40] INFO: Accessed [lessons]
+[2024-02-17 16:18:55] INFO: lessons
+[2024-02-17 16:18:55] INFO: Accessed [lessons]
+[2024-02-17 16:19:01] INFO: lessons
+[2024-02-17 16:19:01] INFO: Accessed [lessons]
+[2024-02-17 16:19:08] INFO: lessons
+[2024-02-17 16:19:08] INFO: Accessed [lessons]
+[2024-02-17 16:19:16] INFO: lessons
+[2024-02-17 16:19:16] INFO: Accessed [lessons]
+[2024-02-17 16:19:31] INFO: lessons
+[2024-02-17 16:19:31] INFO: Accessed [lessons]
+[2024-02-17 16:19:41] INFO: lessons
+[2024-02-17 16:19:41] INFO: Accessed [lessons]
+[2024-02-17 16:20:06] INFO: lessons
+[2024-02-17 16:20:06] INFO: Accessed [lessons]
+[2024-02-17 16:20:13] INFO: lessons
+[2024-02-17 16:20:13] INFO: Accessed [lessons]
+[2024-02-17 16:21:21] INFO: lessons
+[2024-02-17 16:21:21] INFO: Accessed [lessons]
+[2024-02-17 16:21:29] INFO: lessons
+[2024-02-17 16:21:29] INFO: Accessed [lessons]
+[2024-02-17 16:21:37] INFO: lessons
+[2024-02-17 16:21:37] INFO: Accessed [lessons]
+[2024-02-17 16:21:41] INFO: lessons
+[2024-02-17 16:21:41] INFO: Accessed [lessons]
+[2024-02-17 16:22:24] INFO: lessons
+[2024-02-17 16:22:24] INFO: Accessed [lessons]
+[2024-02-17 16:22:36] INFO: lessons
+[2024-02-17 16:22:36] INFO: Accessed [lessons]
+[2024-02-17 16:23:18] INFO: lessons
+[2024-02-17 16:23:18] INFO: Accessed [lessons]
+[2024-02-17 16:23:19] INFO: lessons
+[2024-02-17 16:23:19] INFO: Accessed [lessons]
+[2024-02-17 16:23:19] INFO: assessment
+[2024-02-17 16:23:19] INFO: Accessed [assessment]
+[2024-02-17 16:23:19] ERROR: Access Not Allowed
+[2024-02-17 16:23:20] INFO: lessons
+[2024-02-17 16:23:20] INFO: Accessed [lessons]
+[2024-02-17 16:23:34] INFO: lessons
+[2024-02-17 16:23:34] INFO: Accessed [lessons]
+[2024-02-17 16:23:36] INFO: lessons
+[2024-02-17 16:23:36] INFO: Accessed [lessons]
+[2024-02-17 16:23:37] INFO: lessons
+[2024-02-17 16:23:37] INFO: Accessed [lessons]
+[2024-02-17 16:23:40] INFO: lessons
+[2024-02-17 16:23:40] INFO: Accessed [lessons]
+[2024-02-17 16:23:42] INFO: assessment
+[2024-02-17 16:23:42] INFO: Accessed [assessment]
+[2024-02-17 16:23:42] ERROR: Access Not Allowed
+[2024-02-17 16:23:43] INFO: lessons
+[2024-02-17 16:23:43] INFO: Accessed [lessons]
+[2024-02-17 16:23:45] INFO: lessons
+[2024-02-17 16:23:45] INFO: Accessed [lessons]
+[2024-02-17 16:23:46] INFO: lessons
+[2024-02-17 16:23:46] INFO: Accessed [lessons]
+[2024-02-17 16:23:50] INFO: lessons
+[2024-02-17 16:23:50] INFO: Accessed [lessons]
+[2024-02-17 16:38:04] INFO: lessons
+[2024-02-17 16:38:04] INFO: Accessed [lessons]
+[2024-02-17 16:38:05] INFO: activity
+[2024-02-17 16:38:05] INFO: Accessed [activity]
+[2024-02-17 16:38:05] ERROR: Access Not Allowed
+[2024-02-17 16:38:06] INFO: lessons
+[2024-02-17 16:38:06] INFO: Accessed [lessons]
+[2024-02-17 16:38:07] INFO: activity
+[2024-02-17 16:38:07] INFO: Accessed [activity]
+[2024-02-17 16:38:07] ERROR: Access Not Allowed
+[2024-02-17 16:38:07] INFO: lessons
+[2024-02-17 16:38:07] INFO: Accessed [lessons]
+[2024-02-17 16:38:08] INFO: activity
+[2024-02-17 16:38:08] INFO: Accessed [activity]
+[2024-02-17 16:38:08] ERROR: Access Not Allowed
+[2024-02-17 16:38:08] INFO: lessons
+[2024-02-17 16:38:08] INFO: Accessed [lessons]
+[2024-02-17 16:38:09] INFO: activity
+[2024-02-17 16:38:09] INFO: Accessed [activity]
+[2024-02-17 16:38:09] ERROR: Access Not Allowed
+[2024-02-17 16:38:09] INFO: lessons
+[2024-02-17 16:38:09] INFO: Accessed [lessons]
+[2024-02-17 16:38:26] INFO: lessons
+[2024-02-17 16:38:26] INFO: Accessed [lessons]
+[2024-02-17 16:39:23] INFO: activity
+[2024-02-17 16:39:23] INFO: Accessed [activity]
+[2024-02-17 16:39:23] ERROR: Access Not Allowed
+[2024-02-17 16:39:23] INFO: lessons
+[2024-02-17 16:39:23] INFO: Accessed [lessons]
+[2024-02-17 16:39:24] INFO: activity
+[2024-02-17 16:39:24] INFO: Accessed [activity]
+[2024-02-17 16:39:24] ERROR: Access Not Allowed
+[2024-02-17 16:39:24] INFO: lessons
+[2024-02-17 16:39:24] INFO: Accessed [lessons]
+[2024-02-17 16:39:25] INFO: activity
+[2024-02-17 16:39:25] INFO: Accessed [activity]
+[2024-02-17 16:39:25] ERROR: Access Not Allowed
+[2024-02-17 16:39:25] INFO: lessons
+[2024-02-17 16:39:25] INFO: Accessed [lessons]
+[2024-02-17 16:40:15] INFO: lessons
+[2024-02-17 16:40:15] INFO: Accessed [lessons]
+[2024-02-17 16:40:16] INFO: activity
+[2024-02-17 16:40:16] INFO: Accessed [activity]
+[2024-02-17 16:40:16] ERROR: Access Not Allowed
+[2024-02-17 16:40:17] INFO: lessons
+[2024-02-17 16:40:17] INFO: Accessed [lessons]
+[2024-02-17 16:40:22] INFO: activity
+[2024-02-17 16:40:22] INFO: Accessed [activity]
+[2024-02-17 16:40:22] ERROR: Access Not Allowed
+[2024-02-17 16:41:19] INFO: lessons
+[2024-02-17 16:41:19] INFO: Accessed [lessons]
+[2024-02-17 16:41:27] INFO: activity
+[2024-02-17 16:41:27] INFO: Accessed [activity]
+[2024-02-17 16:41:27] ERROR: Access Not Allowed
+[2024-02-17 16:41:35] INFO: activity
+[2024-02-17 16:41:35] INFO: Accessed [activity]
+[2024-02-17 16:41:35] ERROR: Access Not Allowed
+[2024-02-17 16:41:38] INFO: activity
+[2024-02-17 16:41:38] INFO: Accessed [activity]
+[2024-02-17 16:41:38] ERROR: Access Not Allowed
+[2024-02-17 16:41:40] INFO: activity
+[2024-02-17 16:41:40] INFO: Accessed [activity]
+[2024-02-17 16:41:40] ERROR: Access Not Allowed
+[2024-02-17 16:41:44] INFO: activity
+[2024-02-17 16:41:44] INFO: Accessed [activity]
+[2024-02-17 16:41:44] ERROR: Access Not Allowed
+[2024-02-17 16:42:16] INFO: lessons
+[2024-02-17 16:42:16] INFO: Accessed [lessons]
+[2024-02-17 16:42:24] INFO: activity
+[2024-02-17 16:42:24] INFO: Accessed [activity]
+[2024-02-17 16:42:24] ERROR: Access Not Allowed
+[2024-02-17 16:42:29] INFO: activity
+[2024-02-17 16:42:29] INFO: Accessed [activity]
+[2024-02-17 16:42:29] ERROR: Access Not Allowed
+[2024-02-17 16:42:33] INFO: activity
+[2024-02-17 16:42:33] INFO: Accessed [activity]
+[2024-02-17 16:42:33] ERROR: Access Not Allowed
+[2024-02-17 16:43:27] INFO: lessons
+[2024-02-17 16:43:27] INFO: Accessed [lessons]
+[2024-02-17 16:43:56] INFO: lessons
+[2024-02-17 16:43:56] INFO: Accessed [lessons]
+[2024-02-17 16:45:01] INFO: lessons
+[2024-02-17 16:45:01] INFO: Accessed [lessons]
+[2024-02-17 16:45:04] INFO: activity
+[2024-02-17 16:45:04] INFO: Accessed [activity]
+[2024-02-17 16:45:04] ERROR: Access Not Allowed
+[2024-02-17 16:45:04] INFO: lessons
+[2024-02-17 16:45:04] INFO: Accessed [lessons]
+[2024-02-17 16:45:09] INFO: activity
+[2024-02-17 16:45:09] INFO: Accessed [activity]
+[2024-02-17 16:45:09] ERROR: Access Not Allowed
+[2024-02-17 16:45:14] INFO: activity
+[2024-02-17 16:45:14] INFO: Accessed [activity]
+[2024-02-17 16:45:14] ERROR: Access Not Allowed
+[2024-02-17 17:02:30] INFO: lessons
+[2024-02-17 17:02:30] INFO: Accessed [lessons]
+[2024-02-17 17:02:33] INFO: activity
+[2024-02-17 17:02:33] INFO: Accessed [activity]
+[2024-02-17 17:02:37] INFO: activity
+[2024-02-17 17:02:37] INFO: Accessed [activity]
+[2024-02-17 17:03:22] INFO: lessons
+[2024-02-17 17:03:22] INFO: Accessed [lessons]
+[2024-02-17 17:03:23] INFO: activity
+[2024-02-17 17:03:23] INFO: Accessed [activity]
+[2024-02-17 17:03:25] INFO: activity
+[2024-02-17 17:03:25] INFO: Accessed [activity]
+[2024-02-17 17:03:52] INFO: activity
+[2024-02-17 17:03:52] INFO: Accessed [activity]
+[2024-02-17 17:03:52] INFO: lessons
+[2024-02-17 17:03:52] INFO: Accessed [lessons]
+[2024-02-17 17:03:54] INFO: activity
+[2024-02-17 17:03:54] INFO: Accessed [activity]
+[2024-02-17 17:03:56] INFO: activity
+[2024-02-17 17:03:56] INFO: Accessed [activity]
+[2024-02-17 17:03:56] INFO: lessons
+[2024-02-17 17:03:56] INFO: Accessed [lessons]
+[2024-02-17 17:03:57] INFO: activity
+[2024-02-17 17:03:57] INFO: Accessed [activity]
+[2024-02-17 17:03:59] INFO: activity
+[2024-02-17 17:03:59] INFO: Accessed [activity]
+[2024-02-17 17:04:00] INFO: lessons
+[2024-02-17 17:04:00] INFO: Accessed [lessons]
+[2024-02-17 17:04:00] INFO: activity
+[2024-02-17 17:04:00] INFO: Accessed [activity]
+[2024-02-17 17:04:01] INFO: activity
+[2024-02-17 17:04:01] INFO: Accessed [activity]
+[2024-02-17 17:04:02] INFO: lessons
+[2024-02-17 17:04:02] INFO: Accessed [lessons]
+[2024-02-17 17:04:03] INFO: activity
+[2024-02-17 17:04:03] INFO: Accessed [activity]
+[2024-02-17 17:04:04] INFO: activity
+[2024-02-17 17:04:04] INFO: Accessed [activity]
+[2024-02-17 17:04:04] INFO: lessons
+[2024-02-17 17:04:04] INFO: Accessed [lessons]
+[2024-02-17 17:04:05] INFO: activity
+[2024-02-17 17:04:05] INFO: Accessed [activity]
+[2024-02-17 17:04:12] INFO: activity
+[2024-02-17 17:04:12] INFO: Accessed [activity]
+[2024-02-17 17:04:13] INFO: lessons
+[2024-02-17 17:04:13] INFO: Accessed [lessons]
+[2024-02-17 17:04:14] INFO: activity
+[2024-02-17 17:04:14] INFO: Accessed [activity]
+[2024-02-17 17:04:16] INFO: activity
+[2024-02-17 17:04:16] INFO: Accessed [activity]
+[2024-02-17 17:04:17] INFO: lessons
+[2024-02-17 17:04:17] INFO: Accessed [lessons]
+[2024-02-17 17:04:17] INFO: activity
+[2024-02-17 17:04:17] INFO: Accessed [activity]
+[2024-02-17 17:04:27] INFO: activity
+[2024-02-17 17:04:27] INFO: Accessed [activity]
+[2024-02-17 17:06:54] INFO: activity
+[2024-02-17 17:06:54] INFO: Accessed [activity]
+[2024-02-17 17:06:55] INFO: lessons
+[2024-02-17 17:06:55] INFO: Accessed [lessons]
+[2024-02-17 17:06:57] INFO: activity
+[2024-02-17 17:06:57] INFO: Accessed [activity]
+[2024-02-17 17:06:58] INFO: activity
+[2024-02-17 17:06:58] INFO: Accessed [activity]
+[2024-02-17 17:06:59] INFO: lessons
+[2024-02-17 17:06:59] INFO: Accessed [lessons]
+[2024-02-17 17:06:59] INFO: activity
+[2024-02-17 17:06:59] INFO: Accessed [activity]
+[2024-02-17 17:07:03] INFO: assessment
+[2024-02-17 17:07:03] INFO: Accessed [assessment]
+[2024-02-17 17:07:03] ERROR: Access Not Allowed
+[2024-02-17 17:07:04] INFO: lessons
+[2024-02-17 17:07:04] INFO: Accessed [lessons]
+[2024-02-17 17:07:10] INFO: activity
+[2024-02-17 17:07:10] INFO: Accessed [activity]
+[2024-02-17 17:07:10] INFO: lessons
+[2024-02-17 17:07:10] INFO: Accessed [lessons]
+[2024-02-17 17:07:11] INFO: activity
+[2024-02-17 17:07:11] INFO: Accessed [activity]
+[2024-02-17 17:07:13] INFO: activity
+[2024-02-17 17:07:13] INFO: Accessed [activity]
+[2024-02-17 17:08:48] INFO: lessons
+[2024-02-17 17:08:48] INFO: Accessed [lessons]
+[2024-02-17 17:08:53] INFO: activity
+[2024-02-17 17:08:53] INFO: Accessed [activity]
+[2024-02-17 17:08:54] INFO: lessons
+[2024-02-17 17:08:54] INFO: Accessed [lessons]
+[2024-02-17 17:08:55] INFO: activity
+[2024-02-17 17:08:55] INFO: Accessed [activity]
+[2024-02-17 17:11:00] INFO: activity
+[2024-02-17 17:11:00] INFO: Accessed [activity]
+[2024-02-17 17:11:00] INFO: lessons
+[2024-02-17 17:11:00] INFO: Accessed [lessons]
+[2024-02-17 17:11:01] INFO: activity
+[2024-02-17 17:11:01] INFO: Accessed [activity]
+[2024-02-17 17:11:02] INFO: activity
+[2024-02-17 17:11:02] INFO: Accessed [activity]
+[2024-02-17 17:11:04] INFO: activity
+[2024-02-17 17:11:04] INFO: Accessed [activity]
+[2024-02-17 17:11:04] INFO: lessons
+[2024-02-17 17:11:04] INFO: Accessed [lessons]
+[2024-02-17 17:11:05] INFO: activity
+[2024-02-17 17:11:05] INFO: Accessed [activity]
+[2024-02-17 17:11:07] INFO: activity
+[2024-02-17 17:11:07] INFO: Accessed [activity]
+[2024-02-17 17:11:08] INFO: activity
+[2024-02-17 17:11:08] INFO: Accessed [activity]
+[2024-02-17 17:11:10] INFO: activity
+[2024-02-17 17:11:10] INFO: Accessed [activity]
+[2024-02-17 17:11:11] INFO: activity
+[2024-02-17 17:11:11] INFO: Accessed [activity]
+[2024-02-17 17:11:12] INFO: activity
+[2024-02-17 17:11:12] INFO: Accessed [activity]
+[2024-02-17 17:11:14] INFO: activity
+[2024-02-17 17:11:14] INFO: Accessed [activity]
+[2024-02-17 17:11:17] INFO: activity
+[2024-02-17 17:11:17] INFO: Accessed [activity]
+[2024-02-17 17:12:05] INFO: lessons
+[2024-02-17 17:12:05] INFO: Accessed [lessons]
+[2024-02-17 17:12:06] INFO: assessment
+[2024-02-17 17:12:06] INFO: Accessed [assessment]
+[2024-02-17 17:12:06] ERROR: Access Not Allowed
+[2024-02-17 17:12:07] INFO: lessons
+[2024-02-17 17:12:07] INFO: Accessed [lessons]
+[2024-02-17 17:12:19] INFO: assessment
+[2024-02-17 17:12:19] INFO: Accessed [assessment]
+[2024-02-17 17:12:19] ERROR: Access Not Allowed
+[2024-02-17 17:12:22] INFO: lessons
+[2024-02-17 17:12:22] INFO: Accessed [lessons]
+[2024-02-18 02:06:51] INFO: home
+[2024-02-18 02:06:51] INFO: Accessed [home]
+[2024-02-18 02:09:12] INFO: login
+[2024-02-18 02:09:12] INFO: Accessed [login]
+[2024-02-18 02:09:12] INFO: dashboard
+[2024-02-18 02:09:12] INFO: Accessed [dashboard]
+[2024-02-18 02:09:13] INFO: accounts
+[2024-02-18 02:09:13] INFO: Accessed [accounts]
+[2024-02-18 02:09:14] INFO: course
+[2024-02-18 02:09:14] INFO: Accessed [course]
+[2024-02-18 02:09:19] INFO: chapter
+[2024-02-18 02:09:19] INFO: Accessed [chapter]
+[2024-02-18 02:09:21] INFO: lessons
+[2024-02-18 02:09:21] INFO: Accessed [lessons]
+[2024-02-18 02:09:23] INFO: activity
+[2024-02-18 02:09:23] INFO: Accessed [activity]
+[2024-02-18 02:09:27] INFO: activity
+[2024-02-18 02:09:27] INFO: Accessed [activity]
+[2024-02-18 02:09:27] ERROR: Error deleting records: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+[2024-02-18 02:09:28] INFO: lessons
+[2024-02-18 02:09:28] INFO: Accessed [lessons]
+[2024-02-18 02:09:31] INFO: activity
+[2024-02-18 02:09:31] INFO: Accessed [activity]
+[2024-02-18 02:09:34] INFO: activity
+[2024-02-18 02:09:34] INFO: Accessed [activity]
+[2024-02-18 02:09:34] ERROR: Error deleting records: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+[2024-02-18 02:09:35] INFO: lessons
+[2024-02-18 02:09:35] INFO: Accessed [lessons]
+[2024-02-18 02:09:40] INFO: activity
+[2024-02-18 02:09:40] INFO: Accessed [activity]
+[2024-02-18 02:09:45] INFO: activity
+[2024-02-18 02:09:45] INFO: Accessed [activity]
+[2024-02-18 02:09:45] ERROR: Error deleting records: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+[2024-02-18 02:09:46] INFO: lessons
+[2024-02-18 02:09:46] INFO: Accessed [lessons]
+[2024-02-18 02:10:04] INFO: activity
+[2024-02-18 02:10:04] INFO: Accessed [activity]
+[2024-02-18 02:10:08] INFO: activity
+[2024-02-18 02:10:08] INFO: Accessed [activity]
+[2024-02-18 02:10:08] ERROR: Error deleting records: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+[2024-02-18 02:10:08] INFO: lessons
+[2024-02-18 02:10:08] INFO: Accessed [lessons]
+[2024-02-18 02:10:41] INFO: lessons
+[2024-02-18 02:10:41] INFO: Accessed [lessons]
+[2024-02-18 02:10:43] INFO: activity
+[2024-02-18 02:10:43] INFO: Accessed [activity]
+[2024-02-18 02:10:45] INFO: activity
+[2024-02-18 02:10:45] INFO: Accessed [activity]
+[2024-02-18 02:10:47] INFO: activity
+[2024-02-18 02:10:47] INFO: Accessed [activity]
+[2024-02-18 02:10:47] ERROR: Error deleting records: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+[2024-02-18 02:15:13] INFO: activity
+[2024-02-18 02:15:13] INFO: Accessed [activity]
+[2024-02-18 02:15:13] INFO: 4
+[2024-02-18 02:15:13] ERROR: Error deleting records: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+[2024-02-18 02:15:43] INFO: activity
+[2024-02-18 02:15:43] INFO: Accessed [activity]
+[2024-02-18 02:15:43] INFO: 4
+[2024-02-18 02:15:43] ERROR: Error deleting records: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+[2024-02-18 02:17:23] INFO: activity
+[2024-02-18 02:17:23] INFO: Accessed [activity]
+[2024-02-18 02:17:23] INFO: 4
+[2024-02-18 02:17:23] ERROR: Error deleting records: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+[2024-02-18 02:18:00] INFO: activity
+[2024-02-18 02:18:00] INFO: Accessed [activity]
+[2024-02-18 02:18:00] ERROR: Error deleting records: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+[2024-02-18 02:18:21] INFO: activity
+[2024-02-18 02:18:21] INFO: Accessed [activity]
+[2024-02-18 02:18:21] INFO: 0
+[2024-02-18 02:18:21] ERROR: Error deleting records: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+[2024-02-18 02:18:52] INFO: activity
+[2024-02-18 02:18:52] INFO: Accessed [activity]
+[2024-02-18 02:18:52] INFO: 0
+[2024-02-18 02:18:52] INFO: mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1 in C:\Users\Stephen\Documents\GitHub\Project-Skiller\config\Database.php:36
+Stack trace:
+#0 C:\Users\Stephen\Documents\GitHub\Project-Skiller\config\Database.php(36): mysqli->prepare('DELETE FROM tbl...')
+#1 C:\Users\Stephen\Documents\GitHub\Project-Skiller\app\models\ActivityModel.php(629): Database->prepare('DELETE FROM tbl...')
+#2 C:\Users\Stephen\Documents\GitHub\Project-Skiller\app\controllers\ActivityController.php(193): ActivityModel->deleteActivity(Array)
+#3 C:\Users\Stephen\Documents\GitHub\Project-Skiller\config\Router.php(59): ActivityController->actionAdministrator('')
+#4 C:\Users\Stephen\Documents\GitHub\Project-Skiller\config\Router.php(47): Router->executeRoleSpecificAction(Object(ActivityController), 'true', 'Administrator', '')
+#5 C:\Users\Stephen\Documents\GitHub\Project-Skiller\config\Router.php(36): Router->processAction(Object(ActivityController), 'true', '')
+#6 C:\Users\Stephen\Documents\GitHub\Project-Skiller\public\index.php(45): Router->route()
+#7 {main}
+[2024-02-18 02:18:52] ERROR: Error deleting records: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+[2024-02-18 02:21:51] INFO: activity
+[2024-02-18 02:21:51] INFO: Accessed [activity]
+[2024-02-18 02:21:51] INFO: 0
+[2024-02-18 02:21:51] INFO: 1
+[2024-02-18 02:21:51] INFO: 2
+[2024-02-18 02:21:51] INFO: 3
+[2024-02-18 02:21:51] INFO: 4
+[2024-02-18 02:21:51] INFO: 5
+[2024-02-18 02:21:54] INFO: lessons
+[2024-02-18 02:21:54] INFO: Accessed [lessons]
+[2024-02-18 02:22:01] INFO: lessons
+[2024-02-18 02:22:01] INFO: Accessed [lessons]
+[2024-02-18 02:22:02] INFO: activity
+[2024-02-18 02:22:02] INFO: Accessed [activity]
+[2024-02-18 02:22:04] INFO: activity
+[2024-02-18 02:22:04] INFO: Accessed [activity]
+[2024-02-18 02:22:04] INFO: 0
+[2024-02-18 02:22:04] INFO: 1
+[2024-02-18 02:22:04] INFO: 2
+[2024-02-18 02:22:04] INFO: 3
+[2024-02-18 02:22:04] INFO: 4
+[2024-02-18 02:22:04] INFO: 5
+[2024-02-18 02:22:08] INFO: lessons
+[2024-02-18 02:22:08] INFO: Accessed [lessons]
+[2024-02-18 02:22:09] INFO: activity
+[2024-02-18 02:22:09] INFO: Accessed [activity]
+[2024-02-18 02:22:11] INFO: activity
+[2024-02-18 02:22:11] INFO: Accessed [activity]
+[2024-02-18 02:22:11] INFO: 0
+[2024-02-18 02:22:11] INFO: 1
+[2024-02-18 02:22:11] INFO: 2
+[2024-02-18 02:22:11] INFO: 3
+[2024-02-18 02:22:11] INFO: 4
+[2024-02-18 02:22:11] INFO: 5
+[2024-02-18 02:22:12] INFO: lessons
+[2024-02-18 02:22:12] INFO: Accessed [lessons]
+[2024-02-18 02:22:18] INFO: activity
+[2024-02-18 02:22:18] INFO: Accessed [activity]
+[2024-02-18 02:22:18] INFO: lessons
+[2024-02-18 02:22:18] INFO: Accessed [lessons]
+[2024-02-18 02:22:20] INFO: activity
+[2024-02-18 02:22:20] INFO: Accessed [activity]
+[2024-02-18 02:22:22] INFO: activity
+[2024-02-18 02:22:22] INFO: Accessed [activity]
+[2024-02-18 02:22:22] INFO: 0
+[2024-02-18 02:22:22] INFO: 1
+[2024-02-18 02:22:22] INFO: 2
+[2024-02-18 02:22:22] INFO: 3
+[2024-02-18 02:22:22] INFO: 4
+[2024-02-18 02:22:22] INFO: 5
+[2024-02-18 02:22:22] INFO: lessons
+[2024-02-18 02:22:22] INFO: Accessed [lessons]
+[2024-02-18 02:22:25] INFO: assessment
+[2024-02-18 02:22:25] INFO: Accessed [assessment]
+[2024-02-18 02:22:25] ERROR: Access Not Allowed
+[2024-02-18 02:22:28] INFO: lessons
+[2024-02-18 02:22:28] INFO: Accessed [lessons]
+[2024-02-18 02:25:17] INFO: lessons
+[2024-02-18 02:25:17] INFO: Accessed [lessons]
+[2024-02-18 02:25:18] INFO: assessment
+[2024-02-18 02:25:18] INFO: Accessed [assessment]
+[2024-02-18 02:25:18] ERROR: Access Not Allowed
+[2024-02-18 02:25:20] INFO: lessons
+[2024-02-18 02:25:20] INFO: Accessed [lessons]
+[2024-02-18 02:25:56] INFO: lessons
+[2024-02-18 02:25:56] INFO: Accessed [lessons]
+[2024-02-18 02:25:57] INFO: activity
+[2024-02-18 02:25:57] INFO: Accessed [activity]
+[2024-02-18 02:25:59] INFO: activity
+[2024-02-18 02:25:59] INFO: Accessed [activity]
+[2024-02-18 02:26:02] INFO: lessons
+[2024-02-18 02:26:02] INFO: Accessed [lessons]
+[2024-02-18 02:26:03] INFO: activity
+[2024-02-18 02:26:03] INFO: Accessed [activity]
+[2024-02-18 02:56:33] INFO: activity
+[2024-02-18 02:56:33] INFO: Accessed [activity]
+[2024-02-18 02:58:26] INFO: chapter
+[2024-02-18 02:58:26] INFO: Accessed [chapter]
+[2024-02-18 02:58:28] INFO: lessons
+[2024-02-18 02:58:28] INFO: Accessed [lessons]
+[2024-02-18 02:58:29] INFO: assessment
+[2024-02-18 02:58:29] INFO: Accessed [assessment]
+[2024-02-18 02:58:45] INFO: lessons
+[2024-02-18 02:58:45] INFO: Accessed [lessons]
+[2024-02-18 02:58:48] INFO: assessment
+[2024-02-18 02:58:48] INFO: Accessed [assessment]
+[2024-02-18 03:24:39] INFO: assessment
+[2024-02-18 03:24:39] INFO: Accessed [assessment]
+[2024-02-18 03:25:08] INFO: assessment
+[2024-02-18 03:25:08] INFO: Accessed [assessment]
+[2024-02-18 03:27:51] INFO: assessment
+[2024-02-18 03:27:51] INFO: Accessed [assessment]
+[2024-02-18 03:27:55] INFO: assessment
+[2024-02-18 03:27:55] INFO: Accessed [assessment]
+[2024-02-18 03:29:38] INFO: assessment
+[2024-02-18 03:29:38] INFO: Accessed [assessment]
+[2024-02-18 03:30:49] INFO: assessment
+[2024-02-18 03:30:49] INFO: Accessed [assessment]
+[2024-02-18 03:31:12] INFO: assessment
+[2024-02-18 03:31:12] INFO: Accessed [assessment]
+[2024-02-18 03:31:18] INFO: assessment
+[2024-02-18 03:31:18] INFO: Accessed [assessment]
+[2024-02-18 03:31:33] INFO: assessment
+[2024-02-18 03:31:33] INFO: Accessed [assessment]
+[2024-02-18 03:34:00] INFO: assessment
+[2024-02-18 03:34:00] INFO: Accessed [assessment]
+[2024-02-18 03:34:13] INFO: assessment
+[2024-02-18 03:34:13] INFO: Accessed [assessment]
+[2024-02-18 03:34:24] INFO: assessment
+[2024-02-18 03:34:24] INFO: Accessed [assessment]
+[2024-02-18 03:35:03] INFO: assessment
+[2024-02-18 03:35:03] INFO: Accessed [assessment]
+[2024-02-18 03:35:21] INFO: assessment
+[2024-02-18 03:35:21] INFO: Accessed [assessment]
+[2024-02-18 03:35:26] INFO: result
+[2024-02-18 03:35:26] INFO: Accessed [result]
+[2024-02-18 03:35:26] ERROR: Access Not Allowed
+[2024-02-18 03:35:29] INFO: assessment
+[2024-02-18 03:35:29] INFO: Accessed [assessment]
+[2024-02-18 03:36:00] INFO: assessment
+[2024-02-18 03:36:00] INFO: Accessed [assessment]
+[2024-02-18 03:36:19] INFO: assessment
+[2024-02-18 03:36:19] INFO: Accessed [assessment]
+[2024-02-18 03:36:24] INFO: assessment
+[2024-02-18 03:36:24] INFO: Accessed [assessment]
+[2024-02-18 03:36:27] INFO: assessment
+[2024-02-18 03:36:27] INFO: Accessed [assessment]
+[2024-02-18 03:36:41] INFO: assessment
+[2024-02-18 03:36:41] INFO: Accessed [assessment]
+[2024-02-18 03:36:59] INFO: assessment
+[2024-02-18 03:36:59] INFO: Accessed [assessment]
+[2024-02-18 03:37:03] INFO: assessment
+[2024-02-18 03:37:03] INFO: Accessed [assessment]
+[2024-02-18 03:44:48] INFO: assessment
+[2024-02-18 03:44:48] INFO: Accessed [assessment]
+[2024-02-18 03:45:15] INFO: assessment
+[2024-02-18 03:45:15] INFO: Accessed [assessment]
+[2024-02-18 03:45:25] INFO: assessment
+[2024-02-18 03:45:25] INFO: Accessed [assessment]
+[2024-02-18 03:53:59] INFO: assessment
+[2024-02-18 03:53:59] INFO: Accessed [assessment]
+[2024-02-18 03:54:33] INFO: assessment
+[2024-02-18 03:54:33] INFO: Accessed [assessment]
+[2024-02-18 03:55:12] INFO: assessment
+[2024-02-18 03:55:12] INFO: Accessed [assessment]
+[2024-02-18 03:55:18] INFO: assessment
+[2024-02-18 03:55:18] INFO: Accessed [assessment]
+[2024-02-18 03:55:24] INFO: assessment
+[2024-02-18 03:55:24] INFO: Accessed [assessment]
+[2024-02-18 03:56:33] INFO: assessment
+[2024-02-18 03:56:33] INFO: Accessed [assessment]
+[2024-02-18 03:58:07] INFO: assessment
+[2024-02-18 03:58:07] INFO: Accessed [assessment]
+[2024-02-18 03:58:19] INFO: assessment
+[2024-02-18 03:58:19] INFO: Accessed [assessment]
+[2024-02-18 03:58:34] INFO: assessment
+[2024-02-18 03:58:34] INFO: Accessed [assessment]
+[2024-02-18 03:58:50] INFO: assessment
+[2024-02-18 03:58:50] INFO: Accessed [assessment]
+[2024-02-18 04:02:00] INFO: assessment
+[2024-02-18 04:02:00] INFO: Accessed [assessment]
+[2024-02-18 04:03:15] INFO: assessment
+[2024-02-18 04:03:15] INFO: Accessed [assessment]
+[2024-02-18 04:03:21] INFO: assessment
+[2024-02-18 04:03:21] INFO: Accessed [assessment]
+[2024-02-18 04:04:11] INFO: assessment
+[2024-02-18 04:04:11] INFO: Accessed [assessment]
+[2024-02-18 04:08:50] INFO: assessment
+[2024-02-18 04:08:50] INFO: Accessed [assessment]
+[2024-02-18 04:25:45] INFO: assessment
+[2024-02-18 04:25:45] INFO: Accessed [assessment]
+[2024-02-18 04:25:58] INFO: assessment
+[2024-02-18 04:25:58] INFO: Accessed [assessment]
+[2024-02-18 04:26:00] INFO: assessment
+[2024-02-18 04:26:00] INFO: Accessed [assessment]
+[2024-02-18 04:26:34] INFO: assessment
+[2024-02-18 04:26:34] INFO: Accessed [assessment]
+[2024-02-18 04:27:00] INFO: assessment
+[2024-02-18 04:27:00] INFO: Accessed [assessment]
+[2024-02-18 04:27:23] INFO: assessment
+[2024-02-18 04:27:23] INFO: Accessed [assessment]
+[2024-02-18 04:27:45] INFO: assessment
+[2024-02-18 04:27:45] INFO: Accessed [assessment]
+[2024-02-18 04:28:35] INFO: assessment
+[2024-02-18 04:28:35] INFO: Accessed [assessment]
+[2024-02-18 04:28:57] INFO: assessment
+[2024-02-18 04:28:57] INFO: Accessed [assessment]
+[2024-02-18 04:29:22] INFO: assessment
+[2024-02-18 04:29:22] INFO: Accessed [assessment]
+[2024-02-18 04:31:20] INFO: assessment
+[2024-02-18 04:31:20] INFO: Accessed [assessment]
+[2024-02-18 04:33:03] INFO: assessment
+[2024-02-18 04:33:03] INFO: Accessed [assessment]
+[2024-02-18 04:36:27] INFO: assessment
+[2024-02-18 04:36:27] INFO: Accessed [assessment]
+[2024-02-18 04:36:54] INFO: assessment
+[2024-02-18 04:36:54] INFO: Accessed [assessment]
+[2024-02-18 04:37:08] INFO: assessment
+[2024-02-18 04:37:08] INFO: Accessed [assessment]
+[2024-02-18 04:37:51] INFO: assessment
+[2024-02-18 04:37:51] INFO: Accessed [assessment]
+[2024-02-18 04:38:45] INFO: assessment
+[2024-02-18 04:38:45] INFO: Accessed [assessment]
+[2024-02-18 04:38:52] INFO: assessment
+[2024-02-18 04:38:52] INFO: Accessed [assessment]
+[2024-02-18 04:39:04] INFO: assessment
+[2024-02-18 04:39:04] INFO: Accessed [assessment]
+[2024-02-18 04:39:15] INFO: assessment
+[2024-02-18 04:39:15] INFO: Accessed [assessment]
+[2024-02-18 04:39:29] INFO: assessment
+[2024-02-18 04:39:29] INFO: Accessed [assessment]
+[2024-02-18 04:39:48] INFO: assessment
+[2024-02-18 04:39:48] INFO: Accessed [assessment]
+[2024-02-18 04:40:04] INFO: assessment
+[2024-02-18 04:40:04] INFO: Accessed [assessment]
+[2024-02-18 04:40:53] INFO: assessment
+[2024-02-18 04:40:53] INFO: Accessed [assessment]
+[2024-02-18 04:41:36] INFO: assessment
+[2024-02-18 04:41:36] INFO: Accessed [assessment]
+[2024-02-18 04:42:03] INFO: assessment
+[2024-02-18 04:42:03] INFO: Accessed [assessment]
+[2024-02-18 04:42:43] INFO: assessment
+[2024-02-18 04:42:43] INFO: Accessed [assessment]
+[2024-02-18 04:43:09] INFO: assessment
+[2024-02-18 04:43:09] INFO: Accessed [assessment]
+[2024-02-18 04:44:41] INFO: assessment
+[2024-02-18 04:44:41] INFO: Accessed [assessment]
+[2024-02-18 04:45:22] INFO: assessment
+[2024-02-18 04:45:22] INFO: Accessed [assessment]
+[2024-02-18 04:45:23] INFO: assessment
+[2024-02-18 04:45:23] INFO: Accessed [assessment]
+[2024-02-18 04:45:24] INFO: assessment
+[2024-02-18 04:45:24] INFO: Accessed [assessment]
+[2024-02-18 04:45:24] INFO: assessment
+[2024-02-18 04:45:24] INFO: Accessed [assessment]
+[2024-02-18 04:45:24] INFO: assessment
+[2024-02-18 04:45:24] INFO: Accessed [assessment]
+[2024-02-18 04:45:25] INFO: assessment
+[2024-02-18 04:45:25] INFO: Accessed [assessment]
+[2024-02-18 04:46:00] INFO: assessment
+[2024-02-18 04:46:00] INFO: Accessed [assessment]
+[2024-02-18 04:52:39] INFO: assessment
+[2024-02-18 04:52:40] INFO: Accessed [assessment]
+[2024-02-18 04:53:13] INFO: assessment
+[2024-02-18 04:53:13] INFO: Accessed [assessment]
+[2024-02-18 04:53:34] INFO: assessment
+[2024-02-18 04:53:34] INFO: Accessed [assessment]
+[2024-02-18 04:54:44] INFO: assessment
+[2024-02-18 04:54:44] INFO: Accessed [assessment]
+[2024-02-18 04:54:56] INFO: assessment
+[2024-02-18 04:54:56] INFO: Accessed [assessment]
+[2024-02-18 04:55:11] INFO: assessment
+[2024-02-18 04:55:11] INFO: Accessed [assessment]
+[2024-02-18 04:56:07] INFO: assessment
+[2024-02-18 04:56:07] INFO: Accessed [assessment]
+[2024-02-18 04:59:02] INFO: assessment
+[2024-02-18 04:59:02] INFO: Accessed [assessment]
+[2024-02-18 05:02:25] INFO: assessment
+[2024-02-18 05:02:25] INFO: Accessed [assessment]
+[2024-02-18 05:03:04] INFO: assessment
+[2024-02-18 05:03:04] INFO: Accessed [assessment]
+[2024-02-18 05:03:39] INFO: assessment
+[2024-02-18 05:03:39] INFO: Accessed [assessment]
+[2024-02-18 05:06:22] INFO: assessment
+[2024-02-18 05:06:22] INFO: Accessed [assessment]
+[2024-02-18 05:07:30] INFO: activity
+[2024-02-18 05:07:30] INFO: Accessed [activity]
+[2024-02-18 05:07:31] INFO: activity
+[2024-02-18 05:07:31] INFO: Accessed [activity]
+[2024-02-18 05:07:33] INFO: activity
+[2024-02-18 05:07:33] INFO: Accessed [activity]
+[2024-02-18 05:11:15] INFO: assessment
+[2024-02-18 05:11:15] INFO: Accessed [assessment]
+[2024-02-18 05:11:25] INFO: assessment
+[2024-02-18 05:11:25] INFO: Accessed [assessment]
+[2024-02-18 05:11:40] INFO: assessment
+[2024-02-18 05:11:40] INFO: Accessed [assessment]
+[2024-02-18 05:12:28] INFO: assessment
+[2024-02-18 05:12:28] INFO: Accessed [assessment]
+[2024-02-18 05:12:31] INFO: assessment
+[2024-02-18 05:12:31] INFO: Accessed [assessment]
+[2024-02-18 05:12:33] INFO: assessment
+[2024-02-18 05:12:33] INFO: Accessed [assessment]
+[2024-02-18 05:12:44] INFO: assessment
+[2024-02-18 05:12:44] INFO: Accessed [assessment]
+[2024-02-18 05:13:13] INFO: assessment
+[2024-02-18 05:13:13] INFO: Accessed [assessment]
+[2024-02-18 05:14:29] INFO: assessment
+[2024-02-18 05:14:29] INFO: Accessed [assessment]
+[2024-02-18 05:14:59] INFO: assessment
+[2024-02-18 05:14:59] INFO: Accessed [assessment]
+[2024-02-18 05:15:14] INFO: assessment
+[2024-02-18 05:15:14] INFO: Accessed [assessment]
+[2024-02-18 05:15:30] INFO: assessment
+[2024-02-18 05:15:30] INFO: Accessed [assessment]
+[2024-02-18 05:15:33] INFO: assessment
+[2024-02-18 05:15:33] INFO: Accessed [assessment]
+[2024-02-18 05:15:36] INFO: assessment
+[2024-02-18 05:15:36] INFO: Accessed [assessment]
+[2024-02-18 05:15:37] INFO: assessment
+[2024-02-18 05:15:37] INFO: Accessed [assessment]
+[2024-02-18 05:15:39] INFO: assessment
+[2024-02-18 05:15:39] INFO: Accessed [assessment]
+[2024-02-18 05:16:05] INFO: assessment
+[2024-02-18 05:16:05] INFO: Accessed [assessment]
+[2024-02-18 05:16:08] INFO: assessment
+[2024-02-18 05:16:08] INFO: Accessed [assessment]
+[2024-02-18 05:22:14] INFO: assessment
+[2024-02-18 05:22:14] INFO: Accessed [assessment]
+[2024-02-18 05:24:22] INFO: assessment
+[2024-02-18 05:24:22] INFO: Accessed [assessment]
+[2024-02-18 05:24:59] INFO: assessment
+[2024-02-18 05:24:59] INFO: Accessed [assessment]
+[2024-02-18 05:25:39] INFO: assessment
+[2024-02-18 05:25:39] INFO: Accessed [assessment]
+[2024-02-18 05:26:34] INFO: assessment
+[2024-02-18 05:26:34] INFO: Accessed [assessment]
+[2024-02-18 05:27:14] INFO: assessment
+[2024-02-18 05:27:14] INFO: Accessed [assessment]
+[2024-02-18 05:27:38] INFO: assessment
+[2024-02-18 05:27:38] INFO: Accessed [assessment]
+[2024-02-18 05:32:59] INFO: assessment
+[2024-02-18 05:32:59] INFO: Accessed [assessment]
+[2024-02-18 05:33:09] INFO: assessment
+[2024-02-18 05:33:09] INFO: Accessed [assessment]
+[2024-02-18 05:33:40] INFO: assessment
+[2024-02-18 05:33:40] INFO: Accessed [assessment]
+[2024-02-18 05:34:01] INFO: assessment
+[2024-02-18 05:34:01] INFO: Accessed [assessment]
+[2024-02-18 05:37:05] INFO: assessment
+[2024-02-18 05:37:05] INFO: Accessed [assessment]
+[2024-02-18 05:37:07] INFO: home
+[2024-02-18 05:37:07] INFO: Accessed [home]
+[2024-02-18 05:40:49] INFO: assessment
+[2024-02-18 05:40:49] INFO: Accessed [assessment]
+[2024-02-18 05:40:51] INFO: assessment
+[2024-02-18 05:40:51] INFO: Accessed [assessment]
+[2024-02-18 05:41:19] INFO: assessment
+[2024-02-18 05:41:19] INFO: Accessed [assessment]
+[2024-02-18 05:41:20] INFO: assessment
+[2024-02-18 05:41:20] INFO: Accessed [assessment]
+[2024-02-18 05:41:20] ERROR: Access Not Allowed
+[2024-02-18 05:41:59] INFO: assessment
+[2024-02-18 05:41:59] INFO: Accessed [assessment]
+[2024-02-18 05:42:00] INFO: assessment
+[2024-02-18 05:42:00] INFO: Accessed [assessment]
+[2024-02-18 05:43:38] INFO: assessment
+[2024-02-18 05:43:38] INFO: Accessed [assessment]
+[2024-02-18 05:43:40] INFO: assessment
+[2024-02-18 05:43:40] INFO: Accessed [assessment]
+[2024-02-18 05:44:46] INFO: assessment
+[2024-02-18 05:44:46] INFO: Accessed [assessment]
+[2024-02-18 05:44:47] INFO: assessment
+[2024-02-18 05:44:47] INFO: Accessed [assessment]
+[2024-02-18 05:45:24] INFO: assessment
+[2024-02-18 05:45:24] INFO: Accessed [assessment]
+[2024-02-18 05:45:25] INFO: assessment
+[2024-02-18 05:45:25] INFO: Accessed [assessment]
+[2024-02-18 05:45:47] INFO: assessment
+[2024-02-18 05:45:47] INFO: Accessed [assessment]
+[2024-02-18 05:45:48] INFO: assessment
+[2024-02-18 05:45:48] INFO: Accessed [assessment]
+[2024-02-18 05:46:37] INFO: assessment
+[2024-02-18 05:46:37] INFO: Accessed [assessment]
+[2024-02-18 05:46:58] INFO: assessment
+[2024-02-18 05:46:58] INFO: Accessed [assessment]
+[2024-02-18 05:46:58] INFO: assessment
+[2024-02-18 05:46:58] INFO: Accessed [assessment]
+[2024-02-18 05:47:30] INFO: assessment
+[2024-02-18 05:47:30] INFO: Accessed [assessment]
+[2024-02-18 05:47:47] INFO: assessment
+[2024-02-18 05:47:47] INFO: Accessed [assessment]
+[2024-02-18 05:48:23] INFO: assessment
+[2024-02-18 05:48:23] INFO: Accessed [assessment]
+[2024-02-18 05:48:38] INFO: assessment
+[2024-02-18 05:48:38] INFO: Accessed [assessment]
+[2024-02-18 05:48:55] INFO: assessment
+[2024-02-18 05:48:55] INFO: Accessed [assessment]
+[2024-02-18 05:49:38] INFO: assessment
+[2024-02-18 05:49:38] INFO: Accessed [assessment]

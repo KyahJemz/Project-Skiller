@@ -64,8 +64,6 @@ class LessonModel {
         return $data;
     }
 
-   
-
     public function updateChapterOnly($params) {
         $ChapterId = $this->database->escape($params['Id']);
         $ChapterTitle = $this->database->escape($params['Title']);
@@ -217,7 +215,6 @@ class LessonModel {
             return false;
         }
     }
-
 
     public function getLessonsOnly() {
         $query = "SELECT 

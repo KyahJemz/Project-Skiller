@@ -182,7 +182,9 @@ class ResultController {
 
             $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
             $activityModel = new ActivityModel($db, $logger);
-            $Account = $activityModel
+            $accountModel = new AccountModel($db, $logger);
+
+            $Account = $accountModel->getAccountById(['Account_Id'=>$data['Id']]);
 
             if ($data['ToState'] === "Enable"){
                 $activityModel->updateResultRetake([

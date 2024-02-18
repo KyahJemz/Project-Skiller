@@ -68,5 +68,13 @@ pre {
     transform: translateY(-50%);
     z-index: 5;
 }
+.edit-activity-btn{
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
 
 

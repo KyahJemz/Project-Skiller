@@ -49,7 +49,7 @@ class AssessmentController {
             $data['Questions'] = json_decode($data['Progress'][0]['ActivityQuestions'], true);
             $data['Answers'] = json_decode($data['Progress'][0]['ActivityAnswers'], true);
         }
-
+        
         $data['title'] = "Skiller - ".$data['Activity'][0]['ActivityTitle'];
  
         include(__DIR__ . '/../views/headers/Default.php');
@@ -99,14 +99,27 @@ class AssessmentController {
 
         $data['title'] = "Skiller - ".$data['Activity'][0]['ActivityTitle'];
 
-        echo '<script>';
-        echo 'const BASE_URL=`'.BASE_URL.'`;';
-        echo '</script>';
- 
+        if ($_SESSION['User_Role'] === "Administrator") {
+            echo '<script>';
+            echo 'const QuestionsList=`'.json_encode($data['Questions']).'`;';
+            echo 'const AnswersList=`'.json_encode($data['Answers']).'`;';
+            echo 'const Activity_Id=`'.$item.'`;';
+            echo 'const BASE_URL=`'.BASE_URL.'`;';
+            echo '</script>';
+        } else {
+            echo '<script>';
+            echo 'const BASE_URL=`'.BASE_URL.'`;';
+            echo '</script>';
+        }
+
         include(__DIR__ . '/../views/headers/Default.php');
         include(__DIR__ . '/../views/headers/SignedIn.php');
         include(__DIR__ . '/../views/assessment.php');
         include(__DIR__ . '/../views/footers/Default.php');
+    }
+
+    public function indexAdministrator($item = null){
+        $this->indexTeacher($item);
     }
 
     public function action($item = null) {
@@ -180,6 +193,26 @@ class AssessmentController {
             ]);
 
             echo json_encode(['status' => 'success']);
+        }
+    }
+
+    public function actionAdministrator($item = null) {
+        $logger = new Logger();
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+            $jsonPayload = file_get_contents("php://input");
+
+            $data = json_decode($jsonPayload, true);
+
+            if ($data === null) {
+                http_response_code(400);
+                exit;
+            } else { 
+
+
+            }
+
+            print_r( $data);
         }
     }
 }

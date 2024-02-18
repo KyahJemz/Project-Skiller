@@ -4,8 +4,6 @@ window.handleCredentialResponse = (response) => {
     window.location.href = `${BASE_URL}index.php?page=login&action=process&token=${response.credential}`;
 }
 
-
-
 // STUDENTS  ADD
 let StudentsSubmitAddAccountBtn = document.getElementById('StudentsSubmitAddAccountBtn');
 if(StudentsSubmitAddAccountBtn) {
@@ -268,7 +266,7 @@ if(AssessmentViewSummaryBtn) {
     })
 }
 
-
+// CHAPTER =============
 
 // CHAPTER ADD
 let ChapterSubmitAddBtn = document.getElementById('ChapterSubmitAddBtn');
@@ -423,8 +421,7 @@ if(ChapterSubmitEditBtn) {
     })
 }
 
-
-
+// LESSON =============
 
 // LESSON ADD
 let LessonSubmitAddBtn = document.getElementById('LessonSubmitAddBtn');
@@ -506,7 +503,7 @@ if(LessonDeleteBtnConfirmation) {
     })
 }
 
-// CHAPTER DELETE
+// LESSON DELETE
 let LessonDeleteBtn = document.getElementById('LessonDeleteBtn');
 if(LessonDeleteBtn) {
     LessonDeleteBtn.addEventListener('click', async ()=>{
@@ -538,7 +535,7 @@ if(LessonDeleteBtn) {
     })
 }
 
-// CHAPTER EDIT PREPARATION
+// LESSON EDIT PREPARATION
 let EditLessonBtns = document.querySelectorAll(".edit-lesson-btn");
 if(EditLessonBtns) {
     EditLessonBtns.forEach(element => {
@@ -627,18 +624,354 @@ if(LessonSubmitEditBtn) {
     })
 }
 
-
-
-
-
-
-
-
-
-// LESSON ADD
-
+// ACTIVITY =============
 
 // ACTIVITY ADD
+let ActivitySubmitAddBtn = document.getElementById('ActivitySubmitAddBtn');
+if(ActivitySubmitAddBtn) {
+    ActivitySubmitAddBtn.addEventListener('click', async ()=>{
+        ActivitySubmitAddBtn.disabled = true;
+        ActivitySubmitAddBtn.innerHTML = "...";
+
+        let Title = document.getElementById('activity-title').value;
+        let Description = document.getElementById('activity-description').value;
+        let Notes = document.getElementById('activity-notes').value;
+        let CanViewSummary = document.getElementById('activity-canviewsummary').checked;
+        let LessonId = document.getElementById('activity-lessonid').value;
+        
+        document.getElementById('activity-add-success').innerHTML = "";
+        document.getElementById('activity-add-failed').innerHTML = "";
+    
+        if (!Title) {
+            document.getElementById('activity-title-note').innerHTML = "Title Required!";
+            ActivitySubmitAddBtn.disabled = false;
+            ActivitySubmitAddBtn.innerHTML = "Save Changes";
+            return
+        }
+        document.getElementById('activity-title-note').innerHTML = "";
+        if (!Description) {
+            document.getElementById('activity-descriptions-note').innerHTML = "Description Required!";
+            ActivitySubmitAddBtn.disabled = false;
+            ActivitySubmitAddBtn.innerHTML = "Save Changes";
+            return
+        }
+        document.getElementById('activity-description-note').innerHTML = "";
+        
+        const formData = new FormData();
+        formData.append("Title", Title);
+        formData.append("Notes", Notes);
+        formData.append("Description", Description);
+        formData.append("CanViewSummary", CanViewSummary);
+        formData.append("LessonId", LessonId);
+        formData.append("Type", "Add");
+    
+        AjaxRequest.sendFormRequest(formData, BASE_URL + "?page=activity&action=true")
+            .then(response => {
+                document.getElementById('activity-add-success').innerHTML = "Success!";
+                setTimeout(() => {
+                    window.location.reload();
+                }, 500);
+            })
+            .catch(error => {
+                document.getElementById('activity-add-failed').innerHTML = "Failed, Try Again!";
+            })
+            .finally(() => {
+                ActivitySubmitAddBtn.disabled = false;
+                ActivitySubmitAddBtn.innerHTML = "Save Changes";
+            });
+    })
+}
+
+// ACTIVITY DELETE PREPARATION
+let ActivityDeleteBtnConfirmation = document.getElementById('ActivityDeleteBtnConfirmation');
+if(ActivityDeleteBtnConfirmation) {
+    ActivityDeleteBtnConfirmation.addEventListener('click', async ()=>{
+        let Title = document.getElementById('activity-edit-title').value;
+        document.getElementById('activity-delete-confirmation').innerHTML = `Are you sure you want to delete this lesson [ ${Title} ], and its contents?`;
+    })
+}
+
+// ACTIVITY DELETE
+let ActivityDeleteBtn = document.getElementById('ActivityDeleteBtn');
+if(ActivityDeleteBtn) {
+    ActivityDeleteBtn.addEventListener('click', async ()=>{
+        ActivityDeleteBtn.disabled = true;
+        ActivityDeleteBtn.innerHTML = "...";
+        let Id = document.getElementById('activity-edit-id').value;
+
+        let data = {
+            'Id': Id,
+            'Type': 'Delete',
+        };
+    
+        AjaxRequest.sendRequest(data, BASE_URL + "?page=activity&action=true")
+            .then(response => {
+                ActivityDeleteBtn.innerHTML = "Success";
+                setTimeout(() => {
+                    window.location.reload();
+                }, 500);
+            })
+            .catch(error => {
+                ActivityDeleteBtn.innerHTML = "Failed";
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    ActivityDeleteBtn.disabled = false;
+                    ActivityDeleteBtn.innerHTML = "Yes";
+                }, 1000);
+            });
+    })
+}
+
+// ACTIVITY EDIT PREPARATION
+let EditActivityBtns = document.querySelectorAll(".edit-activity-btn");
+if(EditActivityBtns) {
+    EditActivityBtns.forEach(element => {
+        element.addEventListener('click', async (e)=>{
+            let data = {
+                'Id': e.target.dataset.activityid,
+                'Type': 'Read',
+            };
+
+            let xTitle = document.getElementById('activity-edit-title');
+            let xNotes = document.getElementById('activity-edit-notes');
+            let xDescription = document.getElementById('activity-edit-description');
+            let xCanViewSummary = document.getElementById('activity-edit-canviewsummary');
+            let xId = document.getElementById('activity-edit-id');
+
+            AjaxRequest.sendRequest(data, BASE_URL + "?page=activity&action=true")
+                .then(response => {
+                    xTitle.value = response?.Parameters[0].Title??"";
+                    xNotes.value = response?.Parameters[0].Notes??"";
+                    xDescription.value = response?.Parameters[0].Description??"";
+                    xCanViewSummary.checked = response?.Parameters[0].IsViewSummary && response?.Parameters[0].IsViewSummary === 1 ? true : false;
+                    xId.value = response?.Parameters[0].Id??"";
+                })
+                .catch(error => {
+                    xTitle.value = "Error, Try Again";
+                    xNotes.value = "Error, Try Again";
+                    xDescription.value = "Error, Try Again";
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 500);
+                })
+        })
+    });
+}
+
+// ACTIVITY EDIT
+let ActivitySubmitEditBtn = document.getElementById('ActivitySubmitEditBtn');
+if(ActivitySubmitEditBtn) {
+    ActivitySubmitEditBtn.addEventListener('click', async ()=>{
+        ActivitySubmitEditBtn.disabled = true;
+        ActivitySubmitEditBtn.innerHTML = "...";
+
+        let xTitle = document.getElementById('activity-edit-title').value;
+        let xNotes = document.getElementById('activity-edit-notes').value;
+        let xDescription = document.getElementById('activity-edit-description').value;
+        let xCanViewSummary = document.getElementById('activity-edit-canviewsummary').checked;
+        let xId = document.getElementById('activity-edit-id').value;
+
+        const formData = new FormData();
+        formData.append("Title", xTitle);
+        formData.append("Notes", xNotes);
+        formData.append("Description", xDescription);
+        formData.append("IsViewSummary", xCanViewSummary);
+        formData.append("Id", xId);
+        formData.append("Type", "Edit");
+    
+        AjaxRequest.sendFormRequest(formData, BASE_URL + "?page=activity&action=true")
+            .then(response => {
+                ActivitySubmitEditBtn.innerHTML = "Success";
+                setTimeout(() => {
+                    window.location.reload();
+                }, 500);
+            })
+            .catch(error => {
+                ActivitySubmitEditBtn.innerHTML = "Failed";
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    ActivitySubmitEditBtn.disabled = false;
+                    ActivitySubmitEditBtn.innerHTML = "Yes";
+                }, 1000);
+            });
+    })
+}
+
+
+
+let QuestionsContainer = document.getElementById('QuestionsContainer');
+let QuestionsRaw = null;
+let QuestionCounts = 0;
+const Questions = [];
+if (QuestionsContainer){
+    QuestionsRaw = JSON.parse(QuestionsList);
+    console.log(QuestionsRaw);
+    QuestionsRaw.forEach((element) => {
+        QuestionCounts++;
+        Questions.push({ ...element, TempId: QuestionCounts });
+    });
+
+   // <img src="'.$value['Image'].'" alt="">
+
+    function ReRenderQuestions() {
+
+        console.log(Questions);
+        QuestionsContainer.innerHTML = "";
+        Questions.forEach(question => {
+            QuestionsContainer.innerHTML += `
+                <div class="row mb-4 p-4 bg-white rounded-3 d-flex flex-column align-items-center">
+                    <p class="w-100 d-flex flex-row justify-content-between" style="gap: 10px">Question: <input class="QuestionInput w-100" type="text" data-tempid="${question['TempId']}" value="${question['Question']}" placeholder="???" required><button class="btn btn-danger QuestionDelete" data-tempid="${question['TempId']}" type="button">Remove</button></p>
+                    <p class="text-warning">Points: <input class="PointsInput" type="number" data-tempid="${question['TempId']}" Value="${question['QuestionPoints']}" placeholder="?"></p>
+                 
+                    <div class="row">
+                        <div class="col">
+                            <input class="form-check-input data-tempid="${question['TempId']}" cursor-pointer QuestionAnswer" value="${question['QuestionOptions'][0]}" type="radio" name="${question['QuestionId']}" id="${question['QuestionId']}-1" required ${question['QuestionOptions'][0] === question['QuestionAnswer'] ? 'checked' : ''}>
+                            <label class="form-check-label cursor-pointer" for="${question['QuestionId']}-1"><input data-tempid="${question['TempId']}" class="QuestionOption" data-loc="0" type="text" value="${question['QuestionOptions'][0]}" placeholder="Option 1"></label>
+                        </div>
+                        <div class="col">
+                            <input class="form-check-input cursor-pointer QuestionAnswer" data-tempid="${question['TempId']}" value="${question['QuestionOptions'][1]}" type="radio" name="${question['QuestionId']}" id="${question['QuestionId']}-2" required ${question['QuestionOptions'][1] === question['QuestionAnswer'] ? 'checked' : ''}>
+                            <label class="form-check-label cursor-pointer" for="${question['QuestionId']}-2"><input class="QuestionOption" data-tempid="${question['TempId']}" data-loc="1" type="text" value="${question['QuestionOptions'][1]}" placeholder="Option 2"></label>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <input class="form-check-input cursor-pointer QuestionAnswer" data-tempid="${question['TempId']}" value="${question['QuestionOptions'][2]}" type="radio" name="${question['QuestionId']}" id="${question['QuestionId']}-3" required ${question['QuestionOptions'][2] === question['QuestionAnswer'] ? 'checked' : ''}>
+                            <label class="form-check-label cursor-pointer" for="${question['QuestionId']}-3"><input class="QuestionOption" data-tempid="${question['TempId']}" data-loc="2" type="text" value="${question['QuestionOptions'][2]}" placeholder="Option 3"></label>
+                        </div>
+                        <div class="col">
+                            <input class="form-check-input cursor-pointer QuestionAnswer" data-tempid="${question['TempId']}" value="${question['QuestionOptions'][3]}" type="radio" name="${question['QuestionId']}" id="${question['QuestionId']}-4" required ${question['QuestionOptions'][3] === question['QuestionAnswer'] ? 'checked' : ''}>
+                            <label class="form-check-label cursor-pointer" for="${question['QuestionId']}-4"><input class="QuestionOption" data-tempid="${question['TempId']}" data-loc="3" type="text" value="${question['QuestionOptions'][3]}" placeholder="Option 4"></label>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+    
+        QuestionsContainer.innerHTML += `
+            <div class="row mb-4 p-4 bg-white rounded-3 d-flex flex-column align-items-center">
+                <button type="button" class="btn btn-primary w-25 addQuestionForm" >Add Question Form</button>
+            </div>
+        `;
+
+        QuestionsContainer.innerHTML += `
+            <div class="row mb-4 p-4 bg-white rounded-3 d-flex flex-column align-items-center">
+                <button type="button" class="btn btn-success w-25 questionsSaveChanges" data-activityid="${Activity_Id}">Save Changes</button>
+            </div>
+        `;
+
+        document.querySelectorAll('.addQuestionForm')?.forEach(element => {
+            element.addEventListener('click', (e) => {
+                QuestionCounts++;
+                Questions.push({
+                    "QuestionId": "x-"+Date.now (),
+                    "Question": "",
+                    "QuestionOptions": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "QuestionPoints": "0",
+                    "QuestionImage": null,
+                    "QuestionAnswer": "",
+                    "TempId": QuestionCounts
+                });
+                ReRenderQuestions();
+            });
+        });
+
+        document.querySelectorAll('.QuestionInput')?.forEach(element => {
+            element.addEventListener('blur', (e) => {
+                const input = e.currentTarget;
+                Questions.forEach((row, index) => { 
+                    if (row.TempId === parseInt(input.dataset.tempid)) {
+                        Questions[index].Question = input.value;
+                    }
+                });
+                ReRenderQuestions();
+            });
+        });
+        
+        document.querySelectorAll('.PointsInput')?.forEach(element => {
+            element.addEventListener('blur', (e) => {
+                const input = e.currentTarget;
+                Questions.forEach((row, index) => { 
+                    if (row.TempId === parseInt(input.dataset.tempid)) {
+                        Questions[index].QuestionPoints = input.value;
+                    }
+                });
+                ReRenderQuestions();
+            });
+        });
+
+        document.querySelectorAll('.QuestionAnswer')?.forEach(element => {
+            element.addEventListener('change', (e) => {
+                const input = e.currentTarget;
+                Questions.forEach((row, index) => { 
+                    if (row.TempId === parseInt(input.dataset.tempid)) {
+                        Questions[index].QuestionAnswer = input.value;
+                    }
+                });
+                ReRenderQuestions();
+            });
+        });
+
+        document.querySelectorAll('.QuestionOption')?.forEach(element => {
+            element.addEventListener('blur', (e) => {
+                const input = e.currentTarget;
+                Questions.forEach((row, index) => { 
+                    if (row.TempId === parseInt(input.dataset.tempid)) {
+                        Questions[index].QuestionOptions[parseInt(input.dataset.loc)] = input.value;
+                    }
+                });
+                ReRenderQuestions();
+            });
+        });
+
+        document.querySelectorAll('.QuestionDelete')?.forEach(element => {
+            element.addEventListener('click', (e) => {
+                const button = e.currentTarget;
+                const tempId = parseInt(button.dataset.tempid);
+                const index = Questions.findIndex(row => row.TempId === tempId);
+                if (index !== -1) {
+                    Questions.splice(index, 1);
+                }
+                ReRenderQuestions();
+            });
+        });
+
+        document.querySelectorAll('.questionsSaveChanges')?.forEach(element => {
+            element.addEventListener('click', (e) => {
+                const button = e.currentTarget;
+
+                let data = {
+                    'Activity_Id': Activity_Id,
+                    'Questions': JSON.stringify(Questions),
+                };
+        
+                AjaxRequest.sendRequest(data, BASE_URL + "?page=assessment&item="+Activity_Id+"&action=true")
+                    .then(response => {
+                        console.log(response);
+                    })
+                    .catch(error => {
+                        console.log(error);
+                    })
+                    .finally(() => {
+  
+                    });
+                ReRenderQuestions();
+            });
+        });
+    };
+
+    ReRenderQuestions();
+};
+
+
+
+
 
 
 // QUESTIONS ADD

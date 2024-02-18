@@ -16,6 +16,15 @@
             <h3><?php echo $data['Activity'][0]['ActivityTitle'];?></h3>
             <p><?php echo $data['Activity'][0]['ChapterTitle'];?>: <?php echo $data['Activity'][0]['LessonTitle'];?></p>
 
+            <?php 
+                if($data['CanTake'] !== true){
+                    $lastResult = end($data['Result']);
+                    $lastResultId = $lastResult['Id'];
+                    header('Location: ' . BASE_URL . '?page=result&item=' . $lastResultId);
+                    exit;
+                }
+            ?>
+
             <!-- DESCRIPTION -->
             <?php 
                 if(!empty($data['Activity'][0]['ActivityDescription'])) {
@@ -28,15 +37,6 @@
             <?php 
                 if(!empty($data['Activity'][0]['ActivityNotes'])) {
                     echo '<p>Note: <span class="text-danger">'.nl2br($data['Activity'][0]['ActivityNotes']).'</span></p>';
-                }
-            ?>
-
-            <?php 
-                if($data['CanTake'] !== true){
-                    $lastResult = end($data['Result']);
-                    $lastResultId = $lastResult['Id'];
-                    header('Location: ' . BASE_URL . '?page=result&item=' . $lastResultId);
-                    exit;
                 }
             ?>
 

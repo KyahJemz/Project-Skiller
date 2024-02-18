@@ -72,6 +72,10 @@ class ActivityController {
         }
     }
 
+    public function indexAdministrator($item = null) {
+        $this->index($item);
+    }
+
     public function actionTeacher($item = null){
         $logger = new Logger();
     
@@ -103,6 +107,113 @@ class ActivityController {
             http_response_code(200);
             exit();
             
+        }
+    }
+
+    public function actionAdministrator($item = null){
+        $logger = new Logger();
+
+        if ($_SERVER['CONTENT_TYPE'] === 'application/json') {
+            $jsonPayload = file_get_contents("php://input");
+            $data = json_decode($jsonPayload, true);
+        } else {
+            $data = $_POST;
+        }
+
+        if ($data === null) {
+            http_response_code(400);
+            exit;
+        } else {
+            if (!isset($data['Type'])) {
+                echo "Error: Required fields are missing in the JSON payload.";
+                http_response_code(400);
+                exit;
+            }
+            $Type = sanitizeInput(filter_var($data['Type'], FILTER_SANITIZE_STRING));
+
+            $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+            $activityModel = new ActivityModel($db, $logger);
+
+            switch ($Type) {
+                case 'Add':
+                    if (!isset($data['LessonId']) || !isset($data['Title']) || !isset($data['Description'])) {
+                        echo "Error: Required fields are missing in the JSON payload.";
+                        http_response_code(400);
+                        exit;
+                    }
+                    $Title = sanitizeInput(filter_var($data['Title'], FILTER_SANITIZE_STRING));
+                    $Notes = filter_var($data['Notes'], FILTER_SANITIZE_STRING);
+                    $Description = filter_var($data['Description'], FILTER_SANITIZE_STRING);
+                    $IsViewSummary = filter_var($data['CanViewSummary'], FILTER_SANITIZE_STRING);
+                    $LessonId = sanitizeInput(filter_var($data['LessonId'], FILTER_SANITIZE_STRING));
+
+                    $activityModel->addActivityOnly([
+                        'Title'=>$Title,
+                        'Notes'=>$Notes,
+                        'Description'=>$Description,
+                        'IsViewSummary'=>$db->escape($IsViewSummary),
+                        'Lesson_Id'=>$db->escape($LessonId),
+                    ]);
+                    echo json_encode(['Success' => true]);
+                    break;
+
+                case 'Edit':
+                    if (!isset($data['Id']) ||!isset($data['Title']) || !isset($data['Description'])) {
+                        echo "Error: Required fields are missing in the JSON payload.";
+                        http_response_code(400);
+                        exit;
+                    }
+
+                    $Id = sanitizeInput(filter_var($data['Id'], FILTER_SANITIZE_STRING));
+                    $Title = sanitizeInput(filter_var($data['Title'], FILTER_SANITIZE_STRING));
+                    $Notes = filter_var($data['Notes'], FILTER_SANITIZE_STRING);
+                    $Description = filter_var($data['Description'], FILTER_SANITIZE_STRING);
+                    $IsViewSummary = filter_var($data['IsViewSummary'], FILTER_SANITIZE_STRING);
+
+                    $activityModel->updateActivityOnly([
+                        'Id'=>$db->escape($Id),
+                        'Title'=>$db->escape($Title),
+                        'Notes'=>$Notes,
+                        'Description'=>$Description,
+                        'IsViewSummary'=>$IsViewSummary,
+                    ]);
+
+                    echo json_encode(['Success' => true]);
+                    break;
+
+                case 'Delete':
+                    if (!isset($data['Id'])) {
+                        echo "Error: Required fields are missing in the JSON payload.";
+                        http_response_code(400); 
+                        exit;
+                    }
+                    $Id = sanitizeInput(filter_var($data['Id'], FILTER_SANITIZE_STRING));
+                    
+                    $activityModel->deleteActivity([
+                        'Id'=>$db->escape($Id)
+                    ]);
+                    echo json_encode(['Success' => true]);
+                    break;
+
+                case 'Read':
+                    if (!isset($data['Id'])) {
+                        echo "Error: Required fields are missing in the JSON payload.";
+                        http_response_code(400); 
+                        exit;
+                    }
+                    $Id = sanitizeInput(filter_var($data['Id'], FILTER_SANITIZE_STRING));
+                    $Parameters = $activityModel->getActivityOnly(['Id'=>$db->escape($Id)]);
+                    echo json_encode(['Success' => true, 'Parameters'=> $Parameters]);
+                    break;
+                
+                default:
+                    echo "Error: Type is not recognized!";
+                    http_response_code(400);
+                    exit();
+                    break;
+            }
+            http_response_code(200);
+            exit();
         }
     }
 
