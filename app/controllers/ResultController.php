@@ -184,7 +184,11 @@ class ResultController {
             $activityModel = new ActivityModel($db, $logger);
             $accountModel = new AccountModel($db, $logger);
 
-            $Account = $accountModel->getAccountById(['Account_Id'=>$data['Id']]);
+            $result = $activityModel->getActivityResult(['ResultId'=>$data['Id']]);
+
+            $Account = $accountModel->getAccountById(['Account_Id'=>$result[0]['Account_Id']]);
+
+            $activity = $activityModel->getActivityOnly(['Id'=>$result[0]['Activity_Id']]);
 
             if ($data['ToState'] === "Enable"){
                 $activityModel->updateResultRetake([
@@ -195,7 +199,7 @@ class ResultController {
                     'Subject' => 'Assessment Retake Enabled',
                     'ReceiverName' => $Account[0]['FirstName'],
                     'ReceiverEmail' => $Account[0]['Email'],
-                    'Message' => 'Your assessment in '.$Account[0]['Title'].' has retake now enabled. You can now retake your assessment, Thank you!'
+                    'Message' => 'Your assessment in '.$activity[0]['Title'].' has retake now enabled. You can now retake your assessment, Thank you!'
                 ]);
             } else {
                 $activityModel->updateResultRetake([
@@ -206,7 +210,7 @@ class ResultController {
                     'Subject' => 'Assessment Retake Disabled',
                     'ReceiverName' => $Account[0]['FirstName'],
                     'ReceiverEmail' => $Account[0]['Email'],
-                    'Message' => 'Your assessment in '.$Account[0]['Title'].' has retake now disabled. Retake is not possible, Thank you!'
+                    'Message' => 'Your assessment in '.$activity[0]['Title'].' has retake now disabled. Retake is not possible, Thank you!'
                 ]);
             }
             echo json_encode(['success' => true]);

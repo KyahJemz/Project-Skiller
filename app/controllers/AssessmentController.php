@@ -208,11 +208,80 @@ class AssessmentController {
                 http_response_code(400);
                 exit;
             } else { 
+                $Activity_Id = $data['Activity_Id'];
+                $Questions = json_decode($data['Questions'], true);
 
+                $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                $activityModel = new ActivityModel($db, $logger);
 
-            }
+                $Question_Ids_Result = $activityModel->getQuestionIds(['Activity_Id'=>$Activity_Id]);
+                $Question_Ids = [];
 
-            print_r( $data);
+                foreach ($Question_Ids_Result as $value) {
+                    $Question_Ids[] =  $value['Id'];
+                }  
+
+                $actions = [];
+
+                $db->begin_transaction();
+                try {   
+                    foreach ($Questions as $value) {
+                        if(
+                            !empty($value['Question']) && 
+                            !empty($value['QuestionAnswer']) && 
+                            !empty($value['QuestionOptions'][0]) && 
+                            !empty($value['QuestionOptions'][1]) && 
+                            !empty($value['QuestionOptions'][2]) && 
+                            !empty($value['QuestionOptions'][3]) && 
+                            !empty($value['QuestionPoints'])
+                        ) {
+                            if(substr($value['QuestionId'], 0, 1) === 'x'){
+                                $actions[] = 'A'; 
+                                $activityModel->addQuestion([
+                                    'Activity_Id' => $Activity_Id,
+                                    'Question' => $value['Question'],
+                                    'Points' => $value['QuestionPoints'],
+                                    'Option1' => $value['QuestionOptions'][0],
+                                    'Option2' => $value['QuestionOptions'][1],
+                                    'Option3' => $value['QuestionOptions'][2],
+                                    'Option4' => $value['QuestionOptions'][3],
+                                    'Answer' => $value['QuestionAnswer'],
+                                ]);
+                            } else {
+                                $actions[] = 'U';
+                                $activityModel->updateQuestion([
+                                    'Id' => $value['QuestionId'],
+                                    'Question' => $value['Question'],
+                                    'Points' => $value['QuestionPoints'],
+                                    'Option1' => $value['QuestionOptions'][0],
+                                    'Option2' => $value['QuestionOptions'][1],
+                                    'Option3' => $value['QuestionOptions'][2],
+                                    'Option4' => $value['QuestionOptions'][3],
+                                    'Answer' => $value['QuestionAnswer'],
+                                ]);
+                                $key = array_search($value['QuestionId'], $Question_Ids);
+                                if ($key !== false) {
+                                    unset($Question_Ids[$key]);
+                                }
+                            }
+                        }
+                    }
+
+                    if(!empty($Question_Ids)){
+                        $actions[] = 'R';
+                        $activityModel->deactivateQuestion([
+                            'Ids' => $Question_Ids
+                        ]);
+                    }
+                    
+                    $db->commit();
+                } catch (Exception $e) {
+                    $db->rollback();
+                    $logger->log('Error deleting records: ' . $e->getMessage(), 'error');
+                }
+
+                echo json_encode(['status' => 'success', 'message' => '('.implode(',', $actions).')']);
+            } 
         }
     }
 }

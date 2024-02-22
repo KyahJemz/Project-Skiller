@@ -135,6 +135,25 @@ class ActivityController {
             $activityModel = new ActivityModel($db, $logger);
 
             switch ($Type) {
+                case 'updateCanViewResultState':
+                    if (!isset($data['ToState']) || !isset($data['Id'])) {
+                        echo "Error: Required fields are missing in the JSON payload.";
+                        http_response_code(400);
+                        exit;
+                    }
+                    $ToState = sanitizeInput(filter_var($data['ToState'], FILTER_SANITIZE_NUMBER_INT ));
+                    $Id = sanitizeInput(filter_var($data['Id'], FILTER_SANITIZE_NUMBER_INT));
+        
+                    $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+                    
+                    $activityModel = new ActivityModel($db, $logger);
+                    $activityModel->updateActivityViewResults([
+                        'Id' => $db->escape($Id),
+                        'ToState' => $db->escape($ToState)
+                    ]);
+        
+                    echo json_encode(['success' => true]);
+                    break;
                 case 'Add':
                     if (!isset($data['LessonId']) || !isset($data['Title']) || !isset($data['Description'])) {
                         echo "Error: Required fields are missing in the JSON payload.";

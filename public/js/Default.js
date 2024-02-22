@@ -246,7 +246,8 @@ if(AssessmentViewSummaryBtn) {
         let ToState = AssessmentViewSummaryBtn.dataset.tostate;
         let data = {
             'ToState': ToState,
-            'Id': Id
+            'Id': Id,
+            'Type': 'updateCanViewResultState'
         };
 
         AjaxRequest.sendRequest(data, BASE_URL + "?page=activity&action=true")
@@ -813,8 +814,6 @@ if (QuestionsContainer){
         Questions.push({ ...element, TempId: QuestionCounts });
     });
 
-   // <img src="'.$value['Image'].'" alt="">
-
     function ReRenderQuestions() {
 
         console.log(Questions);
@@ -945,6 +944,8 @@ if (QuestionsContainer){
         document.querySelectorAll('.questionsSaveChanges')?.forEach(element => {
             element.addEventListener('click', (e) => {
                 const button = e.currentTarget;
+                button.disabled = true;
+                button.innerHTML = 'Saving changes...';
 
                 let data = {
                     'Activity_Id': Activity_Id,
@@ -954,13 +955,19 @@ if (QuestionsContainer){
                 AjaxRequest.sendRequest(data, BASE_URL + "?page=assessment&item="+Activity_Id+"&action=true")
                     .then(response => {
                         console.log(response);
+                        button.innerHTML = 'Success';
+                        setTimeout(() => {
+                            window.location.reload();
+                        }, 500);
                     })
                     .catch(error => {
                         console.log(error);
+                        button.innerHTML = 'Failed';
+                        setTimeout(() => {
+                            button.innerHTML = 'Save Changes';
+                            button.disabled = false;
+                        }, 500);
                     })
-                    .finally(() => {
-  
-                    });
                 ReRenderQuestions();
             });
         });

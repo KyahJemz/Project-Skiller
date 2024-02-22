@@ -511,7 +511,6 @@ class ActivityModel {
         return true;
     }
 
-
     public function addActivityOnly($params) {
         $fields = [];
         $values = [];
@@ -565,7 +564,6 @@ class ActivityModel {
     
         return true; 
     }
-
 
     public function updateActivityOnly($params) {
         $fieldsToUpdate = [];
@@ -623,39 +621,32 @@ class ActivityModel {
         $ActivityId = $this->database->escape($params['Id']);
         
         $this->database->begin_transaction();
-        $this->logger->log("0", 'info');
         try {
             $queryTable3 = "DELETE FROM tbl_questions WHERE Activity_Id = $ActivityId";
             $stmtTable3 = $this->database->prepare($queryTable3);
             $stmtTable3->execute();
             $stmtTable3->close();
-            $this->logger->log("1", 'info');
             $queryTable1 = "DELETE FROM tbl_inprogress WHERE Activity_Id = $ActivityId";
             $stmtTable1 = $this->database->prepare($queryTable1);
             $stmtTable1->execute();
             $stmtTable1->close();
-            $this->logger->log("2", 'info');
             $queryTable4 = "DELETE FROM tbl_results WHERE Activity_Id = $ActivityId";
             $stmtTable4 = $this->database->prepare($queryTable4);
             $stmtTable4->execute();
             $stmtTable4->close();
-            $this->logger->log("3", 'info');
             $queryTable2 = "DELETE FROM tbl_progress WHERE Activity_Id = $ActivityId";
             $stmtTable2 = $this->database->prepare($queryTable2);
             $stmtTable2->execute();
             $stmtTable2->close();
-            $this->logger->log("4", 'info');
             $queryTable6 = "DELETE FROM tbl_activity WHERE Id = $ActivityId";
             $stmtTable6 = $this->database->prepare($queryTable6);
             $stmtTable6->execute();
             $stmtTable6->close();
-            $this->logger->log("5", 'info');
             $this->database->commit();
     
             return true; 
         } catch (Exception $e) {
             $this->database->rollback();
-            $this->logger->log($e, 'info');
             $this->logger->log('Error deleting records: ' . $e->getMessage(), 'error');
             return false;
         }
@@ -687,6 +678,109 @@ class ActivityModel {
         $stmt->close();
 
         return $data;
+    }
+
+    public function updateQuestion($params){
+        $Question_Id = $params['Id'];
+        $Question = $params['Question'];
+        $Points = $params['Points'];
+        $Option1 = $params['Option1'];
+        $Option2 = $params['Option2'];
+        $Option3 = $params['Option3'];
+        $Option4 = $params['Option4'];
+        $Answer = $params['Answer'];
+        
+        $query = "UPDATE tbl_questions SET Question = ?, Points = ?, Option1 = ?, Option2 = ?, Option3 = ?, Option4 = ?, Answer = ? WHERE Id = ?";
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return false;
+        }
+    
+        $stmt->bind_param('sssssssi', $Question, $Points, $Option1, $Option2, $Option3, $Option4, $Answer, $Question_Id);
+        $stmt->execute();
+    
+        if ($stmt->error) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return false;
+        }
+    
+        $stmt->close();
+    
+        return true;
+    }
+
+    public function deactivateQuestion($params){
+        $query = "UPDATE tbl_questions SET IsActive = 0 WHERE Activity_Id IN (" . implode(',', $params['Ids']) . ")";
+        $stmt = $this->database->prepare($query);
+        $stmt->execute();
+        $stmt->close();
+    }
+
+    public function addQuestion($params){
+        $Activity_Id = $params['Activity_Id'];
+        $Question = $params['Question'];
+        $Points = $params['Points'];
+        $Option1 = $params['Option1'];
+        $Option2 = $params['Option2'];
+        $Option3 = $params['Option3'];
+        $Option4 = $params['Option4'];
+        $Answer = $params['Answer'];
+
+        $query = "INSERT INTO tbl_questions (Activity_Id, Question, Points, Option1, Option2, Option3, Option4, Answer) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
+        $stmt = $this->database->prepare($query);
+
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return false;
+        }
+
+        $stmt->bind_param('isssssss', $Activity_Id, $Question, $Points, $Option1, $Option2, $Option3, $Option4, $Answer);
+        $stmt->execute();
+
+        if ($stmt->error) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return false;
+        }
+
+        $stmt->close();
+
+        return true;
+    }
+
+    public function getQuestionIds($params){
+        $Activity_Id = $this->database->escape($params['Activity_Id']);
+        $query = "SELECT 
+            Id
+        FROM tbl_questions 
+        WHERE tbl_questions.Activity_Id = $Activity_Id";
+    
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return [];
+        }
+    
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        if (!$result) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return [];
+        }
+    
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+    
+        $stmt->close();
+    
+        return $data ?? [];
     }
 
 
