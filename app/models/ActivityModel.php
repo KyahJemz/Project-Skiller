@@ -783,10 +783,4 @@ class ActivityModel {
         return $data ?? [];
     }
 
-
-
-
-
-
-
 }

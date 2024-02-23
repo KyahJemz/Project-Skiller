@@ -111,7 +111,21 @@
             A_Search = e.target.value;
             RefreshAdministratorList();
         })
-        
+
+        function titleCase(str) {
+            if (str && str !== "") {
+                const words = str.split(" ");
+                const final = [];
+                for (let i = 0; i < words.length; i++) {
+                    const capitalizedWord = words[i].toLowerCase().charAt(0).toUpperCase() + words[i].toLowerCase().slice(1);
+                    final.push(capitalizedWord);
+                }
+                return final.join(" ");
+            } else {
+                return str;
+            }
+        }
+                        
         function RefreshStudentList(){
             StudentsList.innerHTML = "";
             StudentsArray.forEach(row => {
@@ -148,7 +162,7 @@
                             if (row.account.FirstName === null){
                                 view += `<h5>${row.account.Email??""}</h5>`;
                             } else {
-                                view += `<h5>${row.account.LastName}, ${row.account.FirstName} ${row.account.MiddleName??""}</h5>`;
+                                view += `<h5>${titleCase(row.account.LastName)}, ${titleCase(row.account.FirstName)} ${titleCase(row.account.MiddleName??"")}</h5>`;
                             }
                             view += `<p class="m-0 p-0">Overall progress: <strong>${TotalProgressPercentage.toFixed(2)}%</strong><p>`;
                             view += `<div class="progress px-0">`;
@@ -180,7 +194,7 @@
                         if (row.account.FirstName === null){
                             view += `<h5>${row.account.Email??""}</h5>`;
                         } else {
-                            view += `<h5>${row.account.LastName}, ${row.account.FirstName} ${row.account.MiddleName??""}</h5>`;
+                            view += `<h5>${titleCase(row.account.LastName)}, ${titleCase(row.account.FirstName)} ${titleCase(row.account.MiddleName??"")}</h5>`;
                         }
                         view += `</a>`;
                         TeachersList.innerHTML += view;
@@ -191,7 +205,7 @@
                         if (row.account.FirstName === null){
                             view += `<h5>${row.account.Email??""}</h5>`;
                         } else {
-                            view += `<h5>${row.account.LastName}, ${row.account.FirstName} ${row.account.MiddleName??""}</h5>`;
+                            view += `<h5>${titleCase(row.account.LastName)}, ${titleCase(row.account.FirstName)} ${titleCase(row.account.MiddleName??"")}</h5>`;
                         }
                         view += `</a>`;
                         TeachersList.innerHTML += view;
@@ -214,7 +228,7 @@
                         if (row.account.FirstName === null){
                             view += `<h5>${row.account.Email??""}</h5>`;
                         } else {
-                            view += `<h5>${row.account.LastName}, ${row.account.FirstName} ${row.account.MiddleName??""}</h5>`;
+                            view += `<h5>${titleCase(row.account.LastName)}, ${titleCase(row.account.FirstName)} ${titleCase(row.account.MiddleName??"")}</h5>`;
                         }
                         view += `</a>`;
                         AdministratorsList.innerHTML += view;
@@ -225,7 +239,7 @@
                         if (row.account.FirstName === null){
                             view += `<h5>${row.account.Email??""}</h5>`;
                         } else {
-                            view += `<h5>${row.account.LastName}, ${row.account.FirstName} ${row.account.MiddleName??""}</h5>`;
+                            view += `<h5>${titleCase(row.account.LastName)}, ${titleCase(row.account.FirstName)} ${titleCase(row.account.MiddleName??"")}</h5>`;
                         }
                         view += `</a>`;
                         AdministratorsList.innerHTML += view;

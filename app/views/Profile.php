@@ -82,14 +82,15 @@
         
                             echo '<div class="row">';
                             foreach ($data['Chapters'] as $chapter) {
-                                echo '<h6><span class="badge ' . getNextBgColor() . '">#</span>' . $chapter['Title'] . '</h6>';
+                                $ChapterPercentage = number_format(((isset($data['Progress']['ChapterProgress'][$chapter["Id"]]) ? $data['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($data['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
+                                echo '<h6><span class="badge ' . getNextBgColor() . '">#</span>' . $chapter['Title'] . ' - '.$ChapterPercentage.'%</h6>';
                             }
                             echo '</div>';
                         ?>
                     </div>
             <?php 
                 } else {
-                    if ($_SESSION['User_Role'] === "Teacher" || $_SESSION['User_Role'] === "Administrator") {
+                    if (($_SESSION['User_Role'] === "Teacher" || $_SESSION['User_Role'] === "Administrator") && ($_SESSION['User_Id'] !== $data['id'])) {
             ?>
                         <h4 class="row mt-5 border-top pt-3">Actions</h4>
                         <div class="d-flex justify-content-between">

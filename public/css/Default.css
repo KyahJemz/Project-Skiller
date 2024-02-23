@@ -75,6 +75,16 @@ pre {
     transform: translateY(-50%);
     z-index: 5;
 }
+.navbar-red{
+    background-color: #6A0106;
+}
 
-
+.sscr-icon{
+    background-image: url('../images/sscr-logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
 

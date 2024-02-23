@@ -1,4 +1,9 @@
 <?php
+
+function titleCase($str) {
+    return ucwords(strtolower($str));
+}
+
 class PDF {
     static function createPdf($params) {
         require(__DIR__."./../fpdf/fpdf186/fpdf.php");
@@ -22,7 +27,7 @@ class PDF {
         $pdf->AddFont('GreatVibes', 'B', 'GreatVibes.php'); 
 
         $pdf->SetY(85);
-        $certName = $params['certName'];
+        $certName = titleCase($params['certName']);
         $pdf->SetFont('GreatVibes', 'B', 40);
         $certNameWidth = $pdf->GetStringWidth($certName);
         $x = ($w - $certNameWidth) / 2;

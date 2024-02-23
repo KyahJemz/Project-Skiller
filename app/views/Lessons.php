@@ -15,7 +15,7 @@
             <h3><?php echo $data['Lessons'][0]['LessonTitle'];?></h3>
             <p>Chapter <?php echo $data['Lessons'][0]['ChapterId'];?>: <?php echo $data['Lessons'][0]['ChapterTitle'];?></p>
             <?php if ($_SESSION['User_Role'] === "Student") { ?>
-                <p>Progress: <?php echo number_format(((isset($data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']]) ? $data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']] : 0) / max($data['Progress']['LessonProgressTotal'][$data['Lessons'][0]['LessonId']], 1)) * 100, 2).'%'  ?></p>
+                <p>Lesson Overall Progress: <?php echo number_format(((isset($data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']]) ? $data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']] : 0) / max($data['Progress']['LessonProgressTotal'][$data['Lessons'][0]['LessonId']], 1)) * 100, 2).'%'  ?></p>
             <?php } ?>
 
             <!-- OBJECTIVES -->
@@ -58,11 +58,11 @@
                         echo '</ul>';
                     }
                 } elseif ($_SESSION['User_Role'] === "Administrator") {
+                    echo '<div class="d-flex justify-content-between mt-4 mb-3">';
+                    echo '    <h5 class="mr-auto">Activities</h5>';
+                    echo '    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#AddActivity">Add Activity</button>';
+                    echo '</div>';
                     if(!empty($data['Activities'][0])) {
-                        echo '<div class="d-flex justify-content-between mt-4 mb-3">';
-                        echo '    <h5 class="mr-auto">Activities</h5>';
-                        echo '    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#AddActivity">Add Activity</button>';
-                        echo '</div>';
                         echo '<ul class="list-group">';
                         foreach ($data['Activities'] as $row){
                             echo '<li class="list-group-item py-3"><a href="'.BASE_URL.'?page=assessment&item='.$row['ActivityId'].'">'.$row['ActivityTitle']. '</a><button class="edit-activity-btn btn btn-secondary" data-activityid="'.$row['ActivityId'].'" type="button" data-bs-toggle="modal" data-bs-target="#EditActivity">';

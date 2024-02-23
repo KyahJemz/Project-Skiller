@@ -54,8 +54,8 @@
                                     </div>
 
                                     <div class="container text-center">
-                                            <p class="mb-2">Having problems signing in?</p>
-                                            <p>You may contact the CICT Department for assistance.</p>
+                                        <p class="mb-2">Having problems signing in?</p>
+                                        <p>You may contact the Center for Information and Communications Technology(CICT) for assistance.</p>
                                     </div>
                                 </form>
                             </div>
@@ -66,5 +66,6 @@
         </div>
 
     </section>
+    
     <script src="https://accounts.google.com/gsi/client" async></script>
     <script type="module" src="<?php echo BASE_URL . 'js/Default.js' ?>"></script>

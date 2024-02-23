@@ -82,7 +82,7 @@
             <?php } else { ?>
                 <div class="row p-3 rounded-3">
                     <h3>Your Progress: </h3>
-                    <?php 
+                    <?php
                         $TotalProgressPercentage = number_format(((isset($data['Progress']['FullProgress']) ? $data['Progress']['FullProgress'] : 0) / max($data['Progress']['FullProgressTotal'], 1)) * 100, 2);
                         echo '<div class="progress p-0">';
                         $TotalChaptersCount = sizeof($data['Chapters']);
@@ -97,7 +97,8 @@
 
                         echo '<div class="row">';
                         foreach ($data['Chapters'] as $chapter) {
-                            echo '<h5><a href="'.BASE_URL.'?page=chapter&item='.$chapter['Id'].'"><span class="badge ' . getNextBgColor() . '">#</span>' . $chapter['Title'] . '</a></h5>';
+                            $ChapterPercentage = number_format(((isset($data['Progress']['ChapterProgress'][$chapter["Id"]]) ? $data['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($data['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
+                            echo '<h5><a href="'.BASE_URL.'?page=chapter&item='.$chapter['Id'].'"><span class="badge ' . getNextBgColor() . '">#</span>' . $chapter['Title'] . '</a> - '.$ChapterPercentage.'%</h5>';
                             echo '<div class="row px-5">';
                             echo '<ul class="ml-5 px-5">';
                             foreach ($data['Lessons'] as $lesson) {

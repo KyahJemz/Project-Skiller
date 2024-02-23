@@ -1,411 +1,900 @@
-[2024-02-23 00:25:10] INFO: assessment
-[2024-02-23 00:25:10] INFO: Accessed [assessment]
-[2024-02-23 00:25:13] INFO: activity
-[2024-02-23 00:25:13] INFO: Accessed [activity]
-[2024-02-23 00:25:14] INFO: activity
-[2024-02-23 00:25:14] INFO: Accessed [activity]
-[2024-02-23 00:25:14] INFO: activity
-[2024-02-23 00:25:14] INFO: Accessed [activity]
-[2024-02-23 00:25:24] INFO: activity
-[2024-02-23 00:25:24] INFO: Accessed [activity]
-[2024-02-23 00:25:25] INFO: activity
-[2024-02-23 00:25:25] INFO: Accessed [activity]
-[2024-02-23 00:28:35] INFO: assessment
-[2024-02-23 00:28:35] INFO: Accessed [assessment]
-[2024-02-23 00:28:36] INFO: activity
-[2024-02-23 00:28:36] INFO: Accessed [activity]
-[2024-02-23 00:28:36] INFO: assessment
-[2024-02-23 00:28:36] INFO: Accessed [assessment]
-[2024-02-23 00:28:38] INFO: activity
-[2024-02-23 00:28:38] INFO: Accessed [activity]
-[2024-02-23 00:28:38] INFO: assessment
-[2024-02-23 00:28:38] INFO: Accessed [assessment]
-[2024-02-23 00:28:39] INFO: activity
-[2024-02-23 00:28:39] INFO: Accessed [activity]
-[2024-02-23 00:28:39] INFO: assessment
-[2024-02-23 00:28:39] INFO: Accessed [assessment]
-[2024-02-23 00:28:39] INFO: activity
-[2024-02-23 00:28:39] INFO: Accessed [activity]
-[2024-02-23 00:28:39] INFO: assessment
-[2024-02-23 00:28:39] INFO: Accessed [assessment]
-[2024-02-23 00:28:40] INFO: activity
-[2024-02-23 00:28:40] INFO: Accessed [activity]
-[2024-02-23 00:28:40] INFO: assessment
-[2024-02-23 00:28:40] INFO: Accessed [assessment]
-[2024-02-23 00:28:40] INFO: activity
-[2024-02-23 00:28:40] INFO: Accessed [activity]
-[2024-02-23 00:28:40] INFO: assessment
-[2024-02-23 00:28:40] INFO: Accessed [assessment]
-[2024-02-23 00:28:41] INFO: activity
-[2024-02-23 00:28:41] INFO: Accessed [activity]
-[2024-02-23 00:28:41] INFO: assessment
-[2024-02-23 00:28:41] INFO: Accessed [assessment]
-[2024-02-23 00:28:42] INFO: activity
-[2024-02-23 00:28:42] INFO: Accessed [activity]
-[2024-02-23 00:28:42] INFO: assessment
-[2024-02-23 00:28:42] INFO: Accessed [assessment]
-[2024-02-23 00:28:42] INFO: activity
-[2024-02-23 00:28:42] INFO: Accessed [activity]
-[2024-02-23 00:28:42] INFO: assessment
-[2024-02-23 00:28:42] INFO: Accessed [assessment]
-[2024-02-23 00:28:48] INFO: logout
-[2024-02-23 00:28:48] INFO: Logging Out
-[2024-02-23 00:28:48] INFO: home
-[2024-02-23 00:28:48] INFO: Accessed [home]
-[2024-02-23 00:28:50] INFO: login
-[2024-02-23 00:28:50] INFO: Accessed [login]
-[2024-02-23 00:29:18] INFO: login
-[2024-02-23 00:29:18] INFO: Accessed [login]
-[2024-02-23 00:29:19] INFO: Successfully validated Google Sign-In token
-[2024-02-23 00:29:19] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
-[2024-02-23 00:29:19] INFO: bindingString: sssi
-[2024-02-23 00:29:19] INFO: Update successful
-[2024-02-23 00:29:19] INFO: dashboard
-[2024-02-23 00:29:19] INFO: Accessed [dashboard]
-[2024-02-23 00:29:21] INFO: course
-[2024-02-23 00:29:21] INFO: Accessed [course]
-[2024-02-23 00:29:23] INFO: lessons
-[2024-02-23 00:29:23] INFO: Accessed [lessons]
-[2024-02-23 00:29:24] INFO: assessment
-[2024-02-23 00:29:24] INFO: Accessed [assessment]
-[2024-02-23 00:29:25] INFO: activity
-[2024-02-23 00:29:25] INFO: Accessed [activity]
-[2024-02-23 00:29:25] INFO: assessment
-[2024-02-23 00:29:25] INFO: Accessed [assessment]
-[2024-02-23 00:29:26] INFO: activity
-[2024-02-23 00:29:26] INFO: Accessed [activity]
-[2024-02-23 00:29:26] INFO: assessment
-[2024-02-23 00:29:26] INFO: Accessed [assessment]
-[2024-02-23 00:29:31] INFO: activity
-[2024-02-23 00:29:31] INFO: Accessed [activity]
-[2024-02-23 00:29:31] INFO: assessment
-[2024-02-23 00:29:31] INFO: Accessed [assessment]
-[2024-02-23 00:29:32] INFO: activity
-[2024-02-23 00:29:32] INFO: Accessed [activity]
-[2024-02-23 00:29:32] INFO: assessment
-[2024-02-23 00:29:32] INFO: Accessed [assessment]
-[2024-02-23 00:29:32] INFO: activity
-[2024-02-23 00:29:32] INFO: Accessed [activity]
-[2024-02-23 00:29:32] INFO: assessment
-[2024-02-23 00:29:32] INFO: Accessed [assessment]
-[2024-02-23 00:29:32] INFO: activity
-[2024-02-23 00:29:32] INFO: Accessed [activity]
-[2024-02-23 00:29:32] INFO: assessment
-[2024-02-23 00:29:32] INFO: Accessed [assessment]
-[2024-02-23 00:29:32] INFO: activity
-[2024-02-23 00:29:32] INFO: Accessed [activity]
-[2024-02-23 00:29:32] INFO: assessment
-[2024-02-23 00:29:32] INFO: Accessed [assessment]
-[2024-02-23 00:29:33] INFO: activity
-[2024-02-23 00:29:33] INFO: Accessed [activity]
-[2024-02-23 00:29:33] INFO: assessment
-[2024-02-23 00:29:33] INFO: Accessed [assessment]
-[2024-02-23 00:29:33] INFO: activity
-[2024-02-23 00:29:33] INFO: Accessed [activity]
-[2024-02-23 00:29:33] INFO: assessment
-[2024-02-23 00:29:33] INFO: Accessed [assessment]
-[2024-02-23 00:29:33] INFO: activity
-[2024-02-23 00:29:33] INFO: Accessed [activity]
-[2024-02-23 00:29:33] INFO: assessment
-[2024-02-23 00:29:33] INFO: Accessed [assessment]
-[2024-02-23 00:29:33] INFO: activity
-[2024-02-23 00:29:33] INFO: Accessed [activity]
-[2024-02-23 00:29:33] INFO: assessment
-[2024-02-23 00:29:33] INFO: Accessed [assessment]
-[2024-02-23 00:29:35] INFO: students
-[2024-02-23 00:29:35] INFO: Accessed [students]
-[2024-02-23 00:29:37] INFO: profile
-[2024-02-23 00:29:37] INFO: Accessed [profile]
-[2024-02-23 00:29:43] INFO: dashboard
-[2024-02-23 00:29:43] INFO: Accessed [dashboard]
-[2024-02-23 00:29:43] INFO: students
-[2024-02-23 00:29:43] INFO: Accessed [students]
-[2024-02-23 00:29:44] INFO: students
-[2024-02-23 00:29:44] INFO: Accessed [students]
-[2024-02-23 00:29:45] INFO: profile
-[2024-02-23 00:29:45] INFO: Accessed [profile]
-[2024-02-23 00:29:45] INFO: students
-[2024-02-23 00:29:45] INFO: Accessed [students]
-[2024-02-23 00:29:46] INFO: students
-[2024-02-23 00:29:46] INFO: Accessed [students]
-[2024-02-23 00:29:47] INFO: course
-[2024-02-23 00:29:47] INFO: Accessed [course]
-[2024-02-23 00:29:48] INFO: lessons
-[2024-02-23 00:29:48] INFO: Accessed [lessons]
-[2024-02-23 00:29:49] INFO: course
-[2024-02-23 00:29:49] INFO: Accessed [course]
-[2024-02-23 00:29:50] INFO: course
-[2024-02-23 00:29:50] INFO: Accessed [course]
-[2024-02-23 00:29:51] INFO: lessons
-[2024-02-23 00:29:51] INFO: Accessed [lessons]
-[2024-02-23 00:29:52] INFO: chapter
-[2024-02-23 00:29:52] INFO: Accessed [chapter]
-[2024-02-23 00:29:52] ERROR: Access Not Allowed
-[2024-02-23 00:29:53] INFO: course
-[2024-02-23 00:29:53] INFO: Accessed [course]
-[2024-02-23 00:29:54] INFO: lessons
-[2024-02-23 00:29:54] INFO: Accessed [lessons]
-[2024-02-23 00:29:55] INFO: chapter
-[2024-02-23 00:29:55] INFO: Accessed [chapter]
-[2024-02-23 00:29:55] ERROR: Access Not Allowed
-[2024-02-23 00:30:30] INFO: chapter
-[2024-02-23 00:30:30] INFO: Accessed [chapter]
-[2024-02-23 00:30:52] INFO: chapter
-[2024-02-23 00:30:52] INFO: Accessed [chapter]
-[2024-02-23 00:32:23] INFO: chapter
-[2024-02-23 00:32:23] INFO: Accessed [chapter]
-[2024-02-23 00:32:27] INFO: course
-[2024-02-23 00:32:27] INFO: Accessed [course]
-[2024-02-23 00:32:27] INFO: lessons
-[2024-02-23 00:32:27] INFO: Accessed [lessons]
-[2024-02-23 00:32:28] INFO: chapter
-[2024-02-23 00:32:28] INFO: Accessed [chapter]
-[2024-02-23 00:34:04] INFO: chapter
-[2024-02-23 00:34:04] INFO: Accessed [chapter]
-[2024-02-23 00:34:07] INFO: course
-[2024-02-23 00:34:07] INFO: Accessed [course]
-[2024-02-23 00:34:08] INFO: lessons
-[2024-02-23 00:34:08] INFO: Accessed [lessons]
-[2024-02-23 00:34:09] INFO: chapter
-[2024-02-23 00:34:09] INFO: Accessed [chapter]
-[2024-02-23 00:34:09] INFO: course
-[2024-02-23 00:34:09] INFO: Accessed [course]
-[2024-02-23 00:34:10] INFO: lessons
-[2024-02-23 00:34:10] INFO: Accessed [lessons]
-[2024-02-23 00:34:11] INFO: chapter
-[2024-02-23 00:34:11] INFO: Accessed [chapter]
-[2024-02-23 00:34:12] INFO: lessons
-[2024-02-23 00:34:12] INFO: Accessed [lessons]
-[2024-02-23 00:34:13] INFO: assessment
-[2024-02-23 00:34:13] INFO: Accessed [assessment]
-[2024-02-23 00:34:14] INFO: activity
-[2024-02-23 00:34:14] INFO: Accessed [activity]
-[2024-02-23 00:34:14] INFO: assessment
-[2024-02-23 00:34:14] INFO: Accessed [assessment]
-[2024-02-23 00:34:14] INFO: activity
-[2024-02-23 00:34:14] INFO: Accessed [activity]
-[2024-02-23 00:34:14] INFO: assessment
-[2024-02-23 00:34:14] INFO: Accessed [assessment]
-[2024-02-23 00:34:16] INFO: course
-[2024-02-23 00:34:16] INFO: Accessed [course]
-[2024-02-23 00:34:17] INFO: students
-[2024-02-23 00:34:17] INFO: Accessed [students]
-[2024-02-23 00:34:17] INFO: profile
-[2024-02-23 00:34:17] INFO: Accessed [profile]
-[2024-02-23 00:34:24] INFO: students
-[2024-02-23 00:34:24] INFO: Accessed [students]
-[2024-02-23 00:34:25] INFO: dashboard
-[2024-02-23 00:34:25] INFO: Accessed [dashboard]
-[2024-02-23 00:34:26] INFO: students
-[2024-02-23 00:34:26] INFO: Accessed [students]
-[2024-02-23 00:34:27] INFO: profile
-[2024-02-23 00:34:27] INFO: Accessed [profile]
-[2024-02-23 00:34:28] INFO: course
-[2024-02-23 00:34:28] INFO: Accessed [course]
-[2024-02-23 00:34:28] INFO: students
-[2024-02-23 00:34:28] INFO: Accessed [students]
-[2024-02-23 00:34:29] INFO: students
-[2024-02-23 00:34:29] INFO: Accessed [students]
-[2024-02-23 00:34:29] INFO: dashboard
-[2024-02-23 00:34:29] INFO: Accessed [dashboard]
-[2024-02-23 00:34:30] INFO: students
-[2024-02-23 00:34:30] INFO: Accessed [students]
-[2024-02-23 00:34:30] INFO: course
-[2024-02-23 00:34:30] INFO: Accessed [course]
-[2024-02-23 00:34:31] INFO: students
-[2024-02-23 00:34:31] INFO: Accessed [students]
-[2024-02-23 00:34:34] INFO: logout
-[2024-02-23 00:34:34] INFO: Logging Out
-[2024-02-23 00:34:34] INFO: home
-[2024-02-23 00:34:34] INFO: Accessed [home]
-[2024-02-23 00:34:41] INFO: login
-[2024-02-23 00:34:41] INFO: Accessed [login]
-[2024-02-23 00:34:45] INFO: login
-[2024-02-23 00:34:45] INFO: Accessed [login]
-[2024-02-23 00:34:46] INFO: Successfully validated Google Sign-In token
-[2024-02-23 00:34:46] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
-[2024-02-23 00:34:46] INFO: bindingString: sssi
-[2024-02-23 00:34:46] INFO: No rows were affected. Update may not have found a matching row.
-[2024-02-23 00:34:46] INFO: dashboard
-[2024-02-23 00:34:46] INFO: Accessed [dashboard]
-[2024-02-23 00:34:47] INFO: dashboard
-[2024-02-23 00:34:47] INFO: Accessed [dashboard]
-[2024-02-23 00:34:47] INFO: accounts
-[2024-02-23 00:34:47] INFO: Accessed [accounts]
-[2024-02-23 00:34:49] INFO: course
-[2024-02-23 00:34:49] INFO: Accessed [course]
-[2024-02-23 00:34:51] INFO: lessons
-[2024-02-23 00:34:51] INFO: Accessed [lessons]
-[2024-02-23 00:34:52] INFO: chapter
-[2024-02-23 00:34:52] INFO: Accessed [chapter]
-[2024-02-23 00:35:02] INFO: accounts
-[2024-02-23 00:35:02] INFO: Accessed [accounts]
-[2024-02-23 00:35:04] INFO: profile
-[2024-02-23 00:35:04] INFO: Accessed [profile]
-[2024-02-23 00:35:05] INFO: accounts
-[2024-02-23 00:35:05] INFO: Accessed [accounts]
-[2024-02-23 00:35:06] INFO: profile
-[2024-02-23 00:35:06] INFO: Accessed [profile]
-[2024-02-23 00:35:07] INFO: accounts
-[2024-02-23 00:35:07] INFO: Accessed [accounts]
-[2024-02-23 00:35:08] INFO: profile
-[2024-02-23 00:35:08] INFO: Accessed [profile]
-[2024-02-23 00:35:09] INFO: accounts
-[2024-02-23 00:35:09] INFO: Accessed [accounts]
-[2024-02-23 00:35:10] INFO: course
-[2024-02-23 00:35:10] INFO: Accessed [course]
-[2024-02-23 00:35:12] INFO: chapter
-[2024-02-23 00:35:12] INFO: Accessed [chapter]
-[2024-02-23 00:35:15] INFO: lessons
-[2024-02-23 00:35:15] INFO: Accessed [lessons]
-[2024-02-23 00:35:16] INFO: course
-[2024-02-23 00:35:16] INFO: Accessed [course]
-[2024-02-23 00:35:17] INFO: course
-[2024-02-23 00:35:17] INFO: Accessed [course]
-[2024-02-23 00:35:19] INFO: chapter
-[2024-02-23 00:35:19] INFO: Accessed [chapter]
-[2024-02-23 00:35:21] INFO: lessons
-[2024-02-23 00:35:21] INFO: Accessed [lessons]
-[2024-02-23 00:35:23] INFO: chapter
-[2024-02-23 00:35:23] INFO: Accessed [chapter]
-[2024-02-23 00:35:24] INFO: course
-[2024-02-23 00:35:24] INFO: Accessed [course]
-[2024-02-23 00:35:26] INFO: chapter
-[2024-02-23 00:35:26] INFO: Accessed [chapter]
-[2024-02-23 00:35:28] INFO: lessons
-[2024-02-23 00:35:28] INFO: Accessed [lessons]
-[2024-02-23 00:35:34] INFO: activity
-[2024-02-23 00:35:34] INFO: Accessed [activity]
-[2024-02-23 00:35:39] INFO: assessment
-[2024-02-23 00:35:39] INFO: Accessed [assessment]
-[2024-02-23 00:35:57] INFO: assessment
-[2024-02-23 00:35:57] INFO: Accessed [assessment]
-[2024-02-23 00:35:58] INFO: assessment
-[2024-02-23 00:35:58] INFO: Accessed [assessment]
-[2024-02-23 00:36:01] INFO: logout
-[2024-02-23 00:36:01] INFO: Logging Out
-[2024-02-23 00:36:01] INFO: home
-[2024-02-23 00:36:01] INFO: Accessed [home]
-[2024-02-23 00:36:02] INFO: login
-[2024-02-23 00:36:02] INFO: Accessed [login]
-[2024-02-23 00:36:07] INFO: login
-[2024-02-23 00:36:07] INFO: Accessed [login]
-[2024-02-23 00:36:07] INFO: Successfully validated Google Sign-In token
-[2024-02-23 00:36:07] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
-[2024-02-23 00:36:07] INFO: bindingString: sssi
-[2024-02-23 00:36:07] INFO: No rows were affected. Update may not have found a matching row.
-[2024-02-23 00:36:07] INFO: dashboard
-[2024-02-23 00:36:07] INFO: Accessed [dashboard]
-[2024-02-23 00:36:09] INFO: chapter
-[2024-02-23 00:36:09] INFO: Accessed [chapter]
-[2024-02-23 00:36:11] INFO: lessons
-[2024-02-23 00:36:11] INFO: Accessed [lessons]
-[2024-02-23 00:36:12] INFO: activity
-[2024-02-23 00:36:12] INFO: Accessed [activity]
-[2024-02-23 00:36:12] INFO: result
-[2024-02-23 00:36:12] INFO: Accessed [result]
-[2024-02-23 00:36:21] INFO: lessons
-[2024-02-23 00:36:21] INFO: Accessed [lessons]
-[2024-02-23 00:36:23] INFO: activity
-[2024-02-23 00:36:23] INFO: Accessed [activity]
-[2024-02-23 00:36:23] INFO: result
-[2024-02-23 00:36:23] INFO: Accessed [result]
-[2024-02-23 00:36:36] INFO: result
-[2024-02-23 00:36:36] INFO: Accessed [result]
-[2024-02-23 00:36:40] INFO: lessons
-[2024-02-23 00:36:40] INFO: Accessed [lessons]
-[2024-02-23 00:36:41] INFO: activity
-[2024-02-23 00:36:41] INFO: Accessed [activity]
-[2024-02-23 00:36:41] INFO: result
-[2024-02-23 00:36:41] INFO: Accessed [result]
-[2024-02-23 00:36:43] INFO: chapter
-[2024-02-23 00:36:43] INFO: Accessed [chapter]
-[2024-02-23 00:36:44] INFO: course
-[2024-02-23 00:36:44] INFO: Accessed [course]
-[2024-02-23 00:36:45] INFO: logout
-[2024-02-23 00:36:45] INFO: Logging Out
-[2024-02-23 00:36:45] INFO: home
-[2024-02-23 00:36:45] INFO: Accessed [home]
-[2024-02-23 00:36:46] INFO: login
-[2024-02-23 00:36:46] INFO: Accessed [login]
-[2024-02-23 00:36:55] INFO: login
-[2024-02-23 00:36:55] INFO: Accessed [login]
-[2024-02-23 00:36:55] INFO: Successfully validated Google Sign-In token
-[2024-02-23 00:36:55] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
-[2024-02-23 00:36:55] INFO: bindingString: sssi
-[2024-02-23 00:36:55] INFO: No rows were affected. Update may not have found a matching row.
-[2024-02-23 00:36:55] INFO: dashboard
-[2024-02-23 00:36:55] INFO: Accessed [dashboard]
-[2024-02-23 00:36:57] INFO: course
-[2024-02-23 00:36:57] INFO: Accessed [course]
-[2024-02-23 00:36:58] INFO: students
-[2024-02-23 00:36:58] INFO: Accessed [students]
-[2024-02-23 00:37:00] INFO: profile
-[2024-02-23 00:37:00] INFO: Accessed [profile]
-[2024-02-23 00:37:01] INFO: scores
-[2024-02-23 00:37:01] INFO: Accessed [scores]
-[2024-02-23 00:37:02] INFO: result
-[2024-02-23 00:37:02] INFO: Accessed [result]
-[2024-02-23 00:37:05] INFO: students
-[2024-02-23 00:37:05] INFO: Accessed [students]
-[2024-02-23 00:37:06] INFO: profile
-[2024-02-23 00:37:06] INFO: Accessed [profile]
-[2024-02-23 00:37:07] INFO: scores
-[2024-02-23 00:37:07] INFO: Accessed [scores]
-[2024-02-23 00:37:07] INFO: result
-[2024-02-23 00:37:07] INFO: Accessed [result]
-[2024-02-23 00:37:10] INFO: result
-[2024-02-23 00:37:10] INFO: Accessed [result]
-[2024-02-23 00:37:11] INFO: result
-[2024-02-23 00:37:11] INFO: Accessed [result]
-[2024-02-23 00:37:12] INFO: result
-[2024-02-23 00:37:12] INFO: Accessed [result]
-[2024-02-23 00:37:17] INFO: result
-[2024-02-23 00:37:17] INFO: Accessed [result]
-[2024-02-23 00:37:18] INFO: result
-[2024-02-23 00:37:18] INFO: Accessed [result]
-[2024-02-23 00:37:18] INFO: result
-[2024-02-23 00:37:18] INFO: Accessed [result]
-[2024-02-23 00:40:46] INFO: result
-[2024-02-23 00:40:46] INFO: Accessed [result]
-[2024-02-23 00:40:48] INFO: result
-[2024-02-23 00:40:48] INFO: Accessed [result]
-[2024-02-23 00:40:49] INFO: result
-[2024-02-23 00:40:49] INFO: Accessed [result]
-[2024-02-23 00:41:02] INFO: result
-[2024-02-23 00:41:02] INFO: Accessed [result]
-[2024-02-23 00:41:03] INFO: result
-[2024-02-23 00:41:03] INFO: Accessed [result]
-[2024-02-23 00:41:19] INFO: result
-[2024-02-23 00:41:19] INFO: Accessed [result]
-[2024-02-23 00:41:20] INFO: Email sent to: jameslayson.0@gmail.com
-[2024-02-23 00:41:21] INFO: result
-[2024-02-23 00:41:21] INFO: Accessed [result]
-[2024-02-23 00:41:21] INFO: Email sent to: jameslayson.0@gmail.com
-[2024-02-23 00:41:22] INFO: result
-[2024-02-23 00:41:22] INFO: Accessed [result]
-[2024-02-23 00:41:22] INFO: Email sent to: jameslayson.0@gmail.com
-[2024-02-23 00:43:13] INFO: result
-[2024-02-23 00:43:13] INFO: Accessed [result]
-[2024-02-23 00:43:15] INFO: result
-[2024-02-23 00:43:15] INFO: Accessed [result]
-[2024-02-23 00:43:17] INFO: result
-[2024-02-23 00:43:17] INFO: Accessed [result]
-[2024-02-23 00:43:18] INFO: Email sent to: jameslayson.0@gmail.com
-[2024-02-23 00:43:20] INFO: result
-[2024-02-23 00:43:20] INFO: Accessed [result]
-[2024-02-23 00:43:21] INFO: Email sent to: jameslayson.0@gmail.com
-[2024-02-23 00:43:22] INFO: result
-[2024-02-23 00:43:22] INFO: Accessed [result]
-[2024-02-23 00:43:22] INFO: Email sent to: jameslayson.0@gmail.com
-[2024-02-23 00:43:27] INFO: scores
-[2024-02-23 00:43:27] INFO: Accessed [scores]
-[2024-02-23 00:43:28] INFO: result
-[2024-02-23 00:43:28] INFO: Accessed [result]
-[2024-02-23 00:43:31] INFO: result
-[2024-02-23 00:43:31] INFO: Accessed [result]
-[2024-02-23 00:43:31] INFO: Email sent to: jameslayson.0@gmail.com
-[2024-02-23 00:43:32] INFO: students
-[2024-02-23 00:43:32] INFO: Accessed [students]
-[2024-02-23 00:43:33] INFO: course
-[2024-02-23 00:43:33] INFO: Accessed [course]
+[2024-02-23 00:47:57] INFO: lessons
+[2024-02-23 00:47:57] INFO: Accessed [lessons]
+[2024-02-23 00:47:58] INFO: chapter
+[2024-02-23 00:47:58] INFO: Accessed [chapter]
+[2024-02-23 00:47:58] INFO: course
+[2024-02-23 00:47:58] INFO: Accessed [course]
+[2024-02-23 00:48:12] INFO: dashboard
+[2024-02-23 00:48:12] INFO: Accessed [dashboard]
+[2024-02-23 00:48:14] INFO: logout
+[2024-02-23 00:48:14] INFO: Logging Out
+[2024-02-23 00:48:14] INFO: home
+[2024-02-23 00:48:14] INFO: Accessed [home]
+[2024-02-23 00:48:25] INFO: login
+[2024-02-23 00:48:25] INFO: Accessed [login]
+[2024-02-23 00:48:29] INFO: login
+[2024-02-23 00:48:29] INFO: Accessed [login]
+[2024-02-23 00:48:30] INFO: Successfully validated Google Sign-In token
+[2024-02-23 00:48:30] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 00:48:30] INFO: bindingString: sssi
+[2024-02-23 00:48:30] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 00:48:30] INFO: dashboard
+[2024-02-23 00:48:30] INFO: Accessed [dashboard]
+[2024-02-23 00:48:32] INFO: logout
+[2024-02-23 00:48:32] INFO: Logging Out
+[2024-02-23 00:48:32] INFO: home
+[2024-02-23 00:48:32] INFO: Accessed [home]
+[2024-02-23 00:48:32] INFO: login
+[2024-02-23 00:48:32] INFO: Accessed [login]
+[2024-02-23 00:48:35] INFO: login
+[2024-02-23 00:48:35] INFO: Accessed [login]
+[2024-02-23 00:48:35] INFO: Successfully validated Google Sign-In token
+[2024-02-23 00:48:35] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 00:48:35] INFO: bindingString: sssi
+[2024-02-23 00:48:35] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 00:48:35] INFO: dashboard
+[2024-02-23 00:48:35] INFO: Accessed [dashboard]
+[2024-02-23 14:15:28] INFO: home
+[2024-02-23 14:15:28] INFO: Accessed [home]
+[2024-02-23 14:17:05] INFO: login
+[2024-02-23 14:17:05] INFO: Accessed [login]
+[2024-02-23 14:17:05] INFO: dashboard
+[2024-02-23 14:17:05] INFO: Accessed [dashboard]
+[2024-02-23 14:17:24] INFO: dashboard
+[2024-02-23 14:17:24] INFO: Accessed [dashboard]
+[2024-02-23 14:19:42] INFO: dashboard
+[2024-02-23 14:19:42] INFO: Accessed [dashboard]
+[2024-02-23 14:19:54] INFO: dashboard
+[2024-02-23 14:19:54] INFO: Accessed [dashboard]
+[2024-02-23 14:20:04] INFO: profile
+[2024-02-23 14:20:04] INFO: Accessed [profile]
+[2024-02-23 14:21:23] INFO: profile
+[2024-02-23 14:21:23] INFO: Accessed [profile]
+[2024-02-23 14:22:16] INFO: logout
+[2024-02-23 14:22:16] INFO: Logging Out
+[2024-02-23 14:22:16] INFO: home
+[2024-02-23 14:22:16] INFO: Accessed [home]
+[2024-02-23 14:22:17] INFO: login
+[2024-02-23 14:22:17] INFO: Accessed [login]
+[2024-02-23 14:22:20] INFO: login
+[2024-02-23 14:22:20] INFO: Accessed [login]
+[2024-02-23 14:22:21] INFO: Successfully validated Google Sign-In token
+[2024-02-23 14:22:21] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 14:22:21] INFO: bindingString: sssi
+[2024-02-23 14:22:21] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 14:22:21] INFO: dashboard
+[2024-02-23 14:22:21] INFO: Accessed [dashboard]
+[2024-02-23 14:22:22] INFO: accounts
+[2024-02-23 14:22:22] INFO: Accessed [accounts]
+[2024-02-23 14:22:23] INFO: profile
+[2024-02-23 14:22:23] INFO: Accessed [profile]
+[2024-02-23 14:22:28] INFO: scores
+[2024-02-23 14:22:28] INFO: Accessed [scores]
+[2024-02-23 14:22:28] ERROR: Access Not Allowed
+[2024-02-23 14:22:29] INFO: accounts
+[2024-02-23 14:22:29] INFO: Accessed [accounts]
+[2024-02-23 14:25:23] INFO: profile
+[2024-02-23 14:25:23] INFO: Accessed [profile]
+[2024-02-23 14:25:24] INFO: profile
+[2024-02-23 14:25:24] INFO: Accessed [profile]
+[2024-02-23 14:25:25] INFO: accounts
+[2024-02-23 14:25:25] INFO: Accessed [accounts]
+[2024-02-23 14:25:27] INFO: accounts
+[2024-02-23 14:25:27] INFO: Accessed [accounts]
+[2024-02-23 14:25:38] INFO: accounts
+[2024-02-23 14:25:38] INFO: Accessed [accounts]
+[2024-02-23 14:26:14] INFO: accounts
+[2024-02-23 14:26:14] INFO: Accessed [accounts]
+[2024-02-23 14:26:26] INFO: accounts
+[2024-02-23 14:26:26] INFO: Accessed [accounts]
+[2024-02-23 14:28:27] INFO: accounts
+[2024-02-23 14:28:27] INFO: Accessed [accounts]
+[2024-02-23 14:29:49] INFO: accounts
+[2024-02-23 14:29:49] INFO: Accessed [accounts]
+[2024-02-23 14:32:15] INFO: accounts
+[2024-02-23 14:32:15] INFO: Accessed [accounts]
+[2024-02-23 14:32:32] INFO: accounts
+[2024-02-23 14:32:32] INFO: Accessed [accounts]
+[2024-02-23 14:34:28] INFO: accounts
+[2024-02-23 14:34:28] INFO: Accessed [accounts]
+[2024-02-23 14:34:49] INFO: accounts
+[2024-02-23 14:34:49] INFO: Accessed [accounts]
+[2024-02-23 14:34:57] INFO: accounts
+[2024-02-23 14:34:57] INFO: Accessed [accounts]
+[2024-02-23 14:35:44] INFO: accounts
+[2024-02-23 14:35:44] INFO: Accessed [accounts]
+[2024-02-23 14:38:05] INFO: accounts
+[2024-02-23 14:38:05] INFO: Accessed [accounts]
+[2024-02-23 14:39:27] INFO: accounts
+[2024-02-23 14:39:27] INFO: Accessed [accounts]
+[2024-02-23 14:40:48] INFO: accounts
+[2024-02-23 14:40:48] INFO: Accessed [accounts]
+[2024-02-23 14:41:35] INFO: accounts
+[2024-02-23 14:41:35] INFO: Accessed [accounts]
+[2024-02-23 14:42:24] INFO: accounts
+[2024-02-23 14:42:24] INFO: Accessed [accounts]
+[2024-02-23 14:42:59] INFO: profile
+[2024-02-23 14:42:59] INFO: Accessed [profile]
+[2024-02-23 14:43:01] INFO: accounts
+[2024-02-23 14:43:01] INFO: Accessed [accounts]
+[2024-02-23 14:43:42] INFO: accounts
+[2024-02-23 14:43:42] INFO: Accessed [accounts]
+[2024-02-23 14:44:11] INFO: accounts
+[2024-02-23 14:44:11] INFO: Accessed [accounts]
+[2024-02-23 14:44:29] INFO: accounts
+[2024-02-23 14:44:29] INFO: Accessed [accounts]
+[2024-02-23 14:45:07] INFO: accounts
+[2024-02-23 14:45:07] INFO: Accessed [accounts]
+[2024-02-23 14:45:15] INFO: accounts
+[2024-02-23 14:45:15] INFO: Accessed [accounts]
+[2024-02-23 14:47:21] INFO: accounts
+[2024-02-23 14:47:21] INFO: Accessed [accounts]
+[2024-02-23 14:47:43] INFO: accounts
+[2024-02-23 14:47:43] INFO: Accessed [accounts]
+[2024-02-23 14:48:32] INFO: accounts
+[2024-02-23 14:48:32] INFO: Accessed [accounts]
+[2024-02-23 14:48:57] INFO: accounts
+[2024-02-23 14:48:57] INFO: Accessed [accounts]
+[2024-02-23 14:49:16] INFO: accounts
+[2024-02-23 14:49:16] INFO: Accessed [accounts]
+[2024-02-23 14:49:24] INFO: accounts
+[2024-02-23 14:49:24] INFO: Accessed [accounts]
+[2024-02-23 14:49:59] INFO: accounts
+[2024-02-23 14:49:59] INFO: Accessed [accounts]
+[2024-02-23 14:50:45] INFO: accounts
+[2024-02-23 14:50:45] INFO: Accessed [accounts]
+[2024-02-23 14:53:58] INFO: accounts
+[2024-02-23 14:53:58] INFO: Accessed [accounts]
+[2024-02-23 14:54:27] INFO: accounts
+[2024-02-23 14:54:27] INFO: Accessed [accounts]
+[2024-02-23 14:55:01] INFO: accounts
+[2024-02-23 14:55:01] INFO: Accessed [accounts]
+[2024-02-23 14:55:05] INFO: profile
+[2024-02-23 14:55:05] INFO: Accessed [profile]
+[2024-02-23 14:55:08] INFO: accounts
+[2024-02-23 14:55:08] INFO: Accessed [accounts]
+[2024-02-23 14:55:29] INFO: profile
+[2024-02-23 14:55:29] INFO: Accessed [profile]
+[2024-02-23 14:55:35] INFO: accounts
+[2024-02-23 14:55:35] INFO: Accessed [accounts]
+[2024-02-23 14:55:35] INFO: dashboard
+[2024-02-23 14:55:35] INFO: Accessed [dashboard]
+[2024-02-23 14:55:35] INFO: accounts
+[2024-02-23 14:55:35] INFO: Accessed [accounts]
+[2024-02-23 14:55:36] INFO: course
+[2024-02-23 14:55:36] INFO: Accessed [course]
+[2024-02-23 14:55:43] INFO: profile
+[2024-02-23 14:55:43] INFO: Accessed [profile]
+[2024-02-23 14:55:45] INFO: logout
+[2024-02-23 14:55:45] INFO: Logging Out
+[2024-02-23 14:55:45] INFO: home
+[2024-02-23 14:55:45] INFO: Accessed [home]
+[2024-02-23 14:55:48] INFO: login
+[2024-02-23 14:55:48] INFO: Accessed [login]
+[2024-02-23 14:55:56] INFO: login
+[2024-02-23 14:55:56] INFO: Accessed [login]
+[2024-02-23 14:55:56] INFO: Successfully validated Google Sign-In token
+[2024-02-23 14:55:56] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 14:55:56] INFO: bindingString: sssi
+[2024-02-23 14:55:56] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 14:55:56] INFO: dashboard
+[2024-02-23 14:55:56] INFO: Accessed [dashboard]
+[2024-02-23 14:56:01] INFO: profile
+[2024-02-23 14:56:01] INFO: Accessed [profile]
+[2024-02-23 14:56:03] INFO: logout
+[2024-02-23 14:56:03] INFO: Logging Out
+[2024-02-23 14:56:03] INFO: home
+[2024-02-23 14:56:03] INFO: Accessed [home]
+[2024-02-23 14:58:12] INFO: login
+[2024-02-23 14:58:12] INFO: Accessed [login]
+[2024-02-23 14:58:16] INFO: login
+[2024-02-23 14:58:16] INFO: Accessed [login]
+[2024-02-23 14:58:16] INFO: Successfully validated Google Sign-In token
+[2024-02-23 14:58:16] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 14:58:16] INFO: bindingString: sssi
+[2024-02-23 14:58:16] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 14:58:16] INFO: dashboard
+[2024-02-23 14:58:16] INFO: Accessed [dashboard]
+[2024-02-23 14:58:18] INFO: profile
+[2024-02-23 14:58:18] INFO: Accessed [profile]
+[2024-02-23 14:58:20] INFO: profile
+[2024-02-23 14:58:20] INFO: Accessed [profile]
+[2024-02-23 14:58:33] INFO: profile
+[2024-02-23 14:58:33] INFO: Accessed [profile]
+[2024-02-23 14:59:18] INFO: profile
+[2024-02-23 14:59:18] INFO: Accessed [profile]
+[2024-02-23 14:59:18] INFO: profile
+[2024-02-23 14:59:18] INFO: Accessed [profile]
+[2024-02-23 15:00:02] INFO: profile
+[2024-02-23 15:00:02] INFO: Accessed [profile]
+[2024-02-23 15:00:06] INFO: profile
+[2024-02-23 15:00:06] INFO: Accessed [profile]
+[2024-02-23 15:00:25] INFO: profile
+[2024-02-23 15:00:25] INFO: Accessed [profile]
+[2024-02-23 15:00:48] INFO: profile
+[2024-02-23 15:00:48] INFO: Accessed [profile]
+[2024-02-23 15:01:35] INFO: profile
+[2024-02-23 15:01:35] INFO: Accessed [profile]
+[2024-02-23 15:01:38] INFO: accounts
+[2024-02-23 15:01:38] INFO: Accessed [accounts]
+[2024-02-23 15:01:40] INFO: profile
+[2024-02-23 15:01:40] INFO: Accessed [profile]
+[2024-02-23 15:01:41] INFO: accounts
+[2024-02-23 15:01:41] INFO: Accessed [accounts]
+[2024-02-23 15:01:43] INFO: profile
+[2024-02-23 15:01:43] INFO: Accessed [profile]
+[2024-02-23 15:01:44] INFO: dashboard
+[2024-02-23 15:01:44] INFO: Accessed [dashboard]
+[2024-02-23 15:01:45] INFO: accounts
+[2024-02-23 15:01:45] INFO: Accessed [accounts]
+[2024-02-23 15:01:45] INFO: course
+[2024-02-23 15:01:45] INFO: Accessed [course]
+[2024-02-23 15:01:54] INFO: lessons
+[2024-02-23 15:01:54] INFO: Accessed [lessons]
+[2024-02-23 15:01:58] INFO: assessment
+[2024-02-23 15:01:58] INFO: Accessed [assessment]
+[2024-02-23 15:06:52] INFO: logout
+[2024-02-23 15:06:52] INFO: Logging Out
+[2024-02-23 15:06:52] INFO: home
+[2024-02-23 15:06:52] INFO: Accessed [home]
+[2024-02-23 15:07:06] INFO: login
+[2024-02-23 15:07:06] INFO: Accessed [login]
+[2024-02-23 15:07:13] INFO: login
+[2024-02-23 15:07:13] INFO: Accessed [login]
+[2024-02-23 15:07:13] INFO: Successfully validated Google Sign-In token
+[2024-02-23 15:07:13] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 15:07:13] INFO: bindingString: sssi
+[2024-02-23 15:07:13] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 15:07:13] INFO: dashboard
+[2024-02-23 15:07:13] INFO: Accessed [dashboard]
+[2024-02-23 15:07:19] INFO: course
+[2024-02-23 15:07:19] INFO: Accessed [course]
+[2024-02-23 15:07:20] INFO: certificate
+[2024-02-23 15:07:20] INFO: Accessed [certificate]
+[2024-02-23 15:07:21] INFO: Email sent to: jameslayson.0@gmail.com
+[2024-02-23 15:08:05] INFO: course
+[2024-02-23 15:08:05] INFO: Accessed [course]
+[2024-02-23 15:08:07] INFO: certificate
+[2024-02-23 15:08:07] INFO: Accessed [certificate]
+[2024-02-23 15:08:07] INFO: Email sent to: jameslayson.0@gmail.com
+[2024-02-23 15:08:44] INFO: course
+[2024-02-23 15:08:44] INFO: Accessed [course]
+[2024-02-23 15:08:45] INFO: certificate
+[2024-02-23 15:08:45] INFO: Accessed [certificate]
+[2024-02-23 15:08:46] INFO: Email sent to: jameslayson.0@gmail.com
+[2024-02-23 15:19:33] INFO: course
+[2024-02-23 15:19:33] INFO: Accessed [course]
+[2024-02-23 15:19:36] INFO: course
+[2024-02-23 15:19:36] INFO: Accessed [course]
+[2024-02-23 15:19:37] INFO: logout
+[2024-02-23 15:19:37] INFO: Logging Out
+[2024-02-23 15:19:37] INFO: home
+[2024-02-23 15:19:37] INFO: Accessed [home]
+[2024-02-23 15:19:39] INFO: home
+[2024-02-23 15:19:39] INFO: Accessed [home]
+[2024-02-23 15:20:09] INFO: home
+[2024-02-23 15:20:09] INFO: Accessed [home]
+[2024-02-23 15:20:10] INFO: login
+[2024-02-23 15:20:10] INFO: Accessed [login]
+[2024-02-23 15:20:17] INFO: login
+[2024-02-23 15:20:17] INFO: Accessed [login]
+[2024-02-23 15:20:17] INFO: Successfully validated Google Sign-In token
+[2024-02-23 15:20:17] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 15:20:17] INFO: bindingString: sssi
+[2024-02-23 15:20:17] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 15:20:17] INFO: dashboard
+[2024-02-23 15:20:17] INFO: Accessed [dashboard]
+[2024-02-23 15:20:20] INFO: dashboard
+[2024-02-23 15:20:20] INFO: Accessed [dashboard]
+[2024-02-23 15:21:20] INFO: dashboard
+[2024-02-23 15:21:20] INFO: Accessed [dashboard]
+[2024-02-23 15:21:27] INFO: dashboard
+[2024-02-23 15:21:27] INFO: Accessed [dashboard]
+[2024-02-23 15:21:39] INFO: dashboard
+[2024-02-23 15:21:39] INFO: Accessed [dashboard]
+[2024-02-23 15:21:56] INFO: dashboard
+[2024-02-23 15:21:56] INFO: Accessed [dashboard]
+[2024-02-23 15:22:04] INFO: dashboard
+[2024-02-23 15:22:04] INFO: Accessed [dashboard]
+[2024-02-23 15:22:47] INFO: dashboard
+[2024-02-23 15:22:47] INFO: Accessed [dashboard]
+[2024-02-23 15:23:37] INFO: dashboard
+[2024-02-23 15:23:37] INFO: Accessed [dashboard]
+[2024-02-23 15:23:59] INFO: dashboard
+[2024-02-23 15:23:59] INFO: Accessed [dashboard]
+[2024-02-23 15:24:00] INFO: course
+[2024-02-23 15:24:00] INFO: Accessed [course]
+[2024-02-23 15:24:15] INFO: home
+[2024-02-23 15:24:15] INFO: Accessed [home]
+[2024-02-23 15:24:18] INFO: home
+[2024-02-23 15:24:18] INFO: Accessed [home]
+[2024-02-23 15:24:20] INFO: home
+[2024-02-23 15:24:20] INFO: Accessed [home]
+[2024-02-23 15:24:21] INFO: home
+[2024-02-23 15:24:21] INFO: Accessed [home]
+[2024-02-23 15:24:42] INFO: home
+[2024-02-23 15:24:42] INFO: Accessed [home]
+[2024-02-23 15:24:47] INFO: home
+[2024-02-23 15:24:47] INFO: Accessed [home]
+[2024-02-23 15:24:49] INFO: login
+[2024-02-23 15:24:49] INFO: Accessed [login]
+[2024-02-23 15:24:49] INFO: dashboard
+[2024-02-23 15:24:49] INFO: Accessed [dashboard]
+[2024-02-23 15:24:51] INFO: home
+[2024-02-23 15:24:51] INFO: Accessed [home]
+[2024-02-23 15:26:34] INFO: home
+[2024-02-23 15:26:34] INFO: Accessed [home]
+[2024-02-23 15:26:36] INFO: login
+[2024-02-23 15:26:36] INFO: Accessed [login]
+[2024-02-23 15:26:36] INFO: dashboard
+[2024-02-23 15:26:36] INFO: Accessed [dashboard]
+[2024-02-23 15:26:39] INFO: logout
+[2024-02-23 15:26:39] INFO: Logging Out
+[2024-02-23 15:26:39] INFO: home
+[2024-02-23 15:26:39] INFO: Accessed [home]
+[2024-02-23 15:27:10] INFO: login
+[2024-02-23 15:27:10] INFO: Accessed [login]
+[2024-02-23 15:27:15] INFO: home
+[2024-02-23 15:27:15] INFO: Accessed [home]
+[2024-02-23 15:27:16] INFO: login
+[2024-02-23 15:27:16] INFO: Accessed [login]
+[2024-02-23 15:27:18] INFO: home
+[2024-02-23 15:27:18] INFO: Accessed [home]
+[2024-02-23 15:27:20] INFO: login
+[2024-02-23 15:27:20] INFO: Accessed [login]
+[2024-02-23 15:27:22] INFO: home
+[2024-02-23 15:27:22] INFO: Accessed [home]
+[2024-02-23 15:27:23] INFO: login
+[2024-02-23 15:27:23] INFO: Accessed [login]
+[2024-02-23 15:32:53] INFO: login
+[2024-02-23 15:32:53] INFO: Accessed [login]
+[2024-02-23 15:37:56] INFO: login
+[2024-02-23 15:37:56] INFO: Accessed [login]
+[2024-02-23 15:38:08] INFO: login
+[2024-02-23 15:38:08] INFO: Accessed [login]
+[2024-02-23 15:38:42] INFO: login
+[2024-02-23 15:38:42] INFO: Accessed [login]
+[2024-02-23 15:38:55] INFO: login
+[2024-02-23 15:38:55] INFO: Accessed [login]
+[2024-02-23 15:39:00] INFO: login
+[2024-02-23 15:39:00] INFO: Accessed [login]
+[2024-02-23 15:39:10] INFO: login
+[2024-02-23 15:39:10] INFO: Accessed [login]
+[2024-02-23 15:39:14] INFO: login
+[2024-02-23 15:39:14] INFO: Accessed [login]
+[2024-02-23 15:39:20] INFO: login
+[2024-02-23 15:39:20] INFO: Accessed [login]
+[2024-02-23 15:39:37] INFO: login
+[2024-02-23 15:39:37] INFO: Accessed [login]
+[2024-02-23 15:39:42] INFO: login
+[2024-02-23 15:39:42] INFO: Accessed [login]
+[2024-02-23 15:39:46] INFO: login
+[2024-02-23 15:39:46] INFO: Accessed [login]
+[2024-02-23 15:39:51] INFO: login
+[2024-02-23 15:39:51] INFO: Accessed [login]
+[2024-02-23 15:39:58] INFO: login
+[2024-02-23 15:39:58] INFO: Accessed [login]
+[2024-02-23 15:40:08] INFO: login
+[2024-02-23 15:40:08] INFO: Accessed [login]
+[2024-02-23 15:40:59] INFO: login
+[2024-02-23 15:40:59] INFO: Accessed [login]
+[2024-02-23 15:41:08] INFO: login
+[2024-02-23 15:41:08] INFO: Accessed [login]
+[2024-02-23 15:41:16] INFO: login
+[2024-02-23 15:41:16] INFO: Accessed [login]
+[2024-02-23 15:41:44] INFO: login
+[2024-02-23 15:41:44] INFO: Accessed [login]
+[2024-02-23 15:42:07] INFO: login
+[2024-02-23 15:42:07] INFO: Accessed [login]
+[2024-02-23 15:42:09] INFO: home
+[2024-02-23 15:42:09] INFO: Accessed [home]
+[2024-02-23 15:42:12] INFO: home
+[2024-02-23 15:42:12] INFO: Accessed [home]
+[2024-02-23 15:42:28] INFO: home
+[2024-02-23 15:42:28] INFO: Accessed [home]
+[2024-02-23 15:42:29] INFO: home
+[2024-02-23 15:42:29] INFO: Accessed [home]
+[2024-02-23 15:42:29] INFO: home
+[2024-02-23 15:42:29] INFO: Accessed [home]
+[2024-02-23 15:42:29] INFO: home
+[2024-02-23 15:42:29] INFO: Accessed [home]
+[2024-02-23 15:42:29] INFO: home
+[2024-02-23 15:42:29] INFO: Accessed [home]
+[2024-02-23 15:42:48] INFO: home
+[2024-02-23 15:42:48] INFO: Accessed [home]
+[2024-02-23 15:43:17] INFO: home
+[2024-02-23 15:43:17] INFO: Accessed [home]
+[2024-02-23 15:43:18] INFO: login
+[2024-02-23 15:43:18] INFO: Accessed [login]
+[2024-02-23 15:43:56] INFO: login
+[2024-02-23 15:43:56] INFO: Accessed [login]
+[2024-02-23 15:44:11] INFO: login
+[2024-02-23 15:44:11] INFO: Accessed [login]
+[2024-02-23 15:44:19] INFO: login
+[2024-02-23 15:44:19] INFO: Accessed [login]
+[2024-02-23 15:44:22] INFO: login
+[2024-02-23 15:44:22] INFO: Accessed [login]
+[2024-02-23 15:44:22] INFO: Successfully validated Google Sign-In token
+[2024-02-23 15:44:22] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 15:44:22] INFO: bindingString: sssi
+[2024-02-23 15:44:22] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 15:44:22] INFO: dashboard
+[2024-02-23 15:44:22] INFO: Accessed [dashboard]
+[2024-02-23 15:44:59] INFO: dashboard
+[2024-02-23 15:44:59] INFO: Accessed [dashboard]
+[2024-02-23 15:45:16] INFO: dashboard
+[2024-02-23 15:45:16] INFO: Accessed [dashboard]
+[2024-02-23 15:45:21] INFO: dashboard
+[2024-02-23 15:45:21] INFO: Accessed [dashboard]
+[2024-02-23 15:45:32] INFO: dashboard
+[2024-02-23 15:45:32] INFO: Accessed [dashboard]
+[2024-02-23 15:45:39] INFO: dashboard
+[2024-02-23 15:45:39] INFO: Accessed [dashboard]
+[2024-02-23 15:46:00] INFO: dashboard
+[2024-02-23 15:46:00] INFO: Accessed [dashboard]
+[2024-02-23 15:46:15] INFO: dashboard
+[2024-02-23 15:46:15] INFO: Accessed [dashboard]
+[2024-02-23 15:46:21] INFO: dashboard
+[2024-02-23 15:46:21] INFO: Accessed [dashboard]
+[2024-02-23 15:46:22] INFO: dashboard
+[2024-02-23 15:46:22] INFO: Accessed [dashboard]
+[2024-02-23 15:46:30] INFO: logout
+[2024-02-23 15:46:30] INFO: Logging Out
+[2024-02-23 15:46:30] INFO: home
+[2024-02-23 15:46:30] INFO: Accessed [home]
+[2024-02-23 15:46:35] INFO: login
+[2024-02-23 15:46:35] INFO: Accessed [login]
+[2024-02-23 15:47:05] INFO: login
+[2024-02-23 15:47:05] INFO: Accessed [login]
+[2024-02-23 15:47:21] INFO: home
+[2024-02-23 15:47:21] INFO: Accessed [home]
+[2024-02-23 15:48:20] INFO: login
+[2024-02-23 15:48:20] INFO: Accessed [login]
+[2024-02-23 15:48:39] INFO: login
+[2024-02-23 15:48:39] INFO: Accessed [login]
+[2024-02-23 15:48:43] INFO: login
+[2024-02-23 15:48:43] INFO: Accessed [login]
+[2024-02-23 15:48:43] INFO: Successfully validated Google Sign-In token
+[2024-02-23 15:48:44] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 15:48:44] INFO: bindingString: sssi
+[2024-02-23 15:48:44] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 15:48:44] INFO: dashboard
+[2024-02-23 15:48:44] INFO: Accessed [dashboard]
+[2024-02-23 15:48:57] INFO: dashboard
+[2024-02-23 15:48:57] INFO: Accessed [dashboard]
+[2024-02-23 15:48:58] INFO: students
+[2024-02-23 15:48:58] INFO: Accessed [students]
+[2024-02-23 15:48:59] INFO: course
+[2024-02-23 15:48:59] INFO: Accessed [course]
+[2024-02-23 15:48:59] INFO: students
+[2024-02-23 15:48:59] INFO: Accessed [students]
+[2024-02-23 15:49:01] INFO: profile
+[2024-02-23 15:49:01] INFO: Accessed [profile]
+[2024-02-23 15:50:30] INFO: profile
+[2024-02-23 15:50:30] INFO: Accessed [profile]
+[2024-02-23 15:50:34] INFO: scores
+[2024-02-23 15:50:34] INFO: Accessed [scores]
+[2024-02-23 15:50:36] INFO: profile
+[2024-02-23 15:50:36] INFO: Accessed [profile]
+[2024-02-23 15:50:39] INFO: students
+[2024-02-23 15:50:39] INFO: Accessed [students]
+[2024-02-23 15:50:40] INFO: profile
+[2024-02-23 15:50:40] INFO: Accessed [profile]
+[2024-02-23 15:50:42] INFO: students
+[2024-02-23 15:50:42] INFO: Accessed [students]
+[2024-02-23 15:50:43] INFO: dashboard
+[2024-02-23 15:50:43] INFO: Accessed [dashboard]
+[2024-02-23 15:50:50] INFO: students
+[2024-02-23 15:50:50] INFO: Accessed [students]
+[2024-02-23 15:50:50] INFO: course
+[2024-02-23 15:50:50] INFO: Accessed [course]
+[2024-02-23 15:50:50] INFO: students
+[2024-02-23 15:50:50] INFO: Accessed [students]
+[2024-02-23 15:50:51] INFO: dashboard
+[2024-02-23 15:50:51] INFO: Accessed [dashboard]
+[2024-02-23 15:50:51] INFO: students
+[2024-02-23 15:50:51] INFO: Accessed [students]
+[2024-02-23 15:50:51] INFO: course
+[2024-02-23 15:50:51] INFO: Accessed [course]
+[2024-02-23 15:50:52] INFO: students
+[2024-02-23 15:50:52] INFO: Accessed [students]
+[2024-02-23 15:50:52] INFO: dashboard
+[2024-02-23 15:50:52] INFO: Accessed [dashboard]
+[2024-02-23 15:50:52] INFO: students
+[2024-02-23 15:50:52] INFO: Accessed [students]
+[2024-02-23 15:51:00] INFO: profile
+[2024-02-23 15:51:00] INFO: Accessed [profile]
+[2024-02-23 15:51:01] INFO: students
+[2024-02-23 15:51:01] INFO: Accessed [students]
+[2024-02-23 15:51:10] INFO: profile
+[2024-02-23 15:51:10] INFO: Accessed [profile]
+[2024-02-23 15:51:12] INFO: logout
+[2024-02-23 15:51:12] INFO: Logging Out
+[2024-02-23 15:51:12] INFO: home
+[2024-02-23 15:51:12] INFO: Accessed [home]
+[2024-02-23 15:51:16] INFO: login
+[2024-02-23 15:51:16] INFO: Accessed [login]
+[2024-02-23 15:51:24] INFO: login
+[2024-02-23 15:51:24] INFO: Accessed [login]
+[2024-02-23 15:51:25] INFO: Successfully validated Google Sign-In token
+[2024-02-23 15:51:25] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 15:51:25] INFO: bindingString: sssi
+[2024-02-23 15:51:25] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 15:51:25] INFO: dashboard
+[2024-02-23 15:51:25] INFO: Accessed [dashboard]
+[2024-02-23 15:51:28] INFO: logout
+[2024-02-23 15:51:28] INFO: Logging Out
+[2024-02-23 15:51:28] INFO: home
+[2024-02-23 15:51:28] INFO: Accessed [home]
+[2024-02-23 15:51:29] INFO: login
+[2024-02-23 15:51:29] INFO: Accessed [login]
+[2024-02-23 15:51:31] INFO: login
+[2024-02-23 15:51:31] INFO: Accessed [login]
+[2024-02-23 15:51:32] INFO: Successfully validated Google Sign-In token
+[2024-02-23 15:51:32] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 15:51:32] INFO: bindingString: sssi
+[2024-02-23 15:51:32] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 15:51:32] INFO: dashboard
+[2024-02-23 15:51:32] INFO: Accessed [dashboard]
+[2024-02-23 15:51:42] INFO: scores
+[2024-02-23 15:51:42] INFO: Accessed [scores]
+[2024-02-23 15:52:01] INFO: course
+[2024-02-23 15:52:01] INFO: Accessed [course]
+[2024-02-23 15:54:10] INFO: course
+[2024-02-23 15:54:10] INFO: Accessed [course]
+[2024-02-23 15:59:17] INFO: course
+[2024-02-23 15:59:17] INFO: Accessed [course]
+[2024-02-23 16:00:01] INFO: course
+[2024-02-23 16:00:01] INFO: Accessed [course]
+[2024-02-23 16:01:30] INFO: course
+[2024-02-23 16:01:30] INFO: Accessed [course]
+[2024-02-23 16:01:46] INFO: course
+[2024-02-23 16:01:46] INFO: Accessed [course]
+[2024-02-23 16:01:56] INFO: course
+[2024-02-23 16:01:56] INFO: Accessed [course]
+[2024-02-23 16:02:06] INFO: course
+[2024-02-23 16:02:06] INFO: Accessed [course]
+[2024-02-23 16:02:20] INFO: course
+[2024-02-23 16:02:20] INFO: Accessed [course]
+[2024-02-23 16:02:51] INFO: course
+[2024-02-23 16:02:51] INFO: Accessed [course]
+[2024-02-23 16:03:02] INFO: course
+[2024-02-23 16:03:02] INFO: Accessed [course]
+[2024-02-23 16:03:10] INFO: logout
+[2024-02-23 16:03:10] INFO: Logging Out
+[2024-02-23 16:03:10] INFO: home
+[2024-02-23 16:03:10] INFO: Accessed [home]
+[2024-02-23 16:03:10] INFO: login
+[2024-02-23 16:03:10] INFO: Accessed [login]
+[2024-02-23 16:03:14] INFO: login
+[2024-02-23 16:03:14] INFO: Accessed [login]
+[2024-02-23 16:03:14] INFO: Successfully validated Google Sign-In token
+[2024-02-23 16:03:14] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 16:03:14] INFO: bindingString: sssi
+[2024-02-23 16:03:14] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 16:03:14] INFO: dashboard
+[2024-02-23 16:03:14] INFO: Accessed [dashboard]
+[2024-02-23 16:03:15] INFO: accounts
+[2024-02-23 16:03:15] INFO: Accessed [accounts]
+[2024-02-23 16:03:16] INFO: course
+[2024-02-23 16:03:16] INFO: Accessed [course]
+[2024-02-23 16:03:23] INFO: chapter
+[2024-02-23 16:03:23] INFO: Accessed [chapter]
+[2024-02-23 16:03:25] INFO: course
+[2024-02-23 16:03:25] INFO: Accessed [course]
+[2024-02-23 16:03:26] INFO: chapter
+[2024-02-23 16:03:26] INFO: Accessed [chapter]
+[2024-02-23 16:05:23] INFO: lessons
+[2024-02-23 16:05:23] INFO: Accessed [lessons]
+[2024-02-23 16:05:23] INFO: chapter
+[2024-02-23 16:05:23] INFO: Accessed [chapter]
+[2024-02-23 16:05:25] INFO: lessons
+[2024-02-23 16:05:25] INFO: Accessed [lessons]
+[2024-02-23 16:05:32] INFO: lessons
+[2024-02-23 16:05:32] INFO: Accessed [lessons]
+[2024-02-23 16:05:39] INFO: lessons
+[2024-02-23 16:05:39] INFO: Accessed [lessons]
+[2024-02-23 16:05:47] INFO: lessons
+[2024-02-23 16:05:47] INFO: Accessed [lessons]
+[2024-02-23 16:05:48] INFO: chapter
+[2024-02-23 16:05:48] INFO: Accessed [chapter]
+[2024-02-23 16:05:49] INFO: lessons
+[2024-02-23 16:05:49] INFO: Accessed [lessons]
+[2024-02-23 16:05:59] INFO: chapter
+[2024-02-23 16:05:59] INFO: Accessed [chapter]
+[2024-02-23 16:06:13] INFO: chapter
+[2024-02-23 16:06:13] INFO: Accessed [chapter]
+[2024-02-23 16:06:15] INFO: lessons
+[2024-02-23 16:06:15] INFO: Accessed [lessons]
+[2024-02-23 16:06:23] INFO: chapter
+[2024-02-23 16:06:23] INFO: Accessed [chapter]
+[2024-02-23 16:06:24] INFO: course
+[2024-02-23 16:06:24] INFO: Accessed [course]
+[2024-02-23 16:06:27] INFO: chapter
+[2024-02-23 16:06:27] INFO: Accessed [chapter]
+[2024-02-23 16:06:30] INFO: course
+[2024-02-23 16:06:30] INFO: Accessed [course]
+[2024-02-23 16:06:32] INFO: lessons
+[2024-02-23 16:06:32] INFO: Accessed [lessons]
+[2024-02-23 16:06:42] INFO: logout
+[2024-02-23 16:06:42] INFO: Logging Out
+[2024-02-23 16:06:42] INFO: home
+[2024-02-23 16:06:42] INFO: Accessed [home]
+[2024-02-23 16:06:43] INFO: login
+[2024-02-23 16:06:43] INFO: Accessed [login]
+[2024-02-23 16:06:47] INFO: login
+[2024-02-23 16:06:47] INFO: Accessed [login]
+[2024-02-23 16:06:47] INFO: Successfully validated Google Sign-In token
+[2024-02-23 16:06:47] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 16:06:47] INFO: bindingString: sssi
+[2024-02-23 16:06:47] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 16:06:47] INFO: dashboard
+[2024-02-23 16:06:47] INFO: Accessed [dashboard]
+[2024-02-23 16:06:49] INFO: course
+[2024-02-23 16:06:49] INFO: Accessed [course]
+[2024-02-23 16:06:51] INFO: logout
+[2024-02-23 16:06:51] INFO: Logging Out
+[2024-02-23 16:06:51] INFO: home
+[2024-02-23 16:06:51] INFO: Accessed [home]
+[2024-02-23 16:06:52] INFO: login
+[2024-02-23 16:06:52] INFO: Accessed [login]
+[2024-02-23 16:06:55] INFO: login
+[2024-02-23 16:06:55] INFO: Accessed [login]
+[2024-02-23 16:06:56] INFO: Successfully validated Google Sign-In token
+[2024-02-23 16:06:56] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 16:06:56] INFO: bindingString: sssi
+[2024-02-23 16:06:56] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 16:06:56] INFO: dashboard
+[2024-02-23 16:06:56] INFO: Accessed [dashboard]
+[2024-02-23 16:07:02] INFO: chapter
+[2024-02-23 16:07:02] INFO: Accessed [chapter]
+[2024-02-23 16:07:05] INFO: lessons
+[2024-02-23 16:07:05] INFO: Accessed [lessons]
+[2024-02-23 16:07:07] INFO: chapter
+[2024-02-23 16:07:07] INFO: Accessed [chapter]
+[2024-02-23 16:07:08] INFO: course
+[2024-02-23 16:07:08] INFO: Accessed [course]
+[2024-02-23 16:07:13] INFO: lessons
+[2024-02-23 16:07:13] INFO: Accessed [lessons]
+[2024-02-23 16:07:22] INFO: logout
+[2024-02-23 16:07:22] INFO: Logging Out
+[2024-02-23 16:07:22] INFO: home
+[2024-02-23 16:07:22] INFO: Accessed [home]
+[2024-02-23 16:07:23] INFO: login
+[2024-02-23 16:07:23] INFO: Accessed [login]
+[2024-02-23 16:07:27] INFO: login
+[2024-02-23 16:07:27] INFO: Accessed [login]
+[2024-02-23 16:07:27] INFO: Successfully validated Google Sign-In token
+[2024-02-23 16:07:27] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 16:07:27] INFO: bindingString: sssi
+[2024-02-23 16:07:27] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 16:07:27] INFO: dashboard
+[2024-02-23 16:07:27] INFO: Accessed [dashboard]
+[2024-02-23 16:07:28] INFO: course
+[2024-02-23 16:07:28] INFO: Accessed [course]
+[2024-02-23 16:07:31] INFO: lessons
+[2024-02-23 16:07:31] INFO: Accessed [lessons]
+[2024-02-23 16:07:33] INFO: accounts
+[2024-02-23 16:07:33] INFO: Accessed [accounts]
+[2024-02-23 16:07:35] INFO: course
+[2024-02-23 16:07:35] INFO: Accessed [course]
+[2024-02-23 16:07:41] INFO: chapter
+[2024-02-23 16:07:41] INFO: Accessed [chapter]
+[2024-02-23 16:07:43] INFO: lessons
+[2024-02-23 16:07:43] INFO: Accessed [lessons]
+[2024-02-23 16:07:44] INFO: chapter
+[2024-02-23 16:07:44] INFO: Accessed [chapter]
+[2024-02-23 16:07:49] INFO: lessons
+[2024-02-23 16:07:49] INFO: Accessed [lessons]
+[2024-02-23 16:07:52] INFO: lessons
+[2024-02-23 16:07:52] INFO: Accessed [lessons]
+[2024-02-23 16:08:39] INFO: lessons
+[2024-02-23 16:08:39] INFO: Accessed [lessons]
+[2024-02-23 16:09:25] INFO: activity
+[2024-02-23 16:09:25] INFO: Accessed [activity]
+[2024-02-23 16:09:26] INFO: lessons
+[2024-02-23 16:09:26] INFO: Accessed [lessons]
+[2024-02-23 16:09:28] INFO: assessment
+[2024-02-23 16:09:28] INFO: Accessed [assessment]
+[2024-02-23 16:09:51] INFO: assessment
+[2024-02-23 16:09:51] INFO: Accessed [assessment]
+[2024-02-23 16:10:09] INFO: assessment
+[2024-02-23 16:10:09] INFO: Accessed [assessment]
+[2024-02-23 16:10:09] INFO: assessment
+[2024-02-23 16:10:09] INFO: Accessed [assessment]
+[2024-02-23 16:10:20] INFO: assessment
+[2024-02-23 16:10:20] INFO: Accessed [assessment]
+[2024-02-23 16:10:21] INFO: assessment
+[2024-02-23 16:10:21] INFO: Accessed [assessment]
+[2024-02-23 16:10:26] INFO: logout
+[2024-02-23 16:10:26] INFO: Logging Out
+[2024-02-23 16:10:26] INFO: home
+[2024-02-23 16:10:26] INFO: Accessed [home]
+[2024-02-23 16:10:27] INFO: login
+[2024-02-23 16:10:27] INFO: Accessed [login]
+[2024-02-23 16:10:30] INFO: login
+[2024-02-23 16:10:30] INFO: Accessed [login]
+[2024-02-23 16:10:30] INFO: Successfully validated Google Sign-In token
+[2024-02-23 16:10:30] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 16:10:30] INFO: bindingString: sssi
+[2024-02-23 16:10:30] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 16:10:30] INFO: dashboard
+[2024-02-23 16:10:30] INFO: Accessed [dashboard]
+[2024-02-23 16:10:35] INFO: chapter
+[2024-02-23 16:10:35] INFO: Accessed [chapter]
+[2024-02-23 16:10:36] INFO: lessons
+[2024-02-23 16:10:36] INFO: Accessed [lessons]
+[2024-02-23 16:10:37] INFO: activity
+[2024-02-23 16:10:37] INFO: Accessed [activity]
+[2024-02-23 16:10:38] INFO: assessment
+[2024-02-23 16:10:38] INFO: Accessed [assessment]
+[2024-02-23 16:10:40] INFO: assessment
+[2024-02-23 16:10:40] INFO: Accessed [assessment]
+[2024-02-23 16:10:43] INFO: result
+[2024-02-23 16:10:43] INFO: Accessed [result]
+[2024-02-23 16:10:43] INFO: Sending assessment score to 
+[2024-02-23 16:10:43] INFO: result
+[2024-02-23 16:10:43] INFO: Accessed [result]
+[2024-02-23 16:10:50] INFO: lessons
+[2024-02-23 16:10:50] INFO: Accessed [lessons]
+[2024-02-23 16:10:50] INFO: chapter
+[2024-02-23 16:10:50] INFO: Accessed [chapter]
+[2024-02-23 16:10:51] INFO: course
+[2024-02-23 16:10:51] INFO: Accessed [course]
+[2024-02-23 16:10:54] INFO: lessons
+[2024-02-23 16:10:54] INFO: Accessed [lessons]
+[2024-02-23 16:10:56] INFO: scores
+[2024-02-23 16:10:56] INFO: Accessed [scores]
+[2024-02-23 16:11:35] INFO: activity
+[2024-02-23 16:11:35] INFO: Accessed [activity]
+[2024-02-23 16:11:38] INFO: assessment
+[2024-02-23 16:11:38] INFO: Accessed [assessment]
+[2024-02-23 16:11:39] INFO: assessment
+[2024-02-23 16:11:39] INFO: Accessed [assessment]
+[2024-02-23 16:11:40] INFO: result
+[2024-02-23 16:11:40] INFO: Accessed [result]
+[2024-02-23 16:11:40] INFO: Sending assessment score to 
+[2024-02-23 16:11:40] INFO: result
+[2024-02-23 16:11:40] INFO: Accessed [result]
+[2024-02-23 16:11:42] INFO: lessons
+[2024-02-23 16:11:42] INFO: Accessed [lessons]
+[2024-02-23 16:11:42] INFO: chapter
+[2024-02-23 16:11:42] INFO: Accessed [chapter]
+[2024-02-23 16:11:44] INFO: course
+[2024-02-23 16:11:44] INFO: Accessed [course]
+[2024-02-23 16:11:46] INFO: logout
+[2024-02-23 16:11:46] INFO: Logging Out
+[2024-02-23 16:11:46] INFO: home
+[2024-02-23 16:11:46] INFO: Accessed [home]
+[2024-02-23 16:11:51] INFO: login
+[2024-02-23 16:11:51] INFO: Accessed [login]
+[2024-02-23 16:17:49] INFO: login
+[2024-02-23 16:17:49] INFO: Accessed [login]
+[2024-02-23 16:17:49] INFO: Successfully validated Google Sign-In token
+[2024-02-23 16:17:49] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 16:17:49] INFO: bindingString: sssi
+[2024-02-23 16:17:49] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 16:17:49] INFO: dashboard
+[2024-02-23 16:17:49] INFO: Accessed [dashboard]
+[2024-02-23 16:18:03] INFO: course
+[2024-02-23 16:18:03] INFO: Accessed [course]
+[2024-02-23 16:18:09] INFO: chapter
+[2024-02-23 16:18:09] INFO: Accessed [chapter]
+[2024-02-23 16:18:16] INFO: lessons
+[2024-02-23 16:18:16] INFO: Accessed [lessons]
+[2024-02-23 16:18:18] INFO: chapter
+[2024-02-23 16:18:18] INFO: Accessed [chapter]
+[2024-02-23 16:18:22] INFO: logout
+[2024-02-23 16:18:22] INFO: Logging Out
+[2024-02-23 16:18:22] INFO: home
+[2024-02-23 16:18:22] INFO: Accessed [home]
+[2024-02-23 16:18:25] INFO: login
+[2024-02-23 16:18:25] INFO: Accessed [login]
+[2024-02-23 16:18:32] INFO: login
+[2024-02-23 16:18:32] INFO: Accessed [login]
+[2024-02-23 16:18:32] INFO: Successfully validated Google Sign-In token
+[2024-02-23 16:18:33] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-02-23 16:18:33] INFO: bindingString: sssi
+[2024-02-23 16:18:33] INFO: No rows were affected. Update may not have found a matching row.
+[2024-02-23 16:18:33] INFO: dashboard
+[2024-02-23 16:18:33] INFO: Accessed [dashboard]
+[2024-02-23 16:18:35] INFO: chapter
+[2024-02-23 16:18:35] INFO: Accessed [chapter]
+[2024-02-23 16:18:37] INFO: lessons
+[2024-02-23 16:18:37] INFO: Accessed [lessons]
+[2024-02-23 16:18:38] INFO: activity
+[2024-02-23 16:18:38] INFO: Accessed [activity]
+[2024-02-23 16:18:38] INFO: result
+[2024-02-23 16:18:38] INFO: Accessed [result]
+[2024-02-23 16:18:43] INFO: chapter
+[2024-02-23 16:18:43] INFO: Accessed [chapter]
+[2024-02-23 16:18:44] INFO: course
+[2024-02-23 16:18:44] INFO: Accessed [course]
+[2024-02-23 16:18:46] INFO: course
+[2024-02-23 16:18:46] INFO: Accessed [course]
+[2024-02-23 16:18:47] INFO: dashboard
+[2024-02-23 16:18:47] INFO: Accessed [dashboard]
+[2024-02-23 16:18:52] INFO: course
+[2024-02-23 16:18:52] INFO: Accessed [course]
+[2024-02-23 16:19:23] INFO: lessons
+[2024-02-23 16:19:23] INFO: Accessed [lessons]
+[2024-02-23 16:19:25] INFO: chapter
+[2024-02-23 16:19:25] INFO: Accessed [chapter]
+[2024-02-23 16:19:27] INFO: lessons
+[2024-02-23 16:19:27] INFO: Accessed [lessons]
+[2024-02-23 16:19:31] INFO: chapter
+[2024-02-23 16:19:31] INFO: Accessed [chapter]
+[2024-02-23 16:26:14] INFO: dashboard
+[2024-02-23 16:26:14] INFO: Accessed [dashboard]
+[2024-02-23 16:26:42] INFO: course
+[2024-02-23 16:26:42] INFO: Accessed [course]
+[2024-02-23 16:26:44] INFO: dashboard
+[2024-02-23 16:26:44] INFO: Accessed [dashboard]
+[2024-02-23 16:26:44] INFO: scores
+[2024-02-23 16:26:44] INFO: Accessed [scores]
+[2024-02-23 16:26:45] INFO: dashboard
+[2024-02-23 16:26:45] INFO: Accessed [dashboard]
+[2024-02-23 16:26:46] INFO: course
+[2024-02-23 16:26:46] INFO: Accessed [course]
+[2024-02-23 16:26:46] INFO: dashboard
+[2024-02-23 16:26:46] INFO: Accessed [dashboard]
+[2024-02-23 16:26:46] INFO: course
+[2024-02-23 16:26:46] INFO: Accessed [course]
+[2024-02-23 16:26:47] INFO: dashboard
+[2024-02-23 16:26:47] INFO: Accessed [dashboard]
+[2024-02-23 16:26:47] INFO: course
+[2024-02-23 16:26:47] INFO: Accessed [course]
+[2024-02-23 16:26:48] INFO: dashboard
+[2024-02-23 16:26:48] INFO: Accessed [dashboard]
+[2024-02-23 16:26:48] INFO: scores
+[2024-02-23 16:26:48] INFO: Accessed [scores]
+[2024-02-23 16:26:49] INFO: dashboard
+[2024-02-23 16:26:49] INFO: Accessed [dashboard]
+[2024-02-23 16:26:49] INFO: scores
+[2024-02-23 16:26:49] INFO: Accessed [scores]
+[2024-02-23 16:26:50] INFO: dashboard
+[2024-02-23 16:26:50] INFO: Accessed [dashboard]
+[2024-02-23 16:26:50] INFO: scores
+[2024-02-23 16:26:50] INFO: Accessed [scores]
+[2024-02-23 16:26:52] INFO: dashboard
+[2024-02-23 16:26:52] INFO: Accessed [dashboard]
+[2024-02-23 16:26:53] INFO: scores
+[2024-02-23 16:26:53] INFO: Accessed [scores]
+[2024-02-23 16:28:15] INFO: dashboard
+[2024-02-23 16:28:15] INFO: Accessed [dashboard]
+[2024-02-23 16:28:15] INFO: course
+[2024-02-23 16:28:15] INFO: Accessed [course]
+[2024-02-23 16:28:16] INFO: dashboard
+[2024-02-23 16:28:16] INFO: Accessed [dashboard]
+[2024-02-23 16:28:17] INFO: course
+[2024-02-23 16:28:17] INFO: Accessed [course]
+[2024-02-23 16:28:17] INFO: scores
+[2024-02-23 16:28:17] INFO: Accessed [scores]
+[2024-02-23 16:28:18] INFO: course
+[2024-02-23 16:28:18] INFO: Accessed [course]
+[2024-02-23 16:28:18] INFO: dashboard
+[2024-02-23 16:28:18] INFO: Accessed [dashboard]
+[2024-02-23 16:28:19] INFO: course
+[2024-02-23 16:28:19] INFO: Accessed [course]
+[2024-02-23 16:28:19] INFO: course
+[2024-02-23 16:28:19] INFO: Accessed [course]
+[2024-02-23 16:28:19] INFO: scores
+[2024-02-23 16:28:19] INFO: Accessed [scores]
+[2024-02-23 16:28:20] INFO: course
+[2024-02-23 16:28:20] INFO: Accessed [course]
+[2024-02-23 16:28:20] INFO: scores
+[2024-02-23 16:28:20] INFO: Accessed [scores]
+[2024-02-23 16:28:21] INFO: dashboard
+[2024-02-23 16:28:21] INFO: Accessed [dashboard]
+[2024-02-23 16:28:21] INFO: course
+[2024-02-23 16:28:21] INFO: Accessed [course]
+[2024-02-23 16:28:21] INFO: scores
+[2024-02-23 16:28:21] INFO: Accessed [scores]
+[2024-02-23 16:28:22] INFO: home
+[2024-02-23 16:28:22] INFO: Accessed [home]
+[2024-02-23 16:28:25] INFO: login
+[2024-02-23 16:28:25] INFO: Accessed [login]
+[2024-02-23 16:28:25] INFO: dashboard
+[2024-02-23 16:28:25] INFO: Accessed [dashboard]
+[2024-02-23 16:28:27] INFO: profile
+[2024-02-23 16:28:27] INFO: Accessed [profile]
