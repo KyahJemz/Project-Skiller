@@ -40,7 +40,7 @@
                         <input type="text" value="<?php echo $data['role']?>" class="form-control" id="profileForm3" readonly disabled>
                     </div>
                     <div class="mb-3">
-                        <label for="profileForm4" class="form-label">Group</label>
+                        <label for="profileForm4" class="form-label">Section</label>
                         <input type="text" value="<?php echo $data['group']?>" class="form-control" id="profileForm4" readonly disabled>
                     </div>
                 </div>

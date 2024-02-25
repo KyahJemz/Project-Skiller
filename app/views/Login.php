@@ -30,7 +30,7 @@
                                     </div>
 
                                     <div class="form-outline mb-0">
-                                        <p>Sign in with your sscr.edu Email</p>
+                                        <p>Sign in with your registered Email</p>
                                     </div>
 
                                     <?php 

@@ -178,6 +178,29 @@ class ResultController {
                     'ReceiverEmail' => $_SESSION['User_Email'],
                     'Message' => 'You have failed your assessment in '.$Activity[0]['ActivityTitle'].'. You have scored '.$score.' out of '.$total.', The system already sent an request for retake to your teacher. you may now continue reviewing this lesson before proceeding to the next lesson, Good luck!'
                 ]);
+
+                $WholeGroup = $accountModel->getAccountByGroup([
+                    'Group'=>$_SESSION['User_Group'],
+                ]);
+
+                $TeacherEmail = "";
+                $TeacherName = "";
+
+                foreach ($WholeGroup as $value) {
+                    if($value['Role'] === 'Teacher'){
+                        $TeacherEmail = $value['Email'];
+                        $TeacherName = $value['FirstName'];
+                    }
+                }
+
+                if (!empty($TeacherEmail) && !empty($TeacherName)){
+                    Email::sendMail([
+                        'Subject' => 'Assessment Retake Request',
+                        'ReceiverName' => $TeacherName,
+                        'ReceiverEmail' => $TeacherEmail,
+                        'Message' => 'Your student named "'.$_SESSION['User_FirstName'].' '.$_aSESSION['User_LastName'].'" have failed assessment in '.$Activity[0]['ActivityTitle'].'. With a score of '.$score.' out of '.$total.'. You may let the student continue by enabling the retake option to give another chance.'
+                    ]);
+                }
             }
 
             header('Location: '.BASE_URL.'?page=result&item='.$Id);
@@ -242,7 +265,6 @@ class ResultController {
             exit();
         }
     }
-
 }
 
 ?>

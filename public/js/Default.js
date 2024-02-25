@@ -22,7 +22,7 @@ if(StudentsSubmitAddAccountBtn) {
         }
         document.getElementById('student-email-note').innerHTML = "";
         if (!Group){
-            document.getElementById('student-group-note').innerHTML = "Group Required!";
+            document.getElementById('student-group-note').innerHTML = "Section Required!";
             StudentsSubmitAddAccountBtn.disabled = false;
             return
         }
@@ -66,7 +66,7 @@ if(TeachersSubmitAddAccountBtn) {
         }
         document.getElementById('teacher-email-note').innerHTML = "";
         if (!Group){
-            document.getElementById('teacher-group-note').innerHTML = "Group Required!";
+            document.getElementById('teacher-group-note').innerHTML = "Section Required!";
             TeachersSubmitAddAccountBtn.disabled = false;
             return
         }
@@ -807,6 +807,7 @@ let QuestionsRaw = null;
 let QuestionCounts = 0;
 const Questions = [];
 if (QuestionsContainer){
+    console.log(QuestionsList);
     QuestionsRaw = JSON.parse(QuestionsList);
     console.log(QuestionsRaw);
     QuestionsRaw.forEach((element) => {

@@ -120,7 +120,7 @@
                         <p id="student-email-note" class="text-danger"></p>
                     </div>
                     <div class="mb-3">
-                        <label for="student-group" class="col-form-label"><strong>Group  </strong>( You're Group: <?php echo $_SESSION['User_Group']?> ) :</label>
+                        <label for="student-group" class="col-form-label"><strong>Section  </strong>( You're Section: <?php echo $_SESSION['User_Group']?> ) :</label>
                         <select id="student-group" class="custom-select my-1 mr-sm-2 form-control" name="student-group" id="inlineFormCustomSelectPref" value="<?php echo $_SESSION['User_Group']?>" required>
                             <option value="" selected>Choose...</option>
                             <?php 

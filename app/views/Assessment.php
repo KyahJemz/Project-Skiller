@@ -73,6 +73,7 @@
                 }
             } elseif ($_SESSION['User_Role'] === "Administrator") {
                 echo '<div id="QuestionsContainer">';
+                
                 echo '</div>';
             } else {
                 if (!empty($data['Questions'])) {

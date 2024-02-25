@@ -101,7 +101,7 @@ class AssessmentController {
 
         if ($_SESSION['User_Role'] === "Administrator") {
             echo '<script>';
-            echo 'const QuestionsList=`'.json_encode($data['Questions']).'`;';
+            echo 'const QuestionsList = `'. json_encode($data['Questions']) .'`;';
             echo 'const AnswersList=`'.json_encode($data['Answers']).'`;';
             echo 'const Activity_Id=`'.$item.'`;';
             echo 'const BASE_URL=`'.BASE_URL.'`;';
