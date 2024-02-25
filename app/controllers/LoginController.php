@@ -2,6 +2,7 @@
 use GuzzleHttp\Client;
 
 require_once __DIR__.'/../models/AccountModel.php';
+require_once __DIR__.'/../models/LessonModel.php';
 require_once __DIR__.'/../../config/Database.php';
 
 class LoginController {
@@ -60,6 +61,7 @@ class LoginController {
                 $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
                 $accountModel = new AccountModel($db, $logger);
 
+
                 $accountData = $accountModel->getAccount(['Email'=>$decodedBody['email']]);
                 if ($accountData === []){
                     $this->Error = "Login Failed, Account not registered!";
@@ -74,7 +76,8 @@ class LoginController {
                             'User_MiddleName' => "",
                             'User_LastName' => $decodedBody['family_name'],
                             'User_Group' => $accountData[0]['Group'],
-                            'User_Role' => $accountData[0]['Role']
+                            'User_Role' => $accountData[0]['Role'],
+                            'CurrentLesson' => $accountData[0]['CurrentLesson']
                         ]);
                         $accountData = $accountModel->updateAccount([
                             'Id'=>$accountData[0]['Id'],
@@ -82,6 +85,11 @@ class LoginController {
                             'FirstName' => $decodedBody['given_name'],
                             'LastName' => $decodedBody['family_name'],
                         ]);
+                        if ($_SESSION['User_Role'] === 'Student'){
+                            $lessonModel = new LessonModel($db, $logger);
+                            $ContentList = $lessonModel->getAllContents();
+                            RefreshAccessibleContents($ContentList);
+                        }
                         header("Location: ".BASE_URL."?page=dashboard");
                     } else {
                         $this->Error = "Login Failed, Account disabled!";

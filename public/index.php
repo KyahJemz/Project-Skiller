@@ -25,6 +25,7 @@ require_once '../utils/input_validation.php';
 require_once '../utils/session.php';
 require_once '../utils/date_format.php';
 require_once '../utils/colors.php';
+require_once '../utils/lesson_access.php';
 
 // SESSION START
 session_start();

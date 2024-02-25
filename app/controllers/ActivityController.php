@@ -23,6 +23,13 @@ class ActivityController {
             exit;
         }
 
+        if(CheckLesson($data['Activity'][0]['LessonId'])){
+            
+        } else {
+            header('Location: '.BASE_URL.'?page=NotFound');
+            exit;
+        }
+
         $data['Progress'] = $activityModel->getActivityHasProgress(['ActivityId'=>$db->escape($item), 'AccountId'=>$db->escape($_SESSION['User_Id'])]);
 
         $data['Result'] = $activityModel->getActivityResultFromActivityId(['ActivityId'=>$db->escape($item), 'AccountId'=>$db->escape($_SESSION['User_Id'])]);
@@ -45,7 +52,6 @@ class ActivityController {
             }
         }
 
-    
         $data['title'] = "Skiller - ".$data['Activity'][0]['ActivityTitle'];
  
         include(__DIR__ . '/../views/headers/Default.php');

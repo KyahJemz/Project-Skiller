@@ -15,6 +15,13 @@ class LessonsController {
             header('Location: '.BASE_URL.'?page=NotFound');
             exit;
         }
+
+        if(CheckLesson($item)){
+            
+        } else {
+            header('Location: '.BASE_URL.'?page=NotFound');
+            exit;
+        }
         
         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         $lessonModel = new LessonModel($db, $logger);

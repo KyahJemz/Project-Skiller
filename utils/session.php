@@ -13,6 +13,12 @@ function createSession($params){
     $_SESSION['User_LastName'] = $params['User_LastName'];
     $_SESSION['User_Group'] = $params['User_Group'];
     $_SESSION['User_Role'] = $params['User_Role'];
+    $_SESSION['CurrentLesson'] = $params['CurrentLesson'];
+}
+
+function updateAccessibleContents($params){
+    $_SESSION['AllowedChapters'] = $params['AllowedChapters'];
+    $_SESSION['AllowedLessons'] = $params['AllowedLessons'];
 }
 
 function logout() {

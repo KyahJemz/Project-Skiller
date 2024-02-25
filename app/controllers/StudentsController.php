@@ -127,7 +127,9 @@ class StudentsController {
                 $accountModel->addAccount([
                     'Email'=>$email,
                     'Role'=>'Student',
-                    'Group'=>$group
+                    'Group'=>$group,
+                    'CurrentChapter'=>'1',
+                    'CurrentLesson'=>'1'
                 ]);
 
                 Email::sendMail([

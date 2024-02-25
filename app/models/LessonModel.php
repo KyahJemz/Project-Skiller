@@ -552,5 +552,36 @@ class LessonModel {
     
         return $data;
     }
+
+    public function getAllContents() {
+        $query = "SELECT 
+            tbl_chapter.Id as ChapterId,
+            tbl_lessons.Id as LessonId
+        FROM tbl_chapter
+        LEFT JOIN tbl_lessons ON tbl_chapter.Id = tbl_lessons.Chapter_Id
+        ORDER BY tbl_chapter.Id, tbl_lessons.Id";
+    
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return [];
+        }
+    
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        if (!$result) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return [];
+        }
+    
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+    
+        $stmt->close();
+    
+        return $data;
+    }
 }
 ?>

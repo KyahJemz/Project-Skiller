@@ -39,7 +39,11 @@
                         echo '          </br>';
                         echo            $row['LessonDescription'];
                         echo '          </br>';
-                        echo '          <a class="btn btn-primary class="mt-2" href="'.BASE_URL.'?page=lessons&item='.$row['LessonId'].'">View</a>';
+                        if(CheckLesson($row["LessonId"])){
+                            echo '<a class="btn btn-primary mt-2" href="'.BASE_URL.'?page=lessons&item='.$row['LessonId'].'">View</a>';
+                        } else {
+                            echo '<a class="btn btn-secondary mt-2">Locked</a>';
+                        }
                         echo '          </br></br>';
                         echo '        </div>';
                         echo '    </div>';

@@ -25,7 +25,11 @@
                                     echo '</br>';
                                     echo nl2br($row2['LessonDescription']);
                                     echo '</br>';
-                                    echo '<a class="btn btn-primary mt-2" href="'.BASE_URL.'?page=lessons&item='.$row2['LessonId'].'">View</a>';
+                                    if(CheckLesson($row2["LessonId"])){
+                                        echo '<a class="btn btn-primary mt-2" href="'.BASE_URL.'?page=lessons&item='.$row2['LessonId'].'">View</a>';
+                                    } else {
+                                        echo '<a class="btn btn-secondary mt-2">Locked</a>';
+                                    }
                                     echo '</br></br>';
                                 }
                             }

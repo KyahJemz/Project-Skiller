@@ -249,14 +249,21 @@ class AccountModel {
         $Email = $this->database->escape($params['Email']);
         $Role = $this->database->escape($params['Role']);
         $Group = $this->database->escape($params['Group']);
+        $CurrentChapter = $this->database->escape($params['CurrentChapter']);
+        $CurrentLesson = $this->database->escape($params['CurrentLesson']);
 
         $query ="";
         if(empty($Group)){
             $query = "INSERT INTO tbl_accounts (Email, Role) 
             VALUES ('$Email', '$Role')";
         } else {
-            $query = "INSERT INTO tbl_accounts (Email, Role, `Group`) 
-            VALUES ('$Email', '$Role', $Group)";
+            if(empty($CurrentChapter)){
+                $query = "INSERT INTO tbl_accounts (Email, Role, `Group`) 
+                VALUES ('$Email', '$Role', $Group)";
+            } else {
+                $query = "INSERT INTO tbl_accounts (Email, Role, `Group`, CurrentChapter, CurrentLesson) 
+                VALUES ('$Email', '$Role', $Group, '$CurrentChapter', '$CurrentLesson')";
+            }
         }
 
         $stmt = $this->database->prepare($query);
@@ -278,6 +285,5 @@ class AccountModel {
     
         return true;
     }
-
 }
 ?>
