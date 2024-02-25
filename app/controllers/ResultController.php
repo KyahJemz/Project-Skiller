@@ -2,6 +2,7 @@
 
 require_once __DIR__.'/../models/AccountModel.php';
 require_once __DIR__.'/../models/ActivityModel.php';
+require_once __DIR__.'/../models/LessonModel.php';
 require_once __DIR__.'/../models/ProgressModel.php';
 require_once __DIR__.'/../../config/Database.php';
 
@@ -73,7 +74,8 @@ class ResultController {
             $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
             $activityModel = new ActivityModel($db, $logger);
             $progressModel = new ProgressModel($db, $logger);
-
+            $accountModel = new AccountModel($db, $logger);
+            $lessonModel = new LessonModel($db, $logger);
 
             $Activity =  $activityModel->getActivity(['ActivityId'=>$db->escape($item)]);
 
@@ -127,12 +129,6 @@ class ResultController {
                 }
             }
 
-            $progressModel->AddMyProgress([
-                'Lesson_Id'=>$db->escape($LessonId),
-                'Activity_Id'=>$db->escape($ActivityId),
-                'Account_Id'=>$db->escape($_SESSION['User_Id'])
-            ]);
-
             $Id = $activityModel->createActivityResult([
                 'ActivityId'=>$db->escape($ActivityId),
                 'LessonId'=>$db->escape($LessonId),
@@ -148,13 +144,41 @@ class ResultController {
                 'AccountId'=>$db->escape($_SESSION['User_Id']),
             ]);
 
-            $logger->log('Sending assessment score to ' .$Activity[0]['Email'], 'info');
-            Email::sendMail([
-                'Subject' => 'Assessment Score',
-                'ReceiverName' => $Activity[0]['FirstName'],
-                'ReceiverEmail' => $Activity[0]['Email'],
-                'Message' => 'You have completed your assessment in '.$Activity[0]['ActivityTitle'].'. You have scored '.$score.' out of '.$total.', Thank you!'
-            ]);
+            if ((($score / $total) * 100) >= 75) { // passed
+                $isNew = $progressModel->AddMyProgress([
+                    'Lesson_Id'=>$db->escape($LessonId),
+                    'Activity_Id'=>$db->escape($ActivityId),
+                    'Account_Id'=>$db->escape($_SESSION['User_Id'])
+                ]);
+    
+                $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$_SESSION['User_Id']]);
+
+                $ProgressPercentage =  number_format(((isset($data['Progress']['LessonProgress'][$LessonId]) ? $data['Progress']['LessonProgress'][$LessonId] : 0) / max($data['Progress']['LessonProgressTotal'][$LessonId], 1)) * 100, 2);
+                if((int) $ProgressPercentage === 100) {
+                    if((int)$isNew > 0) {
+                        $accountModel->updateCurrentLesson();
+                        $_SESSION['CurrentLesson'] = (int)$_SESSION['CurrentLesson'] + 1;
+                        $ContentList = $lessonModel->getAllContents();
+                        RefreshAccessibleContents($ContentList);
+                    }
+                }
+
+                $logger->log('Sending assessment score to ' .$_SESSION['User_Email'], 'info');
+                Email::sendMail([
+                    'Subject' => 'Assessment Score - Passed',
+                    'ReceiverName' => $_SESSION['User_FirstName'],
+                    'ReceiverEmail' => $_SESSION['User_Email'],
+                    'Message' => 'You have completed your assessment in '.$Activity[0]['ActivityTitle'].'. You have scored '.$score.' out of '.$total.', Thank you!'
+                ]);
+            } else { // failed
+                $logger->log('Sending assessment score to ' .$_SESSION['User_Email'], 'info');
+                Email::sendMail([
+                    'Subject' => 'Assessment Score - Failed',
+                    'ReceiverName' => $_SESSION['User_FirstName'],
+                    'ReceiverEmail' => $_SESSION['User_Email'],
+                    'Message' => 'You have failed your assessment in '.$Activity[0]['ActivityTitle'].'. You have scored '.$score.' out of '.$total.', The system already sent an request for retake to your teacher. you may now continue reviewing this lesson before proceeding to the next lesson, Good luck!'
+                ]);
+            }
 
             header('Location: '.BASE_URL.'?page=result&item='.$Id);
             exit;

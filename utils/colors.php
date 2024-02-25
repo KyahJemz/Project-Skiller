@@ -7,7 +7,7 @@
     function getNextTextColor() {
         global $CounterTextColor;
 
-        if ($CounterTextColor === 5) {
+        if ($CounterTextColor === 6) {
             $CounterTextColor = 0;
         }
 
@@ -16,6 +16,7 @@
             'text-success',
             'text-danger',
             'text-warning',
+            'text-secondary',
             'text-info'
         ];
 
@@ -29,7 +30,7 @@
     function getNextBgColor() {
         global $CounterBgColor;
 
-        if ($CounterBgColor === 5) {
+        if ($CounterBgColor === 6) {
             $CounterBgColor = 0;
         }
 
@@ -38,6 +39,7 @@
             'bg-success',
             'bg-danger',
             'bg-warning',
+            'bg-secondary',
             'bg-info'
         ];
 
@@ -51,7 +53,7 @@
     function getNextBadgeColor() {
         global $CounterBadgeColor;
         
-        if ($CounterBadgeColor === 5) {
+        if ($CounterBadgeColor === 6) {
             $CounterBadgeColor = 0;
         }
 
@@ -60,6 +62,7 @@
             'badge-success',
             'badge-danger',
             'badge-warning',
+            'badge-secondary',
             'badge-info'
         ];
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 17, 2024 at 12:26 AM
+-- Generation Time: Feb 25, 2024 at 08:54 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -37,6 +37,7 @@ CREATE TABLE `tbl_accounts` (
   `Role` varchar(25) NOT NULL DEFAULT 'Student',
   `Group` int(11) DEFAULT NULL,
   `Disabled` tinyint(1) NOT NULL DEFAULT 0,
+  `CurrentLesson` int(11) DEFAULT NULL,
   `CreatedAt` timestamp NOT NULL DEFAULT current_timestamp(),
   `UpdatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -45,8 +46,10 @@ CREATE TABLE `tbl_accounts` (
 -- Dumping data for table `tbl_accounts`
 --
 
-INSERT INTO `tbl_accounts` (`Id`, `Email`, `Image`, `FirstName`, `MiddleName`, `LastName`, `Role`, `Group`, `Disabled`, `CreatedAt`, `UpdatedAt`) VALUES
-(1, 'stephenreganjames.layson@gmail.com', null, null, NULL, null, 'Administrator', NULL, 0, '2024-02-11 09:57:25', '2024-02-11 09:58:42');
+INSERT INTO `tbl_accounts` (`Id`, `Email`, `Image`, `FirstName`, `MiddleName`, `LastName`, `Role`, `Group`, `Disabled`, `CurrentLesson`, `CreatedAt`, `UpdatedAt`) VALUES
+(1, 'stephenreganjames.layson@gmail.com', NULL, NULL, NULL, 'Administrator', NULL, 0, NULL, '2024-02-11 09:57:25', '2024-02-11 09:58:42'),
+(2, 'jameslayson.0@gmail.com', NULL, NULL, NULL, NULL, 'Teacher', 1, 0, 1, '2024-01-20 23:11:43', '2024-02-25 07:46:15'),
+(3, 's.stephen.layson@sscr.edu', NULL, NULL, NULL, NULL, 'Student', 1, 0, NULL, '2024-02-11 10:36:10', '2024-02-22 23:29:19');
 
 -- --------------------------------------------------------
 
@@ -64,14 +67,6 @@ CREATE TABLE `tbl_activity` (
   `CreatedAt` timestamp NOT NULL DEFAULT current_timestamp(),
   `UpdatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `tbl_activity`
---
-
-INSERT INTO `tbl_activity` (`Id`, `Lesson_Id`, `Title`, `Description`, `Notes`, `IsViewSummary`, `CreatedAt`, `UpdatedAt`) VALUES
-(1, 1, 'Activity 1 - Test', 'testset s', 'bawal pasaway', 1, '2024-01-21 19:31:17', '2024-01-28 08:55:10'),
-(3, 1, 'Activity 2 - eme lang', 'tes tsefsd fsf a', 'wala na finnish na', 1, '2024-01-29 01:19:04', '2024-01-29 01:19:04');
 
 -- --------------------------------------------------------
 
@@ -96,7 +91,8 @@ INSERT INTO `tbl_chapter` (`Id`, `Title`, `Codes`, `CreatedAt`, `UpdatedAt`) VAL
 (2, 'Rational Functions and Equations', 'M11GM-Ib-1, M11GM-Ib-2, M11GM-Ib-3, M11GM-Ib-4, M11GM-Ib-5, M11GM-Ic-1, M11GM-Ic-2, M11GM-Ic-3', '2024-01-21 19:29:35', '2024-01-21 19:29:35'),
 (3, 'Inverse Functions', 'M11GM-Id-1, M11GM-Id-2, M11GM-Id-3, M11GM-Id-4, M11GM-Ie-1, M11GM-Ie-2', '2024-01-21 19:29:35', '2024-01-21 19:29:35'),
 (4, 'Exponential Functions and Logarithmic Functions', 'M11GM-Ie-3, M11GM-Ie-4, M11GM-Ie-5, M11GM-If-1, M11GM-If-2, M11GM-If-3, M11GM-If-4, M11GM-Ig-1, M11GM-Ig-2, M11GM-Ih-1, M11GM-Ih-2, M11GM-Ih-3, M11GM-Ih-i-1, M11GM-Ii-2, M11GM-Ii-3, M11GM-Ii-4, M11GM-Ij-1, M11GM-Ij-2', '2024-01-21 19:29:35', '2024-01-21 19:29:35'),
-(5, 'Financial Mathematics, Propositions, and Logic', 'M11GM-IIa-1, M11GM-IIa-2, M11GM-IIa-b-1, M11GM-IIb-2, M11GM-IIc-1, M11GM-IIc-2, M11GM-IIc-d-1, M11GM-IId-2, M11GM-IId-3, M11GM-IIe-1, M11GM-IIe-2, M11GM-IIe-3, M11GM-IIe-4, M11GM-IIe-5, M11GM-IIf-1, M11GM-IIf-2, M11GM-IIf-3, M11GM-IIg-1, M11GM-IIg-2, M11GM-IIg-3, M11GM-IIg-4, M11GM-IIh-1, M11GM-IIh-2, M11GM-IIi-1, M11GM-IIi-2, M11GM-IIi-3, M11GM-IIj-1, M11GM-IIj-2', '2024-01-21 19:29:35', '2024-01-21 19:29:35');
+(5, 'Financial Mathematics, Propositions, and Logic', 'M11GM-IIa-1, M11GM-IIa-2, M11GM-IIa-b-1, M11GM-IIb-2, M11GM-IIc-1, M11GM-IIc-2, M11GM-IIc-d-1, M11GM-IId-2, M11GM-IId-3, M11GM-IIe-1, M11GM-IIe-2, M11GM-IIe-3, M11GM-IIe-4, M11GM-IIe-5, M11GM-IIf-1, M11GM-IIf-2, M11GM-IIf-3, M11GM-IIg-1, M11GM-IIg-2, M11GM-IIg-3, M11GM-IIg-4, M11GM-IIh-1, M11GM-IIh-2, M11GM-IIi-1, M11GM-IIi-2, M11GM-IIi-3, M11GM-IIj-1, M11GM-IIj-2', '2024-01-21 19:29:35', '2024-01-21 19:29:35'),
+(6, 'Final Examination', 'All Lessons', '2024-02-23 14:54:00', '2024-02-25 06:09:09');
 
 -- --------------------------------------------------------
 
@@ -138,7 +134,7 @@ CREATE TABLE `tbl_lessons` (
 
 INSERT INTO `tbl_lessons` (`Id`, `Title`, `Chapter_Id`, `Objective`, `Description`, `Image`, `Video`, `Content`, `CreatedAt`, `UpdatedAt`) VALUES
 (1, 'Real-world Applications of Functions', 1, 'The primary objective of this lesson is to enable students to recognize and formulate mathematical functions that effectively describe and predict real-world phenomena. By the end of the session, students should not only comprehend the theoretical foundations of functions but also develop the skills to apply these concepts in solving tangible problems beyond the classroom setting. This lesson serves as a foundation for appreciating the practical significance of functions and their role in addressing complex, dynamic scenarios in various fields.', 'The lesson on \"Real-world Applications of Functions\" is designed to bridge the gap between abstract mathematical concepts and their practical utility in addressing real-life scenarios. Students explore the versatile nature of functions as powerful tools for representing relationships between different quantities in a variety of contexts. Through concrete examples and case studies, the lesson provides a hands-on understanding of how functions can accurately model dynamic systems, offering valuable insights into the complexities of the real world.', NULL, NULL, NULL, '2024-01-21 19:30:43', '2024-01-21 19:30:43'),
-(2, 'Mastering Function Evaluation', 1, 'The primary objective of this lesson is to equip students with the necessary skills to confidently evaluate a variety of functions for specific inputs. By mastering function evaluation, students will not only enhance their computational abilities but also develop a deeper understanding of the dynamic nature of functions. This skill is crucial for navigating more complex mathematical concepts and problem-solving scenarios that involve the manipulation and analysis of functions in practical applications.', 'The lesson on \"Mastering Function Evaluation\" focuses on honing students\' proficiency in evaluating functions, a fundamental skill in understanding mathematical relationships. Students delve into the process of substituting specific values into functions and calculating the corresponding outputs. The lesson emphasizes the importance of this skill in comprehending how functions behave and respond to different inputs. Through a series of examples and exercises, students gain confidence in manipulating functions and interpreting the results of their evaluations, laying a solid foundation for more advanced concepts in the study of functions.', NULL, 'https://www.youtube-nocookie.com/embed/p7YXXieghto?si=XL6ZKyQ6mZqYJJDC', 'The primary objective of this lesson is to equip students with the necessary skills to confidently evaluate a variety of functions for specific inputs. By mastering function evaluation, students will not only enhance their computational abilities but also develop a deeper understanding of the dynamic nature of functions. This skill is crucial for navigating more complex mathematical concepts and problem-solving scenarios that involve the manipulation and analysis of functions in practical applications.', '2024-01-21 19:30:43', '2024-01-21 20:33:33'),
+(2, 'Mastering Function Evaluation', 1, 'The primary objective of this lesson is to equip students with the necessary skills to confidently evaluate a variety of functions for specific inputs. By mastering function evaluation, students will not only enhance their computational abilities but also develop a deeper understanding of the dynamic nature of functions. This skill is crucial for navigating more complex mathematical concepts and problem-solving scenarios that involve the manipulation and analysis of functions in practical applications.', 'The lesson on \"Mastering Function Evaluation\" focuses on honing students\' proficiency in evaluating functions, a fundamental skill in understanding mathematical relationships. Students delve into the process of substituting specific values into functions and calculating the corresponding outputs. The lesson emphasizes the importance of this skill in comprehending how functions behave and respond to different inputs. Through a series of examples and exercises, students gain confidence in manipulating functions and interpreting the results of their evaluations, laying a solid foundation for more advanced concepts in the study of functions.', NULL, NULL, NULL, '2024-01-21 19:30:43', '2024-02-25 07:51:45'),
 (3, 'Basic Operations and Function Compositions', 1, 'The primary objective of this lesson is to empower students with the skills to perform basic operations on functions and compose multiple functions. By mastering these fundamental operations, students develop a deeper understanding of how functions interact and transform, laying the groundwork for more complex mathematical concepts. The lesson aims to foster both algebraic and graphical proficiency, ensuring that students can navigate various scenarios involving the manipulation and combination of functions with confidence.', 'The lesson on \"Basic Operations and Function Compositions\" delves into the fundamental operations that can be performed on functions and the concept of composing multiple functions. Students explore how to combine, add, subtract, multiply, and divide functions, understanding the impact of these operations on the overall behavior of the composite function. Emphasis is placed on developing a systematic approach to performing these operations and interpreting the results in both algebraic and graphical terms. Through examples and interactive exercises, students gain a solid grasp of manipulating functions, setting the stage for more advanced studies in function theory and analysis.', NULL, NULL, NULL, '2024-01-21 19:30:43', '2024-01-21 19:30:43'),
 (4, 'Problems in the Realm of Functions', 1, 'The primary objective of this lesson is to develop students\' problem-solving skills within the context of functions. By tackling a range of problems, students learn to apply function concepts to real-world scenarios, fostering a deeper appreciation for the practical utility of mathematical functions. The lesson aims to cultivate analytical thinking, encouraging students to approach problem-solving with a systematic and mathematically informed mindset.', 'The lesson on \"Problems in the Realm of Functions\" is geared towards applying the knowledge of functions to solve real-world problems and mathematical challenges. Students engage in problem-solving exercises that require them to leverage their understanding of functions to analyze, model, and address practical scenarios. This lesson aims to sharpen students\' critical thinking and analytical skills by presenting them with a variety of problems that can be effectively tackled using the concepts learned in previous sessions. Through guided problem-solving and interactive discussions, students gain confidence in their ability to apply function theory to diverse problem domains.', NULL, NULL, NULL, '2024-01-21 19:30:43', '2024-01-21 19:30:43'),
 (5, 'Representing Scenarios with Rational Functions', 2, 'The primary objective of this lesson is to equip students with the skills to recognize and utilize rational functions as powerful tools for representing real-world scenarios. By the end of the session, students should be adept at identifying situations where rational functions are applicable and be able to formulate these functions accurately. This lesson sets the stage for further exploration into the nuances of rational functions and their applications in various fields.', 'The lesson on \"Representing Scenarios with Rational Functions\" immerses students in the practical application of rational functions to model and represent real-world scenarios. Students explore the versatile nature of rational functions, understanding how they can accurately describe relationships in various contexts. The lesson introduces scenarios where ratios, proportions, and dynamic relationships can be effectively modeled using rational functions. Through examples and hands-on activities, students gain insight into selecting and formulating rational functions that best represent specific situations, laying the groundwork for a deeper understanding of this important class of functions.', NULL, NULL, NULL, '2024-01-21 19:30:43', '2024-01-21 19:30:43'),
@@ -156,7 +152,8 @@ INSERT INTO `tbl_lessons` (`Id`, `Title`, `Chapter_Id`, `Objective`, `Descriptio
 (17, 'Simple and Compound Tales in Financial Mathematics', 5, 'The primary objective of this lesson is to enable students to comprehend and apply the principles of simple and compound interest in financial mathematics. By the end of the session, students should be adept at calculating interest, determining future values, and making informed financial decisions based on these concepts. This lesson serves as a crucial step in developing financial literacy and prepares students for more advanced studies in financial mathematics.', 'The lesson on \"Simple and Compound Tales in Financial Mathematics\" delves into the world of financial concepts, focusing on simple and compound interest scenarios. Students explore the principles underlying simple and compound interest, understanding how these concepts influence financial decisions and investments. The lesson covers calculations of interest, maturity value, future value, and present value in both simple interest and compound interest environments. Through practical examples and hands-on activities, students gain insights into the application of financial mathematics in various contexts, laying the foundation for informed decision-making in financial scenarios.', NULL, NULL, NULL, '2024-01-21 19:30:43', '2024-01-21 19:30:43'),
 (18, 'Coding Real-world Statements into Logical Propositions', 5, 'The primary objective of this lesson is to equip students with the skills to code real-world statements into logical propositions. By the end of the session, students should be proficient in recognizing logical structures within statements and translating them into a symbolic language. This lesson serves as a foundational step in building students\' logical reasoning skills and prepares them for more advanced studies in formal logic and problem-solving.', 'The lesson titled \"Coding Real-world Statements into Logical Propositions\" introduces students to the fundamentals of symbolic logic by translating real-world statements into logical propositions. Students explore the process of representing complex statements using mathematical symbols and logical operators. The lesson emphasizes the importance of precision in logical coding, fostering an understanding of how to capture the essence of real-world scenarios in a formal logical language. Through practical examples and exercises, students gain proficiency in coding statements into logical propositions, laying the groundwork for further studies in propositional logic.', NULL, NULL, NULL, '2024-01-21 19:30:43', '2024-01-21 19:30:43'),
 (19, 'Unraveling Truth Values and Conditional Propositions', 5, 'The primary objective of this lesson is to enable students to confidently unravel truth values and understand conditional propositions. By the end of the session, students should be adept at assessing the truth or falsity of propositions and interpreting conditional statements. This lesson serves as a foundational step in building students\' proficiency in symbolic logic and prepares them for more advanced studies in logical reasoning and argumentation.', 'The lesson on \"Unraveling Truth Values and Conditional Propositions\" introduces students to the fundamental concepts of truth values and conditional propositions within the realm of symbolic logic. Students explore the truth values of propositions and understand the implications of conditional statements. The lesson guides students through the logical structure of conditional propositions, emphasizing the relationship between the antecedent and the consequent. Through practical examples and interactive exercises, students gain proficiency in unraveling truth values and analyzing conditional propositions, enhancing their logical reasoning skills.', NULL, NULL, NULL, '2024-01-21 19:30:43', '2024-01-21 19:30:43'),
-(20, 'Analyzing Validity, Fallacies, and Methods in Logic', 5, 'The primary objective of this lesson is to equip students with the skills to analyze the validity of logical arguments, identify fallacies, and apply various methods of logical reasoning. By the end of the session, students should be proficient in critically assessing the strength and soundness of logical propositions and arguments. This lesson serves as a crucial step in building students\' logical reasoning abilities and prepares them for more advanced studies in formal logic and argumentation.', 'The lesson on \"Analyzing Validity, Fallacies, and Methods in Logic\" provides students with a deep dive into the evaluation of logical arguments. Students explore the principles of validity, identifying common fallacies, and understanding different methods of logical reasoning. The lesson emphasizes the importance of sound reasoning and critical analysis in assessing the strength of logical arguments. Through practical examples and interactive discussions, students gain proficiency in identifying valid arguments, recognizing fallacies, and applying different methods of logical analysis. This lesson lays the foundation for developing strong analytical and evaluative skills in logical reasoning.', NULL, NULL, NULL, '2024-01-21 19:30:43', '2024-01-21 19:30:43');
+(20, 'Analyzing Validity, Fallacies, and Methods in Logic', 5, 'The primary objective of this lesson is to equip students with the skills to analyze the validity of logical arguments, identify fallacies, and apply various methods of logical reasoning. By the end of the session, students should be proficient in critically assessing the strength and soundness of logical propositions and arguments. This lesson serves as a crucial step in building students\' logical reasoning abilities and prepares them for more advanced studies in formal logic and argumentation.', 'The lesson on \"Analyzing Validity, Fallacies, and Methods in Logic\" provides students with a deep dive into the evaluation of logical arguments. Students explore the principles of validity, identifying common fallacies, and understanding different methods of logical reasoning. The lesson emphasizes the importance of sound reasoning and critical analysis in assessing the strength of logical arguments. Through practical examples and interactive discussions, students gain proficiency in identifying valid arguments, recognizing fallacies, and applying different methods of logical analysis. This lesson lays the foundation for developing strong analytical and evaluative skills in logical reasoning.', NULL, NULL, NULL, '2024-01-21 19:30:43', '2024-01-21 19:30:43'),
+(21, 'Final Examination', 6, 'As a reminder, successfully passing this final examination in General Mathematics is crucial for obtaining your certificate. Your performance on this test will determine your mastery of essential mathematical concepts and your eligibility for certification. Take this opportunity to review thoroughly, ensuring your understanding of the material and your ability to apply it effectively. Your dedication and preparation are key to achieving success and reaching your academic goals. Good luck and remember that your hard work will be rewarded with the recognition and validation of your achievements.', 'As a reminder, successfully passing this final examination in General Mathematics is crucial for obtaining your certificate. Your performance on this test will determine your mastery of essential mathematical concepts and your eligibility for certification. Take this opportunity to review thoroughly, ensuring your understanding of the material and your ability to apply it effectively. Your dedication and preparation are key to achieving success and reaching your academic goals. Good luck and remember that your hard work will be rewarded with the recognition and validation of your achievements.', NULL, NULL, NULL, '2024-02-23 15:05:23', '2024-02-23 15:29:12');
 
 -- --------------------------------------------------------
 
@@ -187,17 +184,10 @@ CREATE TABLE `tbl_questions` (
   `Option4` text DEFAULT NULL,
   `Answer` text NOT NULL,
   `Image` text DEFAULT NULL,
+  `IsActive` tinyint(1) NOT NULL DEFAULT 1,
   `CreatedAt` timestamp NOT NULL DEFAULT current_timestamp(),
   `UpdatedAt` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `tbl_questions`
---
-
-INSERT INTO `tbl_questions` (`Id`, `Activity_Id`, `Question`, `Points`, `Option1`, `Option2`, `Option3`, `Option4`, `Answer`, `Image`, `CreatedAt`, `UpdatedAt`) VALUES
-(1, 1, '123', '1', '111', '222', '333', '444', '222', NULL, '2024-01-27 01:36:42', '2024-01-27 01:37:51'),
-(2, 1, '123', '1', '111', '222', '333', '444', '333', NULL, '2024-01-27 01:37:01', '2024-01-27 01:37:53');
 
 -- --------------------------------------------------------
 
@@ -218,10 +208,10 @@ CREATE TABLE `tbl_results` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tbl_results`
+-- Indexes for dumped tables
 --
 
-
+--
 -- Indexes for table `tbl_accounts`
 --
 ALTER TABLE `tbl_accounts`
@@ -285,31 +275,37 @@ ALTER TABLE `tbl_results`
 -- AUTO_INCREMENT for table `tbl_accounts`
 --
 ALTER TABLE `tbl_accounts`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tbl_activity`
 --
 ALTER TABLE `tbl_activity`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_chapter`
+--
+ALTER TABLE `tbl_chapter`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tbl_lessons`
 --
 ALTER TABLE `tbl_lessons`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `tbl_questions`
 --
 ALTER TABLE `tbl_questions`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_results`
 --
 ALTER TABLE `tbl_results`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Constraints for dumped tables

@@ -285,5 +285,21 @@ class AccountModel {
     
         return true;
     }
+
+    public function updateCurrentLesson(){
+        $query = "UPDATE tbl_accounts SET CurrentLesson = CurrentLesson + 1 WHERE Id = ?";
+        $stmt = $this->database->prepare($query);
+        $stmt->bind_param("i", $_SESSION['User_Id']);
+        $stmt->execute();
+        $stmt->close();
+    }
+
+    public function resetCurrentLesson($params){
+        $query = "UPDATE tbl_accounts SET CurrentLesson = 1 WHERE Id = ?";
+        $stmt = $this->database->prepare($query);
+        $stmt->bind_param("i", $params['Id']);
+        $stmt->execute();
+        $stmt->close();
+    }
 }
 ?>

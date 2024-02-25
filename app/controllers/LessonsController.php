@@ -27,6 +27,7 @@ class LessonsController {
         $lessonModel = new LessonModel($db, $logger);
         $activityModel = new ActivityModel($db, $logger);
         $progressModel = new ProgressModel($db, $logger);
+        $accountModel = new AccountModel($db, $logger);
 
         $data['Lessons'] = $lessonModel->getLessonFull(['LessonId'=>$db->escape($item)]);
         if($data['Lessons'] === []){
@@ -36,15 +37,25 @@ class LessonsController {
 
         $data['Activities'] = $activityModel->getLessonActivities(['LessonId'=>$db->escape($item)]);
 
-        $progressModel->AddMyProgress([
+        $isNew = $progressModel->AddMyProgress([
             'Lesson_Id'=>$db->escape($item),
             'Activity_Id'=>"0",
             'Account_Id'=>$db->escape($_SESSION['User_Id'])
         ]);
 
+        $data['title'] = "Skiller - ".$data['Lessons'][0]['LessonTitle'];
+
         $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$_SESSION['User_Id']]);
 
-        $data['title'] = "Skiller - ".$data['Lessons'][0]['LessonTitle'];
+        $ProgressPercentage =  number_format(((isset($data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']]) ? $data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']] : 0) / max($data['Progress']['LessonProgressTotal'][$data['Lessons'][0]['LessonId']], 1)) * 100, 2);
+        if((int) $ProgressPercentage === 100) {
+            if((int)$isNew > 0) {
+                $accountModel->updateCurrentLesson();
+                $_SESSION['CurrentLesson'] = (int)$_SESSION['CurrentLesson'] + 1;
+                $ContentList = $lessonModel->getAllContents();
+                RefreshAccessibleContents($ContentList);
+            }
+        }
  
         include(__DIR__ . '/../views/headers/Default.php');
         include(__DIR__ . '/../views/headers/SignedIn.php');

@@ -131,6 +131,8 @@ class ProgressModel {
     
         $stmt->bind_param('iii', $ActivityId, $LessonId, $AccountId);
         $stmt->execute();
+    
+        $affectedRows = $stmt->affected_rows;
         
         if ($stmt->error) {
             $this->logger->log('Error executing query: ' . $stmt->error, 'error');
@@ -140,7 +142,7 @@ class ProgressModel {
     
         $stmt->close();
     
-        return true;
+        return $affectedRows;
     }
 
     public function ClearProgress($params) {
@@ -183,6 +185,38 @@ class ProgressModel {
         $stmt3->close();
     
         return true;
+    }
+    
+    public function CheckProgressIfExist($params){
+        $Account_Id = $this->database->escape($params['Account_Id']);
+        $Lesson_Id = $this->database->escape($params['Lesson_Id']);
+        $Activity_Id = $this->database->escape($params['Activity_Id']);
+    
+        $query = "SELECT * FROM tbl_progress WHERE Account_Id = ? AND Lesson_Id = ? AND Activity_Id = ?";
+        
+        $stmt = $this->database->prepare($query);
+    
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return false; 
+        }
+    
+        $stmt->bind_param("iii", $Account_Id, $Lesson_Id, $Activity_Id);
+        
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        if (!$result) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return false; 
+        }
+        
+        $exists = $result->num_rows > 0;
+        
+        $stmt->close();
+        
+        return $exists;
     }
     
 }

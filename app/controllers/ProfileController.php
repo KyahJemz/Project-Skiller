@@ -92,6 +92,10 @@ class ProfileController {
             if($Action === "Reset") {
                 $progressModel = new ProgressModel($db, $logger);
                 $progressModel->ClearProgress(['Account_Id'=>$db->escape($Id)]);
+
+                $accountModel->resetCurrentLesson([
+                    'Id' => $db->escape($Id),
+                ]);
                 
                 Email::sendMail([
                     'Subject' => 'Account Progress Reset',
