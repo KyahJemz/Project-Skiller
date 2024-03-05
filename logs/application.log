@@ -6,3 +6,125 @@
 [2024-02-25 11:25:14] INFO: Accessed [home]
 [2024-02-25 11:25:17] INFO: login
 [2024-02-25 11:25:17] INFO: Accessed [login]
+[2024-03-05 15:25:22] INFO: home
+[2024-03-05 15:25:22] INFO: Accessed [home]
+[2024-03-05 15:25:24] INFO: login
+[2024-03-05 15:25:24] INFO: Accessed [login]
+[2024-03-05 15:25:28] INFO: login
+[2024-03-05 15:25:28] INFO: Accessed [login]
+[2024-03-05 15:25:29] INFO: Successfully validated Google Sign-In token
+[2024-03-05 15:25:29] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-03-05 15:25:29] INFO: bindingString: sssi
+[2024-03-05 15:25:29] INFO: No rows were affected. Update may not have found a matching row.
+[2024-03-05 15:25:29] INFO: dashboard
+[2024-03-05 15:25:29] INFO: Accessed [dashboard]
+[2024-03-05 15:25:31] INFO: course
+[2024-03-05 15:25:31] INFO: Accessed [course]
+[2024-03-05 15:25:33] INFO: lessons
+[2024-03-05 15:25:33] INFO: Accessed [lessons]
+[2024-03-05 15:25:35] INFO: assessment
+[2024-03-05 15:25:35] INFO: Accessed [assessment]
+[2024-03-05 15:25:48] INFO: assessment
+[2024-03-05 15:25:48] INFO: Accessed [assessment]
+[2024-03-05 15:25:49] INFO: assessment
+[2024-03-05 15:25:49] INFO: Accessed [assessment]
+[2024-03-05 15:34:53] INFO: assessment
+[2024-03-05 15:34:53] INFO: Accessed [assessment]
+[2024-03-05 15:35:37] INFO: assessment
+[2024-03-05 15:35:37] INFO: Accessed [assessment]
+[2024-03-05 15:35:50] INFO: assessment
+[2024-03-05 15:35:50] INFO: Accessed [assessment]
+[2024-03-05 15:37:51] INFO: assessment
+[2024-03-05 15:37:51] INFO: Accessed [assessment]
+[2024-03-05 15:37:58] INFO: assessment
+[2024-03-05 15:37:58] INFO: Accessed [assessment]
+[2024-03-05 15:37:58] INFO: assessment
+[2024-03-05 15:37:58] INFO: Accessed [assessment]
+[2024-03-05 15:38:13] INFO: assessment
+[2024-03-05 15:38:13] INFO: Accessed [assessment]
+[2024-03-05 15:38:13] INFO: assessment
+[2024-03-05 15:38:13] INFO: Accessed [assessment]
+[2024-03-05 15:38:19] INFO: assessment
+[2024-03-05 15:38:19] INFO: Accessed [assessment]
+[2024-03-05 15:38:20] INFO: assessment
+[2024-03-05 15:38:20] INFO: Accessed [assessment]
+[2024-03-05 15:38:32] INFO: assessment
+[2024-03-05 15:38:32] INFO: Accessed [assessment]
+[2024-03-05 15:38:33] INFO: assessment
+[2024-03-05 15:38:33] INFO: Accessed [assessment]
+[2024-03-05 15:38:39] INFO: assessment
+[2024-03-05 15:38:39] INFO: Accessed [assessment]
+[2024-03-05 15:38:40] INFO: assessment
+[2024-03-05 15:38:40] INFO: Accessed [assessment]
+[2024-03-05 15:38:45] INFO: assessment
+[2024-03-05 15:38:45] INFO: Accessed [assessment]
+[2024-03-05 15:38:46] INFO: assessment
+[2024-03-05 15:38:46] INFO: Accessed [assessment]
+[2024-03-05 15:38:51] INFO: assessment
+[2024-03-05 15:38:51] INFO: Accessed [assessment]
+[2024-03-05 15:38:52] INFO: assessment
+[2024-03-05 15:38:52] INFO: Accessed [assessment]
+[2024-03-05 15:38:59] INFO: assessment
+[2024-03-05 15:38:59] INFO: Accessed [assessment]
+[2024-03-05 15:39:00] INFO: assessment
+[2024-03-05 15:39:00] INFO: Accessed [assessment]
+[2024-03-05 15:40:53] INFO: assessment
+[2024-03-05 15:40:53] INFO: Accessed [assessment]
+[2024-03-05 15:40:53] INFO: assessment
+[2024-03-05 15:40:53] INFO: Accessed [assessment]
+[2024-03-05 15:40:57] INFO: assessment
+[2024-03-05 15:40:57] INFO: Accessed [assessment]
+[2024-03-05 15:40:58] INFO: assessment
+[2024-03-05 15:40:58] INFO: Accessed [assessment]
+[2024-03-05 15:41:12] INFO: assessment
+[2024-03-05 15:41:12] INFO: Accessed [assessment]
+[2024-03-05 15:41:12] INFO: assessment
+[2024-03-05 15:41:12] INFO: Accessed [assessment]
+[2024-03-05 15:41:12] INFO: assessment
+[2024-03-05 15:41:12] INFO: Accessed [assessment]
+[2024-03-05 15:41:18] INFO: assessment
+[2024-03-05 15:41:18] INFO: Accessed [assessment]
+[2024-03-05 15:41:19] INFO: assessment
+[2024-03-05 15:41:19] INFO: Accessed [assessment]
+[2024-03-05 15:43:01] INFO: assessment
+[2024-03-05 15:43:01] INFO: Accessed [assessment]
+[2024-03-05 15:43:02] INFO: assessment
+[2024-03-05 15:43:02] INFO: Accessed [assessment]
+[2024-03-05 15:43:07] INFO: assessment
+[2024-03-05 15:43:07] INFO: Accessed [assessment]
+[2024-03-05 15:43:07] INFO: assessment
+[2024-03-05 15:43:07] INFO: Accessed [assessment]
+[2024-03-05 15:43:10] INFO: assessment
+[2024-03-05 15:43:10] INFO: Accessed [assessment]
+[2024-03-05 15:43:11] INFO: assessment
+[2024-03-05 15:43:11] INFO: Accessed [assessment]
+[2024-03-05 15:43:15] INFO: assessment
+[2024-03-05 15:43:15] INFO: Accessed [assessment]
+[2024-03-05 15:43:16] INFO: assessment
+[2024-03-05 15:43:16] INFO: Accessed [assessment]
+[2024-03-05 15:43:20] INFO: assessment
+[2024-03-05 15:43:20] INFO: Accessed [assessment]
+[2024-03-05 15:43:21] INFO: assessment
+[2024-03-05 15:43:21] INFO: Accessed [assessment]
+[2024-03-05 15:43:35] INFO: assessment
+[2024-03-05 15:43:35] INFO: Accessed [assessment]
+[2024-03-05 15:43:36] INFO: assessment
+[2024-03-05 15:43:36] INFO: Accessed [assessment]
+[2024-03-05 15:43:41] INFO: assessment
+[2024-03-05 15:43:41] INFO: Accessed [assessment]
+[2024-03-05 15:43:42] INFO: assessment
+[2024-03-05 15:43:42] INFO: Accessed [assessment]
+[2024-03-05 15:43:47] INFO: assessment
+[2024-03-05 15:43:47] INFO: Accessed [assessment]
+[2024-03-05 15:43:47] INFO: assessment
+[2024-03-05 15:43:47] INFO: Accessed [assessment]
+[2024-03-05 15:43:56] INFO: assessment
+[2024-03-05 15:43:56] INFO: Accessed [assessment]
+[2024-03-05 15:43:56] INFO: assessment
+[2024-03-05 15:43:56] INFO: Accessed [assessment]
+[2024-03-05 15:46:18] INFO: assessment
+[2024-03-05 15:46:18] INFO: Accessed [assessment]
+[2024-03-05 15:46:19] INFO: assessment
+[2024-03-05 15:46:19] INFO: Accessed [assessment]
+[2024-03-05 15:51:17] INFO: home
+[2024-03-05 15:51:17] INFO: Accessed [home]

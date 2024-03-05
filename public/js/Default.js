@@ -817,7 +817,6 @@ if (QuestionsContainer){
 
     function ReRenderQuestions() {
 
-        console.log(Questions);
         QuestionsContainer.innerHTML = "";
         Questions.forEach(question => {
             QuestionsContainer.innerHTML += `
@@ -827,7 +826,7 @@ if (QuestionsContainer){
                  
                     <div class="row">
                         <div class="col">
-                            <input class="form-check-input data-tempid="${question['TempId']}" cursor-pointer QuestionAnswer" value="${question['QuestionOptions'][0]}" type="radio" name="${question['QuestionId']}" id="${question['QuestionId']}-1" required ${question['QuestionOptions'][0] === question['QuestionAnswer'] ? 'checked' : ''}>
+                            <input class="form-check-input cursor-pointer QuestionAnswer" data-tempid="${question['TempId']}"  value="${question['QuestionOptions'][0]}" type="radio" name="${question['QuestionId']}" id="${question['QuestionId']}-1" required ${question['QuestionOptions'][0] === question['QuestionAnswer'] ? 'checked' : ''}>
                             <label class="form-check-label cursor-pointer" for="${question['QuestionId']}-1"><input data-tempid="${question['TempId']}" class="QuestionOption" data-loc="0" type="text" value="${question['QuestionOptions'][0]}" placeholder="Option 1"></label>
                         </div>
                         <div class="col">
@@ -913,6 +912,7 @@ if (QuestionsContainer){
                     if (row.TempId === parseInt(input.dataset.tempid)) {
                         Questions[index].QuestionAnswer = input.value;
                     }
+
                 });
                 ReRenderQuestions();
             });
