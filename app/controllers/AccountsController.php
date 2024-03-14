@@ -76,7 +76,7 @@ class AccountsController {
             http_response_code(400);
             exit;
         } else {
-            if (!isset($data['Email']) || !isset($data['Group']) || !isset($data['Type'])) {
+            if (!isset($data['Email']) || !isset($data['Type'])) {
                 echo "Error: Required fields are missing in the JSON payload.";
                 http_response_code(400);
                 exit;
@@ -84,7 +84,6 @@ class AccountsController {
             $email = sanitizeInput(filter_var($data['Email'], FILTER_SANITIZE_EMAIL));
             $type = sanitizeInput(filter_var($data['Type'], FILTER_SANITIZE_STRING));
             $group = sanitizeInput(filter_var($data['Group'], FILTER_SANITIZE_NUMBER_INT));
-
 
             $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
             $accountModel = new AccountModel($db, $logger);
