@@ -1,0 +1,8 @@
+@media (max-width: 700px) {
+    .mainFooter{
+        display: flex !important; 
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+        gap: 10px;
+    }
+  }

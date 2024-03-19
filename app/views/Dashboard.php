@@ -92,13 +92,13 @@
                             echo '<div class="progress-bar '.getNextBgColor().'" role="progressbar" style="width: '.$adjustedWidth.'%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><strong>'.$ChapterPercentage.'%</strong></div>';
                         }
                         echo '</div>';
-                        echo '<p class="mb-3 mt-2">Overall progress: <strong>'.$TotalProgressPercentage.'%</strong><p>';
+                        echo '<p class="mb-3 mt-2">Overall progress: <strong>'.((int)$TotalProgressPercentage === 100 ? "Completed": $TotalProgressPercentage."%").'</strong><p>';
 
 
                         echo '<div class="row">';
                         foreach ($data['Chapters'] as $chapter) {
                             $ChapterPercentage = number_format(((isset($data['Progress']['ChapterProgress'][$chapter["Id"]]) ? $data['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($data['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
-                            echo '<h5><a href="'.BASE_URL.'?page=chapter&item='.$chapter['Id'].'"><span class="badge ' . getNextBgColor() . '">#</span>' . $chapter['Title'] . '</a> - '.$ChapterPercentage.'%</h5>';
+                            echo '<h5><a href="'.BASE_URL.'?page=chapter&item='.$chapter['Id'].'"><span class="badge ' . getNextBgColor() . '">#</span>&nbsp;' . $chapter['Title'] . '</a> - '.((int)$ChapterPercentage === 100 ? "Completed": $ChapterPercentage."%").'</h5>';
                             echo '<div class="row px-5">';
                             echo '<ul class="ml-5 px-5">';
                             foreach ($data['Lessons'] as $lesson) {

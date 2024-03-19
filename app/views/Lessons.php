@@ -14,8 +14,9 @@
 
             <h3><?php echo $data['Lessons'][0]['LessonTitle'];?></h3>
             <p>Chapter <?php echo $data['Lessons'][0]['ChapterId'];?>: <?php echo $data['Lessons'][0]['ChapterTitle'];?></p>
-            <?php if ($_SESSION['User_Role'] === "Student") { ?>
-                <p>Lesson Overall Progress: <?php echo number_format(((isset($data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']]) ? $data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']] : 0) / max($data['Progress']['LessonProgressTotal'][$data['Lessons'][0]['LessonId']], 1)) * 100, 2).'%'  ?></p>
+            <?php if ($_SESSION['User_Role'] === "Student") { 
+                $Progress = number_format(((isset($data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']]) ? $data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']] : 0) / max($data['Progress']['LessonProgressTotal'][$data['Lessons'][0]['LessonId']], 1)) * 100, 2)?>
+                <p>Lesson Overall Progress: <?php echo ((int)$Progress === 100 ? "<b>Complete</b>" : $Progress."%") ?></p>
             <?php } ?>
 
             <!-- OBJECTIVES -->

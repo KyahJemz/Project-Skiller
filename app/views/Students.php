@@ -26,6 +26,20 @@
             Search = e.target.value;
             RefreshStudentList();
         })
+
+        function titleCase(str) {
+            if (str && str !== "") {
+                const words = str.split(" ");
+                const final = [];
+                for (let i = 0; i < words.length; i++) {
+                    const capitalizedWord = words[i].toLowerCase().charAt(0).toUpperCase() + words[i].toLowerCase().slice(1);
+                    final.push(capitalizedWord);
+                }
+                return final.join(" ");
+            } else {
+                return str;
+            }
+        }
         
         function RefreshStudentList(){
             StudentsList.innerHTML = "";
@@ -42,7 +56,7 @@
                             if (row.student.FirstName === null){
                                 view += `<h5>${row.student.Email??""}</h5>`;
                             } else {
-                                view += `<h5>${row.student.LastName}, ${row.student.FirstName} ${row.student.MiddleName??""}</h5>`;
+                                view += `<h5>${titleCase(row?.student?.LastName??"")}, ${titleCase(row?.student?.FirstName??"")} ${titleCase(row?.student?.MiddleName??"")}</h5>`;
                             }
                             view += `<p class="m-0 p-0">Overall progress: <strong>${TotalProgressPercentage.toFixed(2)}%</strong><p>`;
                             view += `<div class="progress px-0">`;
@@ -63,7 +77,7 @@
                             if (row.student.FirstName === null){
                                 view += `<h5>${row.student.Email??""}</h5>`;
                             } else {
-                                view += `<h5>${row.student.LastName}, ${row.student.FirstName} ${row.student.MiddleName??""}</h5>`;
+                                view += `<h5>${titleCase(row?.student?.LastName??"")}, ${titleCase(row?.student?.FirstName??"")} ${titleCase(row?.student?.MiddleName??"")}</h5>`;
                             }
                             view += `<p class="m-0 p-0">Overall progress: <strong>${TotalProgressPercentage.toFixed(2)}%</strong><p>`;
                             view += `<div class="progress px-0">`;
@@ -86,7 +100,7 @@
         RefreshStudentList();
 
         function getNextBgColor() {
-            if (counterBgColor === 5) {
+            if (counterBgColor === 6) {
                 counterBgColor = 0;
             }
             const options = [
@@ -94,6 +108,7 @@
                 'bg-success',
                 'bg-danger',
                 'bg-warning',
+                'bg-secondary',
                 'bg-info'
             ];
             const text = options[counterBgColor];

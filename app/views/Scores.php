@@ -5,7 +5,18 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=students';?>">My Students</a></li>
-                      <li class="breadcrumb-item"><a class="text-dark" href="#" onclick="window.history.back()">Profile</a></li>
+                      <li class="breadcrumb-item"><a class="text-dark" href="#" onclick="window.history.back()"><?php echo $data['lastname'];?></a></li>
+                      <li class="breadcrumb-item active">Assessments</li>
+                    </ol>
+                  </nav>
+            </div>
+        <?php }?>
+        <?php if ($_SESSION['User_Role'] === "Administrator") {?>
+            <div class="row">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=accounts';?>">Accounts</a></li>
+                      <li class="breadcrumb-item"><a class="text-dark" href="#" onclick="window.history.back()"><?php echo $data['lastname'];?></a></li>
                       <li class="breadcrumb-item active">Assessments</li>
                     </ol>
                   </nav>

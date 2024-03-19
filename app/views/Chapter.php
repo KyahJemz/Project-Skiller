@@ -13,8 +13,10 @@
         <div class="row">
             <h3><?php echo $data['ChapterRaw'][0]['Title'];?></h3>
             <p>Chapter: <?php echo $data['ChapterRaw'][0]['Title'];?></p>
-            <?php if ($_SESSION['User_Role'] === "Student") { ?>
-                <p>Progress: <?php echo number_format(((isset($data['Progress']['ChapterProgress'][$data['Chapter'][0]['ChapterId']]) ? $data['Progress']['ChapterProgress'][$data['Chapter'][0]['ChapterId']] : 0) / max($data['Progress']['ChapterProgressTotal'][$data['Chapter'][0]['ChapterId']], 1)) * 100, 2).'%'  ?></p>
+            <?php if ($_SESSION['User_Role'] === "Student") { 
+                $progress = number_format(((isset($data['Progress']['ChapterProgress'][$data['Chapter'][0]['ChapterId']]) ? $data['Progress']['ChapterProgress'][$data['Chapter'][0]['ChapterId']] : 0) / max($data['Progress']['ChapterProgressTotal'][$data['Chapter'][0]['ChapterId']], 1)) * 100, 2);
+            ?>
+                <p><?php echo ((int)$progress === 100 ? "Progress: <b>Chapter Complete</b>" : "Progress: ".$progress."%")?></p>
             <?php } ?>
         </div>
 
@@ -28,7 +30,7 @@
                         echo '    <h2 class="accordion-header">';
                         echo '    <button class="accordion-button '.((int)$LessonProgress === 100 ? "collapsed" : "").'" type="button" data-bs-toggle="collapse" data-bs-target="#a'.$row['LessonId'].'" aria-expanded="'.((int)$LessonProgress === 100 ? "true" : "false").'" aria-controls="a'.$row['LessonId'].'">';
                         
-                        echo $row['LessonTitle'] . ' - Progress: '.$LessonProgress.'%';
+                        echo $row['LessonTitle'] . ' -&nbsp;'.((int)$LessonProgress === 100 ? "<b>Complete</b>" :  "Progress: ".$LessonProgress."%");
                         echo '    </button>';
                         echo '    </h2>';
                         echo '    <div id="a'.$row['LessonId'].'" class="accordion-collapse collapse '.((int)$LessonProgress === 100 ? "" : "show").'">';

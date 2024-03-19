@@ -13,7 +13,7 @@
                             echo '<div class="accordion-item mb-2">';
                             echo '    <h2 class="accordion-header">';
                             echo '    <button class="accordion-button '.((int)$ChapterProgress === 100 ? "collapsed" : "").'" type="button" data-bs-toggle="collapse" data-bs-target="#a'.$row['Id'].'" aria-expanded="'.((int)$ChapterProgress === 100 ? "true" : "false").'" aria-controls="a'.$row['Id'].'">';
-                            echo $row['Title'] . ' - Progress: ' . $ChapterProgress . '%';
+                            echo $row['Title'] . ' -&nbsp;' . (((int)$ChapterProgress) === 100 ? "<b>Completed</b>" : "Progress: ".$ChapterProgress.'%');
                             echo '    </button>';
                             echo '    </h2>';
                             echo '    <div id="a'.$row['Id'].'" class="accordion-collapse collapse '.((int)$ChapterProgress === 100 ? "" : "show").'">';
@@ -21,7 +21,7 @@
                             foreach ($data['Lessons'] as $row2){
                                 if ($row2['ChapterId'] === $row['Id']){
                                     $LessonProgress = number_format(((isset($data['Progress']['LessonProgress'][$row2["LessonId"]]) ? $data['Progress']['LessonProgress'][$row2["LessonId"]] : 0) / max($data['Progress']['LessonProgressTotal'][$row2["LessonId"]], 1)) * 100, 2);
-                                    echo '<strong class="pb-2">'.$row2['LessonTitle'].'</strong>' . ' - Progress: ' . $LessonProgress . '%';
+                                    echo '<strong class="pb-2">'.$row2['LessonTitle'].'</strong>' . ' -&nbsp;' . (((int)$LessonProgress) === 100 ? "Completed" : "Progress: ".$LessonProgress.'%');
                                     echo '</br>';
                                     echo nl2br($row2['LessonDescription']);
                                     echo '</br>';

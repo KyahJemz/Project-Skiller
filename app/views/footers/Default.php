@@ -1,6 +1,6 @@
-    <footer class="p-3 mt-3 border-top bg-dark" >
+    <footer class="p-3 mt-3 border-top bg-dark " >
         <div class="container">
-            <div class="d-flex flex-wrap justify-content-between align-items-center py-3">
+            <div class="d-flex flex-wrap justify-content-between align-items-center py-3 mainFooter">
                 <div class="col-md-4 d-flex align-items-center">
                     <a href="/" class="mb-3 me-2 mb-md-0 text-body-light text-decoration-none lh-1">
                         <img src="<?php echo BASE_URL . 'images/logo-full-white.png'; ?>" width="100" height="24"/>

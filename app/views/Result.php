@@ -1,17 +1,28 @@
 <body class="bg-body-secondary d-flex flex-column justify-content-between h-100">
     <div class="container flex-fill">
 
-        <?php if ($_SESSION['User_Role'] === "Teacher" || $_SESSION['User_Role'] === "Administrator") {?>
+        <?php if ($_SESSION['User_Role'] === "Teacher") {?>
             <div class="row">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                       <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=students';?>">My Students</a></li>
-                      <li class="breadcrumb-item"><a class="text-dark" href="#" onclick="window.history.go(-2)">Profile</a></li>
+                      <li class="breadcrumb-item"><a class="text-dark" href="#" onclick="window.history.go(-2)"><?php echo $data['lastname']?></a></li>
                       <li class="breadcrumb-item"><a class="text-dark" href="#" onclick="window.history.back()">Assessments</a></li>
                       <li class="breadcrumb-item active">Result</li>
                     </ol>
                   </nav>
             </div>
+        <?php } elseif ($_SESSION['User_Role'] === "Administrator") {?>
+        <div class="row">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=accounts';?>">Accounts</a></li>
+                    <li class="breadcrumb-item"><a class="text-dark" href="#" onclick="window.history.go(-2)"><?php echo $data['lastname']?></a></li>
+                    <li class="breadcrumb-item"><a class="text-dark" href="#" onclick="window.history.back()">Assessments</a></li>
+                    <li class="breadcrumb-item active">Result</li>
+                </ol>
+                </nav>
+        </div>
         <?php } else {?>
             <div class="row">
                 <nav aria-label="breadcrumb">
@@ -73,6 +84,17 @@
                         echo '<div><button id="ResultRetakeBtn" class="btn btn-danger" data-tostate="Enable" data-result="'.$lastResult['Id'].'">Enable Retake</button></div>';
                     } else {
                         echo '<div><button id="ResultRetakeBtn" class="btn btn-danger" data-tostate="Disable" data-result="'.$lastResult['Id'].'">Disable Retake</button></div>';
+                    }
+                }
+            ?>
+
+            <!-- NEXT LESSON -->
+            <?php 
+                if($_SESSION['User_Role'] === "Student") {
+                    if ((int)$data['Result'][0]['Lesson_Id'] === 21){
+                        echo '<div><a class="btn btn-primary" href="'.BASE_URL.'?page=course">Back To Course</a></div>';
+                    } else {
+                        echo '<div><a class="btn btn-primary" href="'.BASE_URL.'?page=lessons&item='. $data['LessonNextToAccess'].'">Go to next lesson</a></div>';
                     }
                 }
             ?>

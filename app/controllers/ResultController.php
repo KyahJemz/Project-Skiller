@@ -18,6 +18,8 @@ class ResultController {
         
         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         $activityModel = new ActivityModel($db, $logger);
+        $lessonModel = new LessonModel($db, $logger);
+        $accountModel = new AccountModel($db, $logger);
 
         $data['Result'] = $activityModel->getActivityResult(['ResultId'=>$db->escape($item)]);
         if($data['Result'] === []){
@@ -34,7 +36,15 @@ class ResultController {
 
         $data['Summary'] = json_decode($data['Result'][0]['Summary']);
 
+        $data['Account'] = $accountModel->getAccountById(['Account_Id'=>$data['Result'][0]['Account_Id']]);
+
+        $data['lastname'] = $data['Account'][0]['LastName'];
+
         $data['title'] = "Skiller - Assessment Result";
+
+        print_r( $data['Result'][0]['Lesson_Id']);
+
+        $data['LessonNextToAccess'] = end($_SESSION['AllowedLessons']);
 
         echo '<script>';
         echo 'const BASE_URL=`'.BASE_URL.'`;';
@@ -47,6 +57,10 @@ class ResultController {
     }
 
     public function indexTeacher($item = null) {
+        $this->index($item);
+    }
+
+    public function indexAdministrator($item = null) {
         $this->index($item);
     }
 

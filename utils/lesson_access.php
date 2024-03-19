@@ -35,17 +35,4 @@ function CheckLesson($LessonId){
     }
 }
 
-function CheckChapter ($ChapterId){
-    if($_SESSION['User_Role'] === 'Student' ){
-        if (in_array($ChapterId, $_SESSION['AllowedChapters'])) {
-            return true;
-        } else {
-            return false;
-        }
-    } else {
-        return true;
-    }
-}
-
-
 ?>

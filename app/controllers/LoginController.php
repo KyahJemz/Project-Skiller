@@ -51,6 +51,8 @@ class LoginController {
     
             $body = $response->getBody()->getContents();
             $decodedBody = json_decode($body, true);
+
+            print_r($body);
     
             $logger->log('Successfully validated Google Sign-In token', 'info');
         } catch (Exception $e) {
@@ -90,6 +92,32 @@ class LoginController {
                             $ContentList = $lessonModel->getAllContents();
                             RefreshAccessibleContents($ContentList);
                         }
+                        $user_agent = $_SERVER['HTTP_USER_AGENT'];
+                        $is_mobile = (bool)preg_match('/Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile/', $user_agent);
+                        $device_type = $is_mobile ? 'Mobile' : 'Web';
+
+                        $ip_address = $_SERVER['REMOTE_ADDR'];
+                        date_default_timezone_set('Asia/Manila');
+                        $timestamp = strtotime(date('Y-m-d H:i:s'));
+                        $timestamp_human_readable = date('F j, Y, g:i a', $timestamp);
+
+                        Email::sendMail([
+                            'Subject' => 'Skiller - Login Alert',
+                            'ReceiverName' => $_SESSION['User_FirstName'] . " " .$_SESSION['User_LastName'],
+                            'ReceiverEmail' => $_SESSION['User_Email'],
+                            'Header' => 'Hi '.$_SESSION['User_FirstName'].',',
+                            'Message' => '
+                                    <p>Your Skiller Account was just signed in from a device</p>
+                                    <ul>
+                                        <li>Date -> '.$timestamp_human_readable.'</li>
+                                        <li>Platform -> '.$user_agent.'</li>
+                                        <li>Device -> '.$device_type.'</li>
+                                        <li>Ip Address -> '.$ip_address.'</li>
+                                    </ul>
+                                    <p>If this was you, then you don\'t have to do anything.</p>
+                                    <p>If you don\'t recognize this activity, please change your Google Account Password.</p>',
+                            'Footer' => '',
+                        ]);
                         header("Location: ".BASE_URL."?page=dashboard");
                     } else {
                         $this->Error = "Login Failed, Account disabled!";

@@ -1,0 +1,15 @@
+@media (max-width: 700px) {
+    .skillerLogo{
+        display: none !important;
+    }
+    .mainHeader{
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .mainHeaderMenu{
+        width: fit-content;
+    }
+  }

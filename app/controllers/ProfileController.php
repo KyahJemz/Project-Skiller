@@ -34,7 +34,8 @@ class ProfileController {
         
         $data['id'] = $account[0]['Id'];
         $data['image'] = $account[0]['Image'];
-        $data['name'] = $account[0]['LastName'].', '.$account[0]['FirstName'].' '.$account[0]['MiddleName'];
+        $data['name'] = !empty($account[0]['LastName']) ? $account[0]['LastName'].', '.$account[0]['FirstName'].' '.$account[0]['MiddleName'] : "";
+        $data['lastname'] = $account[0]['LastName'];
         $data['role'] = $account[0]['Role'];
         $data['group'] = $account[0]['Group'];
         $data['disabled'] = $account[0]['Disabled'];
