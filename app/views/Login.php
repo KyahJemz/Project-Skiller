@@ -12,17 +12,17 @@
         <div class="px-4 py-5 px-md-5 text-center d-flex justify-content-center align-items-center text-lg-start h-100" style="background-color: hsl(0, 0%, 96%)">
             <div class="container">
                 <div class="row gx-lg-5 align-items-center">
-                    <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="col-lg-7 mb-5 mb-lg-0">
                         <h1 class="my-5 display-3 fw-bold ls-tight text-primary">General Mathematics</h1>
                         <p style="color: hsl(217, 10%, 50.8%)">
                             Skiller's General Mathematics tutorial spans five weeks, following the DepEd syllabus. The program features interactive activities, assessments, and exams for an engaging learning experience. With a user-friendly interface, Skiller prioritizes deep comprehension, fostering critical thinking and problem-solving skills, making it an ideal resource for effective and efficient General Mathematics learning.
                         </p>
                     </div>
 
-                    <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="col-lg-5 mb-5 mb-lg-0">
                         <div class="card">
                             <div class="card-body py-5 px-md-5">
-                                <form>
+                                <div>
                                     <div class="row py-2">
                                         <a href="<?php echo BASE_URL ?>" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
                                             <svg class="bi me-2" width="300" height="100" role="img" aria-label="Bootstrap"><image href="<?php echo BASE_URL . 'images/logo-full-black.png'; ?>" width="300" height="100"/></svg>
@@ -53,11 +53,20 @@
                                         </div>
                                     </div>
 
-                                    <div class="container text-center">
-                                        <p class="mb-2">Having problems signing in?</p>
-                                        <p>You may contact the Center for Information and Communications Technology(CICT) for assistance.</p>
+                                    <div class="form-outline d-flex justify-content-center mb-4 login-or">
+                                        <div class="text">or</div>
+                                        <div class="line"></div>
                                     </div>
-                                </form>
+
+                                    <form class="form-outline d-flex flex-column mb-4">
+                                        <div class=" w-100 d-flex justify-content-between mb-2 gap-2">
+                                            <input class="w-100" type="text" placeholder="FirstName" required>
+                                            <input class="w-100" type="text" placeholder="LastName" required>
+                                        </div>
+                                        <div class=" d-flex mb-2 w-100"><input class="flex w-100" type="email" placeholder="Email" required></div>
+                                        <div class=" d-flex w-100"> <input class="w-100 btn btn-primary" type="submit" value="Sign-Up"></div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>

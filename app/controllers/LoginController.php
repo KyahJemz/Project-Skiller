@@ -51,8 +51,6 @@ class LoginController {
     
             $body = $response->getBody()->getContents();
             $decodedBody = json_decode($body, true);
-
-            print_r($body);
     
             $logger->log('Successfully validated Google Sign-In token', 'info');
         } catch (Exception $e) {

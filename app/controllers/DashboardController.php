@@ -24,7 +24,7 @@ class DashboardController {
  
         include(__DIR__ . '/../views/headers/Default.php');
         include(__DIR__ . '/../views/headers/SignedIn.php');
-        include(__DIR__ . '/../views/dashboard.php');
+        include(__DIR__ . '/../views/dashboard-primary.php');
         include(__DIR__ . '/../views/footers/Default.php');
     }
 

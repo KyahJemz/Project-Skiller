@@ -83,7 +83,7 @@
                             echo '<div class="row">';
                             foreach ($data['Chapters'] as $chapter) {
                                 $ChapterPercentage = number_format(((isset($data['Progress']['ChapterProgress'][$chapter["Id"]]) ? $data['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($data['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
-                                echo '<h6><span class="badge ' . getNextBgColor() . '">#</span>&nbsp;&nbsp;' . $chapter['Title'] . ' - '.((int)$ChapterPercentage ? "Completed" : $ChapterPercentage."%").'</h6>';
+                                echo '<h6><span class="badge ' . getNextBgColor() . '">#</span>&nbsp;&nbsp;' . $chapter['Title'] . ' - '.((int)$ChapterPercentage === 100  ? "Completed" : $ChapterPercentage."%").'</h6>';
                             }
                             echo '</div>';
                         ?>

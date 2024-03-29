@@ -1,33 +1,297 @@
-[2024-03-19 15:07:41] INFO: home
-[2024-03-19 15:07:41] INFO: Accessed [home]
-[2024-03-19 15:08:08] INFO: login
-[2024-03-19 15:08:08] INFO: Accessed [login]
-[2024-03-19 15:08:11] INFO: login
-[2024-03-19 15:08:11] INFO: Accessed [login]
-[2024-03-19 15:08:11] INFO: Successfully validated Google Sign-In token
-[2024-03-19 15:08:11] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
-[2024-03-19 15:08:11] INFO: bindingString: sssi
-[2024-03-19 15:08:11] INFO: No rows were affected. Update may not have found a matching row.
-[2024-03-19 22:08:12] INFO: Email sent to: jameslayson.0@gmail.com
-[2024-03-19 15:08:12] INFO: dashboard
-[2024-03-19 15:08:12] INFO: Accessed [dashboard]
-[2024-03-19 15:08:19] INFO: students
-[2024-03-19 15:08:19] INFO: Accessed [students]
-[2024-03-19 15:08:21] INFO: profile
-[2024-03-19 15:08:21] INFO: Accessed [profile]
-[2024-03-19 15:08:34] INFO: students
-[2024-03-19 15:08:34] INFO: Accessed [students]
-[2024-03-19 15:08:36] INFO: profile
-[2024-03-19 15:08:36] INFO: Accessed [profile]
-[2024-03-19 15:08:37] INFO: students
-[2024-03-19 15:08:37] INFO: Accessed [students]
-[2024-03-19 15:08:37] INFO: students
-[2024-03-19 15:08:37] INFO: Accessed [students]
-[2024-03-19 15:08:38] INFO: dashboard
-[2024-03-19 15:08:38] INFO: Accessed [dashboard]
-[2024-03-19 15:08:38] INFO: students
-[2024-03-19 15:08:38] INFO: Accessed [students]
-[2024-03-19 15:08:40] INFO: logout
-[2024-03-19 15:08:40] INFO: Logging Out
-[2024-03-19 15:08:40] INFO: home
-[2024-03-19 15:08:40] INFO: Accessed [home]
+[2024-03-20 19:16:09] INFO: home
+[2024-03-20 19:16:09] INFO: Accessed [home]
+[2024-03-20 19:16:11] INFO: login
+[2024-03-20 19:16:11] INFO: Accessed [login]
+[2024-03-29 17:30:13] INFO: home
+[2024-03-29 17:30:13] INFO: Accessed [home]
+[2024-03-29 17:30:14] INFO: login
+[2024-03-29 17:30:14] INFO: Accessed [login]
+[2024-03-29 17:32:03] INFO: login
+[2024-03-29 17:32:03] INFO: Accessed [login]
+[2024-03-29 17:32:19] INFO: login
+[2024-03-29 17:32:19] INFO: Accessed [login]
+[2024-03-29 17:32:54] INFO: login
+[2024-03-29 17:32:54] INFO: Accessed [login]
+[2024-03-29 17:33:33] INFO: login
+[2024-03-29 17:33:33] INFO: Accessed [login]
+[2024-03-29 17:33:39] INFO: login
+[2024-03-29 17:33:39] INFO: Accessed [login]
+[2024-03-29 17:33:54] INFO: login
+[2024-03-29 17:33:54] INFO: Accessed [login]
+[2024-03-29 17:34:08] INFO: login
+[2024-03-29 17:34:08] INFO: Accessed [login]
+[2024-03-29 17:34:49] INFO: login
+[2024-03-29 17:34:49] INFO: Accessed [login]
+[2024-03-29 17:35:08] INFO: login
+[2024-03-29 17:35:08] INFO: Accessed [login]
+[2024-03-29 17:35:20] INFO: login
+[2024-03-29 17:35:20] INFO: Accessed [login]
+[2024-03-29 17:35:29] INFO: login
+[2024-03-29 17:35:29] INFO: Accessed [login]
+[2024-03-29 17:35:57] INFO: login
+[2024-03-29 17:35:57] INFO: Accessed [login]
+[2024-03-29 17:36:25] INFO: login
+[2024-03-29 17:36:25] INFO: Accessed [login]
+[2024-03-29 17:36:38] INFO: login
+[2024-03-29 17:36:38] INFO: Accessed [login]
+[2024-03-29 17:36:56] INFO: login
+[2024-03-29 17:36:56] INFO: Accessed [login]
+[2024-03-29 17:37:14] INFO: login
+[2024-03-29 17:37:14] INFO: Accessed [login]
+[2024-03-29 17:37:36] INFO: login
+[2024-03-29 17:37:36] INFO: Accessed [login]
+[2024-03-29 17:37:57] INFO: login
+[2024-03-29 17:37:57] INFO: Accessed [login]
+[2024-03-29 17:38:08] INFO: login
+[2024-03-29 17:38:08] INFO: Accessed [login]
+[2024-03-29 17:38:35] INFO: login
+[2024-03-29 17:38:35] INFO: Accessed [login]
+[2024-03-29 17:39:10] INFO: login
+[2024-03-29 17:39:10] INFO: Accessed [login]
+[2024-03-29 17:39:22] INFO: login
+[2024-03-29 17:39:22] INFO: Accessed [login]
+[2024-03-29 17:39:25] INFO: login
+[2024-03-29 17:39:25] INFO: Accessed [login]
+[2024-03-29 17:39:29] INFO: login
+[2024-03-29 17:39:29] INFO: Accessed [login]
+[2024-03-29 17:39:35] INFO: login
+[2024-03-29 17:39:35] INFO: Accessed [login]
+[2024-03-29 17:39:46] INFO: login
+[2024-03-29 17:39:46] INFO: Accessed [login]
+[2024-03-29 17:39:59] INFO: login
+[2024-03-29 17:39:59] INFO: Accessed [login]
+[2024-03-29 17:40:21] INFO: login
+[2024-03-29 17:40:21] INFO: Accessed [login]
+[2024-03-29 17:40:21] INFO: login
+[2024-03-29 17:40:21] INFO: Accessed [login]
+[2024-03-29 17:40:29] INFO: login
+[2024-03-29 17:40:29] INFO: Accessed [login]
+[2024-03-29 17:40:56] INFO: login
+[2024-03-29 17:40:56] INFO: Accessed [login]
+[2024-03-29 17:41:03] INFO: login
+[2024-03-29 17:41:03] INFO: Accessed [login]
+[2024-03-29 17:41:34] INFO: login
+[2024-03-29 17:41:34] INFO: Accessed [login]
+[2024-03-29 17:41:41] INFO: login
+[2024-03-29 17:41:41] INFO: Accessed [login]
+[2024-03-29 17:42:05] INFO: login
+[2024-03-29 17:42:05] INFO: Accessed [login]
+[2024-03-29 17:42:30] INFO: login
+[2024-03-29 17:42:30] INFO: Accessed [login]
+[2024-03-29 17:42:35] INFO: login
+[2024-03-29 17:42:35] INFO: Accessed [login]
+[2024-03-29 17:43:03] INFO: login
+[2024-03-29 17:43:03] INFO: Accessed [login]
+[2024-03-29 17:43:15] INFO: login
+[2024-03-29 17:43:15] INFO: Accessed [login]
+[2024-03-29 17:43:34] INFO: login
+[2024-03-29 17:43:34] INFO: Accessed [login]
+[2024-03-29 17:43:45] INFO: login
+[2024-03-29 17:43:45] INFO: Accessed [login]
+[2024-03-29 17:43:51] INFO: login
+[2024-03-29 17:43:51] INFO: Accessed [login]
+[2024-03-29 17:44:11] INFO: login
+[2024-03-29 17:44:11] INFO: Accessed [login]
+[2024-03-29 17:44:30] INFO: login
+[2024-03-29 17:44:30] INFO: Accessed [login]
+[2024-03-29 17:44:42] INFO: login
+[2024-03-29 17:44:42] INFO: Accessed [login]
+[2024-03-29 17:44:50] INFO: login
+[2024-03-29 17:44:50] INFO: Accessed [login]
+[2024-03-29 17:44:56] INFO: login
+[2024-03-29 17:44:56] INFO: Accessed [login]
+[2024-03-29 17:46:03] INFO: login
+[2024-03-29 17:46:03] INFO: Accessed [login]
+[2024-03-29 17:46:14] INFO: login
+[2024-03-29 17:46:14] INFO: Accessed [login]
+[2024-03-29 17:47:10] INFO: login
+[2024-03-29 17:47:10] INFO: Accessed [login]
+[2024-03-29 17:47:15] INFO: login
+[2024-03-29 17:47:15] INFO: Accessed [login]
+[2024-03-29 17:47:19] INFO: login
+[2024-03-29 17:47:19] INFO: Accessed [login]
+[2024-03-29 17:47:31] INFO: login
+[2024-03-29 17:47:31] INFO: Accessed [login]
+[2024-03-29 17:47:43] INFO: login
+[2024-03-29 17:47:43] INFO: Accessed [login]
+[2024-03-29 17:48:23] INFO: login
+[2024-03-29 17:48:23] INFO: Accessed [login]
+[2024-03-29 17:48:35] INFO: login
+[2024-03-29 17:48:35] INFO: Accessed [login]
+[2024-03-29 17:48:48] INFO: login
+[2024-03-29 17:48:48] INFO: Accessed [login]
+[2024-03-29 17:48:55] INFO: login
+[2024-03-29 17:48:55] INFO: Accessed [login]
+[2024-03-29 17:49:03] INFO: login
+[2024-03-29 17:49:03] INFO: Accessed [login]
+[2024-03-29 17:49:25] INFO: login
+[2024-03-29 17:49:25] INFO: Accessed [login]
+[2024-03-29 17:49:32] INFO: login
+[2024-03-29 17:49:32] INFO: Accessed [login]
+[2024-03-29 17:49:36] INFO: login
+[2024-03-29 17:49:36] INFO: Accessed [login]
+[2024-03-29 17:49:42] INFO: login
+[2024-03-29 17:49:42] INFO: Accessed [login]
+[2024-03-29 17:50:06] INFO: login
+[2024-03-29 17:50:06] INFO: Accessed [login]
+[2024-03-29 17:50:14] INFO: login
+[2024-03-29 17:50:14] INFO: Accessed [login]
+[2024-03-29 17:50:21] INFO: login
+[2024-03-29 17:50:21] INFO: Accessed [login]
+[2024-03-29 17:50:46] INFO: login
+[2024-03-29 17:50:46] INFO: Accessed [login]
+[2024-03-29 17:51:05] INFO: login
+[2024-03-29 17:51:05] INFO: Accessed [login]
+[2024-03-29 17:51:10] INFO: login
+[2024-03-29 17:51:10] INFO: Accessed [login]
+[2024-03-29 17:51:14] INFO: login
+[2024-03-29 17:51:14] INFO: Accessed [login]
+[2024-03-29 17:51:42] INFO: login
+[2024-03-29 17:51:42] INFO: Accessed [login]
+[2024-03-29 17:51:45] INFO: login
+[2024-03-29 17:51:45] INFO: Accessed [login]
+[2024-03-29 17:51:51] INFO: login
+[2024-03-29 17:51:51] INFO: Accessed [login]
+[2024-03-29 17:51:57] INFO: login
+[2024-03-29 17:51:57] INFO: Accessed [login]
+[2024-03-29 17:52:03] INFO: login
+[2024-03-29 17:52:03] INFO: Accessed [login]
+[2024-03-29 17:52:07] INFO: login
+[2024-03-29 17:52:07] INFO: Accessed [login]
+[2024-03-29 17:52:08] INFO: login
+[2024-03-29 17:52:08] INFO: Accessed [login]
+[2024-03-29 17:52:14] INFO: login
+[2024-03-29 17:52:14] INFO: Accessed [login]
+[2024-03-29 17:52:20] INFO: login
+[2024-03-29 17:52:20] INFO: Accessed [login]
+[2024-03-29 17:52:43] INFO: login
+[2024-03-29 17:52:43] INFO: Accessed [login]
+[2024-03-29 17:52:53] INFO: login
+[2024-03-29 17:52:53] INFO: Accessed [login]
+[2024-03-29 17:53:18] INFO: login
+[2024-03-29 17:53:18] INFO: Accessed [login]
+[2024-03-29 17:53:32] INFO: login
+[2024-03-29 17:53:32] INFO: Accessed [login]
+[2024-03-29 17:55:25] INFO: login
+[2024-03-29 17:55:25] INFO: Accessed [login]
+[2024-03-29 17:55:26] INFO: Successfully validated Google Sign-In token
+[2024-03-29 17:55:26] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-03-29 17:55:26] INFO: bindingString: sssi
+[2024-03-29 17:55:26] INFO: No rows were affected. Update may not have found a matching row.
+[2024-03-30 00:55:27] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-03-29 17:55:27] INFO: dashboard
+[2024-03-29 17:55:27] INFO: Accessed [dashboard]
+[2024-03-29 17:56:21] INFO: dashboard
+[2024-03-29 17:56:21] INFO: Accessed [dashboard]
+[2024-03-29 17:56:43] INFO: dashboard
+[2024-03-29 17:56:43] INFO: Accessed [dashboard]
+[2024-03-29 17:57:04] INFO: dashboard
+[2024-03-29 17:57:04] INFO: Accessed [dashboard]
+[2024-03-29 17:58:23] INFO: dashboard
+[2024-03-29 17:58:23] INFO: Accessed [dashboard]
+[2024-03-29 17:58:37] INFO: dashboard
+[2024-03-29 17:58:37] INFO: Accessed [dashboard]
+[2024-03-29 17:58:50] INFO: dashboard
+[2024-03-29 17:58:50] INFO: Accessed [dashboard]
+[2024-03-29 17:59:10] INFO: dashboard
+[2024-03-29 17:59:10] INFO: Accessed [dashboard]
+[2024-03-29 17:59:16] INFO: dashboard
+[2024-03-29 17:59:16] INFO: Accessed [dashboard]
+[2024-03-29 17:59:23] INFO: dashboard
+[2024-03-29 17:59:23] INFO: Accessed [dashboard]
+[2024-03-29 17:59:32] INFO: dashboard
+[2024-03-29 17:59:32] INFO: Accessed [dashboard]
+[2024-03-29 17:59:59] INFO: dashboard
+[2024-03-29 17:59:59] INFO: Accessed [dashboard]
+[2024-03-29 18:00:11] INFO: dashboard
+[2024-03-29 18:00:11] INFO: Accessed [dashboard]
+[2024-03-29 18:00:23] INFO: dashboard
+[2024-03-29 18:00:23] INFO: Accessed [dashboard]
+[2024-03-29 18:00:42] INFO: dashboard
+[2024-03-29 18:00:42] INFO: Accessed [dashboard]
+[2024-03-29 18:00:56] INFO: dashboard
+[2024-03-29 18:00:56] INFO: Accessed [dashboard]
+[2024-03-29 18:01:01] INFO: dashboard
+[2024-03-29 18:01:01] INFO: Accessed [dashboard]
+[2024-03-29 18:01:07] INFO: dashboard
+[2024-03-29 18:01:07] INFO: Accessed [dashboard]
+[2024-03-29 18:01:20] INFO: dashboard
+[2024-03-29 18:01:20] INFO: Accessed [dashboard]
+[2024-03-29 18:01:26] INFO: dashboard
+[2024-03-29 18:01:26] INFO: Accessed [dashboard]
+[2024-03-29 18:01:31] INFO: dashboard
+[2024-03-29 18:01:31] INFO: Accessed [dashboard]
+[2024-03-29 18:01:43] INFO: dashboard
+[2024-03-29 18:01:43] INFO: Accessed [dashboard]
+[2024-03-29 18:01:53] INFO: dashboard
+[2024-03-29 18:01:53] INFO: Accessed [dashboard]
+[2024-03-29 18:02:16] INFO: dashboard
+[2024-03-29 18:02:16] INFO: Accessed [dashboard]
+[2024-03-29 18:02:22] INFO: dashboard
+[2024-03-29 18:02:22] INFO: Accessed [dashboard]
+[2024-03-29 18:02:25] INFO: dashboard
+[2024-03-29 18:02:25] INFO: Accessed [dashboard]
+[2024-03-29 18:02:28] INFO: dashboard
+[2024-03-29 18:02:28] INFO: Accessed [dashboard]
+[2024-03-29 18:02:52] INFO: dashboard
+[2024-03-29 18:02:52] INFO: Accessed [dashboard]
+[2024-03-29 18:04:20] INFO: dashboard
+[2024-03-29 18:04:20] INFO: Accessed [dashboard]
+[2024-03-29 18:04:28] INFO: dashboard
+[2024-03-29 18:04:28] INFO: Accessed [dashboard]
+[2024-03-29 18:05:07] INFO: dashboard
+[2024-03-29 18:05:07] INFO: Accessed [dashboard]
+[2024-03-29 18:05:20] INFO: dashboard
+[2024-03-29 18:05:20] INFO: Accessed [dashboard]
+[2024-03-29 18:05:31] INFO: dashboard
+[2024-03-29 18:05:31] INFO: Accessed [dashboard]
+[2024-03-29 18:06:05] INFO: dashboard
+[2024-03-29 18:06:05] INFO: Accessed [dashboard]
+[2024-03-29 18:06:16] INFO: dashboard
+[2024-03-29 18:06:16] INFO: Accessed [dashboard]
+[2024-03-29 18:06:27] INFO: dashboard
+[2024-03-29 18:06:27] INFO: Accessed [dashboard]
+[2024-03-29 18:06:53] INFO: dashboard
+[2024-03-29 18:06:53] INFO: Accessed [dashboard]
+[2024-03-29 18:07:02] INFO: dashboard
+[2024-03-29 18:07:02] INFO: Accessed [dashboard]
+[2024-03-29 18:07:36] INFO: dashboard
+[2024-03-29 18:07:36] INFO: Accessed [dashboard]
+[2024-03-29 18:07:44] INFO: dashboard
+[2024-03-29 18:07:44] INFO: Accessed [dashboard]
+[2024-03-29 18:07:48] INFO: dashboard
+[2024-03-29 18:07:48] INFO: Accessed [dashboard]
+[2024-03-29 18:07:56] INFO: dashboard
+[2024-03-29 18:07:56] INFO: Accessed [dashboard]
+[2024-03-29 18:08:00] INFO: dashboard
+[2024-03-29 18:08:00] INFO: Accessed [dashboard]
+[2024-03-29 18:08:19] INFO: dashboard
+[2024-03-29 18:08:19] INFO: Accessed [dashboard]
+[2024-03-29 18:08:33] INFO: dashboard
+[2024-03-29 18:08:33] INFO: Accessed [dashboard]
+[2024-03-29 18:09:06] INFO: dashboard
+[2024-03-29 18:09:06] INFO: Accessed [dashboard]
+[2024-03-29 18:09:29] INFO: dashboard
+[2024-03-29 18:09:29] INFO: Accessed [dashboard]
+[2024-03-29 18:09:35] INFO: dashboard
+[2024-03-29 18:09:35] INFO: Accessed [dashboard]
+[2024-03-29 18:09:44] INFO: dashboard
+[2024-03-29 18:09:44] INFO: Accessed [dashboard]
+[2024-03-29 18:09:58] INFO: dashboard
+[2024-03-29 18:09:58] INFO: Accessed [dashboard]
+[2024-03-29 18:10:23] INFO: dashboard
+[2024-03-29 18:10:23] INFO: Accessed [dashboard]
+[2024-03-29 18:10:30] INFO: dashboard
+[2024-03-29 18:10:30] INFO: Accessed [dashboard]
+[2024-03-29 18:10:41] INFO: dashboard
+[2024-03-29 18:10:41] INFO: Accessed [dashboard]
+[2024-03-29 18:10:48] INFO: dashboard
+[2024-03-29 18:10:48] INFO: Accessed [dashboard]
+[2024-03-29 18:10:53] INFO: dashboard
+[2024-03-29 18:10:53] INFO: Accessed [dashboard]
+[2024-03-29 18:11:07] INFO: dashboard
+[2024-03-29 18:11:07] INFO: Accessed [dashboard]
+[2024-03-29 18:11:17] INFO: dashboard
+[2024-03-29 18:11:17] INFO: Accessed [dashboard]
+[2024-03-29 18:11:27] INFO: dashboard
+[2024-03-29 18:11:27] INFO: Accessed [dashboard]

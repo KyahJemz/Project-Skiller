@@ -96,3 +96,42 @@ pre {
     width: 50px;
 }
 
+.login-or{
+    width: 100%;
+    position: relative !important;
+}
+
+.login-or .text{
+    background-color: white;
+    z-index: 1;
+    width: 25px;
+    text-align: center;
+}
+
+.login-or .line{
+    position: absolute !important;
+    border: 1px solid black;
+    width: 100%;
+    top: 55%;
+}
+
+.courses-card{
+    border: 1px solid gainsboro;
+}
+
+#FeaturedCourses, #MyCourses {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+#FeaturedCourses > div, #MyCourses > div {
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#FeaturedCourses > div:hover, #MyCourses > div:hover {
+    border-color: black;
+    transition: 750ms;
+}
