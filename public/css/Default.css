@@ -126,12 +126,14 @@ pre {
     margin-top: 8px;
 }
 
-#FeaturedCourses > div, #MyCourses > div {
+#FeaturedCourses > a, #MyCourses > a {
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
-#FeaturedCourses > div:hover, #MyCourses > div:hover {
+#FeaturedCourses > a:hover, #MyCourses > a:hover {
     border-color: black;
     transition: 750ms;
 }

@@ -75,42 +75,73 @@
                 <p>The Skiller Tutorial System caters to senior high school students, specifically focusing on the subject of General Mathematics. Aligned with the K-12 curriculum mandated by the Department of Education in the Philippines, the platform is tailored to meet the academic needs of senior high school learners. By adhering to the curriculum guidelines, Skiller Tutorial System ensures comprehensive coverage of relevant topics, providing a structured and supportive online learning environment for students to excel in their General Mathematics studies.</p>
             </div>
 
-            <?php if ($_SESSION['User_Role'] === "Teacher") { ?>
-                   
-            <?php } elseif ($_SESSION['User_Role'] === "Administrator"){ ?>
-                
-            <?php } else { ?>
-              
-            <?php } ?>
             <hr>
             
             <div class="row p-3 rounded-3">
                 <h3>Lets Start Learning</h3>
                 <div id="MyCourses">
-                    <div class="courses-card p-3">test</div>
-                    <div class="courses-card p-3">2test</div>
-                    <div class="courses-card p-3">3test</div>
-                    <div class="courses-card p-3">4test</div>
-                    <div class="courses-card p-3">5test</div>
-                    <div class="courses-card p-3">6test</div>
-                    <div class="courses-card p-3">7test</div>
-                    <div class="courses-card p-3">8test</div>
+
+                    <a class="courses-card d-flex" href="">
+                        <img height="150" width="150" src="<?php echo BASE_URL . 'images/home4.jpg' ?>" alt="image">
+                        <div class="w-100 p-3">
+                            <h5>Title</h5>
+                            <div></div>
+                        </div>
+                    </a>
+
+
                 </div>
             </div>
+
 
             <hr>
 
             <div class="row p-3 rounded-3">
                 <div class="w-100 d-flex justify-content-between"><h3>What to learn Next?</h3><input class="" type="text" name="" id="" placeholder="search"></div>
                 <div id="FeaturedCourses" class="">
-                    <div class="courses-card p-3">test</div>
-                    <div class="courses-card p-3">2test</div>
-                    <div class="courses-card p-3">3test</div>
-                    <div class="courses-card p-3">4test</div>
-                    <div class="courses-card p-3">5test</div>
-                    <div class="courses-card p-3">6test</div>
-                    <div class="courses-card p-3">7test</div>
-                    <div class="courses-card p-3">8test</div>
+                    <div class="courses-card d-flex">
+                        <img height="150" width="150" src="<?php echo BASE_URL . 'images/home4.jpg' ?>" alt="image">
+                        <div class="w-100 p-3">
+                            <h5>Title</h5>
+                            <div></div>
+                        </div>
+                    </div><div class="courses-card d-flex">
+                        <img height="150" width="150" src="<?php echo BASE_URL . 'images/home4.jpg' ?>" alt="image">
+                        <div class="w-100 p-3">
+                            <h5>Title</h5>
+                            <div></div>
+                        </div>
+                    </div><div class="courses-card d-flex">
+                        <img height="150" width="150" src="<?php echo BASE_URL . 'images/home4.jpg' ?>" alt="image">
+                        <div class="w-100 p-3">
+                            <h5>Title</h5>
+                            <div></div>
+                        </div>
+                    </div><div class="courses-card d-flex">
+                        <img height="150" width="150" src="<?php echo BASE_URL . 'images/home4.jpg' ?>" alt="image">
+                        <div class="w-100 p-3">
+                            <h5>Title</h5>
+                            <div></div>
+                        </div>
+                    </div><div class="courses-card d-flex">
+                        <img height="150" width="150" src="<?php echo BASE_URL . 'images/home4.jpg' ?>" alt="image">
+                        <div class="w-100 p-3">
+                            <h5>Title</h5>
+                            <div></div>
+                        </div>
+                    </div><div class="courses-card d-flex">
+                        <img height="150" width="150" src="<?php echo BASE_URL . 'images/home4.jpg' ?>" alt="image">
+                        <div class="w-100 p-3">
+                            <h5>Title</h5>
+                            <div></div>
+                        </div>
+                    </div><div class="courses-card d-flex">
+                        <img height="150" width="150" src="<?php echo BASE_URL . 'images/home4.jpg' ?>" alt="image">
+                        <div class="w-100 p-3">
+                            <h5>Title</h5>
+                            <div></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
