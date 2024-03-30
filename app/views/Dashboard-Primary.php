@@ -80,68 +80,44 @@
             <div class="row p-3 rounded-3">
                 <h3>Lets Start Learning</h3>
                 <div id="MyCourses">
-
-                    <a class="courses-card d-flex" href="">
-                        <img height="150" width="150" src="<?php echo BASE_URL . 'images/home4.jpg' ?>" alt="image">
-                        <div class="w-100 p-3">
-                            <h5>Title</h5>
-                            <div></div>
-                        </div>
-                    </a>
-
-
+                    <?php foreach ($data['MyCourses'] as $key => $value) {
+                        $TotalProgressPercentage = number_format(((isset($value['Progress']['FullProgress']) ? $value['Progress']['FullProgress'] : 0) / max($value['Progress']['FullProgressTotal'], 1)) * 100, 2);
+                        $TotalChaptersCount = sizeof($value['Chapters']);
+                        echo '<a class="courses-card d-flex" href="'.BASE_URL.'?page=course&item='.$value['Details']['Id'].'">';
+                        echo '  <img height="150" width="150" src="'. BASE_URL . ($value['Details']['CourseImage'] ? $value['Details']['CourseImage'] : 'images/defaultCourse.jpg') . '" alt="image">';
+                        echo '  <div class="w-100 p-3">';
+                        echo '      <h5>'.$value['Details']['CourseName'].'</h5>';
+                        echo '      <div class="mt-2 mb-2">Your Progress: '.$TotalProgressPercentage.'%</div>';
+                        echo '      <div class="progress p-0 w-100">';
+                        foreach ($value['Chapters'] as $chapter) {
+                            $ChapterPercentage = number_format(((isset($value['Progress']['ChapterProgress'][$chapter["Id"]]) ? $value['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($value['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
+                            $adjustedWidth = (float)($ChapterPercentage * ((100 / $TotalChaptersCount)/100));
+                            echo '<div class="progress-bar '.getNextBgColor().'" role="progressbar" style="width: '.$adjustedWidth.'%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0"><strong>'.$ChapterPercentage.'%</strong></div>';
+                        }
+                        echo '      </div>';
+                        echo '  </div>';
+                        echo '</a>';
+                    } ?>
+                    
+                    
                 </div>
             </div>
-
 
             <hr>
 
             <div class="row p-3 rounded-3">
                 <div class="w-100 d-flex justify-content-between"><h3>What to learn Next?</h3><input class="" type="text" name="" id="" placeholder="search"></div>
                 <div id="FeaturedCourses" class="">
-                    <div class="courses-card d-flex">
-                        <img height="150" width="150" src="<?php echo BASE_URL . 'images/home4.jpg' ?>" alt="image">
-                        <div class="w-100 p-3">
-                            <h5>Title</h5>
-                            <div></div>
-                        </div>
-                    </div><div class="courses-card d-flex">
-                        <img height="150" width="150" src="<?php echo BASE_URL . 'images/home4.jpg' ?>" alt="image">
-                        <div class="w-100 p-3">
-                            <h5>Title</h5>
-                            <div></div>
-                        </div>
-                    </div><div class="courses-card d-flex">
-                        <img height="150" width="150" src="<?php echo BASE_URL . 'images/home4.jpg' ?>" alt="image">
-                        <div class="w-100 p-3">
-                            <h5>Title</h5>
-                            <div></div>
-                        </div>
-                    </div><div class="courses-card d-flex">
-                        <img height="150" width="150" src="<?php echo BASE_URL . 'images/home4.jpg' ?>" alt="image">
-                        <div class="w-100 p-3">
-                            <h5>Title</h5>
-                            <div></div>
-                        </div>
-                    </div><div class="courses-card d-flex">
-                        <img height="150" width="150" src="<?php echo BASE_URL . 'images/home4.jpg' ?>" alt="image">
-                        <div class="w-100 p-3">
-                            <h5>Title</h5>
-                            <div></div>
-                        </div>
-                    </div><div class="courses-card d-flex">
-                        <img height="150" width="150" src="<?php echo BASE_URL . 'images/home4.jpg' ?>" alt="image">
-                        <div class="w-100 p-3">
-                            <h5>Title</h5>
-                            <div></div>
-                        </div>
-                    </div><div class="courses-card d-flex">
-                        <img height="150" width="150" src="<?php echo BASE_URL . 'images/home4.jpg' ?>" alt="image">
-                        <div class="w-100 p-3">
-                            <h5>Title</h5>
-                            <div></div>
-                        </div>
-                    </div>
+                    <?php foreach ($data['OtherCourses'] as $key => $value) {
+                        echo '<a class="courses-card d-flex" href="'.BASE_URL.'?page=course&item='.$value['Details']['Id'].'">';
+                        echo '  <img height="150" width="150" src="'. BASE_URL . ($value['Details']['CourseImage'] ? $value['Details']['CourseImage'] : 'images/defaultCourse.jpg') . '" alt="image">';
+                        echo '  <div class="w-100 p-3">';
+                        echo '    <h5>'.$value['Details']['CourseName'].'</h5>';
+                        echo '    <div class="mt-2 mb-2">Total Chapters: '.sizeof($value['Chapters']).'</div>';
+                        echo '    <div><i>Click to view this course</i></div>';
+                        echo '  </div>';
+                        echo '</a>';
+                    } ?>
                 </div>
             </div>
             

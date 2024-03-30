@@ -10,8 +10,8 @@ class LessonModel {
         $this->logger = $logger;
     }
 
-    public function getChaptersOnly() {
-        $query = "SELECT * FROM tbl_chapter";
+    public function getChaptersOnly($params) {
+        $query = "SELECT * FROM tbl_chapter WHERE Course_Id = ".$params['Course_Id'];
 
         $stmt = $this->database->prepare($query);
 
@@ -216,7 +216,7 @@ class LessonModel {
         }
     }
 
-    public function getLessonsOnly() {
+    public function getLessonsOnly($params) {
         $query = "SELECT 
             tbl_chapter.Id as ChapterId,
             tbl_chapter.Title as ChapterTitle,
@@ -226,7 +226,8 @@ class LessonModel {
             tbl_lessons.Objective as LessonObjective,
             tbl_lessons.Description as LessonDescription
         FROM tbl_lessons 
-        RIGHT JOIN tbl_chapter ON tbl_lessons.Chapter_Id = tbl_chapter.Id";
+        RIGHT JOIN tbl_chapter ON tbl_lessons.Chapter_Id = tbl_chapter.Id
+        WHERE tbl_chapter.Course_Id = ". $params['Course_Id'];
     
         $stmt = $this->database->prepare($query);
     

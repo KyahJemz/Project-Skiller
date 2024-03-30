@@ -19,6 +19,7 @@ class ProgressModel {
         null as Aid
         FROM tbl_chapter as chapter
         RIGHT JOIN tbl_lessons as lesson ON chapter.Id = lesson.Chapter_Id
+        WHERE chapter.Course_Id = ".$params['Course_Id']."
         
         UNION
         
@@ -28,7 +29,8 @@ class ProgressModel {
             activity.Id as Aid
         FROM tbl_chapter as chapter
         RIGHT JOIN tbl_lessons as lesson ON chapter.Id = lesson.Chapter_Id
-        LEFT JOIN tbl_activity as activity ON lesson.Id = activity.Lesson_Id";
+        LEFT JOIN tbl_activity as activity ON lesson.Id = activity.Lesson_Id
+        WHERE chapter.Course_Id = ".$params['Course_Id'];
 
         $stmt = $this->database->prepare($query1);
     
@@ -58,7 +60,7 @@ class ProgressModel {
         FROM tbl_progress as progress
         LEFT JOIN tbl_lessons as lesson ON progress.Lesson_Id = lesson.Id
         LEFT JOIN tbl_chapter as chapter ON lesson.Chapter_Id = chapter.Id
-        WHERE progress.Account_Id = $AccountId";
+        WHERE progress.Account_Id = $AccountId AND chapter.Course_Id = ".$params['Course_Id'];
 
         $stmt = $this->database->prepare($query2);
     

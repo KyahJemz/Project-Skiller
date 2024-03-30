@@ -393,3 +393,381 @@
 [2024-03-30 14:58:02] INFO: Accessed [login]
 [2024-03-30 14:58:02] INFO: dashboard
 [2024-03-30 14:58:02] INFO: Accessed [dashboard]
+[2024-03-30 15:12:54] INFO: dashboard
+[2024-03-30 15:12:54] INFO: Accessed [dashboard]
+[2024-03-30 15:13:12] INFO: dashboard
+[2024-03-30 15:13:12] INFO: Accessed [dashboard]
+[2024-03-30 15:13:16] INFO: scores
+[2024-03-30 15:13:16] INFO: Accessed [scores]
+[2024-03-30 15:13:17] INFO: dashboard
+[2024-03-30 15:13:17] INFO: Accessed [dashboard]
+[2024-03-30 15:29:56] INFO: dashboard
+[2024-03-30 15:29:56] INFO: Accessed [dashboard]
+[2024-03-30 15:29:58] INFO: scores
+[2024-03-30 15:29:58] INFO: Accessed [scores]
+[2024-03-30 15:30:00] INFO: dashboard
+[2024-03-30 15:30:00] INFO: Accessed [dashboard]
+[2024-03-30 15:30:01] INFO: dashboard
+[2024-03-30 15:30:01] INFO: Accessed [dashboard]
+[2024-03-30 15:30:48] INFO: dashboard
+[2024-03-30 15:30:48] INFO: Accessed [dashboard]
+[2024-03-30 15:33:07] INFO: dashboard
+[2024-03-30 15:33:07] INFO: Accessed [dashboard]
+[2024-03-30 15:33:55] INFO: dashboard
+[2024-03-30 15:33:55] INFO: Accessed [dashboard]
+[2024-03-30 15:34:16] INFO: dashboard
+[2024-03-30 15:34:16] INFO: Accessed [dashboard]
+[2024-03-30 15:35:14] INFO: dashboard
+[2024-03-30 15:35:14] INFO: Accessed [dashboard]
+[2024-03-30 15:35:49] INFO: dashboard
+[2024-03-30 15:35:49] INFO: Accessed [dashboard]
+[2024-03-30 15:35:52] INFO: dashboard
+[2024-03-30 15:35:52] INFO: Accessed [dashboard]
+[2024-03-30 15:36:21] INFO: dashboard
+[2024-03-30 15:36:21] INFO: Accessed [dashboard]
+[2024-03-30 15:36:41] INFO: dashboard
+[2024-03-30 15:36:41] INFO: Accessed [dashboard]
+[2024-03-30 15:36:51] INFO: dashboard
+[2024-03-30 15:36:51] INFO: Accessed [dashboard]
+[2024-03-30 15:37:22] INFO: dashboard
+[2024-03-30 15:37:22] INFO: Accessed [dashboard]
+[2024-03-30 15:37:51] INFO: dashboard
+[2024-03-30 15:37:51] INFO: Accessed [dashboard]
+[2024-03-30 15:38:12] INFO: dashboard
+[2024-03-30 15:38:12] INFO: Accessed [dashboard]
+[2024-03-30 15:43:07] INFO: dashboard
+[2024-03-30 15:43:07] INFO: Accessed [dashboard]
+[2024-03-30 15:43:31] INFO: dashboard
+[2024-03-30 15:43:31] INFO: Accessed [dashboard]
+[2024-03-30 15:43:33] INFO: dashboard
+[2024-03-30 15:43:33] INFO: Accessed [dashboard]
+[2024-03-30 15:44:37] INFO: dashboard
+[2024-03-30 15:44:37] INFO: Accessed [dashboard]
+[2024-03-30 15:44:38] INFO: course
+[2024-03-30 15:44:38] INFO: Accessed [course]
+[2024-03-30 15:44:40] INFO: dashboard
+[2024-03-30 15:44:40] INFO: Accessed [dashboard]
+[2024-03-30 15:44:40] INFO: course
+[2024-03-30 15:44:40] INFO: Accessed [course]
+[2024-03-30 15:44:41] INFO: dashboard
+[2024-03-30 15:44:41] INFO: Accessed [dashboard]
+[2024-03-30 15:44:42] INFO: dashboard
+[2024-03-30 15:44:42] INFO: Accessed [dashboard]
+[2024-03-30 15:44:43] INFO: dashboard
+[2024-03-30 15:44:43] INFO: Accessed [dashboard]
+[2024-03-30 15:44:45] INFO: dashboard
+[2024-03-30 15:44:45] INFO: Accessed [dashboard]
+[2024-03-30 15:45:04] INFO: course
+[2024-03-30 15:45:04] INFO: Accessed [course]
+[2024-03-30 15:45:05] INFO: course
+[2024-03-30 15:45:05] INFO: Accessed [course]
+[2024-03-30 15:45:06] INFO: dashboard
+[2024-03-30 15:45:06] INFO: Accessed [dashboard]
+[2024-03-30 15:45:07] INFO: dashboard
+[2024-03-30 15:45:07] INFO: Accessed [dashboard]
+[2024-03-30 15:45:08] INFO: course
+[2024-03-30 15:45:08] INFO: Accessed [course]
+[2024-03-30 15:45:11] INFO: dashboard
+[2024-03-30 15:45:11] INFO: Accessed [dashboard]
+[2024-03-30 15:46:33] INFO: dashboard
+[2024-03-30 15:46:33] INFO: Accessed [dashboard]
+[2024-03-30 15:46:34] INFO: course
+[2024-03-30 15:46:34] INFO: Accessed [course]
+[2024-03-30 15:46:35] INFO: dashboard
+[2024-03-30 15:46:35] INFO: Accessed [dashboard]
+[2024-03-30 15:46:37] INFO: course
+[2024-03-30 15:46:37] INFO: Accessed [course]
+[2024-03-30 15:46:38] INFO: dashboard
+[2024-03-30 15:46:38] INFO: Accessed [dashboard]
+[2024-03-30 15:48:20] INFO: course
+[2024-03-30 15:48:20] INFO: Accessed [course]
+[2024-03-30 15:48:20] INFO: dashboard
+[2024-03-30 15:48:20] INFO: Accessed [dashboard]
+[2024-03-30 15:48:21] INFO: dashboard
+[2024-03-30 15:48:21] INFO: Accessed [dashboard]
+[2024-03-30 15:48:22] INFO: course
+[2024-03-30 15:48:22] INFO: Accessed [course]
+[2024-03-30 15:48:23] INFO: dashboard
+[2024-03-30 15:48:23] INFO: Accessed [dashboard]
+[2024-03-30 15:48:24] INFO: course
+[2024-03-30 15:48:24] INFO: Accessed [course]
+[2024-03-30 15:48:27] INFO: dashboard
+[2024-03-30 15:48:27] INFO: Accessed [dashboard]
+[2024-03-30 15:49:10] INFO: dashboard
+[2024-03-30 15:49:10] INFO: Accessed [dashboard]
+[2024-03-30 15:49:11] INFO: course
+[2024-03-30 15:49:11] INFO: Accessed [course]
+[2024-03-30 15:49:13] INFO: dashboard
+[2024-03-30 15:49:13] INFO: Accessed [dashboard]
+[2024-03-30 15:49:25] INFO: course
+[2024-03-30 15:49:25] INFO: Accessed [course]
+[2024-03-30 15:49:28] INFO: dashboard
+[2024-03-30 15:49:28] INFO: Accessed [dashboard]
+[2024-03-30 15:49:29] INFO: course
+[2024-03-30 15:49:29] INFO: Accessed [course]
+[2024-03-30 15:49:54] INFO: course
+[2024-03-30 15:49:54] INFO: Accessed [course]
+[2024-03-30 15:50:41] INFO: course
+[2024-03-30 15:50:41] INFO: Accessed [course]
+[2024-03-30 15:50:46] INFO: dashboard
+[2024-03-30 15:50:46] INFO: Accessed [dashboard]
+[2024-03-30 15:50:47] INFO: course
+[2024-03-30 15:50:47] INFO: Accessed [course]
+[2024-03-30 15:50:48] INFO: home
+[2024-03-30 15:50:48] INFO: Accessed [home]
+[2024-03-30 15:50:50] INFO: login
+[2024-03-30 15:50:50] INFO: Accessed [login]
+[2024-03-30 15:50:50] INFO: dashboard
+[2024-03-30 15:50:50] INFO: Accessed [dashboard]
+[2024-03-30 15:50:51] INFO: course
+[2024-03-30 15:50:51] INFO: Accessed [course]
+[2024-03-30 15:50:59] INFO: dashboard
+[2024-03-30 15:50:59] INFO: Accessed [dashboard]
+[2024-03-30 15:51:01] INFO: course
+[2024-03-30 15:51:01] INFO: Accessed [course]
+[2024-03-30 15:51:06] INFO: dashboard
+[2024-03-30 15:51:06] INFO: Accessed [dashboard]
+[2024-03-30 15:52:30] INFO: course
+[2024-03-30 15:52:30] INFO: Accessed [course]
+[2024-03-30 15:52:33] INFO: dashboard
+[2024-03-30 15:52:33] INFO: Accessed [dashboard]
+[2024-03-30 15:52:34] INFO: course
+[2024-03-30 15:52:34] INFO: Accessed [course]
+[2024-03-30 15:52:36] INFO: dashboard
+[2024-03-30 15:52:36] INFO: Accessed [dashboard]
+[2024-03-30 15:52:37] INFO: course
+[2024-03-30 15:52:37] INFO: Accessed [course]
+[2024-03-30 15:53:30] INFO: course
+[2024-03-30 15:53:30] INFO: Accessed [course]
+[2024-03-30 15:53:33] INFO: dashboard
+[2024-03-30 15:53:33] INFO: Accessed [dashboard]
+[2024-03-30 15:53:34] INFO: course
+[2024-03-30 15:53:34] INFO: Accessed [course]
+[2024-03-30 15:53:37] INFO: dashboard
+[2024-03-30 15:53:37] INFO: Accessed [dashboard]
+[2024-03-30 15:53:38] INFO: course
+[2024-03-30 15:53:38] INFO: Accessed [course]
+[2024-03-30 15:53:39] INFO: dashboard
+[2024-03-30 15:53:39] INFO: Accessed [dashboard]
+[2024-03-30 15:53:40] INFO: course
+[2024-03-30 15:53:40] INFO: Accessed [course]
+[2024-03-30 15:53:43] INFO: lessons
+[2024-03-30 15:53:43] INFO: Accessed [lessons]
+[2024-03-30 15:53:45] INFO: course
+[2024-03-30 15:53:45] INFO: Accessed [course]
+[2024-03-30 15:53:50] INFO: certificate
+[2024-03-30 15:53:50] INFO: Accessed [certificate]
+[2024-03-30 15:53:51] INFO: course
+[2024-03-30 15:53:51] INFO: Accessed [course]
+[2024-03-30 15:54:21] INFO: dashboard
+[2024-03-30 15:54:21] INFO: Accessed [dashboard]
+[2024-03-30 15:54:22] INFO: course
+[2024-03-30 15:54:22] INFO: Accessed [course]
+[2024-03-30 15:54:27] INFO: dashboard
+[2024-03-30 15:54:27] INFO: Accessed [dashboard]
+[2024-03-30 15:58:05] INFO: dashboard
+[2024-03-30 15:58:05] INFO: Accessed [dashboard]
+[2024-03-30 15:58:47] INFO: dashboard
+[2024-03-30 15:58:47] INFO: Accessed [dashboard]
+[2024-03-30 15:59:29] INFO: dashboard
+[2024-03-30 15:59:29] INFO: Accessed [dashboard]
+[2024-03-30 15:59:31] INFO: dashboard
+[2024-03-30 15:59:31] INFO: Accessed [dashboard]
+[2024-03-30 15:59:49] INFO: dashboard
+[2024-03-30 15:59:49] INFO: Accessed [dashboard]
+[2024-03-30 16:01:32] INFO: dashboard
+[2024-03-30 16:01:32] INFO: Accessed [dashboard]
+[2024-03-30 16:01:53] INFO: dashboard
+[2024-03-30 16:01:53] INFO: Accessed [dashboard]
+[2024-03-30 16:02:13] INFO: dashboard
+[2024-03-30 16:02:13] INFO: Accessed [dashboard]
+[2024-03-30 16:03:26] INFO: dashboard
+[2024-03-30 16:03:26] INFO: Accessed [dashboard]
+[2024-03-30 16:03:56] INFO: dashboard
+[2024-03-30 16:03:56] INFO: Accessed [dashboard]
+[2024-03-30 16:04:13] INFO: dashboard
+[2024-03-30 16:04:13] INFO: Accessed [dashboard]
+[2024-03-30 16:04:15] INFO: dashboard
+[2024-03-30 16:04:15] INFO: Accessed [dashboard]
+[2024-03-30 16:09:17] INFO: dashboard
+[2024-03-30 16:09:17] INFO: Accessed [dashboard]
+[2024-03-30 16:09:34] INFO: dashboard
+[2024-03-30 16:09:34] INFO: Accessed [dashboard]
+[2024-03-30 16:10:34] INFO: dashboard
+[2024-03-30 16:10:34] INFO: Accessed [dashboard]
+[2024-03-30 16:11:08] INFO: dashboard
+[2024-03-30 16:11:08] INFO: Accessed [dashboard]
+[2024-03-30 16:11:10] INFO: course
+[2024-03-30 16:11:10] INFO: Accessed [course]
+[2024-03-30 16:11:15] INFO: dashboard
+[2024-03-30 16:11:15] INFO: Accessed [dashboard]
+[2024-03-30 16:12:06] INFO: course
+[2024-03-30 16:12:06] INFO: Accessed [course]
+[2024-03-30 16:12:07] INFO: course
+[2024-03-30 16:12:07] INFO: Accessed [course]
+[2024-03-30 16:12:09] INFO: dashboard
+[2024-03-30 16:12:09] INFO: Accessed [dashboard]
+[2024-03-30 16:12:10] INFO: dashboard
+[2024-03-30 16:12:10] INFO: Accessed [dashboard]
+[2024-03-30 16:12:21] INFO: dashboard
+[2024-03-30 16:12:21] INFO: Accessed [dashboard]
+[2024-03-30 16:12:22] INFO: dashboard
+[2024-03-30 16:12:22] INFO: Accessed [dashboard]
+[2024-03-30 16:12:22] INFO: dashboard
+[2024-03-30 16:12:22] INFO: Accessed [dashboard]
+[2024-03-30 16:12:22] INFO: dashboard
+[2024-03-30 16:12:22] INFO: Accessed [dashboard]
+[2024-03-30 16:12:22] INFO: dashboard
+[2024-03-30 16:12:22] INFO: Accessed [dashboard]
+[2024-03-30 16:12:22] INFO: dashboard
+[2024-03-30 16:12:22] INFO: Accessed [dashboard]
+[2024-03-30 16:12:23] INFO: dashboard
+[2024-03-30 16:12:23] INFO: Accessed [dashboard]
+[2024-03-30 16:12:23] INFO: dashboard
+[2024-03-30 16:12:23] INFO: Accessed [dashboard]
+[2024-03-30 16:12:38] INFO: dashboard
+[2024-03-30 16:12:38] INFO: Accessed [dashboard]
+[2024-03-30 16:12:49] INFO: dashboard
+[2024-03-30 16:12:49] INFO: Accessed [dashboard]
+[2024-03-30 16:13:48] INFO: dashboard
+[2024-03-30 16:13:48] INFO: Accessed [dashboard]
+[2024-03-30 16:14:03] INFO: dashboard
+[2024-03-30 16:14:03] INFO: Accessed [dashboard]
+[2024-03-30 16:14:08] INFO: dashboard
+[2024-03-30 16:14:08] INFO: Accessed [dashboard]
+[2024-03-30 16:14:11] INFO: dashboard
+[2024-03-30 16:14:11] INFO: Accessed [dashboard]
+[2024-03-30 16:14:14] INFO: dashboard
+[2024-03-30 16:14:14] INFO: Accessed [dashboard]
+[2024-03-30 16:14:17] INFO: dashboard
+[2024-03-30 16:14:17] INFO: Accessed [dashboard]
+[2024-03-30 16:14:39] INFO: dashboard
+[2024-03-30 16:14:39] INFO: Accessed [dashboard]
+[2024-03-30 16:14:43] INFO: dashboard
+[2024-03-30 16:14:43] INFO: Accessed [dashboard]
+[2024-03-30 16:14:54] INFO: dashboard
+[2024-03-30 16:14:54] INFO: Accessed [dashboard]
+[2024-03-30 16:15:04] INFO: dashboard
+[2024-03-30 16:15:04] INFO: Accessed [dashboard]
+[2024-03-30 16:15:23] INFO: dashboard
+[2024-03-30 16:15:23] INFO: Accessed [dashboard]
+[2024-03-30 16:15:30] INFO: dashboard
+[2024-03-30 16:15:30] INFO: Accessed [dashboard]
+[2024-03-30 16:15:36] INFO: dashboard
+[2024-03-30 16:15:36] INFO: Accessed [dashboard]
+[2024-03-30 16:15:42] INFO: dashboard
+[2024-03-30 16:15:42] INFO: Accessed [dashboard]
+[2024-03-30 16:15:53] INFO: dashboard
+[2024-03-30 16:15:53] INFO: Accessed [dashboard]
+[2024-03-30 16:16:04] INFO: dashboard
+[2024-03-30 16:16:04] INFO: Accessed [dashboard]
+[2024-03-30 16:16:08] INFO: course
+[2024-03-30 16:16:08] INFO: Accessed [course]
+[2024-03-30 16:16:09] INFO: home
+[2024-03-30 16:16:09] INFO: Accessed [home]
+[2024-03-30 16:16:10] INFO: login
+[2024-03-30 16:16:10] INFO: Accessed [login]
+[2024-03-30 16:16:10] INFO: dashboard
+[2024-03-30 16:16:10] INFO: Accessed [dashboard]
+[2024-03-30 16:16:24] INFO: dashboard
+[2024-03-30 16:16:24] INFO: Accessed [dashboard]
+[2024-03-30 16:16:34] INFO: dashboard
+[2024-03-30 16:16:34] INFO: Accessed [dashboard]
+[2024-03-30 16:16:41] INFO: dashboard
+[2024-03-30 16:16:41] INFO: Accessed [dashboard]
+[2024-03-30 16:18:03] INFO: dashboard
+[2024-03-30 16:18:03] INFO: Accessed [dashboard]
+[2024-03-30 16:18:23] INFO: dashboard
+[2024-03-30 16:18:23] INFO: Accessed [dashboard]
+[2024-03-30 16:18:32] INFO: dashboard
+[2024-03-30 16:18:32] INFO: Accessed [dashboard]
+[2024-03-30 16:18:56] INFO: dashboard
+[2024-03-30 16:18:56] INFO: Accessed [dashboard]
+[2024-03-30 16:19:05] INFO: dashboard
+[2024-03-30 16:19:05] INFO: Accessed [dashboard]
+[2024-03-30 16:19:07] INFO: dashboard
+[2024-03-30 16:19:07] INFO: Accessed [dashboard]
+[2024-03-30 16:19:33] INFO: dashboard
+[2024-03-30 16:19:33] INFO: Accessed [dashboard]
+[2024-03-30 16:19:49] INFO: dashboard
+[2024-03-30 16:19:49] INFO: Accessed [dashboard]
+[2024-03-30 16:20:09] INFO: dashboard
+[2024-03-30 16:20:09] INFO: Accessed [dashboard]
+[2024-03-30 16:21:26] INFO: dashboard
+[2024-03-30 16:21:26] INFO: Accessed [dashboard]
+[2024-03-30 16:21:27] INFO: dashboard
+[2024-03-30 16:21:27] INFO: Accessed [dashboard]
+[2024-03-30 16:21:30] INFO: dashboard
+[2024-03-30 16:21:30] INFO: Accessed [dashboard]
+[2024-03-30 16:21:33] INFO: dashboard
+[2024-03-30 16:21:33] INFO: Accessed [dashboard]
+[2024-03-30 16:21:36] INFO: dashboard
+[2024-03-30 16:21:36] INFO: Accessed [dashboard]
+[2024-03-30 16:21:39] INFO: dashboard
+[2024-03-30 16:21:39] INFO: Accessed [dashboard]
+[2024-03-30 16:21:45] INFO: dashboard
+[2024-03-30 16:21:45] INFO: Accessed [dashboard]
+[2024-03-30 16:21:48] INFO: dashboard
+[2024-03-30 16:21:48] INFO: Accessed [dashboard]
+[2024-03-30 16:21:50] INFO: dashboard
+[2024-03-30 16:21:50] INFO: Accessed [dashboard]
+[2024-03-30 16:23:02] INFO: dashboard
+[2024-03-30 16:23:02] INFO: Accessed [dashboard]
+[2024-03-30 16:23:07] INFO: dashboard
+[2024-03-30 16:23:07] INFO: Accessed [dashboard]
+[2024-03-30 16:24:18] INFO: dashboard
+[2024-03-30 16:24:18] INFO: Accessed [dashboard]
+[2024-03-30 16:24:26] INFO: dashboard
+[2024-03-30 16:24:26] INFO: Accessed [dashboard]
+[2024-03-30 16:25:09] INFO: dashboard
+[2024-03-30 16:25:09] INFO: Accessed [dashboard]
+[2024-03-30 16:25:16] INFO: dashboard
+[2024-03-30 16:25:16] INFO: Accessed [dashboard]
+[2024-03-30 16:25:20] INFO: dashboard
+[2024-03-30 16:25:20] INFO: Accessed [dashboard]
+[2024-03-30 16:26:25] INFO: dashboard
+[2024-03-30 16:26:25] INFO: Accessed [dashboard]
+[2024-03-30 16:26:39] INFO: dashboard
+[2024-03-30 16:26:39] INFO: Accessed [dashboard]
+[2024-03-30 16:28:35] INFO: dashboard
+[2024-03-30 16:28:35] INFO: Accessed [dashboard]
+[2024-03-30 16:28:43] INFO: dashboard
+[2024-03-30 16:28:43] INFO: Accessed [dashboard]
+[2024-03-30 16:28:46] INFO: dashboard
+[2024-03-30 16:28:46] INFO: Accessed [dashboard]
+[2024-03-30 16:29:00] INFO: dashboard
+[2024-03-30 16:29:00] INFO: Accessed [dashboard]
+[2024-03-30 16:29:03] INFO: dashboard
+[2024-03-30 16:29:03] INFO: Accessed [dashboard]
+[2024-03-30 16:29:49] INFO: dashboard
+[2024-03-30 16:29:49] INFO: Accessed [dashboard]
+[2024-03-30 16:30:07] INFO: dashboard
+[2024-03-30 16:30:07] INFO: Accessed [dashboard]
+[2024-03-30 16:31:14] INFO: dashboard
+[2024-03-30 16:31:14] INFO: Accessed [dashboard]
+[2024-03-30 16:31:26] INFO: dashboard
+[2024-03-30 16:31:26] INFO: Accessed [dashboard]
+[2024-03-30 16:31:42] INFO: dashboard
+[2024-03-30 16:31:42] INFO: Accessed [dashboard]
+[2024-03-30 16:31:45] INFO: dashboard
+[2024-03-30 16:31:45] INFO: Accessed [dashboard]
+[2024-03-30 16:31:49] INFO: dashboard
+[2024-03-30 16:31:49] INFO: Accessed [dashboard]
+[2024-03-30 16:32:14] INFO: dashboard
+[2024-03-30 16:32:14] INFO: Accessed [dashboard]
+[2024-03-30 16:32:16] INFO: course
+[2024-03-30 16:32:16] INFO: Accessed [course]
+[2024-03-30 16:32:17] INFO: dashboard
+[2024-03-30 16:32:17] INFO: Accessed [dashboard]
+[2024-03-30 16:32:33] INFO: dashboard
+[2024-03-30 16:32:33] INFO: Accessed [dashboard]
+[2024-03-30 16:32:41] INFO: dashboard
+[2024-03-30 16:32:41] INFO: Accessed [dashboard]
+[2024-03-30 16:32:59] INFO: course
+[2024-03-30 16:32:59] INFO: Accessed [course]
+[2024-03-30 16:33:01] INFO: dashboard
+[2024-03-30 16:33:01] INFO: Accessed [dashboard]
+[2024-03-30 16:34:00] INFO: course
+[2024-03-30 16:34:00] INFO: Accessed [course]
+[2024-03-30 16:34:18] INFO: home
+[2024-03-30 16:34:18] INFO: Accessed [home]

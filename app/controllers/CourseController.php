@@ -14,10 +14,10 @@ class CourseController {
         $lessonModel = new LessonModel($db, $logger);
         $progressModel = new ProgressModel($db, $logger);
 
-        $data['Chapters'] = $lessonModel->getChaptersOnly();
-        $data['Lessons'] = $lessonModel->getLessonsOnly();
+        $data['Chapters'] = $lessonModel->getChaptersOnly(['Course_Id'=>$db->escape($item)]);
+        $data['Lessons'] = $lessonModel->getLessonsOnly(['Course_Id'=>$db->escape($item)]);
 
-        $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$_SESSION['User_Id']]);
+        $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$db->escape($item)]);
  
         include(__DIR__ . '/../views/headers/Default.php');
         include(__DIR__ . '/../views/headers/SignedIn.php');
