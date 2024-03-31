@@ -8,7 +8,7 @@ require_once __DIR__.'/../../config/Database.php';
 
 class LessonsController {
 
-    public function index($item = null) {
+    public function index($item = null, $course = null) {
         $logger = new Logger();
 
         if (empty($item)) {
@@ -29,7 +29,9 @@ class LessonsController {
         $progressModel = new ProgressModel($db, $logger);
         $accountModel = new AccountModel($db, $logger);
 
-        $data['Lessons'] = $lessonModel->getLessonFull(['LessonId'=>$db->escape($item)]);
+        $data['Course'] = $db->escape($course);
+
+        $data['Lessons'] = $lessonModel->getLessonFull(['LessonId'=>$db->escape($item), 'Course_Id'=>$db->escape($course)]);
         if($data['Lessons'] === []){
             header('Location: '.BASE_URL.'?page=NotFound');
             exit;
@@ -40,14 +42,15 @@ class LessonsController {
         $isNew = $progressModel->AddMyProgress([
             'Lesson_Id'=>$db->escape($item),
             'Activity_Id'=>"0",
-            'Account_Id'=>$db->escape($_SESSION['User_Id'])
+            'Account_Id'=>$db->escape($_SESSION['User_Id']),
+            'Course_Id'=>$db->escape($course)
         ]);
 
         $data['title'] = "Skiller - ".$data['Lessons'][0]['LessonTitle'];
 
-        $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$_SESSION['User_Id']]);
+        $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$db->escape($course)]);
 
-        $ProgressPercentage =  number_format(((isset($data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']]) ? $data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']] : 0) / max($data['Progress']['LessonProgressTotal'][$data['Lessons'][0]['LessonId']], 1)) * 100, 2);
+        $ProgressPercentage = number_format(((isset($data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']]) ? $data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']] : 0) / max($data['Progress']['LessonProgressTotal'][$data['Lessons'][0]['LessonId']], 1)) * 100, 2);
         if((int) $ProgressPercentage === 100) {
             if((int)$isNew > 0) {
                 $accountModel->updateCurrentLesson();
@@ -63,7 +66,7 @@ class LessonsController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function indexTeacher($item = null){
+    public function indexTeacher($item = null, $course=null){
         $logger = new Logger();
 
         if (empty($item)) {
@@ -96,11 +99,11 @@ class LessonsController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function indexAdministrator($item = null){
+    public function indexAdministrator($item = null, $course=null){
         $this->indexTeacher($item);
     }
 
-    public function actionAdministrator($item = null){
+    public function actionAdministrator($item = null, $course=null){
         $logger = new Logger();
 
         if ($_SERVER['CONTENT_TYPE'] === 'application/json') {

@@ -7,7 +7,7 @@ require_once __DIR__.'/../../config/Database.php';
 
 class ProfileController {
 
-    public function index($item = null) {
+    public function index($item = null, $course=null) {
         $logger = new Logger();
 
         if ($_SESSION['User_Role'] === 'Student') {
@@ -53,19 +53,19 @@ class ProfileController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function indexTeacher($item = null){
+    public function indexTeacher($item = null, $course=null){
         $this->index($item);
     }
 
-    public function indexAdministrator($item = null){
+    public function indexAdministrator($item = null, $course=null){
         $this->index($item);
     }
 
-    public function actionAdministrator($item = null){
+    public function actionAdministrator($item = null, $course=null){
         $this->actionTeacher($item);
     }
 
-    public function actionTeacher($item = null) {
+    public function actionTeacher($item = null, $course=null) {
         $logger = new Logger();
     
         $jsonPayload = file_get_contents("php://input");

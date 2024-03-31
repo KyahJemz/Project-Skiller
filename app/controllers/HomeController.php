@@ -1,7 +1,7 @@
 <?php
 class HomeController {
 
-    public function index() {
+    public function index($item = null, $course=null) {
         $logger = new Logger();
         $data['title'] = "Welcome to Skiller: Tutorial System";
  
@@ -11,11 +11,11 @@ class HomeController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function indexTeacher() {
+    public function indexTeacher($item = null, $course=null) {
         $this->index();
     }
 
-    public function indexAdministrator() {
+    public function indexAdministrator($item = null, $course=null) {
         $this->index();
     }
 

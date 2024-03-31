@@ -8,7 +8,7 @@ require_once __DIR__.'/../../config/Database.php';
 
 class ResultController {
 
-    public function index($item = null) {
+    public function index($item = null, $course=null) {
         $logger = new Logger();
 
         if (empty($item)) {
@@ -20,6 +20,8 @@ class ResultController {
         $activityModel = new ActivityModel($db, $logger);
         $lessonModel = new LessonModel($db, $logger);
         $accountModel = new AccountModel($db, $logger);
+
+        $data['Course'] = $db->escape($course);
 
         $data['Result'] = $activityModel->getActivityResult(['ResultId'=>$db->escape($item)]);
         if($data['Result'] === []){
@@ -56,15 +58,15 @@ class ResultController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function indexTeacher($item = null) {
+    public function indexTeacher($item = null, $course=null) {
         $this->index($item);
     }
 
-    public function indexAdministrator($item = null) {
+    public function indexAdministrator($item = null, $course=null) {
         $this->index($item);
     }
 
-    public function action($item = null) {
+    public function action($item = null, $course=null) {
         $logger = new Logger();
 
         if (empty($item)) {
@@ -162,7 +164,8 @@ class ResultController {
                 $isNew = $progressModel->AddMyProgress([
                     'Lesson_Id'=>$db->escape($LessonId),
                     'Activity_Id'=>$db->escape($ActivityId),
-                    'Account_Id'=>$db->escape($_SESSION['User_Id'])
+                    'Account_Id'=>$db->escape($_SESSION['User_Id']),
+                    'Course_Id'=>$db->escape($course)
                 ]);
     
                 $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$_SESSION['User_Id']]);
@@ -222,7 +225,7 @@ class ResultController {
         }
     }
 
-    public function actionTeacher($item = null){
+    public function actionTeacher($item = null, $course=null){
         $logger = new Logger();
     
         $jsonPayload = file_get_contents("php://input");

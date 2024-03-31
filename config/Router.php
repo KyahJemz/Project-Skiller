@@ -15,6 +15,7 @@ class Router {
     public function route() {
         $page = $this->sanitizeInput(filter_input(INPUT_GET, 'page', FILTER_SANITIZE_STRING) ?? self::DEFAULT_PAGE);
         $item = $this->sanitizeInput(filter_input(INPUT_GET, 'item', FILTER_SANITIZE_STRING) ?? '');
+        $course = $this->sanitizeInput(filter_input(INPUT_GET, 'course', FILTER_SANITIZE_STRING) ?? null);
         $action = $this->sanitizeInput(filter_input(INPUT_GET, 'action', FILTER_SANITIZE_STRING) ?? '');
 
         $this->validatePage($page);
@@ -33,42 +34,58 @@ class Router {
             $this->logger->log('Accessed [' . $page . ']', 'info');
 
             $controller = new $controllerClass();
-            $this->processAction($controller, $action, $item);
+            $this->processAction($controller, $action, $item, $course);
         } else {
             $this->logger->log('404 - Page not found [' . $page . ']', 'error');
             include(self::ERROR_NOT_FOUND);
         }
     }
 
-    private function processAction($controller, $action, $item) {
+    private function processAction($controller, $action, $item, $course=null) {
         $role = isset($_SESSION['User_Role']) ? $_SESSION['User_Role'] : null;
 
         if ($action) {
-            $this->executeRoleSpecificAction($controller, $action, $role, $item);
+            if($course && $item) {
+                $this->executeRoleSpecificAction($controller, $action, $role, $item, $course);
+            } elseif ($course) {
+                $this->executeRoleSpecificAction($controller, $action, $role, $course);
+            } elseif ($item) {
+                $this->executeRoleSpecificAction($controller, $action, $role, $item);
+            } else {
+                $this->executeRoleSpecificAction($controller, $action, $role);
+            }
         } else {
-            $this->executeRoleSpecificIndex($controller, $role, $item);
+            if($course && $item) {
+                $this->executeRoleSpecificIndex($controller, $role, $item, $course);
+            } elseif ($course) {
+                $this->executeRoleSpecificIndex($controller, $role, $course);
+            } elseif ($item) {
+                $this->executeRoleSpecificIndex($controller, $role, $item);
+            } else {
+                $this->executeRoleSpecificIndex($controller, $role);
+            }
         }
     }
 
-    private function executeRoleSpecificAction($controller, $action, $role, $item) {
+    private function executeRoleSpecificAction($controller, $action, $role, $item=null, $course=null) {
         $methodName = 'action' . ucfirst($role);
         if ($role === "Student"){
             $methodName ='action';
         }
         if (method_exists($controller, $methodName)) {
-            $controller->$methodName($item);
+            $controller->$methodName($item, $course);
         } else {
             $this->handleRoleNotAllowed();
         }
     }
 
-    private function executeRoleSpecificIndex($controller, $role, $item) {
+    private function executeRoleSpecificIndex($controller, $role, $item=null, $course=null) {
         $methodName = 'index' . ucfirst($role);
         if ($role === "Student"){
             $methodName ='index';
         }
         if (method_exists($controller, $methodName)) {
-            $item ? $controller->$methodName($item) : $controller->$methodName();
+            $controller->$methodName($item, $course);
         } else {
             $this->handleRoleNotAllowed();
         }

@@ -9,7 +9,7 @@ class LoginController {
 
     private $Error;
 
-    public function index() {
+    public function index($item=null, $course=null) {
         $logger = new Logger();
 
         if(isLoggedIn()){
@@ -28,15 +28,15 @@ class LoginController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function indexTeacher() {
+    public function indexTeacher($item=null, $course=null) {
         $this->index();
     }
 
-    public function indexAdministrator() {
+    public function indexAdministrator($item=null, $course=null) {
         $this->index();
     }
 
-    public function action($item = null) {
+    public function action($item = null, $course=null) {
         $token = filter_input(INPUT_GET, 'token', FILTER_SANITIZE_STRING);
         $token = sanitizeInput($token);
         $client = new Client();

@@ -117,12 +117,13 @@ class ProgressModel {
     }
 
     public function AddMyProgress($params) {
+        $CourseId = $this->database->escape($params['Course_Id']);
         $ActivityId = $this->database->escape($params['Activity_Id']);
         $LessonId = $this->database->escape($params['Lesson_Id']);
         $AccountId = $this->database->escape($params['Account_Id']);
     
-        $query = "INSERT IGNORE INTO tbl_progress (Activity_Id, Lesson_Id, Account_Id) 
-                  VALUES (?, ?, ?)";
+        $query = "INSERT IGNORE INTO tbl_progress (Activity_Id, Lesson_Id, Account_Id, Course_Id) 
+                  VALUES (?, ?, ?, ?)";
         
         $stmt = $this->database->prepare($query);
         
@@ -131,7 +132,7 @@ class ProgressModel {
             return false;
         }
     
-        $stmt->bind_param('iii', $ActivityId, $LessonId, $AccountId);
+        $stmt->bind_param('iiii', $ActivityId, $LessonId, $AccountId, $CourseId);
         $stmt->execute();
     
         $affectedRows = $stmt->affected_rows;

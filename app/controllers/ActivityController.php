@@ -6,7 +6,7 @@ require_once __DIR__.'/../../config/Database.php';
 
 class ActivityController {
 
-    public function index($item = null) {
+    public function index($item = null, $course=null) {
         $logger = new Logger();
 
         if (empty($item)) {
@@ -16,6 +16,8 @@ class ActivityController {
         
         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         $activityModel = new ActivityModel($db, $logger);
+
+        $data['Course'] = $db->escape($course);
 
         $data['Activity'] = $activityModel->getActivity(['ActivityId'=>$db->escape($item)]);
         if($data['Activity'] === []){
@@ -60,7 +62,7 @@ class ActivityController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function indexTeacher($item = null) {
+    public function indexTeacher($item = null, $course=null) {
         $logger = new Logger();
 
         if (empty($item)) {
@@ -78,11 +80,11 @@ class ActivityController {
         }
     }
 
-    public function indexAdministrator($item = null) {
+    public function indexAdministrator($item = null, $course=null) {
         $this->index($item);
     }
 
-    public function actionTeacher($item = null){
+    public function actionTeacher($item = null, $course=null){
         $logger = new Logger();
     
         $jsonPayload = file_get_contents("php://input");
@@ -116,7 +118,7 @@ class ActivityController {
         }
     }
 
-    public function actionAdministrator($item = null){
+    public function actionAdministrator($item = null, $course=null){
         $logger = new Logger();
 
         if ($_SERVER['CONTENT_TYPE'] === 'application/json') {

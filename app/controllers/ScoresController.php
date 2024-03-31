@@ -6,7 +6,7 @@ require_once __DIR__.'/../../config/Database.php';
 
 class ScoresController {
 
-    public function index($item = null) {
+    public function index($item = null, $course=null) {
         $logger = new Logger();
         
         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -22,7 +22,7 @@ class ScoresController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function indexTeacher($item = null) {
+    public function indexTeacher($item = null, $course=null) {
         $logger = new Logger();
         
         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -43,7 +43,7 @@ class ScoresController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function indexAdministrator($item = null) {
+    public function indexAdministrator($item = null, $course=null) {
        $this->indexTeacher($item);
     }
 }

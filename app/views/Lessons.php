@@ -4,8 +4,8 @@
         <div class="row">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=course';?>">Course</a></li>
-                  <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=chapter&item='.$data['Lessons'][0]['ChapterId'];?>"><?php echo $data['Lessons'][0]['ChapterTitle'];?></a></li>
+                  <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=course&course='.$data['Course'];?>">Course</a></li>
+                  <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=chapter&item='.$data['Lessons'][0]['ChapterId'].'&course='.$data['Course'];?>"><?php echo $data['Lessons'][0]['ChapterTitle'];?></a></li>
                   <li class="breadcrumb-item active"><?php echo $data['Lessons'][0]['LessonTitle'];?></li>
                 </ol>
               </nav>
@@ -54,7 +54,7 @@
                         echo '<h5 class="mt-4">Activities</h5>';
                         echo '<ul class="list-group">';
                         foreach ($data['Activities'] as $row){
-                            echo '<li class="list-group-item py-3"><a href="'.BASE_URL.'?page=activity&item='.$row['ActivityId'].'">'.$row['ActivityTitle']. '</a></li>';
+                            echo '<li class="list-group-item py-3"><a href="'.BASE_URL.'?page=activity&item='.$row['ActivityId'].'&course='.$data['Course'].'">'.$row['ActivityTitle']. '</a></li>';
                         }
                         echo '</ul>';
                     }
@@ -66,7 +66,7 @@
                     if(!empty($data['Activities'][0])) {
                         echo '<ul class="list-group">';
                         foreach ($data['Activities'] as $row){
-                            echo '<li class="list-group-item py-3"><a href="'.BASE_URL.'?page=assessment&item='.$row['ActivityId'].'">'.$row['ActivityTitle']. '</a><button class="edit-activity-btn btn btn-secondary" data-activityid="'.$row['ActivityId'].'" type="button" data-bs-toggle="modal" data-bs-target="#EditActivity">';
+                            echo '<li class="list-group-item py-3"><a href="'.BASE_URL.'?page=assessment&item='.$row['ActivityId'].'&course='.$data['Course'].'">'.$row['ActivityTitle']. '</a><button class="edit-activity-btn btn btn-secondary" data-activityid="'.$row['ActivityId'].'" type="button" data-bs-toggle="modal" data-bs-target="#EditActivity">';
                             echo '      Edit';
                             echo '    </button></li>';
                         }
@@ -77,7 +77,7 @@
                         echo '<h5 class="mt-4">Activities</h5>';
                         echo '<ul class="list-group">';
                         foreach ($data['Activities'] as $row){
-                            echo '<li class="list-group-item py-3"><a href="'.BASE_URL.'?page=assessment&item='.$row['ActivityId'].'">'.$row['ActivityTitle']. '</a></li>';
+                            echo '<li class="list-group-item py-3"><a href="'.BASE_URL.'?page=assessment&item='.$row['ActivityId'].'&course='.$data['Course'].'">'.$row['ActivityTitle']. '</a></li>';
                         }
                         echo '</ul>';
                     }

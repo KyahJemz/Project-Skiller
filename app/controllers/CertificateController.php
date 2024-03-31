@@ -7,7 +7,7 @@ require_once __DIR__.'/../../config/Database.php';
 
 class CertificateController {
 
-    public function index($item = null) {
+    public function index($item = null, $course=null) {
         $logger = new Logger();
         $data['title'] = "Skiller - Certificate";
 

@@ -2,18 +2,21 @@
 
 require_once __DIR__.'/../models/LessonModel.php';
 require_once __DIR__.'/../models/ProgressModel.php';
+require_once __DIR__.'/../models/CoursesModel.php';
 require_once __DIR__.'/../../config/Database.php';
 
 class CourseController {
 
-    public function index($item = null) {
+    public function index($item = null, $course = null) {
         $logger = new Logger();
         $data['title'] = "Skiller - Course";
 
         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         $lessonModel = new LessonModel($db, $logger);
         $progressModel = new ProgressModel($db, $logger);
+        $coursesModel = new CoursesModel($db, $logger);
 
+        $data['Course'] = $coursesModel->getCourses(['Course_Id'=>$db->escape($item)])[0]['Id'];
         $data['Chapters'] = $lessonModel->getChaptersOnly(['Course_Id'=>$db->escape($item)]);
         $data['Lessons'] = $lessonModel->getLessonsOnly(['Course_Id'=>$db->escape($item)]);
 
@@ -25,24 +28,7 @@ class CourseController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function indexTeacher($item = null){
-        $logger = new Logger();
-        $data['title'] = "Skiller - Course";
-
-        $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-        $lessonModel = new LessonModel($db, $logger);
-        $progressModel = new ProgressModel($db, $logger);
-
-        $data['Chapters'] = $lessonModel->getChaptersOnly();
-        $data['Lessons'] = $lessonModel->getLessonsOnly();
- 
-        include(__DIR__ . '/../views/headers/Default.php');
-        include(__DIR__ . '/../views/headers/SignedIn.php');
-        include(__DIR__ . '/../views/course.php');
-        include(__DIR__ . '/../views/footers/Default.php');
-    }
-
-    public function indexAdministrator($item = null){
+    public function indexAdministrator($item = null, $course=null){
         $logger = new Logger();
         $data['title'] = "Skiller - Chapters Management";
 
@@ -62,7 +48,7 @@ class CourseController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function actionAdministrator($item = null){
+    public function actionAdministrator($item = null, $course=null){
         $logger = new Logger();
 
         $jsonPayload = file_get_contents("php://input");

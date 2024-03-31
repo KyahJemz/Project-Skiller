@@ -6,7 +6,7 @@ require_once __DIR__.'/../../config/Database.php';
 
 class AssessmentController {
 
-    public function index($item = null) {
+    public function index($item = null, $course=null) {
         $logger = new Logger();
 
         if (empty($item)) {
@@ -58,7 +58,7 @@ class AssessmentController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function indexTeacher($item = null){
+    public function indexTeacher($item = null, $course=null){
         $logger = new Logger();
 
         if (empty($item)) {
@@ -118,11 +118,11 @@ class AssessmentController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function indexAdministrator($item = null){
+    public function indexAdministrator($item = null, $course=null){
         $this->indexTeacher($item);
     }
 
-    public function action($item = null) {
+    public function action($item = null, $course=null) {
         $logger = new Logger();
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
@@ -196,7 +196,7 @@ class AssessmentController {
         }
     }
 
-    public function actionAdministrator($item = null) {
+    public function actionAdministrator($item = null, $course=null) {
         $logger = new Logger();
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
 

@@ -10,6 +10,37 @@ class CoursesModel {
         $this->logger = $logger;
     }
 
+    public function getCourses($params) {
+        $query = "SELECT 
+            courses.Id as Id,
+            courses.CourseName as CourseName,
+            courses.CourseImage as CourseImage
+            FROM tbl_courses as courses
+            WHERE courses.Id = ".$params['Course_Id'];
+
+        $stmt = $this->database->prepare($query);
+
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return [];
+        }
+
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if (!$result) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return [];
+        }
+
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+
+        $stmt->close();
+
+        return $data;
+    }
+
     public function getAllCourses(){
         $query = "SELECT 
             courses.id as Id
@@ -42,7 +73,7 @@ class CoursesModel {
 
     public function getUserCourses($params) {
         $query = "SELECT 
-                courses.id as Id,
+                courses.Id as Id,
                 courses.CourseName as CourseName,
                 courses.CourseImage as CourseImage
                 FROM tbl_sections  as sections
@@ -83,7 +114,7 @@ class CoursesModel {
         $notInClause = !empty($MyCourses) ? 'NOT IN (' . implode(',', $MyCourses) . ')' : '';
 
         $query = "SELECT 
-            courses.id as Id,
+            courses.Id as Id,
             courses.CourseName as CourseName,
             courses.CourseImage as CourseImage
             FROM tbl_courses as courses

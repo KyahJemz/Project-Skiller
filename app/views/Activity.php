@@ -2,7 +2,7 @@
     if($data['CanTake'] !== true && !empty($data['Result'])){
         $lastResult = end($data['Result']);
         $lastResultId = $lastResult['Id'];
-        header('Location: ' . BASE_URL . '?page=result&item=' . $lastResultId);
+        header('Location: ' . BASE_URL . '?page=result&item='.$lastResultId.'&course='.$data['Course']);
         exit;
     }
 ?>
@@ -13,9 +13,9 @@
         <div class="row">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=course';?>">Course</a></li>
-                    <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=chapter&item='.$data['Activity'][0]['ChapterId'];?>"><?php echo $data['Activity'][0]['ChapterTitle'];?></a></li>
-                    <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=lessons&item='.$data['Activity'][0]['LessonId'];?>"><?php echo $data['Activity'][0]['LessonTitle'];?></a></li>
+                    <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=course'.'&course='.$data['Course'];?>">Course</a></li>
+                    <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=chapter&item='.$data['Activity'][0]['ChapterId'].'&course='.$data['Course'];?>"><?php echo $data['Activity'][0]['ChapterTitle'];?></a></li>
+                    <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=lessons&item='.$data['Activity'][0]['LessonId'].'&course='.$data['Course'];?>"><?php echo $data['Activity'][0]['LessonTitle'];?></a></li>
                     <li class="breadcrumb-item active"><?php echo $data['Activity'][0]['ActivityTitle'];?></li>
                 </ol>
             </nav>

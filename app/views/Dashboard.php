@@ -5,7 +5,7 @@
 
         <div class="row my-4 p-4 bg-white rounded-3 d-flex flex-column align-items-center">
 
-            <div id="myCarousel" class="carousel slide mt-3 mb-6" data-bs-ride="carousel">
+            <div id="myCarousel" class="carousel slide mt-3" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
@@ -75,44 +75,105 @@
                 <p>The Skiller Tutorial System caters to senior high school students, specifically focusing on the subject of General Mathematics. Aligned with the K-12 curriculum mandated by the Department of Education in the Philippines, the platform is tailored to meet the academic needs of senior high school learners. By adhering to the curriculum guidelines, Skiller Tutorial System ensures comprehensive coverage of relevant topics, providing a structured and supportive online learning environment for students to excel in their General Mathematics studies.</p>
             </div>
 
-            <?php if ($_SESSION['User_Role'] === "Teacher") { ?>
-                   
-            <?php } elseif ($_SESSION['User_Role'] === "Administrator"){ ?>
-                
-            <?php } else { ?>
-                <div class="row p-3 rounded-3">
-                    <h3>Your Progress: </h3>
-                    <?php
-                        $TotalProgressPercentage = number_format(((isset($data['Progress']['FullProgress']) ? $data['Progress']['FullProgress'] : 0) / max($data['Progress']['FullProgressTotal'], 1)) * 100, 2);
-                        echo '<div class="progress p-0">';
-                        $TotalChaptersCount = sizeof($data['Chapters']);
-                        foreach ($data['Chapters'] as $chapter) {
-                            $ChapterPercentage = number_format(((isset($data['Progress']['ChapterProgress'][$chapter["Id"]]) ? $data['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($data['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
-                            $adjustedWidth = (int)($ChapterPercentage * ((100 / $TotalChaptersCount)/100));
-                            echo '<div class="progress-bar '.getNextBgColor().'" role="progressbar" style="width: '.$adjustedWidth.'%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><strong>'.$ChapterPercentage.'%</strong></div>';
-                        }
-                        echo '</div>';
-                        echo '<p class="mb-3 mt-2">Overall progress: <strong>'.((int)$TotalProgressPercentage === 100 ? "Completed": $TotalProgressPercentage."%").'</strong><p>';
+            <hr>
 
-
-                        echo '<div class="row">';
-                        foreach ($data['Chapters'] as $chapter) {
-                            $ChapterPercentage = number_format(((isset($data['Progress']['ChapterProgress'][$chapter["Id"]]) ? $data['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($data['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
-                            echo '<h5><a href="'.BASE_URL.'?page=chapter&item='.$chapter['Id'].'"><span class="badge ' . getNextBgColor() . '">#</span>&nbsp;' . $chapter['Title'] . '</a> - '.((int)$ChapterPercentage === 100 ? "Completed": $ChapterPercentage."%").'</h5>';
-                            echo '<div class="row px-5">';
-                            echo '<ul class="ml-5 px-5">';
-                            foreach ($data['Lessons'] as $lesson) {
-                                if ($lesson['ChapterId'] === $chapter['Id']) {
-                                    echo '<li><p class="ml-5">' . $lesson['LessonTitle'] . '</p></li>';
-                                }
-                            }
-                            echo '</ul>';
-                            echo '</div>';
+            <?php if ($_SESSION['User_Role'] === "Student") { ?>
+            
+            <div class="row p-3 rounded-3">
+                <h3>Lets Start Learning</h3>
+                <div id="MyCourses">
+                    <?php foreach ($data['MyCourses'] as $key => $value) {
+                        $TotalProgressPercentage = number_format(((isset($value['Progress']['FullProgress']) ? $value['Progress']['FullProgress'] : 0) / max($value['Progress']['FullProgressTotal'], 1)) * 100, 2);
+                        $TotalChaptersCount = sizeof($value['Chapters']);
+                        echo '<a class="courses-card d-flex" href="'.BASE_URL.'?page=course&item='.$value['Details']['Id'].'&course='.$value['Details']['Id'].'">';
+                        echo '  <img height="150" width="150" src="'. BASE_URL . ($value['Details']['CourseImage'] ? $value['Details']['CourseImage'] : 'images/defaultCourse.jpg') . '" alt="image">';
+                        echo '  <div class="w-100 p-3">';
+                        echo '      <h5>'.$value['Details']['CourseName'].'</h5>';
+                        echo '      <div class="mt-2 mb-2">Your Progress: '.$TotalProgressPercentage.'%</div>';
+                        echo '      <div class="progress p-0 w-100">';
+                        foreach ($value['Chapters'] as $chapter) {
+                            $ChapterPercentage = number_format(((isset($value['Progress']['ChapterProgress'][$chapter["Id"]]) ? $value['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($value['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
+                            $adjustedWidth = (float)($ChapterPercentage * ((100 / $TotalChaptersCount)/100));
+                            echo '<div class="progress-bar '.getNextBgColor().'" role="progressbar" style="width: '.$adjustedWidth.'%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0"><strong>'.$ChapterPercentage.'%</strong></div>';
                         }
-                        echo '</div>';
-                    ?>
+                        echo '      </div>';
+                        echo '  </div>';
+                        echo '</a>';
+                    } ?>
                 </div>
-            <?php } ?>
+            </div>
 
+            <hr>
+
+            <div class="row p-3 rounded-3">
+                <div class="w-100 d-flex justify-content-between"><h3>What to learn Next?</h3><input id="FeaturedCoursesSearch" class="" type="text" name="" id="" placeholder="search"></div>
+                <div id="FeaturedCourses" class=""></div>
+            </div>
+
+            <?php } else { ?>
+
+            <div class="row p-3 rounded-3">
+                <div class="w-100 d-flex justify-content-between">
+                    <h3>What to learn Next?</h3>
+                    <input id="FeaturedCoursesSearch" class="" type="text" name="" id="" placeholder="search">
+                </div>
+                <div id="FeaturedCourses" class=""></div>
+            </div>
+
+            <?php } ?>
+            
         </div>
     </div>
+
+    <script>
+        let FeaturedCoursesContainer = document.getElementById('FeaturedCourses');
+        let FeaturedCoursesRaw = null;
+        let FeaturedCoursesSearch = "";
+        let FeaturedCoursesCounts = 0;
+        if (FeaturedCourses){
+            FeaturedCoursesRaw = JSON.parse(OtherCourses);
+            console.log(FeaturedCoursesRaw);
+
+            function RerenderFeaturedCourses(){
+                console.log("ReRender")
+                FeaturedCoursesContainer.innerHTML="";
+                FeaturedCoursesRaw.forEach(element => {
+                    let layout = ``;
+                    if(FeaturedCoursesSearch === "") {
+                        layout = `
+                            <a class="courses-card d-flex" href="${BASE_URL}?page=course&item=${element['Details']['Id']}">
+                                <img height="150" width="150" src="${BASE_URL}${element['Details']['CourseImage'] ? element['Details']['CourseImage'] : 'images/defaultCourse.jpg'}" alt="image">
+                                <div class="w-100 p-3">
+                                    <h5>${element['Details']['CourseName']}</h5>
+                                    <div class="mt-2 mb-2">Total Chapters: ${element['Chapters'].length}</div>
+                                    <div><i>Click to view this course</i></div>
+                                </div>
+                            </a>
+                        `;
+                    } else {
+                        if (element.Details.CourseName.toUpperCase().includes(FeaturedCoursesSearch.toUpperCase())){
+                            layout = `
+                                <a class="courses-card d-flex" href="${BASE_URL}?page=course&item=${element['Details']['Id']}">
+                                    <img height="150" width="150" src="${BASE_URL}${element['Details']['CourseImage'] ? element['Details']['CourseImage'] : 'images/defaultCourse.jpg'}" alt="image">
+                                    <div class="w-100 p-3">
+                                        <h5>${element['Details']['CourseName']}</h5>
+                                        <div class="mt-2 mb-2">Total Chapters: ${element['Chapters'].length}</div>
+                                        <div><i>Click to view this course</i></div>
+                                    </div>
+                                </a>
+                            `;
+                        }
+                    }
+                    FeaturedCoursesContainer.innerHTML = FeaturedCoursesContainer.innerHTML + layout;
+                })
+            }
+
+            document.getElementById('FeaturedCoursesSearch').addEventListener('change', (e)=>{
+                FeaturedCoursesSearch = e.target.value;
+                RerenderFeaturedCourses();
+            });
+
+            RerenderFeaturedCourses();
+
+        }
+    </script>
