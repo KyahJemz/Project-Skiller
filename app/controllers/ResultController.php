@@ -4,6 +4,7 @@ require_once __DIR__.'/../models/AccountModel.php';
 require_once __DIR__.'/../models/ActivityModel.php';
 require_once __DIR__.'/../models/LessonModel.php';
 require_once __DIR__.'/../models/ProgressModel.php';
+require_once __DIR__.'/../models/CoursesModel.php';
 require_once __DIR__.'/../../config/Database.php';
 
 class ResultController {
@@ -20,8 +21,10 @@ class ResultController {
         $activityModel = new ActivityModel($db, $logger);
         $lessonModel = new LessonModel($db, $logger);
         $accountModel = new AccountModel($db, $logger);
+        $coursesModel = new CoursesModel($db, $logger);
 
         $data['Course'] = $db->escape($course);
+        $data['CourseDetails'] = $coursesModel->getCourses(['Course_Id'=>$db->escape($course)])[0];
 
         $data['Result'] = $activityModel->getActivityResult(['ResultId'=>$db->escape($item)]);
         if($data['Result'] === []){
@@ -43,8 +46,6 @@ class ResultController {
         $data['lastname'] = $data['Account'][0]['LastName'];
 
         $data['title'] = "Skiller - Assessment Result";
-
-        print_r( $data['Result'][0]['Lesson_Id']);
 
         $data['LessonNextToAccess'] = end($_SESSION['AllowedLessons']);
 

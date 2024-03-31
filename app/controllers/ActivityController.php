@@ -2,6 +2,7 @@
 
 require_once __DIR__.'/../models/AccountModel.php';
 require_once __DIR__.'/../models/ActivityModel.php';
+require_once __DIR__.'/../models/CoursesModel.php';
 require_once __DIR__.'/../../config/Database.php';
 
 class ActivityController {
@@ -16,8 +17,10 @@ class ActivityController {
         
         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         $activityModel = new ActivityModel($db, $logger);
+        $coursesModel = new CoursesModel($db, $logger);
 
         $data['Course'] = $db->escape($course);
+        $data['CourseDetails'] = $coursesModel->getCourses(['Course_Id'=>$db->escape($course)])[0];
 
         $data['Activity'] = $activityModel->getActivity(['ActivityId'=>$db->escape($item)]);
         if($data['Activity'] === []){

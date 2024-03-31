@@ -17,6 +17,8 @@ class AssessmentController {
         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         $activityModel = new ActivityModel($db, $logger);
 
+        $data['Course'] = $db->escape($course);
+
         $data['Activity'] = $activityModel->getActivity(['ActivityId'=>$db->escape($item)]);
         if($data['Activity'] === []){
             header('Location: '.BASE_URL.'?page=NotFound');

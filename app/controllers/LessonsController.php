@@ -4,6 +4,7 @@ require_once __DIR__.'/../models/AccountModel.php';
 require_once __DIR__.'/../models/LessonModel.php';
 require_once __DIR__.'/../models/ActivityModel.php';
 require_once __DIR__.'/../models/ProgressModel.php';
+require_once __DIR__.'/../models/CoursesModel.php';
 require_once __DIR__.'/../../config/Database.php';
 
 class LessonsController {
@@ -28,8 +29,10 @@ class LessonsController {
         $activityModel = new ActivityModel($db, $logger);
         $progressModel = new ProgressModel($db, $logger);
         $accountModel = new AccountModel($db, $logger);
+        $coursesModel = new CoursesModel($db, $logger);
 
         $data['Course'] = $db->escape($course);
+        $data['CourseDetails'] = $coursesModel->getCourses(['Course_Id'=>$db->escape($course)])[0];
 
         $data['Lessons'] = $lessonModel->getLessonFull(['LessonId'=>$db->escape($item), 'Course_Id'=>$db->escape($course)]);
         if($data['Lessons'] === []){

@@ -16,7 +16,7 @@ class CourseController {
         $progressModel = new ProgressModel($db, $logger);
         $coursesModel = new CoursesModel($db, $logger);
 
-        $data['Course'] = $coursesModel->getCourses(['Course_Id'=>$db->escape($item)])[0]['Id'];
+        $data['Course'] = $coursesModel->getCourses(['Course_Id'=>$db->escape($item)])[0];
         $data['Chapters'] = $lessonModel->getChaptersOnly(['Course_Id'=>$db->escape($item)]);
         $data['Lessons'] = $lessonModel->getLessonsOnly(['Course_Id'=>$db->escape($item)]);
 

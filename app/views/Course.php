@@ -1,6 +1,6 @@
 <body class="bg-body-secondary d-flex flex-column justify-content-between h-100">
     <div class="container flex-fill">
-        <h2 class="mb-3">Skiller: Tutorial System - General Mathematics</h2>
+        <h2 class="mb-3">Skiller: Tutorial System - <?php echo $data['Course']['CourseName']?></h2>
         <?php if ($_SESSION['User_Role'] === "Student") { ?>
             <p>Course Overall Progress: <?php echo number_format(((isset($data['Progress']['FullProgress']) ? $data['Progress']['FullProgress'] : 0) / max($data['Progress']['FullProgressTotal'], 1)) * 100, 2).'%' ?></p>
         <?php } ?>
@@ -26,7 +26,7 @@
                                     echo nl2br($row2['LessonDescription']);
                                     echo '</br>';
                                     if(CheckLesson($row2["LessonId"])){
-                                        echo '<a class="btn btn-primary mt-2" href="'.BASE_URL.'?page=lessons&item='.$row2['LessonId'].'&course='.$data['Course'].'">View</a>';
+                                        echo '<a class="btn btn-primary mt-2" href="'.BASE_URL.'?page=lessons&item='.$row2['LessonId'].'&course='.$data['Course']['Id'].'">View</a>';
                                     } else {
                                         echo '<a class="btn btn-secondary mt-2">Locked</a>';
                                     }

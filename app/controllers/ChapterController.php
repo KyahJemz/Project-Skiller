@@ -3,6 +3,7 @@
 require_once __DIR__.'/../models/AccountModel.php';
 require_once __DIR__.'/../models/LessonModel.php';
 require_once __DIR__.'/../models/ProgressModel.php';
+require_once __DIR__.'/../models/CoursesModel.php';
 require_once __DIR__.'/../../config/Database.php';
 
 class ChapterController {
@@ -18,8 +19,10 @@ class ChapterController {
         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         $lessonModel = new LessonModel($db, $logger);
         $progressModel = new ProgressModel($db, $logger);
+        $coursesModel = new CoursesModel($db, $logger);
 
         $data['Course'] = $db->escape($course);
+        $data['CourseDetails'] = $coursesModel->getCourses(['Course_Id'=>$db->escape($course)])[0];
 
         $data['Chapter'] = $lessonModel->getChapterFull(['ChapterId'=>$db->escape($item), 'Course_Id'=>$db->escape($course)]);
         if($data['Chapter'] === []){

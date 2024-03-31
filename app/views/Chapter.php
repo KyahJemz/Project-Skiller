@@ -4,7 +4,7 @@
         <div class="row">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=course&course='.$data['Course'];?>">Course</a></li>
+                  <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=course&course='.$data['Course'];?>"><?php echo $data['CourseDetails']['CourseName']?></a></li>
                   <li class="breadcrumb-item active"><?php echo $data['ChapterRaw'][0]['Title'];?></li>
                 </ol>
               </nav>
