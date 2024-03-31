@@ -2677,3 +2677,563 @@
 [2024-03-31 15:41:22] INFO: Accessed [course]
 [2024-03-31 15:41:23] INFO: lessons
 [2024-03-31 15:41:23] INFO: Accessed [lessons]
+[2024-03-31 16:02:49] INFO: lessons
+[2024-03-31 16:02:49] INFO: Accessed [lessons]
+[2024-03-31 16:02:50] INFO: lessons
+[2024-03-31 16:02:50] INFO: Accessed [lessons]
+[2024-03-31 16:02:53] INFO: course
+[2024-03-31 16:02:53] INFO: Accessed [course]
+[2024-03-31 16:03:06] INFO: course
+[2024-03-31 16:03:06] INFO: Accessed [course]
+[2024-03-31 16:03:09] INFO: lessons
+[2024-03-31 16:03:09] INFO: Accessed [lessons]
+[2024-03-31 16:20:13] INFO: home
+[2024-03-31 16:20:13] INFO: Accessed [home]
+[2024-03-31 16:20:14] INFO: login
+[2024-03-31 16:20:14] INFO: Accessed [login]
+[2024-03-31 16:20:14] INFO: dashboard
+[2024-03-31 16:20:14] INFO: Accessed [dashboard]
+[2024-03-31 16:20:16] INFO: course
+[2024-03-31 16:20:16] INFO: Accessed [course]
+[2024-03-31 16:20:19] INFO: lessons
+[2024-03-31 16:20:19] INFO: Accessed [lessons]
+[2024-03-31 16:20:20] INFO: course
+[2024-03-31 16:20:20] INFO: Accessed [course]
+[2024-03-31 16:20:35] INFO: course
+[2024-03-31 16:20:35] INFO: Accessed [course]
+[2024-03-31 16:20:36] INFO: lessons
+[2024-03-31 16:20:36] INFO: Accessed [lessons]
+[2024-03-31 16:20:44] INFO: lessons
+[2024-03-31 16:20:44] INFO: Accessed [lessons]
+[2024-03-31 16:22:12] INFO: course
+[2024-03-31 16:22:12] INFO: Accessed [course]
+[2024-03-31 16:22:20] INFO: course
+[2024-03-31 16:22:20] INFO: Accessed [course]
+[2024-03-31 16:22:21] INFO: lessons
+[2024-03-31 16:22:21] INFO: Accessed [lessons]
+[2024-03-31 16:23:16] INFO: lessons
+[2024-03-31 16:23:16] INFO: Accessed [lessons]
+[2024-03-31 16:23:16] INFO: NotFound
+[2024-03-31 16:23:19] INFO: course
+[2024-03-31 16:23:19] INFO: Accessed [course]
+[2024-03-31 16:23:30] INFO: course
+[2024-03-31 16:23:30] INFO: Accessed [course]
+[2024-03-31 16:27:48] INFO: course
+[2024-03-31 16:27:48] INFO: Accessed [course]
+[2024-03-31 16:27:51] INFO: logout
+[2024-03-31 16:27:51] INFO: Logging Out
+[2024-03-31 16:27:51] INFO: home
+[2024-03-31 16:27:51] INFO: Accessed [home]
+[2024-03-31 16:27:52] INFO: login
+[2024-03-31 16:27:52] INFO: Accessed [login]
+[2024-03-31 16:27:55] INFO: login
+[2024-03-31 16:27:55] INFO: Accessed [login]
+[2024-03-31 16:27:55] INFO: Successfully validated Google Sign-In token
+[2024-03-31 16:27:55] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-03-31 16:27:55] INFO: bindingString: sssi
+[2024-03-31 16:27:55] INFO: No rows were affected. Update may not have found a matching row.
+[2024-03-31 16:28:43] INFO: login
+[2024-03-31 16:28:43] INFO: Accessed [login]
+[2024-03-31 16:28:43] INFO: Successfully validated Google Sign-In token
+[2024-03-31 16:28:43] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-03-31 16:28:43] INFO: bindingString: sssi
+[2024-03-31 16:28:43] INFO: No rows were affected. Update may not have found a matching row.
+[2024-03-31 16:28:55] INFO: login
+[2024-03-31 16:28:55] INFO: Accessed [login]
+[2024-03-31 16:28:55] INFO: Successfully validated Google Sign-In token
+[2024-03-31 16:28:55] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-03-31 16:28:55] INFO: bindingString: sssi
+[2024-03-31 16:28:55] INFO: No rows were affected. Update may not have found a matching row.
+[2024-03-31 16:30:37] INFO: login
+[2024-03-31 16:30:37] INFO: Accessed [login]
+[2024-03-31 16:30:37] INFO: Successfully validated Google Sign-In token
+[2024-03-31 16:30:37] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-03-31 16:30:37] INFO: bindingString: sssi
+[2024-03-31 16:30:37] INFO: No rows were affected. Update may not have found a matching row.
+[2024-03-31 16:32:33] INFO: login
+[2024-03-31 16:32:33] INFO: Accessed [login]
+[2024-03-31 16:32:33] INFO: Successfully validated Google Sign-In token
+[2024-03-31 16:32:33] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-03-31 16:32:33] INFO: bindingString: sssi
+[2024-03-31 16:32:33] INFO: No rows were affected. Update may not have found a matching row.
+[2024-03-31 16:34:24] INFO: login
+[2024-03-31 16:34:24] INFO: Accessed [login]
+[2024-03-31 16:34:24] INFO: Successfully validated Google Sign-In token
+[2024-03-31 16:34:24] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-03-31 16:34:24] INFO: bindingString: sssi
+[2024-03-31 16:34:24] INFO: No rows were affected. Update may not have found a matching row.
+[2024-03-31 16:35:12] INFO: login
+[2024-03-31 16:35:12] INFO: Accessed [login]
+[2024-03-31 16:35:12] INFO: Successfully validated Google Sign-In token
+[2024-03-31 16:35:12] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-03-31 16:35:12] INFO: bindingString: sssi
+[2024-03-31 16:35:12] INFO: No rows were affected. Update may not have found a matching row.
+[2024-03-31 16:35:35] INFO: login
+[2024-03-31 16:35:35] INFO: Accessed [login]
+[2024-03-31 16:35:35] INFO: Successfully validated Google Sign-In token
+[2024-03-31 16:35:35] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-03-31 16:35:35] INFO: bindingString: sssi
+[2024-03-31 16:35:35] INFO: No rows were affected. Update may not have found a matching row.
+[2024-03-31 22:35:36] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-03-31 16:35:36] INFO: dashboard
+[2024-03-31 16:35:36] INFO: Accessed [dashboard]
+[2024-03-31 16:35:39] INFO: course
+[2024-03-31 16:35:39] INFO: Accessed [course]
+[2024-03-31 16:35:44] INFO: dashboard
+[2024-03-31 16:35:44] INFO: Accessed [dashboard]
+[2024-03-31 16:35:45] INFO: course
+[2024-03-31 16:35:45] INFO: Accessed [course]
+[2024-03-31 16:36:07] INFO: course
+[2024-03-31 16:36:07] INFO: Accessed [course]
+[2024-03-31 16:36:10] INFO: dashboard
+[2024-03-31 16:36:10] INFO: Accessed [dashboard]
+[2024-03-31 16:36:11] INFO: course
+[2024-03-31 16:36:11] INFO: Accessed [course]
+[2024-03-31 16:36:20] INFO: course
+[2024-03-31 16:36:20] INFO: Accessed [course]
+[2024-03-31 16:36:22] INFO: dashboard
+[2024-03-31 16:36:22] INFO: Accessed [dashboard]
+[2024-03-31 16:36:31] INFO: course
+[2024-03-31 16:36:31] INFO: Accessed [course]
+[2024-03-31 16:36:53] INFO: course
+[2024-03-31 16:36:53] INFO: Accessed [course]
+[2024-03-31 16:36:55] INFO: course
+[2024-03-31 16:36:55] INFO: Accessed [course]
+[2024-03-31 16:37:03] INFO: course
+[2024-03-31 16:37:03] INFO: Accessed [course]
+[2024-03-31 16:37:04] INFO: course
+[2024-03-31 16:37:04] INFO: Accessed [course]
+[2024-03-31 16:37:19] INFO: course
+[2024-03-31 16:37:19] INFO: Accessed [course]
+[2024-03-31 16:38:05] INFO: course
+[2024-03-31 16:38:05] INFO: Accessed [course]
+[2024-03-31 16:38:19] INFO: course
+[2024-03-31 16:38:19] INFO: Accessed [course]
+[2024-03-31 16:38:21] INFO: course
+[2024-03-31 16:38:21] INFO: Accessed [course]
+[2024-03-31 16:39:26] INFO: course
+[2024-03-31 16:39:26] INFO: Accessed [course]
+[2024-03-31 16:39:28] INFO: course
+[2024-03-31 16:39:28] INFO: Accessed [course]
+[2024-03-31 16:39:28] INFO: course
+[2024-03-31 16:39:28] INFO: Accessed [course]
+[2024-03-31 16:39:28] INFO: course
+[2024-03-31 16:39:28] INFO: Accessed [course]
+[2024-03-31 16:39:32] INFO: dashboard
+[2024-03-31 16:39:32] INFO: Accessed [dashboard]
+[2024-03-31 16:39:33] INFO: course
+[2024-03-31 16:39:33] INFO: Accessed [course]
+[2024-03-31 16:39:53] INFO: course
+[2024-03-31 16:39:53] INFO: Accessed [course]
+[2024-03-31 16:40:05] INFO: course
+[2024-03-31 16:40:05] INFO: Accessed [course]
+[2024-03-31 16:42:59] INFO: course
+[2024-03-31 16:42:59] INFO: Accessed [course]
+[2024-03-31 16:43:00] INFO: course
+[2024-03-31 16:43:00] INFO: Accessed [course]
+[2024-03-31 16:44:52] INFO: course
+[2024-03-31 16:44:52] INFO: Accessed [course]
+[2024-03-31 16:45:45] INFO: course
+[2024-03-31 16:45:45] INFO: Accessed [course]
+[2024-03-31 16:50:19] INFO: course
+[2024-03-31 16:50:19] INFO: Accessed [course]
+[2024-03-31 16:50:22] INFO: logout
+[2024-03-31 16:50:22] INFO: Logging Out
+[2024-03-31 16:50:22] INFO: home
+[2024-03-31 16:50:22] INFO: Accessed [home]
+[2024-03-31 16:50:22] INFO: login
+[2024-03-31 16:50:22] INFO: Accessed [login]
+[2024-03-31 16:50:24] INFO: login
+[2024-03-31 16:50:24] INFO: Accessed [login]
+[2024-03-31 16:50:24] INFO: Successfully validated Google Sign-In token
+[2024-03-31 16:50:25] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-03-31 16:50:25] INFO: bindingString: sssi
+[2024-03-31 16:50:25] INFO: No rows were affected. Update may not have found a matching row.
+[2024-03-31 22:50:26] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-03-31 16:50:26] INFO: dashboard
+[2024-03-31 16:50:26] INFO: Accessed [dashboard]
+[2024-03-31 16:50:28] INFO: course
+[2024-03-31 16:50:28] INFO: Accessed [course]
+[2024-03-31 16:50:31] INFO: dashboard
+[2024-03-31 16:50:31] INFO: Accessed [dashboard]
+[2024-03-31 16:50:31] INFO: course
+[2024-03-31 16:50:31] INFO: Accessed [course]
+[2024-03-31 16:50:41] INFO: course
+[2024-03-31 16:50:42] INFO: Accessed [course]
+[2024-03-31 16:50:42] INFO: course
+[2024-03-31 16:50:42] INFO: Accessed [course]
+[2024-03-31 16:50:42] INFO: course
+[2024-03-31 16:50:42] INFO: Accessed [course]
+[2024-03-31 16:53:56] INFO: course
+[2024-03-31 16:53:56] INFO: Accessed [course]
+[2024-03-31 16:54:22] INFO: course
+[2024-03-31 16:54:22] INFO: Accessed [course]
+[2024-03-31 16:54:24] INFO: course
+[2024-03-31 16:54:24] INFO: Accessed [course]
+[2024-03-31 16:55:58] INFO: course
+[2024-03-31 16:55:58] INFO: Accessed [course]
+[2024-03-31 16:56:00] INFO: course
+[2024-03-31 16:56:00] INFO: Accessed [course]
+[2024-03-31 16:57:43] INFO: course
+[2024-03-31 16:57:43] INFO: Accessed [course]
+[2024-03-31 16:58:08] INFO: course
+[2024-03-31 16:58:08] INFO: Accessed [course]
+[2024-03-31 16:58:10] INFO: course
+[2024-03-31 16:58:10] INFO: Accessed [course]
+[2024-03-31 16:58:11] INFO: course
+[2024-03-31 16:58:11] INFO: Accessed [course]
+[2024-03-31 16:58:11] INFO: course
+[2024-03-31 16:58:11] INFO: Accessed [course]
+[2024-03-31 16:58:12] INFO: course
+[2024-03-31 16:58:12] INFO: Accessed [course]
+[2024-03-31 16:58:12] INFO: course
+[2024-03-31 16:58:12] INFO: Accessed [course]
+[2024-03-31 16:58:12] INFO: course
+[2024-03-31 16:58:12] INFO: Accessed [course]
+[2024-03-31 16:58:13] INFO: course
+[2024-03-31 16:58:13] INFO: Accessed [course]
+[2024-03-31 16:58:16] INFO: course
+[2024-03-31 16:58:16] INFO: Accessed [course]
+[2024-03-31 16:58:20] INFO: course
+[2024-03-31 16:58:20] INFO: Accessed [course]
+[2024-03-31 16:58:27] INFO: dashboard
+[2024-03-31 16:58:27] INFO: Accessed [dashboard]
+[2024-03-31 16:58:28] INFO: logout
+[2024-03-31 16:58:28] INFO: Logging Out
+[2024-03-31 16:58:28] INFO: home
+[2024-03-31 16:58:28] INFO: Accessed [home]
+[2024-03-31 16:58:29] INFO: login
+[2024-03-31 16:58:29] INFO: Accessed [login]
+[2024-03-31 16:58:31] INFO: login
+[2024-03-31 16:58:31] INFO: Accessed [login]
+[2024-03-31 16:58:32] INFO: Successfully validated Google Sign-In token
+[2024-03-31 16:58:32] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-03-31 16:58:32] INFO: bindingString: sssi
+[2024-03-31 16:58:32] INFO: No rows were affected. Update may not have found a matching row.
+[2024-03-31 22:58:32] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-03-31 16:58:32] INFO: dashboard
+[2024-03-31 16:58:32] INFO: Accessed [dashboard]
+[2024-03-31 16:58:34] INFO: course
+[2024-03-31 16:58:34] INFO: Accessed [course]
+[2024-03-31 16:58:35] INFO: course
+[2024-03-31 16:58:35] INFO: Accessed [course]
+[2024-03-31 16:58:36] INFO: course
+[2024-03-31 16:58:36] INFO: Accessed [course]
+[2024-03-31 16:59:14] INFO: course
+[2024-03-31 16:59:14] INFO: Accessed [course]
+[2024-03-31 17:01:09] INFO: course
+[2024-03-31 17:01:09] INFO: Accessed [course]
+[2024-03-31 17:01:24] INFO: course
+[2024-03-31 17:01:24] INFO: Accessed [course]
+[2024-03-31 17:01:30] INFO: course
+[2024-03-31 17:01:30] INFO: Accessed [course]
+[2024-03-31 17:01:30] INFO: course
+[2024-03-31 17:01:30] INFO: Accessed [course]
+[2024-03-31 17:01:30] INFO: course
+[2024-03-31 17:01:30] INFO: Accessed [course]
+[2024-03-31 17:01:30] INFO: course
+[2024-03-31 17:01:30] INFO: Accessed [course]
+[2024-03-31 17:01:57] INFO: course
+[2024-03-31 17:01:57] INFO: Accessed [course]
+[2024-03-31 17:02:14] INFO: course
+[2024-03-31 17:02:14] INFO: Accessed [course]
+[2024-03-31 17:02:30] INFO: course
+[2024-03-31 17:02:30] INFO: Accessed [course]
+[2024-03-31 17:02:59] INFO: course
+[2024-03-31 17:02:59] INFO: Accessed [course]
+[2024-03-31 17:03:05] INFO: course
+[2024-03-31 17:03:05] INFO: Accessed [course]
+[2024-03-31 17:03:08] INFO: dashboard
+[2024-03-31 17:03:08] INFO: Accessed [dashboard]
+[2024-03-31 17:03:09] INFO: course
+[2024-03-31 17:03:09] INFO: Accessed [course]
+[2024-03-31 17:03:12] INFO: dashboard
+[2024-03-31 17:03:12] INFO: Accessed [dashboard]
+[2024-03-31 17:03:14] INFO: course
+[2024-03-31 17:03:14] INFO: Accessed [course]
+[2024-03-31 17:03:14] INFO: dashboard
+[2024-03-31 17:03:14] INFO: Accessed [dashboard]
+[2024-03-31 17:03:15] INFO: course
+[2024-03-31 17:03:15] INFO: Accessed [course]
+[2024-03-31 17:03:19] INFO: dashboard
+[2024-03-31 17:03:19] INFO: Accessed [dashboard]
+[2024-03-31 17:03:21] INFO: course
+[2024-03-31 17:03:21] INFO: Accessed [course]
+[2024-03-31 17:03:22] INFO: course
+[2024-03-31 17:03:22] INFO: Accessed [course]
+[2024-03-31 17:03:45] INFO: course
+[2024-03-31 17:03:45] INFO: Accessed [course]
+[2024-03-31 17:03:48] INFO: course
+[2024-03-31 17:03:48] INFO: Accessed [course]
+[2024-03-31 17:04:03] INFO: course
+[2024-03-31 17:04:03] INFO: Accessed [course]
+[2024-03-31 17:04:06] INFO: course
+[2024-03-31 17:04:06] INFO: Accessed [course]
+[2024-03-31 17:04:15] INFO: dashboard
+[2024-03-31 17:04:15] INFO: Accessed [dashboard]
+[2024-03-31 17:04:16] INFO: course
+[2024-03-31 17:04:16] INFO: Accessed [course]
+[2024-03-31 17:04:18] INFO: lessons
+[2024-03-31 17:04:18] INFO: Accessed [lessons]
+[2024-03-31 17:04:20] INFO: course
+[2024-03-31 17:04:20] INFO: Accessed [course]
+[2024-03-31 17:04:41] INFO: course
+[2024-03-31 17:04:41] INFO: Accessed [course]
+[2024-03-31 17:04:48] INFO: course
+[2024-03-31 17:04:48] INFO: Accessed [course]
+[2024-03-31 17:04:49] INFO: home
+[2024-03-31 17:04:49] INFO: Accessed [home]
+[2024-03-31 17:04:50] INFO: login
+[2024-03-31 17:04:50] INFO: Accessed [login]
+[2024-03-31 17:04:50] INFO: dashboard
+[2024-03-31 17:04:50] INFO: Accessed [dashboard]
+[2024-03-31 17:04:52] INFO: course
+[2024-03-31 17:04:52] INFO: Accessed [course]
+[2024-03-31 17:05:00] INFO: logout
+[2024-03-31 17:05:00] INFO: Logging Out
+[2024-03-31 17:05:00] INFO: home
+[2024-03-31 17:05:00] INFO: Accessed [home]
+[2024-03-31 17:05:01] INFO: login
+[2024-03-31 17:05:01] INFO: Accessed [login]
+[2024-03-31 17:05:04] INFO: login
+[2024-03-31 17:05:04] INFO: Accessed [login]
+[2024-03-31 17:05:04] INFO: Successfully validated Google Sign-In token
+[2024-03-31 17:05:04] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-03-31 17:05:04] INFO: bindingString: sssi
+[2024-03-31 17:05:04] INFO: No rows were affected. Update may not have found a matching row.
+[2024-03-31 23:05:05] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-03-31 17:05:05] INFO: dashboard
+[2024-03-31 17:05:05] INFO: Accessed [dashboard]
+[2024-03-31 17:05:06] INFO: course
+[2024-03-31 17:05:06] INFO: Accessed [course]
+[2024-03-31 17:05:08] INFO: dashboard
+[2024-03-31 17:05:08] INFO: Accessed [dashboard]
+[2024-03-31 17:05:09] INFO: course
+[2024-03-31 17:05:09] INFO: Accessed [course]
+[2024-03-31 17:05:10] INFO: dashboard
+[2024-03-31 17:05:10] INFO: Accessed [dashboard]
+[2024-03-31 17:05:11] INFO: course
+[2024-03-31 17:05:11] INFO: Accessed [course]
+[2024-03-31 17:05:12] INFO: lessons
+[2024-03-31 17:05:12] INFO: Accessed [lessons]
+[2024-03-31 17:05:14] INFO: course
+[2024-03-31 17:05:14] INFO: Accessed [course]
+[2024-03-31 17:05:21] INFO: course
+[2024-03-31 17:05:21] INFO: Accessed [course]
+[2024-03-31 17:05:23] INFO: dashboard
+[2024-03-31 17:05:23] INFO: Accessed [dashboard]
+[2024-03-31 17:05:25] INFO: course
+[2024-03-31 17:05:25] INFO: Accessed [course]
+[2024-03-31 17:05:30] INFO: course
+[2024-03-31 17:05:30] INFO: Accessed [course]
+[2024-03-31 17:06:54] INFO: course
+[2024-03-31 17:06:54] INFO: Accessed [course]
+[2024-03-31 17:06:57] INFO: lessons
+[2024-03-31 17:06:57] INFO: Accessed [lessons]
+[2024-03-31 17:06:58] INFO: chapter
+[2024-03-31 17:06:58] INFO: Accessed [chapter]
+[2024-03-31 17:06:59] INFO: course
+[2024-03-31 17:06:59] INFO: Accessed [course]
+[2024-03-31 17:07:04] INFO: course
+[2024-03-31 17:07:04] INFO: Accessed [course]
+[2024-03-31 17:07:08] INFO: dashboard
+[2024-03-31 17:07:08] INFO: Accessed [dashboard]
+[2024-03-31 17:07:10] INFO: course
+[2024-03-31 17:07:10] INFO: Accessed [course]
+[2024-03-31 17:07:16] INFO: lessons
+[2024-03-31 17:07:16] INFO: Accessed [lessons]
+[2024-03-31 17:07:18] INFO: chapter
+[2024-03-31 17:07:18] INFO: Accessed [chapter]
+[2024-03-31 17:07:24] INFO: course
+[2024-03-31 17:07:24] INFO: Accessed [course]
+[2024-03-31 17:10:10] INFO: course
+[2024-03-31 17:10:10] INFO: Accessed [course]
+[2024-03-31 17:10:11] INFO: dashboard
+[2024-03-31 17:10:11] INFO: Accessed [dashboard]
+[2024-03-31 17:10:12] INFO: dashboard
+[2024-03-31 17:10:12] INFO: Accessed [dashboard]
+[2024-03-31 17:10:13] INFO: course
+[2024-03-31 17:10:13] INFO: Accessed [course]
+[2024-03-31 17:10:15] INFO: lessons
+[2024-03-31 17:10:15] INFO: Accessed [lessons]
+[2024-03-31 17:10:15] INFO: chapter
+[2024-03-31 17:10:15] INFO: Accessed [chapter]
+[2024-03-31 17:10:17] INFO: lessons
+[2024-03-31 17:10:17] INFO: Accessed [lessons]
+[2024-03-31 17:10:18] INFO: course
+[2024-03-31 17:10:18] INFO: Accessed [course]
+[2024-03-31 17:10:21] INFO: home
+[2024-03-31 17:10:21] INFO: Accessed [home]
+[2024-03-31 17:10:23] INFO: login
+[2024-03-31 17:10:23] INFO: Accessed [login]
+[2024-03-31 17:10:23] INFO: dashboard
+[2024-03-31 17:10:23] INFO: Accessed [dashboard]
+[2024-03-31 17:10:23] INFO: dashboard
+[2024-03-31 17:10:23] INFO: Accessed [dashboard]
+[2024-03-31 17:10:24] INFO: course
+[2024-03-31 17:10:24] INFO: Accessed [course]
+[2024-03-31 17:10:26] INFO: lessons
+[2024-03-31 17:10:26] INFO: Accessed [lessons]
+[2024-03-31 17:11:28] INFO: lessons
+[2024-03-31 17:11:28] INFO: Accessed [lessons]
+[2024-03-31 17:11:30] INFO: chapter
+[2024-03-31 17:11:30] INFO: Accessed [chapter]
+[2024-03-31 17:11:32] INFO: lessons
+[2024-03-31 17:11:32] INFO: Accessed [lessons]
+[2024-03-31 17:11:33] INFO: course
+[2024-03-31 17:11:33] INFO: Accessed [course]
+[2024-03-31 17:11:49] INFO: course
+[2024-03-31 17:11:49] INFO: Accessed [course]
+[2024-03-31 17:11:50] INFO: dashboard
+[2024-03-31 17:11:50] INFO: Accessed [dashboard]
+[2024-03-31 17:11:51] INFO: course
+[2024-03-31 17:11:51] INFO: Accessed [course]
+[2024-03-31 17:11:52] INFO: course
+[2024-03-31 17:11:52] INFO: Accessed [course]
+[2024-03-31 17:11:52] INFO: course
+[2024-03-31 17:11:52] INFO: Accessed [course]
+[2024-03-31 17:11:54] INFO: lessons
+[2024-03-31 17:11:54] INFO: Accessed [lessons]
+[2024-03-31 17:11:57] INFO: lessons
+[2024-03-31 17:11:57] INFO: Accessed [lessons]
+[2024-03-31 17:15:46] INFO: chapter
+[2024-03-31 17:15:46] INFO: Accessed [chapter]
+[2024-03-31 17:15:47] INFO: lessons
+[2024-03-31 17:15:47] INFO: Accessed [lessons]
+[2024-03-31 17:17:36] INFO: chapter
+[2024-03-31 17:17:36] INFO: Accessed [chapter]
+[2024-03-31 17:17:37] INFO: course
+[2024-03-31 17:17:37] INFO: Accessed [course]
+[2024-03-31 17:17:39] INFO: certificate
+[2024-03-31 17:17:39] INFO: Accessed [certificate]
+[2024-03-31 17:17:40] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-03-31 17:17:45] INFO: course
+[2024-03-31 17:17:45] INFO: Accessed [course]
+[2024-03-31 17:17:47] INFO: lessons
+[2024-03-31 17:17:47] INFO: Accessed [lessons]
+[2024-03-31 17:21:05] INFO: lessons
+[2024-03-31 17:21:05] INFO: Accessed [lessons]
+[2024-03-31 17:21:05] INFO: NotFound
+[2024-03-31 17:21:07] INFO: Dashboard
+[2024-03-31 17:21:07] INFO: dashboard
+[2024-03-31 17:21:07] INFO: Accessed [dashboard]
+[2024-03-31 17:21:08] INFO: course
+[2024-03-31 17:21:08] INFO: Accessed [course]
+[2024-03-31 17:21:09] INFO: course
+[2024-03-31 17:21:09] INFO: Accessed [course]
+[2024-03-31 17:21:09] INFO: course
+[2024-03-31 17:21:09] INFO: Accessed [course]
+[2024-03-31 17:21:10] INFO: lessons
+[2024-03-31 17:21:10] INFO: Accessed [lessons]
+[2024-03-31 17:22:51] INFO: course
+[2024-03-31 17:22:51] INFO: Accessed [course]
+[2024-03-31 17:23:02] INFO: course
+[2024-03-31 17:23:02] INFO: Accessed [course]
+[2024-03-31 17:23:08] INFO: course
+[2024-03-31 17:23:08] INFO: Accessed [course]
+[2024-03-31 17:23:08] INFO: course
+[2024-03-31 17:23:08] INFO: Accessed [course]
+[2024-03-31 17:24:05] INFO: course
+[2024-03-31 17:24:05] INFO: Accessed [course]
+[2024-03-31 17:24:09] INFO: lessons
+[2024-03-31 17:24:09] INFO: Accessed [lessons]
+[2024-03-31 17:24:19] INFO: chapter
+[2024-03-31 17:24:19] INFO: Accessed [chapter]
+[2024-03-31 17:24:22] INFO: course
+[2024-03-31 17:24:22] INFO: Accessed [course]
+[2024-03-31 17:24:37] INFO: course
+[2024-03-31 17:24:37] INFO: Accessed [course]
+[2024-03-31 17:24:41] INFO: course
+[2024-03-31 17:24:41] INFO: Accessed [course]
+[2024-03-31 17:24:41] INFO: course
+[2024-03-31 17:24:41] INFO: Accessed [course]
+[2024-03-31 17:24:42] INFO: lessons
+[2024-03-31 17:24:42] INFO: Accessed [lessons]
+[2024-03-31 17:24:44] INFO: chapter
+[2024-03-31 17:24:44] INFO: Accessed [chapter]
+[2024-03-31 17:24:45] INFO: lessons
+[2024-03-31 17:24:45] INFO: Accessed [lessons]
+[2024-03-31 17:25:22] INFO: lessons
+[2024-03-31 17:25:22] INFO: Accessed [lessons]
+[2024-03-31 17:25:39] INFO: chapter
+[2024-03-31 17:25:39] INFO: Accessed [chapter]
+[2024-03-31 17:25:41] INFO: lessons
+[2024-03-31 17:25:41] INFO: Accessed [lessons]
+[2024-03-31 17:25:42] INFO: chapter
+[2024-03-31 17:25:42] INFO: Accessed [chapter]
+[2024-03-31 17:25:42] INFO: course
+[2024-03-31 17:25:42] INFO: Accessed [course]
+[2024-03-31 17:25:54] INFO: course
+[2024-03-31 17:25:54] INFO: Accessed [course]
+[2024-03-31 17:25:55] INFO: course
+[2024-03-31 17:25:55] INFO: Accessed [course]
+[2024-03-31 17:25:57] INFO: lessons
+[2024-03-31 17:25:57] INFO: Accessed [lessons]
+[2024-03-31 17:26:47] INFO: lessons
+[2024-03-31 17:26:47] INFO: Accessed [lessons]
+[2024-03-31 17:26:53] INFO: lessons
+[2024-03-31 17:26:53] INFO: Accessed [lessons]
+[2024-03-31 17:26:54] INFO: chapter
+[2024-03-31 17:26:54] INFO: Accessed [chapter]
+[2024-03-31 17:26:55] INFO: chapter
+[2024-03-31 17:26:55] INFO: Accessed [chapter]
+[2024-03-31 17:26:58] INFO: lessons
+[2024-03-31 17:26:58] INFO: Accessed [lessons]
+[2024-03-31 17:27:15] INFO: lessons
+[2024-03-31 17:27:15] INFO: Accessed [lessons]
+[2024-03-31 17:27:16] INFO: chapter
+[2024-03-31 17:27:16] INFO: Accessed [chapter]
+[2024-03-31 17:27:18] INFO: chapter
+[2024-03-31 17:27:18] INFO: Accessed [chapter]
+[2024-03-31 17:27:19] INFO: lessons
+[2024-03-31 17:27:19] INFO: Accessed [lessons]
+[2024-03-31 17:28:23] INFO: lessons
+[2024-03-31 17:28:23] INFO: Accessed [lessons]
+[2024-03-31 17:28:28] INFO: lessons
+[2024-03-31 17:28:28] INFO: Accessed [lessons]
+[2024-03-31 17:28:29] INFO: chapter
+[2024-03-31 17:28:29] INFO: Accessed [chapter]
+[2024-03-31 17:28:30] INFO: chapter
+[2024-03-31 17:28:30] INFO: Accessed [chapter]
+[2024-03-31 17:28:32] INFO: lessons
+[2024-03-31 17:28:32] INFO: Accessed [lessons]
+[2024-03-31 17:28:38] INFO: chapter
+[2024-03-31 17:28:38] INFO: Accessed [chapter]
+[2024-03-31 17:28:40] INFO: lessons
+[2024-03-31 17:28:40] INFO: Accessed [lessons]
+[2024-03-31 17:28:40] INFO: chapter
+[2024-03-31 17:28:40] INFO: Accessed [chapter]
+[2024-03-31 17:28:56] INFO: chapter
+[2024-03-31 17:28:56] INFO: Accessed [chapter]
+[2024-03-31 17:28:57] INFO: dashboard
+[2024-03-31 17:28:57] INFO: Accessed [dashboard]
+[2024-03-31 17:28:58] INFO: course
+[2024-03-31 17:28:58] INFO: Accessed [course]
+[2024-03-31 17:28:59] INFO: lessons
+[2024-03-31 17:28:59] INFO: Accessed [lessons]
+[2024-03-31 17:29:00] INFO: course
+[2024-03-31 17:29:00] INFO: Accessed [course]
+[2024-03-31 17:29:00] INFO: course
+[2024-03-31 17:29:00] INFO: Accessed [course]
+[2024-03-31 17:29:17] INFO: course
+[2024-03-31 17:29:17] INFO: Accessed [course]
+[2024-03-31 17:29:19] INFO: course
+[2024-03-31 17:29:19] INFO: Accessed [course]
+[2024-03-31 17:29:19] INFO: course
+[2024-03-31 17:29:19] INFO: Accessed [course]
+[2024-03-31 17:29:20] INFO: lessons
+[2024-03-31 17:29:20] INFO: Accessed [lessons]
+[2024-03-31 17:29:21] INFO: course
+[2024-03-31 17:29:21] INFO: Accessed [course]
+[2024-03-31 17:29:22] INFO: lessons
+[2024-03-31 17:29:22] INFO: Accessed [lessons]
+[2024-03-31 17:29:23] INFO: course
+[2024-03-31 17:29:23] INFO: Accessed [course]
+[2024-03-31 17:29:48] INFO: course
+[2024-03-31 17:29:48] INFO: Accessed [course]
+[2024-03-31 17:29:50] INFO: logout
+[2024-03-31 17:29:50] INFO: Logging Out
+[2024-03-31 17:29:50] INFO: home
+[2024-03-31 17:29:50] INFO: Accessed [home]
+[2024-03-31 17:30:11] INFO: login
+[2024-03-31 17:30:11] INFO: Accessed [login]

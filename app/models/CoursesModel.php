@@ -214,5 +214,33 @@ class CoursesModel {
         $stmt->execute();
         $stmt->close();
     }
+
+    public function getChapterProgress($params){
+        $AccountId = $params['Account_Id'];
+        
+        $query = "SELECT * FROM tbl_sections WHERE Account_Id = ".$AccountId;
+
+        $stmt = $this->database->prepare($query);
+
+        if (!$stmt) {
+            $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
+            return [];
+        }
+
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if (!$result) {
+            $this->logger->log('Error executing query: ' . $stmt->error, 'error');
+            $stmt->close();
+            return [];
+        }
+
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+
+        $stmt->close();
+
+        return $data;
+    }
 }
 ?>

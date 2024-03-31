@@ -1,36 +1,31 @@
 <?php 
 
 function RefreshAccessibleContents($ContentList) {
-    $Chapters = [];
+    $LessonsTemplates = [];
     $Lessons = [];
 
     $lessonAccess = true;
 
-    for ($i=0; $i < (int)$_SESSION['CurrentLesson']; $i++) { 
-
-        if (!in_array($ContentList[$i]['ChapterId'], $Chapters)) {
-            $Chapters[] = $ContentList[$i]['ChapterId'];
-        }
-
-        if (!in_array($ContentList[$i]['ChapterId'], $Chapters)) {
-            $Chapters[] = $ContentList[$i]['ChapterId'];
-        }
-
-        if (!in_array($ContentList[$i]['LessonId'], $Lessons)) {
-            $Lessons[] = $ContentList[$i]['LessonId'];
+    foreach ($ContentList as $value) {
+        $LessonsTemplates[$value['CourseId']][] = $value['LessonId'];
+    }
+    
+    foreach ($_SESSION['CurrentLesson'] as $key => $value) {
+        for ($i=0; $i < $value; $i++) { 
+            if(isset($LessonsTemplates[$key][$i])) {
+                $Lessons[] = (int)$LessonsTemplates[$key][$i];
+            }
         }
     }
 
     updateAccessibleContents([
-        'MyCourses' => $Courses,
-        'AllowedChapters' => $Chapters,
         'AllowedLessons' => $Lessons,
     ]);
 }
 
 function CheckLesson($LessonId){
     if($_SESSION['User_Role'] === 'Student' ){
-        if (in_array($LessonId, $_SESSION['AllowedLessons'])) {
+        if (in_array((int)$LessonId, $_SESSION['AllowedLessons'])) {
             return true;
         } else {
             return false;

@@ -556,11 +556,13 @@ class LessonModel {
 
     public function getAllContents() {
         $query = "SELECT 
+            tbl_courses.Id as CourseId,
             tbl_chapter.Id as ChapterId,
             tbl_lessons.Id as LessonId
         FROM tbl_chapter
         LEFT JOIN tbl_lessons ON tbl_chapter.Id = tbl_lessons.Chapter_Id
-        ORDER BY tbl_chapter.Id, tbl_lessons.Id";
+        LEFT JOIN tbl_courses ON tbl_chapter.Course_Id = tbl_courses.Id
+        ORDER BY tbl_courses.Id, tbl_chapter.Id, tbl_lessons.Id";
     
         $stmt = $this->database->prepare($query);
     

@@ -13,7 +13,7 @@
         <div class="row">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=course'.'&course='.$data['Course'];?>"><?php echo $data['CourseDetails']['CourseName']?></a></li>
+                    <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=course&item='.$data['Course'].'&course='.$data['Course'];?>"><?php echo $data['CourseDetails']['CourseName']?></a></li>
                     <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=chapter&item='.$data['Activity'][0]['ChapterId'].'&course='.$data['Course'];?>"><?php echo $data['Activity'][0]['ChapterTitle'];?></a></li>
                     <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=lessons&item='.$data['Activity'][0]['LessonId'].'&course='.$data['Course'];?>"><?php echo $data['Activity'][0]['LessonTitle'];?></a></li>
                     <li class="breadcrumb-item active"><?php echo $data['Activity'][0]['ActivityTitle'];?></li>

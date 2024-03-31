@@ -3,6 +3,7 @@ use GuzzleHttp\Client;
 
 require_once __DIR__.'/../models/AccountModel.php';
 require_once __DIR__.'/../models/LessonModel.php';
+require_once __DIR__.'/../models/CoursesModel.php';
 require_once __DIR__.'/../../config/Database.php';
 
 class LoginController {
@@ -75,9 +76,7 @@ class LoginController {
                             'User_FirstName' => $decodedBody['given_name'],
                             'User_MiddleName' => "",
                             'User_LastName' => $decodedBody['family_name'],
-                            'User_Group' => $accountData[0]['Group'],
                             'User_Role' => $accountData[0]['Role'],
-                            'CurrentLesson' => $accountData[0]['CurrentLesson']
                         ]);
                         $accountData = $accountModel->updateAccount([
                             'Id'=>$accountData[0]['Id'],
@@ -86,7 +85,17 @@ class LoginController {
                             'LastName' => $decodedBody['family_name'],
                         ]);
                         if ($_SESSION['User_Role'] === 'Student'){
+                            $coursesModel = new CoursesModel($db, $logger);
                             $lessonModel = new LessonModel($db, $logger);
+
+                            $MyCourses = $coursesModel->getChapterProgress(['Account_Id'=>$_SESSION['User_Id']]);
+                            $CurrentLessons = [];
+                            foreach ($MyCourses as $key => $value) {
+                                $CurrentLessons[$value['Course_Id']] = (int)$value['Progress'];
+                            };
+                            createCurrentLessons([
+                                'CurrentLesson' => $CurrentLessons
+                            ]);
                             $ContentList = $lessonModel->getAllContents();
                             RefreshAccessibleContents($ContentList);
                         }

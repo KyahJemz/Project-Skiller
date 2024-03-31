@@ -61,8 +61,20 @@ class CourseController {
 
         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         $coursesModel = new CoursesModel($db, $logger);
+        $lessonModel = new LessonModel($db, $logger);
 
         $coursesModel->enrollStudentHere(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$db->escape($item)]);
+
+        $MyCourses = $coursesModel->getChapterProgress(['Account_Id'=>$_SESSION['User_Id']]);
+        $CurrentLessons = [];
+        foreach ($MyCourses as $key => $value) {
+            $CurrentLessons[$value['Course_Id']] = (int)$value['Progress'];
+        };
+        createCurrentLessons([
+            'CurrentLesson' => $CurrentLessons
+        ]);
+        $ContentList = $lessonModel->getAllContents();
+        RefreshAccessibleContents($ContentList);
 
         header('Location: '.BASE_URL.'?page=course&item='.$item.'&course='.$item);
         exit;

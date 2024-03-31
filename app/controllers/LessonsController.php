@@ -65,12 +65,12 @@ class LessonsController {
         $data['title'] = "Skiller - ".$data['Lessons'][0]['LessonTitle'];
 
         $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$db->escape($course)]);
-        
+
         $ProgressPercentage = number_format(((isset($data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']]) ? $data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']] : 0) / max($data['Progress']['LessonProgressTotal'][$data['Lessons'][0]['LessonId']], 1)) * 100, 2);
         if((int) $ProgressPercentage === 100) {
             if((int)$isNew > 0) {
-                $accountModel->updateCurrentLesson();
-                $_SESSION['CurrentLesson'] = (int)$_SESSION['CurrentLesson'] + 1;
+                $coursesModel->updateChapterProgress(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$db->escape($course)]);
+                $_SESSION['CurrentLesson'][$course] = (int)$_SESSION['CurrentLesson'][$course] + 1;
                 $ContentList = $lessonModel->getAllContents();
                 RefreshAccessibleContents($ContentList);
             }

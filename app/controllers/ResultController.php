@@ -175,10 +175,10 @@ class ResultController {
                 $ProgressPercentage = number_format(((isset($data['Progress']['LessonProgress'][$LessonId]) ? $data['Progress']['LessonProgress'][$LessonId] : 0) / max($data['Progress']['LessonProgressTotal'][$LessonId], 1)) * 100, 2);
                 if((int) $ProgressPercentage === 100) {
                     if((int)$isNew > 0) {
-                        $coursesModel->updateCurrentLesson(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$db->escape($course)]);
-                        // $_SESSION['CurrentLesson'] = (int)$_SESSION['CurrentLesson'] + 1;
-                        // $ContentList = $lessonModel->getAllContents();
-                        // RefreshAccessibleContents($ContentList);
+                        $coursesModel->updateChapterProgress(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$db->escape($course)]);
+                        $_SESSION['CurrentLesson'][$course] = (int)$_SESSION['CurrentLesson'][$course] + 1;
+                        $ContentList = $lessonModel->getAllContents();
+                        RefreshAccessibleContents($ContentList);
                     }
                 }
 
