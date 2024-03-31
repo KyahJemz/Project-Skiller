@@ -21,7 +21,7 @@
         <?php }?>
 
         <div class="row p-4 bg-white rounded-3">
-            <h3 class="row">Profile</h3>
+            <h3 class="row">Profile</h3>    
             <div class="row">
                 <div class="col-lg-3 mb-3">
                     <img class="w-100 mb-3 rounded-3 border profilePicture" src="<?php echo $data['image']?>" alt="Profile Image">
@@ -29,7 +29,7 @@
                 <div class="col-lg-9">
                     <div class="mb-3">
                         <label for="profileForm1" class="form-label">Full Name</label>
-                        <input type="text" value="<?php echo $data['name']?>" class="form-control" id="profileForm1" readonly disabled>
+                        <input type="text" value="<?php echo titleCase($data['name'])?>" class="form-control" id="profileForm1" readonly disabled>
                     </div>
                     <div class="mb-3">
                         <label for="profileForm2" class="form-label">Email</label>
@@ -39,17 +39,13 @@
                         <label for="profileForm3" class="form-label">Role</label>
                         <input type="text" value="<?php echo $data['role']?>" class="form-control" id="profileForm3" readonly disabled>
                     </div>
-                    <div class="mb-3">
-                        <label for="profileForm4" class="form-label">Section</label>
-                        <input type="text" value="<?php echo $data['group']?>" class="form-control" id="profileForm4" readonly disabled>
-                    </div>
                 </div>
             </div>
             <?php 
                 if ($data['role'] === "Student") {
             ?>
                 <?php 
-                    if ($_SESSION['User_Role'] === "Teacher" || $_SESSION['User_Role'] === "Administrator") {
+                    if ($_SESSION['User_Role'] === "Administrator") {
                 ?>
                     <h4 class="row mt-5 border-top pt-3">Actions</h4>
                     <div class="d-flex justify-content-between">
@@ -64,33 +60,9 @@
                 <?php 
                     }
                 ?>
-
-                    <h4 class="row mt-5 border-top pt-3">Student Progress</h4>
-                    <div class="row">
-                        <?php 
-                            $TotalProgressPercentage = number_format(((isset($data['Progress']['FullProgress']) ? $data['Progress']['FullProgress'] : 0) / max($data['Progress']['FullProgressTotal'], 1)) * 100, 2);
-                            echo '<div class="progress p-0">';
-                            $TotalChaptersCount = sizeof($data['Chapters']);
-                            foreach ($data['Chapters'] as $chapter) {
-                                $ChapterPercentage = number_format(((isset($data['Progress']['ChapterProgress'][$chapter["Id"]]) ? $data['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($data['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
-                                $adjustedWidth = (int)($ChapterPercentage * ((100 / $TotalChaptersCount)/100));
-                                echo '<div class="progress-bar '.getNextBgColor().'" role="progressbar" style="width: '.$adjustedWidth.'%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><strong>'.$ChapterPercentage.'%</strong></div>';
-                            }
-                            echo '</div>';
-                            echo '<p class="mb-3 mt-2">Overall progress: <strong>'.((int)$TotalProgressPercentage === 100 ? "Completed" : $TotalProgressPercentage."%").'</strong><p>';
-        
-        
-                            echo '<div class="row">';
-                            foreach ($data['Chapters'] as $chapter) {
-                                $ChapterPercentage = number_format(((isset($data['Progress']['ChapterProgress'][$chapter["Id"]]) ? $data['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($data['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
-                                echo '<h6><span class="badge ' . getNextBgColor() . '">#</span>&nbsp;&nbsp;' . $chapter['Title'] . ' - '.((int)$ChapterPercentage === 100  ? "Completed" : $ChapterPercentage."%").'</h6>';
-                            }
-                            echo '</div>';
-                        ?>
-                    </div>
             <?php 
                 } else {
-                    if (($_SESSION['User_Role'] === "Teacher" || $_SESSION['User_Role'] === "Administrator") && ($_SESSION['User_Id'] !== $data['id'])) {
+                    if (($_SESSION['User_Role'] === "Administrator") && ($_SESSION['User_Id'] !== $data['id'])) {
             ?>
                         <h4 class="row mt-5 border-top pt-3">Actions</h4>
                         <div class="d-flex justify-content-between">

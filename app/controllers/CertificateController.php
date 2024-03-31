@@ -3,6 +3,7 @@
 require_once __DIR__.'/../models/LessonModel.php';
 require_once __DIR__.'/../models/AccountModel.php';
 require_once __DIR__.'/../models/ProgressModel.php';
+require_once __DIR__.'/../models/CoursesModel.php';
 require_once __DIR__.'/../../config/Database.php';
 
 class CertificateController {
@@ -30,18 +31,21 @@ class CertificateController {
         $lessonModel = new LessonModel($db, $logger);
         $progressModel = new ProgressModel($db, $logger);
         $accountModel = new AccountModel($db, $logger);
+        $coursesModel = new CoursesModel($db, $logger);
 
-        $data['Chapters'] = $lessonModel->getChaptersOnly();
-        $data['Lessons'] = $lessonModel->getLessonsOnly();
+        $data['CourseDetails'] = $coursesModel->getCourses(['Course_Id'=>$db->escape($course)])[0];
 
-        $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$item]);
+        $data['Chapters'] = $lessonModel->getChaptersOnly(['Course_Id'=>$db->escape($course)]);
+        $data['Lessons'] = $lessonModel->getLessonsOnly(['Course_Id'=>$db->escape($course)]);
+
+        $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$item, 'Course_Id'=>$db->escape($course)]);
 
         $data['Account'] = $accountModel->getAccountById(['Account_Id'=>$item]);
 
         $Percentage = number_format(((isset($data['Progress']['FullProgress']) ? $data['Progress']['FullProgress'] : 0) / max($data['Progress']['FullProgressTotal'], 1)) * 100, 2);
 
         if ((int)$Percentage === 100){
-            $filename = __DIR__.'./../../public/certificates/certificate_'.$item.'.pdf';
+            $filename = __DIR__.'./../../public/certificates/certificate_'.$item.'_'.$course.'.pdf';
             // $logger->log("FINDING::: ".$filename, 'info');
             if (file_exists($filename)) {
                 header('Content-Type: application/pdf');
@@ -57,7 +61,7 @@ class CertificateController {
                     'ReceiverEmail' => $data['Account'][0]['Email'],
                     'Message' => 'Congratulations! ,You have completed your course. You can now view your certificate in your portal, Thank you!'
                 ]);
-                PDF::createPdf(['certName'=>$data['Account'][0]['FirstName'] . ' ' . $data['Account'][0]['LastName'], 'certId'=>$data['Account'][0]['Id']]);
+                PDF::createPdf(['certName'=>$data['Account'][0]['FirstName'] . ' ' . $data['Account'][0]['LastName'], 'certId'=>$data['Account'][0]['Id'], 'certCourseId'=>$data['CourseDetails']['Id'], 'certCourse'=>$data['CourseDetails']['CourseName']]);
                 header('Content-Type: application/pdf');
                 header('Content-Disposition: inline; filename="' . basename($filename) . '"');
                 header('Content-Length: ' . filesize($filename));

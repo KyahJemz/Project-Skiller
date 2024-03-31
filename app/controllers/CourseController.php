@@ -16,6 +16,14 @@ class CourseController {
         $progressModel = new ProgressModel($db, $logger);
         $coursesModel = new CoursesModel($db, $logger);
 
+        $StudentCourses = $coursesModel->getUserCourses(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$db->escape($item)]);
+        $data['IsEnrolled'] = FALSE;
+        foreach ($StudentCourses as $key => $value) {
+            if((int)$value['Id'] === (int)$course){
+                $data['IsEnrolled'] = TRUE;
+            }
+        }
+
         $data['Course'] = $coursesModel->getCourses(['Course_Id'=>$db->escape($item)])[0];
         $data['Chapters'] = $lessonModel->getChaptersOnly(['Course_Id'=>$db->escape($item)]);
         $data['Lessons'] = $lessonModel->getLessonsOnly(['Course_Id'=>$db->escape($item)]);
@@ -46,6 +54,18 @@ class CourseController {
         include(__DIR__ . '/../views/headers/SignedIn.php');
         include(__DIR__ . '/../views/ChaptersManagement.php');
         include(__DIR__ . '/../views/footers/Default.php');
+    }
+
+    public function action($item = null, $course=null){
+        $logger = new Logger();
+
+        $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+        $coursesModel = new CoursesModel($db, $logger);
+
+        $coursesModel->enrollStudentHere(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$db->escape($item)]);
+
+        header('Location: '.BASE_URL.'?page=course&item='.$item.'&course='.$item);
+        exit;
     }
 
     public function actionAdministrator($item = null, $course=null){

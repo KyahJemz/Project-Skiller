@@ -28,16 +28,12 @@ class ProfileController {
             header("Location: ".BASE_URL.'?page=NotFound');
             exit;
         }
-
-        $data['Chapters'] = $lessonModel->getChaptersOnly();
-        $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$db->escape($item)]);
         
         $data['id'] = $account[0]['Id'];
         $data['image'] = $account[0]['Image'];
         $data['name'] = !empty($account[0]['LastName']) ? $account[0]['LastName'].', '.$account[0]['FirstName'].' '.$account[0]['MiddleName'] : "";
         $data['lastname'] = $account[0]['LastName'];
         $data['role'] = $account[0]['Role'];
-        $data['group'] = $account[0]['Group'];
         $data['disabled'] = $account[0]['Disabled'];
         $data['email'] = $account[0]['Email'];
 

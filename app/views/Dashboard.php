@@ -115,7 +115,7 @@
             <div class="row p-3 rounded-3">
                 <div class="w-100 d-flex justify-content-between">
                     <h3>What to learn Next?</h3>
-                    <input id="FeaturedCoursesSearch" class="" type="text" name="" id="" placeholder="search">
+                    <input id="FeaturedCoursesSearch" class="h-50 p-2" type="text" name="" id="" placeholder="search">
                 </div>
                 <div id="FeaturedCourses" class=""></div>
             </div>

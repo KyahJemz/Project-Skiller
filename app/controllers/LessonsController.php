@@ -31,6 +31,19 @@ class LessonsController {
         $accountModel = new AccountModel($db, $logger);
         $coursesModel = new CoursesModel($db, $logger);
 
+        $StudentCourses = $coursesModel->getUserCourses(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$db->escape($item)]);
+        $data['IsEnrolled'] = FALSE;
+        foreach ($StudentCourses as $key => $value) {
+            if((int)$value['Id'] === (int)$course){
+                $data['IsEnrolled'] = TRUE;
+            }
+        }
+
+        if (!$data['IsEnrolled']){
+            header('Location: '.BASE_URL.'?page=NotFound');
+            exit;
+        }
+
         $data['Course'] = $db->escape($course);
         $data['CourseDetails'] = $coursesModel->getCourses(['Course_Id'=>$db->escape($course)])[0];
 
@@ -52,7 +65,7 @@ class LessonsController {
         $data['title'] = "Skiller - ".$data['Lessons'][0]['LessonTitle'];
 
         $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$db->escape($course)]);
-
+        
         $ProgressPercentage = number_format(((isset($data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']]) ? $data['Progress']['LessonProgress'][$data['Lessons'][0]['LessonId']] : 0) / max($data['Progress']['LessonProgressTotal'][$data['Lessons'][0]['LessonId']], 1)) * 100, 2);
         if((int) $ProgressPercentage === 100) {
             if((int)$isNew > 0) {

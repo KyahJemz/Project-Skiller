@@ -93,6 +93,7 @@ class ResultController {
             $progressModel = new ProgressModel($db, $logger);
             $accountModel = new AccountModel($db, $logger);
             $lessonModel = new LessonModel($db, $logger);
+            $coursesModel = new CoursesModel($db, $logger);
 
             $Activity =  $activityModel->getActivity(['ActivityId'=>$db->escape($item)]);
 
@@ -169,15 +170,15 @@ class ResultController {
                     'Course_Id'=>$db->escape($course)
                 ]);
     
-                $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$_SESSION['User_Id']]);
+                $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$db->escape($course)]);
 
-                $ProgressPercentage =  number_format(((isset($data['Progress']['LessonProgress'][$LessonId]) ? $data['Progress']['LessonProgress'][$LessonId] : 0) / max($data['Progress']['LessonProgressTotal'][$LessonId], 1)) * 100, 2);
+                $ProgressPercentage = number_format(((isset($data['Progress']['LessonProgress'][$LessonId]) ? $data['Progress']['LessonProgress'][$LessonId] : 0) / max($data['Progress']['LessonProgressTotal'][$LessonId], 1)) * 100, 2);
                 if((int) $ProgressPercentage === 100) {
                     if((int)$isNew > 0) {
-                        $accountModel->updateCurrentLesson();
-                        $_SESSION['CurrentLesson'] = (int)$_SESSION['CurrentLesson'] + 1;
-                        $ContentList = $lessonModel->getAllContents();
-                        RefreshAccessibleContents($ContentList);
+                        $coursesModel->updateCurrentLesson(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$db->escape($course)]);
+                        // $_SESSION['CurrentLesson'] = (int)$_SESSION['CurrentLesson'] + 1;
+                        // $ContentList = $lessonModel->getAllContents();
+                        // RefreshAccessibleContents($ContentList);
                     }
                 }
 
@@ -221,7 +222,7 @@ class ResultController {
                 }
             }
 
-            header('Location: '.BASE_URL.'?page=result&item='.$Id);
+            header('Location: '.BASE_URL.'?page=result&item='.$Id.'&course='.$db->escape($course));
             exit;
         }
     }

@@ -4,13 +4,7 @@
                 <a href="<?php echo BASE_URL ?>" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none skillerLogo">
                     <svg class="bi me-2" width="150" height="32" role="img" aria-label="Bootstrap"><image href="<?php echo BASE_URL . 'images/logo-full-white.png'; ?>" width="150" height="32"/></svg>
                 </a>
-                <?php if ($_SESSION['User_Role'] === "Teacher") { ?>
-                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 mainHeaderMenu">
-                        <li><a href="<?php echo BASE_URL . '?page=dashboard'; ?>" class="nav-link text-light px-2 link-body-emphasis">Dashboard</a></li>
-                        <li><a href="<?php echo BASE_URL . '?page=students'; ?>" class="nav-link text-light px-2 link-body-emphasis">My Students</a></li>
-                        <li><a href="<?php echo BASE_URL . '?page=course'; ?>" class="nav-link text-light px-2 link-body-emphasis">Course</a></li>
-                    </ul>
-                <?php } elseif ($_SESSION['User_Role'] === "Administrator"){ ?>
+                <?php if ($_SESSION['User_Role'] === "Administrator"){ ?>
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 mainHeaderMenu">
                         <li><a href="<?php echo BASE_URL . '?page=dashboard'; ?>" class="nav-link text-light px-2 link-body-emphasis">Dashboard</a></li>
                         <li><a href="<?php echo BASE_URL . '?page=accounts'; ?>" class="nav-link text-light px-2 link-body-emphasis">Accounts</a></li>
@@ -19,8 +13,7 @@
                 <?php } else { ?>
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 mainHeaderMenu">
                         <li><a href="<?php echo BASE_URL . '?page=dashboard'; ?>" class="nav-link text-light px-2 link-body-emphasis">Dashboard</a></li>
-                        <li><a href="<?php echo BASE_URL . '?page=course'; ?>" class="nav-link text-light px-2 link-body-emphasis">Course</a></li>
-                        <li><a href="<?php echo BASE_URL . '?page=scores'; ?>" class="nav-link text-light px-2 link-body-emphasis">Scores</a></li>
+                        <li><a href="<?php echo BASE_URL . '?page=scores'; ?>" class="nav-link text-light px-2 link-body-emphasis">My Scores</a></li>
                     </ul>
                 <?php } ?>
 

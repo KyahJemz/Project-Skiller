@@ -137,3 +137,8 @@ pre {
     border-color: black;
     transition: 750ms;
 }
+
+#FeaturedCoursesSearch {
+    height: 25px !important;
+    padding: 5px;
+}

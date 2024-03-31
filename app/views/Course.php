@@ -2,6 +2,10 @@
     <div class="container flex-fill">
         <h2 class="mb-3">Skiller: Tutorial System - <?php echo $data['Course']['CourseName']?></h2>
         <?php if ($_SESSION['User_Role'] === "Student") { ?>
+            <p><?php echo $data['Course']['CourseDescription']?></p>
+            <?php if (!$data['IsEnrolled']) {
+                echo '<a class="btn btn-primary mt-2 mb-4" href="'.BASE_URL.'?page=course&action=true'.'&course='.$data['Course']['Id'].'">Enroll This Course</a>';
+            } ?>
             <p>Course Overall Progress: <?php echo number_format(((isset($data['Progress']['FullProgress']) ? $data['Progress']['FullProgress'] : 0) / max($data['Progress']['FullProgressTotal'], 1)) * 100, 2).'%' ?></p>
         <?php } ?>
         <div class="accordion " id="accordionPanelsStayOpenExample">
@@ -25,7 +29,7 @@
                                     echo '</br>';
                                     echo nl2br($row2['LessonDescription']);
                                     echo '</br>';
-                                    if(CheckLesson($row2["LessonId"])){
+                                    if($data['IsEnrolled'] && CheckLesson($row2["LessonId"])){
                                         echo '<a class="btn btn-primary mt-2" href="'.BASE_URL.'?page=lessons&item='.$row2['LessonId'].'&course='.$data['Course']['Id'].'">View</a>';
                                     } else {
                                         echo '<a class="btn btn-secondary mt-2">Locked</a>';
@@ -54,7 +58,7 @@
                     }
                     $courseProgress = number_format(((isset($data['Progress']['FullProgress']) ? $data['Progress']['FullProgress'] : 0) / max($data['Progress']['FullProgressTotal'], 1)) * 100, 2);
                     if((int) $courseProgress === 100){
-                        echo '<a href="'.BASE_URL.'?page=certificate&item='.$_SESSION['User_Id'].'"><button class="btn btn-primary mt-3">View Certificate</button><a>';
+                        echo '<a href="'.BASE_URL.'?page=certificate&item='.$_SESSION['User_Id'].'&course='.$data['Course']['Id'].'"><button class="btn btn-primary mt-3">View Certificate</button><a>';
                     }
                 } else {
                     foreach ($data['Chapters'] as $row) {

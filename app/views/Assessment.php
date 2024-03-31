@@ -1,5 +1,5 @@
 <body class="bg-body-secondary d-flex flex-column justify-content-between h-100">
-    <form id="Assessment" class="container flex-fill" method="post" action="<?php echo '?page=result&item='.$data['Activity'][0]['ActivityId'].'&action=true'; ?>">
+    <form id="Assessment" class="container flex-fill" method="post" action="<?php echo '?page=result&item='.$data['Activity'][0]['ActivityId'].'&action=true'.'&course='.$data['Course']; ?>">
 
         <div class="row mb-4 p-4 bg-white rounded-3 d-flex flex-column align-items-center">
 

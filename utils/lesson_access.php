@@ -12,12 +12,17 @@ function RefreshAccessibleContents($ContentList) {
             $Chapters[] = $ContentList[$i]['ChapterId'];
         }
 
+        if (!in_array($ContentList[$i]['ChapterId'], $Chapters)) {
+            $Chapters[] = $ContentList[$i]['ChapterId'];
+        }
+
         if (!in_array($ContentList[$i]['LessonId'], $Lessons)) {
             $Lessons[] = $ContentList[$i]['LessonId'];
         }
     }
 
     updateAccessibleContents([
+        'MyCourses' => $Courses,
         'AllowedChapters' => $Chapters,
         'AllowedLessons' => $Lessons,
     ]);

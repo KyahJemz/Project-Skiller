@@ -40,7 +40,14 @@ class PDF {
         $x = ($w - $certDateWidth) / 2;
         $pdf->Cell(0, 10, $certDate, 0, 1, 'C');
 
-        $filename = __DIR__."./../public/certificates/certificate_" . $params['certId'] . ".pdf";
+        $pdf->SetY($pdf->GetY() + 13);
+        $certCourse = titleCase($params['certCourse']) . " Course,";
+        $pdf->SetFont('Times', '', 20);
+        $certDateWidth = $pdf->GetStringWidth($certCourse);
+        $x = ($w - $certDateWidth) / 2;
+        $pdf->Cell(0, 10, $certCourse, 0, 1, 'C');
+
+        $filename = __DIR__."./../public/certificates/certificate_" . $params['certId'] . "_" . $params['certCourseId'] . ".pdf";
         $pdf->Output($filename, 'F');
 
         echo "Created";
