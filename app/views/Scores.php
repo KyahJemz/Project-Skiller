@@ -1,16 +1,5 @@
 <body class="bg-body-secondary d-flex flex-column justify-content-between h-100">
     <div class="container flex-fill">
-        <?php if ($_SESSION['User_Role'] === "Teacher") {?>
-            <div class="row">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=students';?>">My Students</a></li>
-                      <li class="breadcrumb-item"><a class="text-dark" href="#" onclick="window.history.back()"><?php echo $data['lastname'];?></a></li>
-                      <li class="breadcrumb-item active">Assessments</li>
-                    </ol>
-                  </nav>
-            </div>
-        <?php }?>
         <?php if ($_SESSION['User_Role'] === "Administrator") {?>
             <div class="row">
                 <nav aria-label="breadcrumb">

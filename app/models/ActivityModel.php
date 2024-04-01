@@ -48,7 +48,8 @@ class ActivityModel {
 
     public function getActivitiesResults($params) {
         $AccountId = $this->database->escape($params['Account_Id']);
-        $query = "SELECT 
+        $CourseId = $this->database->escape($params['Course_Id']);
+        $query = 'SELECT 
             results.Id as ResultId,
             results.Score as Score,
             results.Total as Total,
@@ -58,14 +59,18 @@ class ActivityModel {
             lessons.Id as LessonId,
             lessons.Title as LessonTitle,
             lessons.Chapter_Id as ChapterId
-        FROM tbl_results AS results
-        LEFT JOIN tbl_lessons AS lessons ON results.Lesson_Id = lessons.Id
-        LEFT JOIN tbl_activity AS activity ON results.Activity_Id = activity.Id
-        WHERE results.Id IN (
-            SELECT MAX(tbl_results.Id) as ResultId
-            FROM tbl_results
-            WHERE tbl_results.Account_Id = $AccountId
-            GROUP BY tbl_results.Activity_Id, tbl_results.Lesson_Id, tbl_results.Account_Id)";
+            FROM tbl_results AS results
+            LEFT JOIN tbl_lessons AS lessons ON results.Lesson_Id = lessons.Id
+            LEFT JOIN tbl_activity AS activity ON results.Activity_Id = activity.Id
+            LEFT JOIN tbl_chapter AS chapter ON lessons.Chapter_Id = chapter.Id
+            WHERE results.Id IN (
+                SELECT MAX(tbl_results.Id) as ResultId
+                FROM tbl_results
+                LEFT JOIN tbl_lessons AS lessons ON tbl_results.Lesson_Id = lessons.Id
+                LEFT JOIN tbl_chapter AS chapter ON lessons.Chapter_Id = chapter.Id
+                WHERE tbl_results.Account_Id = '.$AccountId.' 
+                AND chapter.Course_Id = '.$CourseId.'
+                GROUP BY tbl_results.Activity_Id, tbl_results.Lesson_Id, tbl_results.Account_Id)';
     
         $stmt = $this->database->prepare($query);
     

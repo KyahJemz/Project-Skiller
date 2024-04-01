@@ -3237,3 +3237,243 @@
 [2024-03-31 17:29:50] INFO: Accessed [home]
 [2024-03-31 17:30:11] INFO: login
 [2024-03-31 17:30:11] INFO: Accessed [login]
+[2024-04-01 16:29:10] INFO: home
+[2024-04-01 16:29:10] INFO: Accessed [home]
+[2024-04-01 16:36:31] INFO: login
+[2024-04-01 16:36:32] INFO: Accessed [login]
+[2024-04-01 16:36:35] INFO: login
+[2024-04-01 16:36:35] INFO: Accessed [login]
+[2024-04-01 16:36:35] INFO: Successfully validated Google Sign-In token
+[2024-04-01 16:36:35] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-04-01 16:36:35] INFO: bindingString: sssi
+[2024-04-01 16:36:35] INFO: No rows were affected. Update may not have found a matching row.
+[2024-04-01 22:36:36] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-04-01 16:36:36] INFO: dashboard
+[2024-04-01 16:36:37] INFO: Accessed [dashboard]
+[2024-04-01 16:36:43] INFO: course
+[2024-04-01 16:36:43] INFO: Accessed [course]
+[2024-04-01 16:36:44] INFO: lessons
+[2024-04-01 16:36:44] INFO: Accessed [lessons]
+[2024-04-01 16:36:46] INFO: course
+[2024-04-01 16:36:46] INFO: Accessed [course]
+[2024-04-01 16:36:48] INFO: scores
+[2024-04-01 16:36:48] INFO: Accessed [scores]
+[2024-04-01 16:36:49] INFO: dashboard
+[2024-04-01 16:36:49] INFO: Accessed [dashboard]
+[2024-04-01 16:36:51] INFO: course
+[2024-04-01 16:36:51] INFO: Accessed [course]
+[2024-04-01 16:36:52] INFO: lessons
+[2024-04-01 16:36:52] INFO: Accessed [lessons]
+[2024-04-01 16:36:52] INFO: activity
+[2024-04-01 16:36:52] INFO: Accessed [activity]
+[2024-04-01 16:36:52] INFO: result
+[2024-04-01 16:36:52] INFO: Accessed [result]
+[2024-04-01 16:36:53] INFO: course
+[2024-04-01 16:36:53] INFO: Accessed [course]
+[2024-04-01 16:36:55] INFO: lessons
+[2024-04-01 16:36:55] INFO: Accessed [lessons]
+[2024-04-01 16:36:56] INFO: activity
+[2024-04-01 16:36:56] INFO: Accessed [activity]
+[2024-04-01 16:36:56] INFO: result
+[2024-04-01 16:36:56] INFO: Accessed [result]
+[2024-04-01 16:36:56] INFO: course
+[2024-04-01 16:36:56] INFO: Accessed [course]
+[2024-04-01 16:37:00] INFO: dashboard
+[2024-04-01 16:37:00] INFO: Accessed [dashboard]
+[2024-04-01 16:37:10] INFO: profile
+[2024-04-01 16:37:10] INFO: Accessed [profile]
+[2024-04-01 16:37:12] INFO: dashboard
+[2024-04-01 16:37:12] INFO: Accessed [dashboard]
+[2024-04-01 16:37:14] INFO: course
+[2024-04-01 16:37:14] INFO: Accessed [course]
+[2024-04-01 16:37:16] INFO: lessons
+[2024-04-01 16:37:16] INFO: Accessed [lessons]
+[2024-04-01 16:37:17] INFO: course
+[2024-04-01 16:37:17] INFO: Accessed [course]
+[2024-04-01 16:37:19] INFO: lessons
+[2024-04-01 16:37:19] INFO: Accessed [lessons]
+[2024-04-01 16:37:20] INFO: course
+[2024-04-01 16:37:20] INFO: Accessed [course]
+[2024-04-01 16:37:21] INFO: dashboard
+[2024-04-01 16:37:21] INFO: Accessed [dashboard]
+[2024-04-01 16:37:27] INFO: scores
+[2024-04-01 16:37:27] INFO: Accessed [scores]
+[2024-04-01 16:45:35] INFO: scores
+[2024-04-01 16:45:35] INFO: Accessed [scores]
+[2024-04-01 16:52:47] INFO: scores
+[2024-04-01 16:52:47] INFO: Accessed [scores]
+[2024-04-01 16:52:59] INFO: scores
+[2024-04-01 16:52:59] INFO: Accessed [scores]
+[2024-04-01 16:53:04] INFO: scores
+[2024-04-01 16:53:04] INFO: Accessed [scores]
+[2024-04-01 16:53:06] INFO: scores
+[2024-04-01 16:53:06] INFO: Accessed [scores]
+[2024-04-01 16:55:03] INFO: scores
+[2024-04-01 16:55:03] INFO: Accessed [scores]
+[2024-04-01 16:56:57] INFO: scores
+[2024-04-01 16:56:57] INFO: Accessed [scores]
+[2024-04-01 16:57:12] INFO: scores
+[2024-04-01 16:57:12] INFO: Accessed [scores]
+[2024-04-01 16:57:15] INFO: scores
+[2024-04-01 16:57:15] INFO: Accessed [scores]
+[2024-04-01 16:57:17] INFO: scores
+[2024-04-01 16:57:17] INFO: Accessed [scores]
+[2024-04-01 16:57:47] INFO: scores
+[2024-04-01 16:57:47] INFO: Accessed [scores]
+[2024-04-01 16:57:48] INFO: scores
+[2024-04-01 16:57:48] INFO: Accessed [scores]
+[2024-04-01 16:58:07] INFO: scores
+[2024-04-01 16:58:07] INFO: Accessed [scores]
+[2024-04-01 16:58:09] INFO: scores
+[2024-04-01 16:58:09] INFO: Accessed [scores]
+[2024-04-01 16:58:10] INFO: scores
+[2024-04-01 16:58:10] INFO: Accessed [scores]
+[2024-04-01 16:58:24] INFO: scores
+[2024-04-01 16:58:24] INFO: Accessed [scores]
+[2024-04-01 16:58:28] INFO: scores
+[2024-04-01 16:58:28] INFO: Accessed [scores]
+[2024-04-01 16:58:29] INFO: scores
+[2024-04-01 16:58:29] INFO: Accessed [scores]
+[2024-04-01 16:58:29] INFO: scores
+[2024-04-01 16:58:29] INFO: Accessed [scores]
+[2024-04-01 16:58:30] INFO: scores
+[2024-04-01 16:58:30] INFO: Accessed [scores]
+[2024-04-01 16:58:49] INFO: scores
+[2024-04-01 16:58:49] INFO: Accessed [scores]
+[2024-04-01 16:59:05] INFO: scores
+[2024-04-01 16:59:05] INFO: Accessed [scores]
+[2024-04-01 17:03:11] INFO: scores
+[2024-04-01 17:03:11] INFO: Accessed [scores]
+[2024-04-01 17:03:59] INFO: scores
+[2024-04-01 17:03:59] INFO: Accessed [scores]
+[2024-04-01 17:04:01] INFO: scores
+[2024-04-01 17:04:01] INFO: Accessed [scores]
+[2024-04-01 17:04:58] INFO: scores
+[2024-04-01 17:04:58] INFO: Accessed [scores]
+[2024-04-01 17:04:59] INFO: scores
+[2024-04-01 17:04:59] INFO: Accessed [scores]
+[2024-04-01 17:05:00] INFO: scores
+[2024-04-01 17:05:00] INFO: Accessed [scores]
+[2024-04-01 17:05:00] INFO: scores
+[2024-04-01 17:05:00] INFO: Accessed [scores]
+[2024-04-01 17:05:02] INFO: scores
+[2024-04-01 17:05:02] INFO: Accessed [scores]
+[2024-04-01 17:05:20] INFO: scores
+[2024-04-01 17:05:20] INFO: Accessed [scores]
+[2024-04-01 17:05:43] INFO: scores
+[2024-04-01 17:05:43] INFO: Accessed [scores]
+[2024-04-01 17:05:44] INFO: scores
+[2024-04-01 17:05:44] INFO: Accessed [scores]
+[2024-04-01 17:05:44] INFO: scores
+[2024-04-01 17:05:44] INFO: Accessed [scores]
+[2024-04-01 17:05:44] INFO: scores
+[2024-04-01 17:05:44] INFO: Accessed [scores]
+[2024-04-01 17:05:51] INFO: scores
+[2024-04-01 17:05:51] INFO: Accessed [scores]
+[2024-04-01 17:07:03] INFO: scores
+[2024-04-01 17:07:03] INFO: Accessed [scores]
+[2024-04-01 17:07:04] INFO: scores
+[2024-04-01 17:07:04] INFO: Accessed [scores]
+[2024-04-01 17:07:04] INFO: scores
+[2024-04-01 17:07:04] INFO: Accessed [scores]
+[2024-04-01 17:07:04] INFO: scores
+[2024-04-01 17:07:04] INFO: Accessed [scores]
+[2024-04-01 17:07:04] INFO: scores
+[2024-04-01 17:07:04] INFO: Accessed [scores]
+[2024-04-01 17:07:05] INFO: scores
+[2024-04-01 17:07:05] INFO: Accessed [scores]
+[2024-04-01 17:07:05] INFO: scores
+[2024-04-01 17:07:05] INFO: Accessed [scores]
+[2024-04-01 17:07:05] INFO: scores
+[2024-04-01 17:07:05] INFO: Accessed [scores]
+[2024-04-01 17:07:05] INFO: scores
+[2024-04-01 17:07:05] INFO: Accessed [scores]
+[2024-04-01 17:07:05] INFO: scores
+[2024-04-01 17:07:05] INFO: Accessed [scores]
+[2024-04-01 17:07:05] INFO: scores
+[2024-04-01 17:07:05] INFO: Accessed [scores]
+[2024-04-01 17:07:06] INFO: scores
+[2024-04-01 17:07:06] INFO: Accessed [scores]
+[2024-04-01 17:07:06] INFO: scores
+[2024-04-01 17:07:06] INFO: Accessed [scores]
+[2024-04-01 17:07:06] INFO: scores
+[2024-04-01 17:07:06] INFO: Accessed [scores]
+[2024-04-01 17:07:06] INFO: scores
+[2024-04-01 17:07:06] INFO: Accessed [scores]
+[2024-04-01 17:07:06] INFO: scores
+[2024-04-01 17:07:06] INFO: Accessed [scores]
+[2024-04-01 17:07:06] INFO: scores
+[2024-04-01 17:07:06] INFO: Accessed [scores]
+[2024-04-01 17:07:07] INFO: scores
+[2024-04-01 17:07:07] INFO: Accessed [scores]
+[2024-04-01 17:07:07] INFO: scores
+[2024-04-01 17:07:07] INFO: Accessed [scores]
+[2024-04-01 17:07:07] INFO: scores
+[2024-04-01 17:07:07] INFO: Accessed [scores]
+[2024-04-01 17:07:07] INFO: scores
+[2024-04-01 17:07:07] INFO: Accessed [scores]
+[2024-04-01 17:07:07] INFO: scores
+[2024-04-01 17:07:07] INFO: Accessed [scores]
+[2024-04-01 17:07:07] INFO: scores
+[2024-04-01 17:07:07] INFO: Accessed [scores]
+[2024-04-01 17:08:31] INFO: scores
+[2024-04-01 17:08:32] INFO: Accessed [scores]
+[2024-04-01 17:08:33] INFO: scores
+[2024-04-01 17:08:34] INFO: Accessed [scores]
+[2024-04-01 17:08:34] INFO: scores
+[2024-04-01 17:08:34] INFO: Accessed [scores]
+[2024-04-01 17:08:34] INFO: scores
+[2024-04-01 17:08:34] INFO: Accessed [scores]
+[2024-04-01 17:08:51] INFO: scores
+[2024-04-01 17:08:51] INFO: Accessed [scores]
+[2024-04-01 17:08:51] INFO: scores
+[2024-04-01 17:08:51] INFO: Accessed [scores]
+[2024-04-01 17:08:52] INFO: scores
+[2024-04-01 17:08:52] INFO: Accessed [scores]
+[2024-04-01 17:09:00] INFO: scores
+[2024-04-01 17:09:00] INFO: Accessed [scores]
+[2024-04-01 17:09:26] INFO: scores
+[2024-04-01 17:09:26] INFO: Accessed [scores]
+[2024-04-01 17:09:45] INFO: scores
+[2024-04-01 17:09:45] INFO: Accessed [scores]
+[2024-04-01 17:11:14] INFO: scores
+[2024-04-01 17:11:14] INFO: Accessed [scores]
+[2024-04-01 17:11:14] INFO: scores
+[2024-04-01 17:11:14] INFO: Accessed [scores]
+[2024-04-01 17:11:15] INFO: scores
+[2024-04-01 17:11:15] INFO: Accessed [scores]
+[2024-04-01 17:11:15] INFO: scores
+[2024-04-01 17:11:15] INFO: Accessed [scores]
+[2024-04-01 17:11:50] INFO: scores
+[2024-04-01 17:11:50] INFO: Accessed [scores]
+[2024-04-01 17:11:50] INFO: scores
+[2024-04-01 17:11:50] INFO: Accessed [scores]
+[2024-04-01 17:11:50] INFO: scores
+[2024-04-01 17:11:50] INFO: Accessed [scores]
+[2024-04-01 17:12:08] INFO: scores
+[2024-04-01 17:12:08] INFO: Accessed [scores]
+[2024-04-01 17:12:31] INFO: scores
+[2024-04-01 17:12:31] INFO: Accessed [scores]
+[2024-04-01 17:13:02] INFO: scores
+[2024-04-01 17:13:02] INFO: Accessed [scores]
+[2024-04-01 17:13:04] INFO: scores
+[2024-04-01 17:13:04] INFO: Accessed [scores]
+[2024-04-01 17:13:05] INFO: scores
+[2024-04-01 17:13:05] INFO: Accessed [scores]
+[2024-04-01 17:13:11] INFO: scores
+[2024-04-01 17:13:11] INFO: Accessed [scores]
+[2024-04-01 17:13:18] INFO: scores
+[2024-04-01 17:13:18] INFO: Accessed [scores]
+[2024-04-01 17:13:21] INFO: scores
+[2024-04-01 17:13:21] INFO: Accessed [scores]
+[2024-04-01 17:14:13] INFO: scores
+[2024-04-01 17:14:13] INFO: Accessed [scores]
+[2024-04-01 17:14:26] INFO: scores
+[2024-04-01 17:14:26] INFO: Accessed [scores]
+[2024-04-01 17:14:29] INFO: scores
+[2024-04-01 17:14:29] INFO: Accessed [scores]
+[2024-04-01 17:14:46] INFO: scores\
+[2024-04-01 17:14:51] INFO: scores
+[2024-04-01 17:14:51] INFO: Accessed [scores]
+[2024-04-01 17:16:03] INFO: scores
+[2024-04-01 17:16:03] INFO: Accessed [scores]

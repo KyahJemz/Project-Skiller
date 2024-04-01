@@ -8,11 +8,25 @@ class ScoresController {
 
     public function index($item = null, $course=null) {
         $logger = new Logger();
-        
-        $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-        $activityModel = new ActivityModel($db, $logger);
 
-        $data['Activities'] = $activityModel->getActivitiesResults(['Account_Id'=>$_SESSION['User_Id']]);
+        $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+
+        $data['HasCourse'] = $item;
+
+        if (empty($data['HasCourse'])) {
+            $coursesModel = new CoursesModel($db, $logger);
+            $lessonModel = new LessonModel($db, $logger);
+            $activityModel = new ActivityModel($db, $logger);
+    
+            $UserCourses = $coursesModel->getUserCourses(['Account_Id'=>$_SESSION['User_Id']]);
+
+            $data['MyCourses'] = [];
+
+           
+        } else {
+            $activityModel = new ActivityModel($db, $logger);
+            $data['Activities'] = $activityModel->getActivitiesResults(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$item]);
+        }
         
         $data['title'] = "Skiller - My Scores";
  
