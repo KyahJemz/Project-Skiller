@@ -16,7 +16,20 @@
 
             <h3 class="mb-4">Assessment Scores</h3>
 
-            <div class="row mb-2">
+            <?php if (empty($data['HasCourse'])) { ?>
+                <div id="MyCourses">
+                    <?php foreach ($data['MyCourses'] as $key => $value) {
+                        echo '<a class="courses-card d-flex" href="'.BASE_URL.'?page=scores&item='.$value['Id'].'&course='.$value['Id'].'">';
+                        echo '  <img height="150" width="150" src="'. BASE_URL . ($value['CourseImage'] ? $value['CourseImage'] : 'images/defaultCourse.jpg') . '" alt="image">';
+                        echo '  <div class="w-100 p-3">';
+                        echo '      <h5>'.$value['CourseName'].'</h5>';
+                        echo '      <p class="mt-2 mb-2 course-description">'.$value['CourseDescription'].'</p>';
+                        echo '  </div>';
+                        echo '</a>';
+                    } ?>
+                </div>
+            <?php } else { ?>
+                <div class="row mb-2">
                 <?php 
                     if(!empty($data['Activities'][0])) {
                         $TotalActivities = 0;
@@ -43,8 +56,7 @@
                 ?>
             </div>
 
-            <!-- ACTIVITIES -->
-            <?php 
+                <?php 
                 if(!empty($data['Activities'][0])) {
                     echo '<ul class="list-group">';
                     foreach ($data['Activities'] as $row){
@@ -53,7 +65,7 @@
                         if($_SESSION['User_Role'] === "Teacher" || $_SESSION['User_Role'] === "Administrator" ) {
                             echo '              <div class="col"><strong><a href="'.BASE_URL.'?page=result&item='.$row['ResultId'].'">'.$row['ActivityTitle']. '</a></strong></div>';   
                         } else {
-                            echo '              <div class="col"><strong><a href="'.BASE_URL.'?page=activity&item='.$row['ActivityId'].'">'.$row['ActivityTitle']. '</a></strong></div>';
+                            echo '              <div class="col"><strong><a href="'.BASE_URL.'?page=activity&item='.$row['ActivityId'].'&course='.$data['HasCourse'].'">'.$row['ActivityTitle']. '</a></strong></div>';
                         }
                         echo '              <div class="col">Score: <strong>'.$row['Score'].'/'.$row['Total'].'</strong></div>';
                         echo '      </div>';
@@ -65,5 +77,9 @@
                     echo '</ul>';
                 }
             ?>
+            <?php } ?>
+
+            
+          
         </div>
     </div>

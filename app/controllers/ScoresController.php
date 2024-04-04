@@ -2,6 +2,8 @@
 
 require_once __DIR__.'/../models/ActivityModel.php';
 require_once __DIR__.'/../models/AccountModel.php';
+require_once __DIR__.'/../models/LessonModel.php';
+require_once __DIR__.'/../models/CoursesModel.php';
 require_once __DIR__.'/../../config/Database.php';
 
 class ScoresController {
@@ -19,10 +21,8 @@ class ScoresController {
             $activityModel = new ActivityModel($db, $logger);
     
             $UserCourses = $coursesModel->getUserCourses(['Account_Id'=>$_SESSION['User_Id']]);
+            $data['MyCourses'] = $UserCourses;
 
-            $data['MyCourses'] = [];
-
-           
         } else {
             $activityModel = new ActivityModel($db, $logger);
             $data['Activities'] = $activityModel->getActivitiesResults(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$item]);
