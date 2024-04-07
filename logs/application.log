@@ -3911,3 +3911,159 @@
 [2024-04-05 17:32:21] INFO: Accessed [course]
 [2024-04-05 17:32:22] INFO: dashboard
 [2024-04-05 17:32:22] INFO: Accessed [dashboard]
+[2024-04-07 07:51:40] INFO: home
+[2024-04-07 07:51:40] INFO: Accessed [home]
+[2024-04-07 07:51:41] INFO: login
+[2024-04-07 07:51:41] INFO: Accessed [login]
+[2024-04-07 07:51:41] INFO: dashboard
+[2024-04-07 07:51:41] INFO: Accessed [dashboard]
+[2024-04-07 07:51:45] INFO: course
+[2024-04-07 07:51:45] INFO: Accessed [course]
+[2024-04-07 07:51:47] INFO: dashboard
+[2024-04-07 07:51:47] INFO: Accessed [dashboard]
+[2024-04-07 07:51:49] INFO: course
+[2024-04-07 07:51:49] INFO: Accessed [course]
+[2024-04-07 07:52:10] INFO: course
+[2024-04-07 07:52:10] INFO: Accessed [course]
+[2024-04-07 07:52:53] INFO: course
+[2024-04-07 07:52:53] INFO: Accessed [course]
+[2024-04-07 07:54:25] INFO: course
+[2024-04-07 07:54:25] INFO: Accessed [course]
+[2024-04-07 07:54:41] INFO: course
+[2024-04-07 07:54:41] INFO: Accessed [course]
+[2024-04-07 07:55:21] INFO: course
+[2024-04-07 07:55:21] INFO: Accessed [course]
+[2024-04-07 07:55:35] INFO: course
+[2024-04-07 07:55:35] INFO: Accessed [course]
+[2024-04-07 07:55:46] INFO: course
+[2024-04-07 07:55:46] INFO: Accessed [course]
+[2024-04-07 07:55:59] INFO: course
+[2024-04-07 07:55:59] INFO: Accessed [course]
+[2024-04-07 07:56:26] INFO: course
+[2024-04-07 07:56:26] INFO: Accessed [course]
+[2024-04-07 07:56:59] INFO: course
+[2024-04-07 07:56:59] INFO: Accessed [course]
+[2024-04-07 07:57:08] INFO: course
+[2024-04-07 07:57:08] INFO: Accessed [course]
+[2024-04-07 07:57:16] INFO: course
+[2024-04-07 07:57:16] INFO: Accessed [course]
+[2024-04-07 07:57:19] INFO: course
+[2024-04-07 07:57:19] INFO: Accessed [course]
+[2024-04-07 07:57:38] INFO: course
+[2024-04-07 07:57:38] INFO: Accessed [course]
+[2024-04-07 07:57:41] INFO: course
+[2024-04-07 07:57:41] INFO: Accessed [course]
+[2024-04-07 07:58:02] INFO: scores
+[2024-04-07 07:58:02] INFO: Accessed [scores]
+[2024-04-07 07:58:02] INFO: scores
+[2024-04-07 07:58:02] INFO: Accessed [scores]
+[2024-04-07 07:58:03] INFO: course
+[2024-04-07 07:58:03] INFO: Accessed [course]
+[2024-04-07 07:58:04] INFO: course
+[2024-04-07 07:58:04] INFO: Accessed [course]
+[2024-04-07 07:58:47] INFO: course
+[2024-04-07 07:58:47] INFO: Accessed [course]
+[2024-04-07 07:59:02] INFO: course
+[2024-04-07 07:59:02] INFO: Accessed [course]
+[2024-04-07 08:00:14] INFO: course
+[2024-04-07 08:00:14] INFO: Accessed [course]
+[2024-04-07 08:00:24] INFO: course
+[2024-04-07 08:00:24] INFO: Accessed [course]
+[2024-04-07 08:00:26] INFO: scores
+[2024-04-07 08:00:26] INFO: Accessed [scores]
+[2024-04-07 08:00:26] INFO: course
+[2024-04-07 08:00:26] INFO: Accessed [course]
+[2024-04-07 08:02:47] INFO: course
+[2024-04-07 08:02:47] INFO: Accessed [course]
+[2024-04-07 08:04:16] INFO: course
+[2024-04-07 08:04:16] INFO: Accessed [course]
+[2024-04-07 08:05:52] INFO: course
+[2024-04-07 08:05:52] INFO: Accessed [course]
+[2024-04-07 08:06:56] INFO: course
+[2024-04-07 08:06:56] INFO: Accessed [course]
+[2024-04-07 08:06:57] INFO: profile
+[2024-04-07 08:06:57] INFO: Accessed [profile]
+[2024-04-07 08:06:59] INFO: accounts
+[2024-04-07 08:06:59] INFO: Accessed [accounts]
+[2024-04-07 08:07:00] INFO: profile
+[2024-04-07 08:07:00] INFO: Accessed [profile]
+[2024-04-07 08:07:01] INFO: dashboard
+[2024-04-07 08:07:01] INFO: Accessed [dashboard]
+[2024-04-07 08:07:01] INFO: accounts
+[2024-04-07 08:07:01] INFO: Accessed [accounts]
+[2024-04-07 08:07:02] INFO: dashboard
+[2024-04-07 08:07:02] INFO: Accessed [dashboard]
+[2024-04-07 08:07:03] INFO: dashboard
+[2024-04-07 08:07:03] INFO: Accessed [dashboard]
+[2024-04-07 08:07:04] INFO: dashboard
+[2024-04-07 08:07:04] INFO: Accessed [dashboard]
+[2024-04-07 08:07:04] INFO: course
+[2024-04-07 08:07:04] INFO: Accessed [course]
+[2024-04-07 08:07:06] INFO: dashboard
+[2024-04-07 08:07:06] INFO: Accessed [dashboard]
+[2024-04-07 08:07:06] INFO: course
+[2024-04-07 08:07:06] INFO: Accessed [course]
+[2024-04-07 08:07:08] INFO: dashboard
+[2024-04-07 08:07:08] INFO: Accessed [dashboard]
+[2024-04-07 08:07:08] INFO: course
+[2024-04-07 08:07:08] INFO: Accessed [course]
+[2024-04-07 08:07:10] INFO: dashboard
+[2024-04-07 08:07:10] INFO: Accessed [dashboard]
+[2024-04-07 08:07:11] INFO: course
+[2024-04-07 08:07:11] INFO: Accessed [course]
+[2024-04-07 08:07:13] INFO: dashboard
+[2024-04-07 08:07:13] INFO: Accessed [dashboard]
+[2024-04-07 08:07:15] INFO: course
+[2024-04-07 08:07:15] INFO: Accessed [course]
+[2024-04-07 08:07:16] INFO: dashboard
+[2024-04-07 08:07:16] INFO: Accessed [dashboard]
+[2024-04-07 08:07:16] INFO: course
+[2024-04-07 08:07:16] INFO: Accessed [course]
+[2024-04-07 08:07:17] INFO: dashboard
+[2024-04-07 08:07:17] INFO: Accessed [dashboard]
+[2024-04-07 08:07:18] INFO: course
+[2024-04-07 08:07:18] INFO: Accessed [course]
+[2024-04-07 08:07:20] INFO: dashboard
+[2024-04-07 08:07:20] INFO: Accessed [dashboard]
+[2024-04-07 08:07:21] INFO: course
+[2024-04-07 08:07:21] INFO: Accessed [course]
+[2024-04-07 08:07:22] INFO: dashboard
+[2024-04-07 08:07:22] INFO: Accessed [dashboard]
+[2024-04-07 08:07:24] INFO: course
+[2024-04-07 08:07:24] INFO: Accessed [course]
+[2024-04-07 08:07:25] INFO: dashboard
+[2024-04-07 08:07:25] INFO: Accessed [dashboard]
+[2024-04-07 08:07:27] INFO: course
+[2024-04-07 08:07:27] INFO: Accessed [course]
+[2024-04-07 08:07:30] INFO: dashboard
+[2024-04-07 08:07:30] INFO: Accessed [dashboard]
+[2024-04-07 08:07:41] INFO: dashboard
+[2024-04-07 08:07:41] INFO: Accessed [dashboard]
+[2024-04-07 08:07:42] INFO: course
+[2024-04-07 08:07:42] INFO: Accessed [course]
+[2024-04-07 08:07:48] INFO: course
+[2024-04-07 08:07:48] INFO: Accessed [course]
+[2024-04-07 08:07:56] INFO: course
+[2024-04-07 08:07:56] INFO: Accessed [course]
+[2024-04-07 08:09:35] INFO: course
+[2024-04-07 08:09:35] INFO: Accessed [course]
+[2024-04-07 08:09:46] INFO: course
+[2024-04-07 08:09:46] INFO: Accessed [course]
+[2024-04-07 08:09:56] INFO: course
+[2024-04-07 08:09:56] INFO: Accessed [course]
+[2024-04-07 08:09:59] INFO: course
+[2024-04-07 08:09:59] INFO: Accessed [course]
+[2024-04-07 08:10:01] INFO: course
+[2024-04-07 08:10:01] INFO: Accessed [course]
+[2024-04-07 08:10:02] INFO: scores
+[2024-04-07 08:10:02] INFO: Accessed [scores]
+[2024-04-07 08:10:05] INFO: course
+[2024-04-07 08:10:05] INFO: Accessed [course]
+[2024-04-07 08:10:05] INFO: dashboard
+[2024-04-07 08:10:05] INFO: Accessed [dashboard]
+[2024-04-07 08:10:07] INFO: course
+[2024-04-07 08:10:07] INFO: Accessed [course]
+[2024-04-07 08:10:09] INFO: dashboard
+[2024-04-07 08:10:09] INFO: Accessed [dashboard]
+[2024-04-07 08:10:10] INFO: course
+[2024-04-07 08:10:10] INFO: Accessed [course]

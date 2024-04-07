@@ -38,24 +38,38 @@ class CourseController {
 
     public function indexAdministrator($item = null, $course=null){
         $logger = new Logger();
-        $data['title'] = "Skiller - Chapters Management";
+        $data['title'] = "Skiller - Course Management";
 
         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         $lessonModel = new LessonModel($db, $logger);
         $coursesModel = new CoursesModel($db, $logger);
 
-        $data['Course'] = $coursesModel->getCourses(['Course_Id'=>$db->escape($item)])[0];
-        $data['Chapters'] = $lessonModel->getChaptersOnly(['Course_Id'=>$db->escape($item)]);
-        $data['Lessons'] = $lessonModel->getLessonsOnly(['Course_Id'=>$db->escape($item)]);
+        if (empty($item)){
+            $OtherCourses = $coursesModel->getUserOtherCourses(['Account_Id'=>$_SESSION['User_Id']]);
+            $data['OtherCourses'] = $OtherCourses ;
 
-        echo '<script>';
-        echo 'const BASE_URL=`'.BASE_URL.'`;';
-        echo '</script>';
- 
-        include(__DIR__ . '/../views/headers/Default.php');
-        include(__DIR__ . '/../views/headers/SignedIn.php');
-        include(__DIR__ . '/../views/ChaptersManagement.php');
-        include(__DIR__ . '/../views/footers/Default.php');
+            echo '<script>';
+            echo 'const BASE_URL=`'.BASE_URL.'`;';
+            echo '</script>';
+     
+            include(__DIR__ . '/../views/headers/Default.php');
+            include(__DIR__ . '/../views/headers/SignedIn.php');
+            include(__DIR__ . '/../views/CoursesManagement.php');
+            include(__DIR__ . '/../views/footers/Default.php');
+        } else {
+            $data['Course'] = $coursesModel->getCourses(['Course_Id'=>$db->escape($item)])[0];
+            $data['Chapters'] = $lessonModel->getChaptersOnly(['Course_Id'=>$db->escape($item)]);
+            $data['Lessons'] = $lessonModel->getLessonsOnly(['Course_Id'=>$db->escape($item)]);
+
+            echo '<script>';
+            echo 'const BASE_URL=`'.BASE_URL.'`;';
+            echo '</script>';
+     
+            include(__DIR__ . '/../views/headers/Default.php');
+            include(__DIR__ . '/../views/headers/SignedIn.php');
+            include(__DIR__ . '/../views/ChaptersManagement.php');
+            include(__DIR__ . '/../views/footers/Default.php');
+        }
     }
 
     public function action($item = null, $course=null){

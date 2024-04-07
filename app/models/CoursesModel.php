@@ -119,7 +119,8 @@ class CoursesModel {
         $query = "SELECT 
             courses.Id as Id,
             courses.CourseName as CourseName,
-            courses.CourseImage as CourseImage
+            courses.CourseImage as CourseImage,
+            courses.CourseDescription as CourseDescription
             FROM tbl_courses as courses
             WHERE courses.Id $notInClause";
 

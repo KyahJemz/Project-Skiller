@@ -1,108 +1,87 @@
 <body class="bg-body-secondary d-flex flex-column justify-content-between h-100">
     <div class="container flex-fill">
-        <h2 class="mb-3">Skiller: Tutorial System - General Mathematics</h2>
+        <h2 class="mb-3">Skiller: Tutorial System - Courses Offered</h2>
         <div class="row">
             <div class="d-flex justify-content-between my-4">
-                <h3 class="mr-auto">Chapters:</h3>
-                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#AddChapter">Add Chapter</button>
+                <h3 class="mr-auto"></h3>
+                <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#AddCourse">Add Course</button>
             </div>
         </div>
-        <div class="accordion " id="accordionPanelsStayOpenExample">
-            <?php 
-                foreach ($data['Chapters'] as $row) {
-                    echo '<div class="accordion-item mb-2">';
-                    echo '    <h2 class="accordion-header">';
-                    echo '    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a'.$row['Id'].'" aria-expanded="false" aria-controls="a'.$row['Id'].'">';
-                    echo $row['Title'];
-                    echo '    </button>';
-                    echo '    <button class="edit-chapter-btn btn btn-secondary" data-chapterid="'.$row['Id'].'" type="button" data-bs-toggle="modal" data-bs-target="#EditChapter">';
-                    echo '      Edit';
-                    echo '    </button>';
-                    echo '    </h2>';
-                    echo '    <div id="a'.$row['Id'].'" class="accordion-collapse collapse">';
-                    echo '        <div class="accordion-body">';
-                    echo '          <a class="btn btn-secondary class="my-2" href="'.BASE_URL.'?page=chapter&item='.$row['Id'].'">View Chapter</a>';
-                    echo '</br></br>';
-                    foreach ($data['Lessons'] as $row2){
-                        if ($row2['ChapterId'] === $row['Id']){
-                            echo '<strong class="pb-2">'.$row2['LessonTitle'].'</strong>';
-                            echo '</br>';
-                            echo nl2br($row2['LessonDescription']);
-                            echo '</br>';
-                            echo '<a class="btn btn-primary class="mt-2" href="'.BASE_URL.'?page=lessons&item='.$row2['LessonId'].'">View</a>';
-                            echo '</br></br>';
-                        }
-                    }
-                    echo '              Scope: '.$row['Codes'];
-                    echo '        </div>';
-                    echo '    </div>';
-                    echo '</div>';
-                }
-            ?>
+        <div id="MyCourses">
+                <?php foreach ($data['OtherCourses'] as $key => $value) {
+                    echo '<a class="courses-card d-flex" href="'.BASE_URL.'?page=scores&item='.$value['Id'].'&course='.$value['Id'].'">';
+                    echo '  <img height="150" width="150" src="'. BASE_URL . ($value['CourseImage'] ? $value['CourseImage'] : 'images/defaultCourse.jpg') . '" alt="image">';
+                    echo '  <div class="w-100 p-3">';
+                    echo '      <h5>'.$value['CourseName'].'</h5>';
+                    echo '      <p class="mt-2 mb-2 course-description">'.$value['CourseDescription'].'</p>';
+                    echo '  </div>';
+                    echo '</a>';
+                } ?>
         </div>
     </div>
 
-    <div class="modal fade" id="EditChapter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="EditCourse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" action="#" method="post">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Edit Chapter Form</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Edit Course Form</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <p id="chapter-edit-success" class="text-success"></p>
-                        <p id="student-edit-failed" class="text-danger"></p>
+                        <p id="course-edit-success" class="text-success"></p>
+                        <p id="course-edit-failed" class="text-danger"></p>
                     </div>
                     <div class="mb-3">
-                        <label for="chapter-edit-title" class="col-form-label"><strong>Chapter Title:</strong></label>
-                        <input type="text" name="chapter-edit-title" class="form-control" id="chapter-edit-title" placeholder="Title" required>
-                        <p id="chapter-edit-title-note" class="text-danger"></p>
+                        <label for="course-edit-title" class="col-form-label"><strong>Course Title:</strong></label>
+                        <input type="text" name="course-edit-title" class="form-control" id="course-edit-title" placeholder="Title" required>
+                        <p id="course-edit-title-note" class="text-danger"></p>
                     </div>
                     <div class="mb-3">
-                        <label for="chapter-edit-codes" class="col-form-label"><strong>Chapter Codes:</strong></label>
-                        <input type="text" name="chapter-edit-codes" class="form-control" id="chapter-edit-codes" placeholder="Optional">
-                        <p id="chapter-edit-codes-note" class="text-danger"></p>
+                        <label for="course-edit-description" class="col-form-label"><strong>Course Description:</strong></label>
+                        <input type="text" name="course-edit-description" class="form-control" id="course-edit-description" placeholder="Optional">
+                        <p id="course-edit-description-note" class="text-danger"></p>
                     </div>
                     <div class="mb-3">
-                        <input type="text" name="chapter-edit-id" class="form-control" id="chapter-edit-id" require hidden>
+                        <label for="course-edit-image" class="col-form-label"><strong>Course Image:</strong></label>
+                        <input type="file" name="course-edit-image" class="form-control" id="course-edit-image" placeholder="Optional">
+                        <p id="course-edit-image-note" class="text-danger"></p>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="course-edit-id" class="form-control" id="course-edit-id" require hidden>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button id="ChapterDeleteBtnConfirmation" data-bs-toggle="modal" data-bs-target="#modalConfirmation" type="button" class="btn btn-danger">Delete</button>
-                    <button id="ChapterSubmitEditBtn" type="submit" class="btn btn-primary">Save Changes</button>
+                    <button id="CourseDeleteBtnConfirmation" data-bs-toggle="modal" data-bs-target="#modalConfirmation" type="button" class="btn btn-danger">Delete</button>
+                    <button id="CourseSubmitEditBtn" type="submit" class="btn btn-primary">Save Changes</button>
                 </div>
             </div> 
         </div>
     </div>
 
-    <div class="modal fade" id="AddChapter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="AddCourse" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" action="#" method="post">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Chapter Form</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Add Course Form</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <div class="mb-3">
-                        <p id="chapter-add-success" class="text-success"></p>
-                        <p id="chapter-add-failed" class="text-danger"></p>
+                    <div class="mb-3"> 
+                        <label for="course-description" class="col-form-label"><strong>Course Description:</strong></label>
+                        <input type="text" name="course-description" class="form-control" id="course-description" placeholder="Optional">
+                        <p id="course-description-note" class="text-danger"></p>
                     </div>
                     <div class="mb-3">
-                        <label for="chapter-title" class="col-form-label"><strong>Chapter Title:</strong></label>
-                        <input type="text" name="chapter-title" class="form-control" id="chapter-title" placeholder="Title" required>
-                        <p id="chapter-title-note" class="text-danger"></p>
-                    </div>
-                    <div class="mb-3">
-                        <label for="chapter-codes" class="col-form-label"><strong>Chapter Codes:</strong></label>
-                        <input type="text" name="chapter-codes" class="form-control" id="chapter-codes" placeholder="Optional">
-                        <p id="chapter-codes-note" class="text-danger"></p>
+                        <label for="course-image" class="col-form-label"><strong>Course Image:</strong></label>
+                        <input type="file" name="course-image" class="form-control" id="course-image">
+                        <p id="course-image-note" class="text-danger"></p>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button id="ChapterSubmitAddBtn" type="submit" class="btn btn-primary">Add Chapter</button>
+                    <button id="CourseSubmitAddBtn" type="submit" class="btn btn-primary">Add Course</button>
                 </div>
             </div> 
         </div>
@@ -116,11 +95,11 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p id="chapter-delete-confirmation">Are you sure you want to delete this chapter?</p>
+                    <p id="course-delete-confirmation">Are you sure you want to delete this course?</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
-                    <button type="button" class="btn btn-primary" id="ChapterDeleteBtn">Yes</button>
+                    <button type="button" class="btn btn-primary" id="CourseDeleteBtn">Yes</button>
                 </div>
             </div> 
         </div>
