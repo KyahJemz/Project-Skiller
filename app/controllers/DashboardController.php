@@ -59,7 +59,6 @@ class DashboardController {
         $coursesModel = new CoursesModel($db, $logger);
         $lessonModel = new LessonModel($db, $logger);
 
-
         $data['User_Name'] = ucwords(strtolower($_SESSION['User_FirstName']));
 
         $OtherCourses = $coursesModel->getUserOtherCourses(['Account_Id'=>$_SESSION['User_Id']]);

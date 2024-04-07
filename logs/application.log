@@ -3773,3 +3773,141 @@
 [2024-04-04 17:51:24] INFO: Accessed [scores]
 [2024-04-04 17:51:24] INFO: scores
 [2024-04-04 17:51:24] INFO: Accessed [scores]
+[2024-04-05 17:14:00] INFO: home
+[2024-04-05 17:14:00] INFO: Accessed [home]
+[2024-04-05 17:15:41] INFO: login
+[2024-04-05 17:15:41] INFO: Accessed [login]
+[2024-04-05 17:15:41] INFO: dashboard
+[2024-04-05 17:15:41] INFO: Accessed [dashboard]
+[2024-04-05 17:15:49] INFO: course
+[2024-04-05 17:15:49] INFO: Accessed [course]
+[2024-04-05 17:15:50] INFO: dashboard
+[2024-04-05 17:15:50] INFO: Accessed [dashboard]
+[2024-04-05 17:15:51] INFO: scores
+[2024-04-05 17:15:51] INFO: Accessed [scores]
+[2024-04-05 17:15:53] INFO: scores
+[2024-04-05 17:15:53] INFO: Accessed [scores]
+[2024-04-05 17:15:54] INFO: scores
+[2024-04-05 17:15:54] INFO: Accessed [scores]
+[2024-04-05 17:15:54] INFO: scores
+[2024-04-05 17:15:54] INFO: Accessed [scores]
+[2024-04-05 17:15:55] INFO: activity
+[2024-04-05 17:15:55] INFO: Accessed [activity]
+[2024-04-05 17:15:55] INFO: result
+[2024-04-05 17:15:55] INFO: Accessed [result]
+[2024-04-05 17:15:57] INFO: course
+[2024-04-05 17:15:57] INFO: Accessed [course]
+[2024-04-05 17:16:05] INFO: lessons
+[2024-04-05 17:16:05] INFO: Accessed [lessons]
+[2024-04-05 17:16:07] INFO: activity
+[2024-04-05 17:16:07] INFO: Accessed [activity]
+[2024-04-05 17:16:07] INFO: result
+[2024-04-05 17:16:07] INFO: Accessed [result]
+[2024-04-05 17:16:08] INFO: chapter
+[2024-04-05 17:16:08] INFO: Accessed [chapter]
+[2024-04-05 17:16:08] INFO: course
+[2024-04-05 17:16:08] INFO: Accessed [course]
+[2024-04-05 17:16:09] INFO: dashboard
+[2024-04-05 17:16:09] INFO: Accessed [dashboard]
+[2024-04-05 17:16:12] INFO: profile
+[2024-04-05 17:16:12] INFO: Accessed [profile]
+[2024-04-05 17:16:14] INFO: logout
+[2024-04-05 17:16:14] INFO: Logging Out
+[2024-04-05 17:16:14] INFO: home
+[2024-04-05 17:16:14] INFO: Accessed [home]
+[2024-04-05 17:16:15] INFO: login
+[2024-04-05 17:16:15] INFO: Accessed [login]
+[2024-04-05 17:16:24] INFO: login
+[2024-04-05 17:16:24] INFO: Accessed [login]
+[2024-04-05 17:16:25] INFO: Successfully validated Google Sign-In token
+[2024-04-05 17:16:25] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-04-05 17:16:25] INFO: bindingString: sssi
+[2024-04-05 17:16:25] INFO: Update successful
+[2024-04-05 23:16:26] INFO: Email sent to: stephenreganjames.layson@gmail.com
+[2024-04-05 17:16:26] INFO: dashboard
+[2024-04-05 17:16:26] INFO: Accessed [dashboard]
+[2024-04-05 17:16:47] INFO: course
+[2024-04-05 17:16:47] INFO: Accessed [course]
+[2024-04-05 17:16:49] INFO: dashboard
+[2024-04-05 17:16:49] INFO: Accessed [dashboard]
+[2024-04-05 17:16:55] INFO: course
+[2024-04-05 17:16:55] INFO: Accessed [course]
+[2024-04-05 17:16:58] INFO: dashboard
+[2024-04-05 17:16:58] INFO: Accessed [dashboard]
+[2024-04-05 17:19:45] INFO: course
+[2024-04-05 17:19:45] INFO: Accessed [course]
+[2024-04-05 17:21:54] INFO: course
+[2024-04-05 17:21:54] INFO: Accessed [course]
+[2024-04-05 17:22:02] INFO: course
+[2024-04-05 17:22:02] INFO: Accessed [course]
+[2024-04-05 17:22:04] INFO: course
+[2024-04-05 17:22:04] INFO: Accessed [course]
+[2024-04-05 17:23:22] INFO: chapters
+[2024-04-05 17:28:01] INFO: course
+[2024-04-05 17:28:01] INFO: Accessed [course]
+[2024-04-05 17:28:05] INFO: dashboard
+[2024-04-05 17:28:05] INFO: Accessed [dashboard]
+[2024-04-05 17:28:06] INFO: course
+[2024-04-05 17:28:06] INFO: Accessed [course]
+[2024-04-05 17:29:40] INFO: course
+[2024-04-05 17:29:40] INFO: Accessed [course]
+[2024-04-05 17:29:51] INFO: course
+[2024-04-05 17:29:51] INFO: Accessed [course]
+[2024-04-05 17:30:16] INFO: logout
+[2024-04-05 17:30:16] INFO: Logging Out
+[2024-04-05 17:30:16] INFO: home
+[2024-04-05 17:30:16] INFO: Accessed [home]
+[2024-04-05 17:30:17] INFO: login
+[2024-04-05 17:30:17] INFO: Accessed [login]
+[2024-04-05 17:30:20] INFO: login
+[2024-04-05 17:30:20] INFO: Accessed [login]
+[2024-04-05 17:30:20] INFO: Successfully validated Google Sign-In token
+[2024-04-05 17:30:20] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-04-05 17:30:20] INFO: bindingString: sssi
+[2024-04-05 17:30:20] INFO: Update successful
+[2024-04-05 23:30:21] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-04-05 17:30:21] INFO: dashboard
+[2024-04-05 17:30:21] INFO: Accessed [dashboard]
+[2024-04-05 17:30:22] INFO: course
+[2024-04-05 17:30:22] INFO: Accessed [course]
+[2024-04-05 17:30:27] INFO: dashboard
+[2024-04-05 17:30:27] INFO: Accessed [dashboard]
+[2024-04-05 17:30:31] INFO: course
+[2024-04-05 17:30:31] INFO: Accessed [course]
+[2024-04-05 17:30:34] INFO: dashboard
+[2024-04-05 17:30:34] INFO: Accessed [dashboard]
+[2024-04-05 17:30:35] INFO: logout
+[2024-04-05 17:30:35] INFO: Logging Out
+[2024-04-05 17:30:35] INFO: home
+[2024-04-05 17:30:35] INFO: Accessed [home]
+[2024-04-05 17:30:36] INFO: login
+[2024-04-05 17:30:36] INFO: Accessed [login]
+[2024-04-05 17:30:38] INFO: login
+[2024-04-05 17:30:38] INFO: Accessed [login]
+[2024-04-05 17:30:38] INFO: Successfully validated Google Sign-In token
+[2024-04-05 17:30:38] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-04-05 17:30:38] INFO: bindingString: sssi
+[2024-04-05 17:30:38] INFO: No rows were affected. Update may not have found a matching row.
+[2024-04-05 23:30:39] INFO: Email sent to: stephenreganjames.layson@gmail.com
+[2024-04-05 17:30:39] INFO: dashboard
+[2024-04-05 17:30:39] INFO: Accessed [dashboard]
+[2024-04-05 17:31:03] INFO: dashboard
+[2024-04-05 17:31:03] INFO: Accessed [dashboard]
+[2024-04-05 17:31:07] INFO: course
+[2024-04-05 17:31:07] INFO: Accessed [course]
+[2024-04-05 17:31:10] INFO: dashboard
+[2024-04-05 17:31:10] INFO: Accessed [dashboard]
+[2024-04-05 17:31:21] INFO: dashboard
+[2024-04-05 17:31:21] INFO: Accessed [dashboard]
+[2024-04-05 17:31:22] INFO: course
+[2024-04-05 17:31:22] INFO: Accessed [course]
+[2024-04-05 17:32:17] INFO: dashboard
+[2024-04-05 17:32:17] INFO: Accessed [dashboard]
+[2024-04-05 17:32:19] INFO: course
+[2024-04-05 17:32:19] INFO: Accessed [course]
+[2024-04-05 17:32:20] INFO: dashboard
+[2024-04-05 17:32:20] INFO: Accessed [dashboard]
+[2024-04-05 17:32:21] INFO: course
+[2024-04-05 17:32:21] INFO: Accessed [course]
+[2024-04-05 17:32:22] INFO: dashboard
+[2024-04-05 17:32:22] INFO: Accessed [dashboard]

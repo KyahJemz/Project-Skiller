@@ -42,9 +42,11 @@ class CourseController {
 
         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         $lessonModel = new LessonModel($db, $logger);
+        $coursesModel = new CoursesModel($db, $logger);
 
-        $data['Chapters'] = $lessonModel->getChaptersOnly();
-        $data['Lessons'] = $lessonModel->getLessonsOnly();
+        $data['Course'] = $coursesModel->getCourses(['Course_Id'=>$db->escape($item)])[0];
+        $data['Chapters'] = $lessonModel->getChaptersOnly(['Course_Id'=>$db->escape($item)]);
+        $data['Lessons'] = $lessonModel->getLessonsOnly(['Course_Id'=>$db->escape($item)]);
 
         echo '<script>';
         echo 'const BASE_URL=`'.BASE_URL.'`;';

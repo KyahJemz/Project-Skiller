@@ -79,46 +79,46 @@
 
             <?php if ($_SESSION['User_Role'] === "Student") { ?>
             
-            <div class="row p-3 rounded-3">
-                <h3>Lets Start Learning</h3>
-                <div id="MyCourses">
-                    <?php foreach ($data['MyCourses'] as $key => $value) {
-                        $TotalProgressPercentage = number_format(((isset($value['Progress']['FullProgress']) ? $value['Progress']['FullProgress'] : 0) / max($value['Progress']['FullProgressTotal'], 1)) * 100, 2);
-                        $TotalChaptersCount = sizeof($value['Chapters']);
-                        echo '<a class="courses-card d-flex" href="'.BASE_URL.'?page=course&item='.$value['Details']['Id'].'&course='.$value['Details']['Id'].'">';
-                        echo '  <img height="150" width="150" src="'. BASE_URL . ($value['Details']['CourseImage'] ? $value['Details']['CourseImage'] : 'images/defaultCourse.jpg') . '" alt="image">';
-                        echo '  <div class="w-100 p-3">';
-                        echo '      <h5>'.$value['Details']['CourseName'].'</h5>';
-                        echo '      <div class="mt-2 mb-2">Your Progress: '.$TotalProgressPercentage.'%</div>';
-                        echo '      <div class="progress p-0 w-100">';
-                        foreach ($value['Chapters'] as $chapter) {
-                            $ChapterPercentage = number_format(((isset($value['Progress']['ChapterProgress'][$chapter["Id"]]) ? $value['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($value['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
-                            $adjustedWidth = (float)($ChapterPercentage * ((100 / $TotalChaptersCount)/100));
-                            echo '<div class="progress-bar '.getNextBgColor().'" role="progressbar" style="width: '.$adjustedWidth.'%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0"><strong>'.$ChapterPercentage.'%</strong></div>';
-                        }
-                        echo '      </div>';
-                        echo '  </div>';
-                        echo '</a>';
-                    } ?>
+                <div class="row p-3 rounded-3">
+                    <h3>Lets Start Learning</h3>
+                    <div id="MyCourses">
+                        <?php foreach ($data['MyCourses'] as $key => $value) {
+                            $TotalProgressPercentage = number_format(((isset($value['Progress']['FullProgress']) ? $value['Progress']['FullProgress'] : 0) / max($value['Progress']['FullProgressTotal'], 1)) * 100, 2);
+                            $TotalChaptersCount = sizeof($value['Chapters']);
+                            echo '<a class="courses-card d-flex" href="'.BASE_URL.'?page=course&item='.$value['Details']['Id'].'&course='.$value['Details']['Id'].'">';
+                            echo '  <img height="150" width="150" src="'. BASE_URL . ($value['Details']['CourseImage'] ? $value['Details']['CourseImage'] : 'images/defaultCourse.jpg') . '" alt="image">';
+                            echo '  <div class="w-100 p-3">';
+                            echo '      <h5>'.$value['Details']['CourseName'].'</h5>';
+                            echo '      <div class="mt-2 mb-2">Your Progress: '.$TotalProgressPercentage.'%</div>';
+                            echo '      <div class="progress p-0 w-100">';
+                            foreach ($value['Chapters'] as $chapter) {
+                                $ChapterPercentage = number_format(((isset($value['Progress']['ChapterProgress'][$chapter["Id"]]) ? $value['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($value['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
+                                $adjustedWidth = (float)($ChapterPercentage * ((100 / $TotalChaptersCount)/100));
+                                echo '<div class="progress-bar '.getNextBgColor().'" role="progressbar" style="width: '.$adjustedWidth.'%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0"><strong>'.$ChapterPercentage.'%</strong></div>';
+                            }
+                            echo '      </div>';
+                            echo '  </div>';
+                            echo '</a>';
+                        } ?>
+                    </div>
                 </div>
-            </div>
 
-            <hr>
+                <hr>
 
-            <div class="row p-3 rounded-3">
-                <div class="w-100 d-flex justify-content-between"><h3>What to learn Next?</h3><input id="FeaturedCoursesSearch" class="" type="text" name="" id="" placeholder="search"></div>
-                <div id="FeaturedCourses" class=""></div>
-            </div>
+                <div class="row p-3 rounded-3">
+                    <div class="w-100 d-flex justify-content-between"><h3>What to learn Next?</h3><input id="FeaturedCoursesSearch" class="" type="text" name="" id="" placeholder="search"></div>
+                    <div id="FeaturedCourses" class=""></div>
+                </div>
 
             <?php } else { ?>
 
-            <div class="row p-3 rounded-3">
-                <div class="w-100 d-flex justify-content-between">
-                    <h3>What to learn Next?</h3>
-                    <input id="FeaturedCoursesSearch" class="h-50 p-2" type="text" name="" id="" placeholder="search">
+                <div class="row p-3 rounded-3">
+                    <div class="w-100 d-flex justify-content-between">
+                        <h3>What to learn Next?</h3>
+                        <input id="FeaturedCoursesSearch" class="h-50 p-2" type="text" name="" id="" placeholder="search">
+                    </div>
+                    <div id="FeaturedCourses" class=""></div>
                 </div>
-                <div id="FeaturedCourses" class=""></div>
-            </div>
 
             <?php } ?>
             

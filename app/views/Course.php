@@ -8,6 +8,7 @@
             } ?>
             <p>Course Overall Progress: <?php echo number_format(((isset($data['Progress']['FullProgress']) ? $data['Progress']['FullProgress'] : 0) / max($data['Progress']['FullProgressTotal'], 1)) * 100, 2).'%' ?></p>
         <?php } ?>
+        
         <div class="accordion " id="accordionPanelsStayOpenExample">
             <?php 
                 if($_SESSION['User_Role'] === "Student") {
