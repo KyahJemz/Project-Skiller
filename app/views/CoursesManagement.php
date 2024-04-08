@@ -9,13 +9,19 @@
         </div>
         <div id="MyCourses">
                 <?php foreach ($data['OtherCourses'] as $key => $value) {
-                    echo '<a class="courses-card d-flex" href="'.BASE_URL.'?page=scores&item='.$value['Id'].'&course='.$value['Id'].'">';
+                    echo '<div class="courses-card d-flex" href="'.BASE_URL.'?page=course&item='.$value['Id'].'&course='.$value['Id'].'">';
                     echo '  <img height="150" width="150" src="'. BASE_URL . ($value['CourseImage'] ? $value['CourseImage'] : 'images/defaultCourse.jpg') . '" alt="image">';
                     echo '  <div class="w-100 p-3">';
                     echo '      <h5>'.$value['CourseName'].'</h5>';
+                    echo '      <button class="edit-course-btn btn btn-secondary" data-courseid="'.$value['Id'].'" type="button" data-bs-toggle="modal" data-bs-target="#EditCourse">';
+                    echo '          Edit';
+                    echo '      </button>';
+                    echo '      <a class=" btn btn-primary" href="'.BASE_URL.'?page=course&item='.$value['Id'].'&course='.$value['Id'].'">';
+                    echo '          View';
+                    echo '      </a>';
                     echo '      <p class="mt-2 mb-2 course-description">'.$value['CourseDescription'].'</p>';
                     echo '  </div>';
-                    echo '</a>';
+                    echo '</div>';
                 } ?>
         </div>
     </div>
@@ -68,6 +74,15 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <div class="mb-3">
+                        <p id="course-add-success" class="text-success"></p>
+                        <p id="course-add-failed" class="text-danger"></p>
+                    </div>
+                    <div class="mb-3">
+                        <label for="course-title" class="col-form-label"><strong>Course Title:</strong></label>
+                        <input type="text" name="course-title" class="form-control" id="course-title" placeholder="Title" required>
+                        <p id="course-title-note" class="text-danger"></p>
+                    </div>
                     <div class="mb-3"> 
                         <label for="course-description" class="col-form-label"><strong>Course Description:</strong></label>
                         <input type="text" name="course-description" class="form-control" id="course-description" placeholder="Optional">

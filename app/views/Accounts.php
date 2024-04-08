@@ -5,7 +5,6 @@
             <h4 class="mb-4">Accounts Management</h4>
             <div>
                 <button id="btn-students" class="btn btn-primary">Students</button>
-                <button id="btn-teachers" class="btn btn-secondary">Teachers</button>
                 <button id="btn-administrators" class="btn btn-secondary">Administrators</button>
             </div>
         </div>
@@ -19,17 +18,6 @@
 
             <div id="Students" class="mt-4 list-group"></div>
         </div>
-
-        <div id="TeachersContainer" class="row p-4 bg-white rounded-3 d-none flex-column">
-            <div id="StudentsHeader" class="d-flex flex-row align-items-center">
-                <h4 class="text-nowrap">Teachers List</h4>
-                <input id="TeachersSearch" type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Search">
-                <button id="TeachersAddAccountBtn" type="button" data-bs-toggle="modal" data-bs-target="#AddTeacher" class="text-nowrap btn btn-primary">Add Teacher</button>
-            </div>
-
-            <div id="Teachers" class="mt-4 list-group"></div>
-        </div>
-
 
         <div id="AdministratorsContainer" class="row p-4 bg-white rounded-3 d-none flex-column">
             <div id="StudentsHeader" class="d-flex flex-row align-items-center">
@@ -46,15 +34,10 @@
     <script>
 
         let StudentBtn = document.getElementById('btn-students');
-        let TeacherBtn = document.getElementById('btn-teachers');
         let AdministratorBtn = document.getElementById('btn-administrators');
 
         StudentBtn.addEventListener('click', (e)=>{
             changePanel(e.target, 'StudentsContainer');
-        });
-
-        TeacherBtn.addEventListener('click', (e)=>{
-            changePanel(e.target, 'TeachersContainer');
         });
 
         AdministratorBtn.addEventListener('click', (e)=>{
@@ -64,18 +47,14 @@
         function changePanel(btn, panelId){
             StudentBtn.classList.remove('btn-primary');
             StudentBtn.classList.add('btn-secondary');
-            TeacherBtn.classList.remove('btn-primary');
-            TeacherBtn.classList.add('btn-secondary');
             AdministratorBtn.classList.remove('btn-primary');
             AdministratorBtn.classList.add('btn-secondary');
             btn.classList.remove('btn-secondary');
             btn.classList.add('btn-primary');
 
             document.getElementById('StudentsContainer').classList.remove('d-flex');
-            document.getElementById('TeachersContainer').classList.remove('d-flex');
             document.getElementById('AdministratorsContainer').classList.remove('d-flex');
             document.getElementById('StudentsContainer').classList.add('d-none');
-            document.getElementById('TeachersContainer').classList.add('d-none');
             document.getElementById('AdministratorsContainer').classList.add('d-none');
             let element = document.getElementById(panelId);
             element.classList.remove('d-none')
@@ -83,16 +62,12 @@
         }
 
         let StudentsArray = JSON.parse(Students);
-        let TeachersArray = JSON.parse(Teachers);
         let AdministratorsArray = JSON.parse(Administrators);
         let StudentsList = document.getElementById('Students');
-        let TeachersList = document.getElementById('Teachers');
         let AdministratorsList = document.getElementById('Administrators');
         let StudentsSearchElement = document.getElementById('StudentsSearch');
-        let TeachersSearchElement = document.getElementById('TeachersSearch');
         let AdministratorsSearchElement = document.getElementById('AdministratorsSearch');
         let S_Search = "";
-        let T_Search = "";
         let A_Search = "";
         let ChaptersArray = JSON.parse(Chapters);
         let counterBgColor = 0;
@@ -102,10 +77,6 @@
             RefreshStudentList();
         })
 
-        TeachersSearchElement.addEventListener('change', (e)=>{
-            T_Search = e.target.value;
-            RefreshTeacherList();
-        })
 
         AdministratorsSearchElement.addEventListener('change', (e)=>{
             A_Search = e.target.value;
@@ -143,14 +114,6 @@
                             } else {
                                 view += `<h5>${titleCase(row?.account?.LastName??"")}, ${titleCase(row?.account?.FirstName??"")} ${titleCase(row?.account?.MiddleName??"")}</h5>`;
                             }
-                            view += `<p class="m-0 p-0">Overall progress: <strong>${TotalProgressPercentage.toFixed(2)}%</strong><p>`;
-                            view += `<div class="progress px-0">`;
-                            ChaptersArray.forEach(chapter => {
-                                let ChapterPercentage = (((Number(row?.progress?.ChapterProgress[chapter.Id]) ?? 0) / Math.max(Number(row.progress.ChapterProgressTotal[chapter.Id]), 1)) * 100)??0;
-                                let adjustedWidth = (ChapterPercentage) * ((100 / (TotalChaptersCount)) / 100)??0;
-                                view += `<div class="progress-bar ${getNextBgColor()}" role="progressbar" style="width: ${parseFloat(adjustedWidth)}%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><strong>${isNaN(ChapterPercentage) ? 0.00 : ChapterPercentage.toFixed(2)}%</strong></div>`;
-                            });
-                            view += `</div>`;
                             view += `</a>`;
                             StudentsList.innerHTML += view;
                         } 
@@ -164,14 +127,6 @@
                             } else {
                                 view += `<h5>${titleCase(row?.account?.LastName??"")}, ${titleCase(row?.account?.FirstName??"")} ${titleCase(row?.account?.MiddleName??"")}</h5>`;
                             }
-                            view += `<p class="m-0 p-0">Overall progress: <strong>${TotalProgressPercentage.toFixed(2)}%</strong><p>`;
-                            view += `<div class="progress px-0">`;
-                            ChaptersArray.forEach(chapter => {
-                                let ChapterPercentage = (((Number(row?.progress?.ChapterProgress[chapter.Id]) ?? 0) / Math.max(Number(row.progress.ChapterProgressTotal[chapter.Id]), 1)) * 100)??0;
-                                let adjustedWidth = (ChapterPercentage) * ((100 / (TotalChaptersCount)) / 100)??0;
-                                view += `<div class="progress-bar ${getNextBgColor()}" role="progressbar" style="width: ${parseFloat(adjustedWidth)}%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"><strong>${isNaN(ChapterPercentage) ? 0.00 : ChapterPercentage.toFixed(2)}%</strong></div>`;
-                            });
-                            view += `</div>`;
                             view += `</a>`;
                             StudentsList.innerHTML += view;
                     }
@@ -179,40 +134,6 @@
             });
             if (StudentsList.innerHTML === "") {
                 StudentsList.innerHTML = "No items to show.";
-            }
-        }
-
-        function RefreshTeacherList(){
-            TeachersList.innerHTML = "";
-            TeachersArray.forEach(row => {
-                let Name = `${row.account.LastName}, ${row.account.FirstName} ${row.account.MiddleName??""}`;
-                let Email = `${row.account.Email}`;
-                if (T_Search) {
-                    if (Name.toUpperCase().includes(T_Search.toUpperCase()) || Email.toUpperCase().includes(T_Search.toUpperCase())) {
-                        let view = "";
-                        view += `<a href="${BASE_URL}?page=profile&item=${row.account.Id}" class="list-group-item list-group-item-action flex-column align-items-start">`;
-                        if (row.account.FirstName === null){
-                            view += `<h5>${row.account.Email??""}</h5>`;
-                        } else {
-                            view += `<h5>${titleCase(row.account.LastName)}, ${titleCase(row.account.FirstName)} ${titleCase(row.account.MiddleName??"")}</h5>`;
-                        }
-                        view += `</a>`;
-                        TeachersList.innerHTML += view;
-                    } 
-                } else {
-                    let view = "";
-                        view += `<a href="${BASE_URL}?page=profile&item=${row.account.Id}" class="list-group-item list-group-item-action flex-column align-items-start">`;
-                        if (row.account.FirstName === null){
-                            view += `<h5>${row.account.Email??""}</h5>`;
-                        } else {
-                            view += `<h5>${titleCase(row.account.LastName)}, ${titleCase(row.account.FirstName)} ${titleCase(row.account.MiddleName??"")}</h5>`;
-                        }
-                        view += `</a>`;
-                        TeachersList.innerHTML += view;
-                }
-            });
-            if (TeachersList.innerHTML === "") {
-                TeachersList.innerHTML = "No items to show.";
             }
         }
 
@@ -251,7 +172,6 @@
         }
 
         RefreshStudentList();
-        RefreshTeacherList();
         RefreshAdministratorList();
 
         function getNextBgColor() {
@@ -289,53 +209,10 @@
                         <input type="text" name="student-email" class="form-control" id="student-email" placeholder="s.####.####@sscr.edu" required>
                         <p id="student-email-note" class="text-danger"></p>
                     </div>
-                    <div class="mb-3">
-                        <label for="student-group" class="col-form-label"><strong>Section  </strong>( You're Section: <?php echo $_SESSION['User_Group']?> ) :</label>
-                        <select id="student-group" class="custom-select my-1 mr-sm-2 form-control" name="student-group" id="inlineFormCustomSelectPref" value="<?php echo $_SESSION['User_Group']?>" required>
-                            <option value="" selected>Choose...</option>
-                            <?php 
-                                foreach ($data['groups'] as $value) {
-                                    echo '<option value="'.$value['Group'].'">Group '.$value['Group'].'</option>';
-                                }
-                            ?>
-                        </select>
-                        <p id="student-group-note" class="text-danger"></p>
-                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button id="StudentsSubmitAddAccountBtn" type="submit" class="btn btn-primary">Register Student</button>
-                </div>
-            </div> 
-        </div>
-    </div>
-
-    <div class="modal fade" id="AddTeacher" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" action="#" method="post">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Add Teacher Form</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <p id="teacher-add-success" class="text-success"></p>
-                        <p id="teacher-add-failed" class="text-danger"></p>
-                    </div>
-                    <div class="mb-3">
-                        <label for="teacher-email" class="col-form-label"><strong>Teacher Email:</strong></label>
-                        <input type="text" name="teacher-email" class="form-control" id="teacher-email" placeholder="####.####@sscr.edu" required>
-                        <p id="teacher-email-note" class="text-danger"></p>
-                    </div>
-                    <div class="mb-3">
-                        <label for="teacher-group" class="col-form-label"><strong>Section: </strong></label>
-                        <input type="text" name="teacher-group" class="form-control" id="teacher-group" placeholder="group #" required>
-                        <p id="teacher-group-note" class="text-danger"></p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button id="TeachersSubmitAddAccountBtn" type="submit" class="btn btn-primary">Register Teacher</button>
                 </div>
             </div> 
         </div>

@@ -96,8 +96,9 @@ class LessonModel {
     public function addChapterOnly($params) {
         $ChapterTitle = $this->database->escape($params['Title']);
         $ChapterCodes = $this->database->escape($params['Codes']);
+        $CourseId = $this->database->escape($params['CourseId']);
     
-        $query = "INSERT IGNORE INTO tbl_chapter (Title, Codes) VALUES (?, ?)";
+        $query = "INSERT IGNORE INTO tbl_chapter (Course_Id, Title, Codes) VALUES (?, ?, ?)";
         
         $stmt = $this->database->prepare($query);
     
@@ -106,7 +107,7 @@ class LessonModel {
             return false;  
         }
     
-        $stmt->bind_param('ss', $ChapterTitle, $ChapterCodes);
+        $stmt->bind_param('iss', $CourseId, $ChapterTitle, $ChapterCodes);
     
         $stmt->execute();
     

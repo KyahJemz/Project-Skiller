@@ -13,9 +13,9 @@
             <div class="container">
                 <div class="row gx-lg-5 align-items-center">
                     <div class="col-lg-7 mb-5 mb-lg-0">
-                        <h1 class="my-5 display-3 fw-bold ls-tight text-primary">General Mathematics</h1>
+                        <h1 class="my-5 display-3 fw-bold ls-tight text-primary">Skiller Tutorial System</h1>
                         <p style="color: hsl(217, 10%, 50.8%)">
-                            Skiller's General Mathematics tutorial spans five weeks, following the DepEd syllabus. The program features interactive activities, assessments, and exams for an engaging learning experience. With a user-friendly interface, Skiller prioritizes deep comprehension, fostering critical thinking and problem-solving skills, making it an ideal resource for effective and efficient General Mathematics learning.
+                        The Skiller Tutorial System caters to senior high school students, specifically focusing on the subject of General Mathematics. Aligned with the K-12 curriculum mandated by the Department of Education in the Philippines, the platform is tailored to meet the academic needs of senior high school learners. By adhering to the curriculum guidelines, Skiller Tutorial System ensures comprehensive coverage of relevant topics, providing a structured and supportive online learning environment for students to excel in their General Mathematics studies.
                         </p>
                     </div>
 
@@ -53,19 +53,21 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-outline d-flex justify-content-center mb-4 login-or">
+                                    <div class="form-outline d-flex justify-content-center mb-1 login-or">
                                         <div class="text">or</div>
                                         <div class="line"></div>
                                     </div>
 
-                                    <form class="form-outline d-flex flex-column mb-4">
+                                    <p class="text-center">Sign Up</p>
+
+                                    <div class="form-outline d-flex flex-column mb-4">
                                         <div class=" w-100 d-flex justify-content-between mb-2 gap-2">
-                                            <input class="w-100" type="text" placeholder="FirstName" required>
-                                            <input class="w-100" type="text" placeholder="LastName" required>
+                                            <input id="signup-firstname" class="w-100" type="text" placeholder="FirstName" required>
+                                            <input id="signup-lastname" class="w-100" type="text" placeholder="LastName" required>
                                         </div>
-                                        <div class=" d-flex mb-2 w-100"><input class="flex w-100" type="email" placeholder="Email" required></div>
-                                        <div class=" d-flex w-100"> <input class="w-100 btn btn-primary" type="submit" value="Sign-Up"></div>
-                                    </form>
+                                        <div class=" d-flex mb-2 w-100"><input id="signup-email" class="flex w-100" type="email" placeholder="Email" required></div>
+                                        <div class=" d-flex w-100"> <input id="SignUpBtn" class="w-100 btn btn-primary" type="submit" value="Sign-Up"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

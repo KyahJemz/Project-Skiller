@@ -12,26 +12,16 @@ class AccountsController {
         $logger = new Logger();
 
         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
-        $activityModel = new ActivityModel($db, $logger);
         $accountModel = new AccountModel($db, $logger);
-        $lessonModel = new LessonModel($db, $logger);
-        $progressModel = new ProgressModel($db, $logger);
 
         $accounts = $accountModel->getAccount([]);
         $data['students'] = [];
-        $data['teachers'] = [];
         $data['administrators'] = [];
 
         foreach ($accounts as $account) {
             switch ($account['Role']) {
                 case 'Student':
                     $data['students'][] = [
-                        'account' => $account,
-                        'progress' => $progressModel->getAllMyProgress(['Account_Id' => $account['Id']])
-                    ];
-                    break;
-                case 'Teacher':
-                    $data['teachers'][] = [
                         'account' => $account,
                     ];
                     break;
@@ -45,17 +35,11 @@ class AccountsController {
             }
         }
 
-        $data['chapters'] = $lessonModel->getChaptersOnly();
-
-        $data['groups'] = $accountModel->getGroups();
-
         $data['title'] = "Welcome to Skiller: My Students";
 
         echo '<script>';
         echo 'const Students=`'.json_encode($data['students']).'`;';
-        echo 'const Teachers=`'.json_encode($data['teachers']).'`;';
         echo 'const Administrators=`'.json_encode($data['administrators']).'`;';
-        echo 'const Chapters=`'.json_encode($data['chapters']).'`;';
         echo 'const BASE_URL=`'.BASE_URL.'`;';
         echo '</script>';
 
@@ -63,6 +47,10 @@ class AccountsController {
         include(__DIR__ . '/../views/headers/SignedIn.php');
         include(__DIR__ . '/../views/accounts.php');
         include(__DIR__ . '/../views/footers/Default.php');
+    }
+
+    public function action($item = null, $course=null){
+
     }
 
     public function actionAdministrator($item = null, $course=null){

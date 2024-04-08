@@ -4,13 +4,61 @@ window.handleCredentialResponse = (response) => {
     window.location.href = `${BASE_URL}index.php?page=login&action=process&token=${response.credential}`;
 }
 
+
+// SIGN UP BTN  ADD
+let SignUpBtn = document.getElementById('SignUpBtn');
+if(SignUpBtn) {
+    SignUpBtn.addEventListener('click', async ()=>{
+        SignUpBtn.disabled = true;
+        let Email = document.getElementById('signup-email').value;
+        let FirstName = document.getElementById('signup-firstname').value;
+        let LastName = document.getElementById('signup-lastname').value;
+    
+        if (!Email) {
+            alert("Email Required");
+            SignUpBtn.disabled = false;
+            return
+        }
+
+        if (!FirstName) {
+            alert("FirstName Required");
+            SignUpBtn.disabled = false;
+            return
+        }
+
+        if (!LastName) {
+            alert("LastName Required");
+            SignUpBtn.disabled = false;
+            return
+        }
+    
+        let data = {
+            'Email': Email,
+            'FirstName': FirstName,
+            'LastName': LastName,
+        };
+    
+        AjaxRequest.sendRequest(data, BASE_URL + "?page=accounts&action=true")
+            .then(response => {
+                setTimeout(() => {
+                    window.location.reload();
+                }, 500);
+            })
+            .catch(error => {
+                alert("Sign Up Failed, Try Again!")
+            })
+            .finally(() => {
+                SignUpBtn.disabled = false;
+            });
+    })
+}
+
 // STUDENTS  ADD
 let StudentsSubmitAddAccountBtn = document.getElementById('StudentsSubmitAddAccountBtn');
 if(StudentsSubmitAddAccountBtn) {
     StudentsSubmitAddAccountBtn.addEventListener('click', async ()=>{
         StudentsSubmitAddAccountBtn.disabled = true;
         let Email = document.getElementById('student-email').value;
-        let Group = document.getElementById('student-group').value;
         
         document.getElementById('student-add-success').innerHTML = "";
         document.getElementById('student-add-failed').innerHTML = ""
@@ -21,16 +69,9 @@ if(StudentsSubmitAddAccountBtn) {
             return
         }
         document.getElementById('student-email-note').innerHTML = "";
-        if (!Group){
-            document.getElementById('student-group-note').innerHTML = "Section Required!";
-            StudentsSubmitAddAccountBtn.disabled = false;
-            return
-        }
-        document.getElementById('student-group-note').innerHTML = "";
     
         let data = {
             'Email': Email,
-            'Group': Group,
         };
     
         AjaxRequest.sendRequest(data, BASE_URL + "?page=students&action=true")
@@ -44,51 +85,6 @@ if(StudentsSubmitAddAccountBtn) {
             })
             .finally(() => {
                 StudentsSubmitAddAccountBtn.disabled = false;
-            });
-    })
-}
-
-// TEACHERS ADD 
-let TeachersSubmitAddAccountBtn = document.getElementById('TeachersSubmitAddAccountBtn');
-if(TeachersSubmitAddAccountBtn) {
-    TeachersSubmitAddAccountBtn.addEventListener('click', async ()=>{
-        TeachersSubmitAddAccountBtn.disabled = true;
-        let Email = document.getElementById('teacher-email').value;
-        let Group = document.getElementById('teacher-group').value;
-        
-        document.getElementById('teacher-add-success').innerHTML = "";
-        document.getElementById('teacher-add-failed').innerHTML = ""
-    
-        if (!Email) {
-            document.getElementById('teacher-email-note').innerHTML = "Email Required!";
-            TeachersSubmitAddAccountBtn.disabled = false;
-            return
-        }
-        document.getElementById('teacher-email-note').innerHTML = "";
-        if (!Group){
-            document.getElementById('teacher-group-note').innerHTML = "Section Required!";
-            TeachersSubmitAddAccountBtn.disabled = false;
-            return
-        }
-        document.getElementById('teacher-group-note').innerHTML = "";
-    
-        let data = {
-            'Email': Email,
-            'Group': Group,
-            'Type': 'Teacher'
-        };
-    
-        AjaxRequest.sendRequest(data, BASE_URL + "?page=accounts&action=true")
-            .then(response => {
-                setTimeout(() => {
-                    window.location.reload();
-                }, 500);
-            })
-            .catch(error => {
-                document.getElementById('student-add-failed').innerHTML = "Failed, Try Again!"
-            })
-            .finally(() => {
-                TeachersSubmitAddAccountBtn.disabled = false;
             });
     })
 }
@@ -267,6 +263,168 @@ if(AssessmentViewSummaryBtn) {
     })
 }
 
+// COURSE =============
+
+// COURSE ADD
+let CourseSubmitAddBtn = document.getElementById('CourseSubmitAddBtn');
+if(CourseSubmitAddBtn) {
+    CourseSubmitAddBtn.addEventListener('click', async ()=>{
+        CourseSubmitAddBtn.disabled = true;
+        CourseSubmitAddBtn.innerHTML = "...";
+        let Title = document.getElementById('course-title').value;
+        let Description = document.getElementById('course-description').value;
+        let Image = document.getElementById('course-image').files[0] ?? null;
+        
+        document.getElementById('course-add-success').innerHTML = "";
+        document.getElementById('course-add-failed').innerHTML = "";
+    
+        if (!Title) {
+            document.getElementById('course-title-note').innerHTML = "Title Required!";
+            CourseSubmitAddBtn.disabled = false;
+            CourseSubmitAddBtn.innerHTML = "Save Changes";
+            return
+        }
+        document.getElementById('course-title-note').innerHTML = "";
+    
+        const formData = new FormData();
+        formData.append("Title", Title);
+        formData.append("Description", Description);
+        formData.append("Type", 'AddCourse');
+        if(Image) {
+            formData.append("Image", Image);
+        }
+
+        AjaxRequest.sendFormRequest(formData, BASE_URL + "?page=course&action=true")
+            .then(response => {
+                document.getElementById('course-title').value = "";
+                document.getElementById('course-description').value = "";
+                document.getElementById('course-add-success').innerHTML = "Success!";
+                setTimeout(() => {
+                    window.location.reload();
+                }, 500);
+            })
+            .catch(error => {
+                document.getElementById('course-add-failed').innerHTML = "Failed, Try Again!";
+            })
+            .finally(() => {
+                CourseSubmitAddBtn.disabled = false;
+                CourseSubmitAddBtn.innerHTML = "Save Changes";
+            });
+    })
+}
+
+// COURSE DELETE PREPARATION
+let CourseDeleteBtnConfirmation = document.getElementById('CourseDeleteBtnConfirmation');
+if(CourseDeleteBtnConfirmation) {
+    CourseDeleteBtnConfirmation.addEventListener('click', async ()=>{
+        let Title = document.getElementById('course-edit-title').value;
+        document.getElementById('course-delete-confirmation').innerHTML = `Are you sure you want to delete this course [ ${Title} ], and its chapters, lessons and activities?`;
+    })
+}
+
+// COURSE DELETE
+let CourseDeleteBtn = document.getElementById('CourseDeleteBtn');
+if(CourseDeleteBtn) {
+    CourseDeleteBtn.addEventListener('click', async ()=>{
+        CourseDeleteBtn.disabled = true;
+        CourseDeleteBtn.innerHTML = "...";
+        let Id = document.getElementById('course-edit-id').value;
+
+        let data = {
+            'Id': Id,
+            'Type': 'DeleteCourse',
+        };
+    
+        AjaxRequest.sendRequest(data, BASE_URL + "?page=course&action=true")
+            .then(response => {
+                CourseDeleteBtn.innerHTML = "Success";
+                setTimeout(() => {
+                    window.location.reload();
+                }, 500);
+            })
+            .catch(error => {
+                CourseDeleteBtn.innerHTML = "Failed";
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    CourseDeleteBtn.disabled = false;
+                    CourseDeleteBtn.innerHTML = "Yes";
+                }, 1000);
+            });
+    })
+}
+
+// COURSE EDIT PREPARATION
+let EditCourseBtns = document.querySelectorAll(".edit-course-btn");
+if(EditCourseBtns) {
+    EditCourseBtns.forEach(element => {
+        element.addEventListener('click', async (e)=>{
+            let data = {
+                'Id': e.target.dataset.courseid,
+                'Type': 'ReadCourse',
+            };
+
+            let xTitle = document.getElementById('course-edit-title');
+            let xDescription = document.getElementById('course-edit-description');
+            let xId = document.getElementById('course-edit-id');
+
+            AjaxRequest.sendRequest(data, BASE_URL + "?page=course&action=true")
+                .then(response => {
+                    xTitle.value = response?.Parameters[0].CourseName??"test";
+                    xDescription.value = response?.Parameters[0].CourseDescription??"test";
+                    xId.value = response?.Parameters[0].Id??"";
+                })
+                .catch(error => {
+                    xTitle.value = "Error, Try Again";
+                    xDescription.value = "Error, Try Again";
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 500);
+                })
+        })
+    });
+}
+
+// COURSE EDIT
+let CourseSubmitEditBtn = document.getElementById('CourseSubmitEditBtn');
+if(CourseSubmitEditBtn) {
+    CourseSubmitEditBtn.addEventListener('click', async ()=>{
+        CourseSubmitEditBtn.disabled = true;
+        CourseSubmitEditBtn.innerHTML = "...";
+        let xTitle = document.getElementById('course-edit-title');
+        let xDescription = document.getElementById('course-edit-description');
+        let xImage = document.getElementById('course-edit-image');
+        let xId = document.getElementById('course-edit-id');
+
+        const formData = new FormData();
+        formData.append("Title", xTitle.value);
+        formData.append("Description", xDescription.value);
+        formData.append("Type", 'EditCourse');
+        formData.append("Id", xId.value);
+        if(xImage) {
+            formData.append("Image", xImage.files[0]??null);
+        }
+    
+        AjaxRequest.sendFormRequest(formData, BASE_URL + "?page=course&action=true")
+            .then(response => {
+                CourseSubmitEditBtn.innerHTML = "Success";
+                setTimeout(() => {
+                    window.location.reload();
+                }, 500);
+            })
+            .catch(error => {
+                CourseSubmitEditBtn.innerHTML = "Failed";
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    CourseSubmitEditBtn.disabled = false;
+                    CourseSubmitEditBtn.innerHTML = "Yes";
+                }, 1000);
+            });
+    })
+}
+
+
 // CHAPTER =============
 
 // CHAPTER ADD
@@ -290,6 +448,7 @@ if(ChapterSubmitAddBtn) {
         document.getElementById('chapter-title-note').innerHTML = "";
     
         let data = {
+            'CourseId': CourseId,
             'Title': Title,
             'Codes': Codes,
             'Type': 'Add',

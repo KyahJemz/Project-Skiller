@@ -50,6 +50,7 @@ class CourseController {
 
             echo '<script>';
             echo 'const BASE_URL=`'.BASE_URL.'`;';
+            echo 'const CourseId=`'.$item.'`;';
             echo '</script>';
      
             include(__DIR__ . '/../views/headers/Default.php');
@@ -63,6 +64,7 @@ class CourseController {
 
             echo '<script>';
             echo 'const BASE_URL=`'.BASE_URL.'`;';
+            echo 'const CourseId=`'.$item.'`;';
             echo '</script>';
      
             include(__DIR__ . '/../views/headers/Default.php');
@@ -99,9 +101,12 @@ class CourseController {
     public function actionAdministrator($item = null, $course=null){
         $logger = new Logger();
 
-        $jsonPayload = file_get_contents("php://input");
-
-        $data = json_decode($jsonPayload, true);
+        if ($_SERVER['CONTENT_TYPE'] === 'application/json') {
+            $jsonPayload = file_get_contents("php://input");
+            $data = json_decode($jsonPayload, true);
+        } else {
+            $data = $_POST;
+        }
 
         if ($data === null) {
             http_response_code(400);
@@ -115,6 +120,7 @@ class CourseController {
             $Type = sanitizeInput(filter_var($data['Type'], FILTER_SANITIZE_STRING));
 
             $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+            $coursesModel = new CoursesModel($db, $logger);
             $lessonModel = new LessonModel($db, $logger);
 
             switch ($Type) {
@@ -126,10 +132,12 @@ class CourseController {
                     }
                     $Codes = sanitizeInput(filter_var($data['Codes'], FILTER_SANITIZE_STRING));
                     $Title = sanitizeInput(filter_var($data['Title'], FILTER_SANITIZE_STRING));
+                    $CourseId = sanitizeInput($data['CourseId']);
 
                     $lessonModel->addChapterOnly([
                         'Codes'=>$db->escape($Codes),
                         'Title'=>$db->escape($Title),
+                        'CourseId'=>$db->escape($CourseId),
                     ]);
                     echo json_encode(['Success' => true]);
                     break;
@@ -177,6 +185,99 @@ class CourseController {
                     echo json_encode(['Success' => true, 'Parameters'=> $Parameters]);
                     break;
                 
+                case 'AddCourse':
+                    if (!isset($data['Title'])) {
+                        echo "Error: Required fields are missing in the JSON payload.";
+                        http_response_code(400);
+                        exit;
+                    }
+                    $Description = sanitizeInput(filter_var($data['Description'], FILTER_SANITIZE_STRING));
+                    $Title = sanitizeInput(filter_var($data['Title'], FILTER_SANITIZE_STRING));
+                    $Image = "";
+
+                    if (isset($_FILES['Image']) && $_FILES['Image']['error'] === UPLOAD_ERR_OK) {
+                        $tempFile = $_FILES['Image']['tmp_name'];
+                        $targetPath = './images/uploads/'; 
+                        $targetFile = $targetPath . basename($_FILES['Image']['name']);
+                
+                        if (move_uploaded_file($tempFile, $targetFile)) {
+                            $Image = $targetFile;
+                        } else {
+                            $logger->log('FILE FAILED: '. $$targetFile, 'error');
+                            echo "Error: Failed to upload the image.";
+                            http_response_code(500); 
+                            exit;
+                        }
+                    }
+
+                    $coursesModel->addCourseOnly([
+                        'Description'=>$db->escape($Description),
+                        'Title'=>$db->escape($Title),
+                        'Image'=>$db->escape($Image),
+                    ]);
+                    echo json_encode(['Success' => true]);
+                    break;
+
+                case 'EditCourse':
+                    if (!isset($data['Title'])) {
+                        echo "Error: Required fields are missing in the JSON payload.";
+                        http_response_code(400);
+                        exit;
+                    }
+                    $Description = sanitizeInput(filter_var($data['Description'], FILTER_SANITIZE_STRING));
+                    $Title = sanitizeInput(filter_var($data['Title'], FILTER_SANITIZE_STRING));
+                    $Id = sanitizeInput(filter_var($data['Id'], FILTER_SANITIZE_STRING));
+                    $Image = "";
+
+                    if (isset($_FILES['Image']) && $_FILES['Image']['error'] === UPLOAD_ERR_OK) {
+                        $tempFile = $_FILES['Image']['tmp_name'];
+                        $targetPath = './images/uploads/'; 
+                        $targetFile = $targetPath . basename($_FILES['Image']['name']);
+                
+                        if (move_uploaded_file($tempFile, $targetFile)) {
+                            $Image = $targetFile;
+                        } else {
+                            $logger->log('FILE FAILED: '. $$targetFile, 'error');
+                            echo "Error: Failed to upload the image.";
+                            http_response_code(500); 
+                            exit;
+                        }
+                    }
+
+                    $coursesModel->updateCourseOnly([
+                        'Id'=>$db->escape($Id),
+                        'Description'=>$db->escape($Description),
+                        'Title'=>$db->escape($Title),
+                        'Image'=>$db->escape($Image),
+                    ]);
+                    echo json_encode(['Success' => true]);
+                    break;
+
+                case 'DeleteCourse':
+                    if (!isset($data['Id'])) {
+                        echo "Error: Required fields are missing in the JSON payload.";
+                        http_response_code(400); 
+                        exit;
+                    }
+                    $Id = sanitizeInput(filter_var($data['Id'], FILTER_SANITIZE_STRING));
+
+                    $coursesModel->deleteCourse([
+                        'Id'=>$db->escape($Id)
+                    ]);
+                    echo json_encode(['Success' => true]);
+                    break;
+
+                case 'ReadCourse':
+                    if (!isset($data['Id'])) {
+                        echo "Error: Required fields are missing in the JSON payload.";
+                        http_response_code(400); 
+                        exit;
+                    }
+                    $Id = sanitizeInput(filter_var($data['Id'], FILTER_SANITIZE_STRING));
+                    $Parameters = $coursesModel->getCoursesOnly(['Id'=>$db->escape($Id)]);
+                    echo json_encode(['Success' => true, 'Parameters'=> $Parameters]);
+                    break;
+
                 default:
                     echo "Error: Type is not recognized!";
                     http_response_code(400);

@@ -76,6 +76,9 @@ pre {
     transform: translateY(-50%);
     z-index: 5;
 }
+.edit-course-btn{
+    z-index: 5;
+}
 .edit-activity-btn{
     position: absolute;
     top: 50%;

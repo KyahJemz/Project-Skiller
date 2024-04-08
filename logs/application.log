@@ -4067,3 +4067,623 @@
 [2024-04-07 08:10:09] INFO: Accessed [dashboard]
 [2024-04-07 08:10:10] INFO: course
 [2024-04-07 08:10:10] INFO: Accessed [course]
+[2024-04-07 13:25:27] INFO: home
+[2024-04-07 13:25:27] INFO: Accessed [home]
+[2024-04-07 13:26:40] INFO: home
+[2024-04-07 13:26:40] INFO: Accessed [home]
+[2024-04-07 13:26:41] INFO: login
+[2024-04-07 13:26:41] INFO: Accessed [login]
+[2024-04-07 13:26:41] INFO: dashboard
+[2024-04-07 13:26:41] INFO: Accessed [dashboard]
+[2024-04-07 13:26:43] INFO: course
+[2024-04-07 13:26:43] INFO: Accessed [course]
+[2024-04-07 13:26:45] INFO: dashboard
+[2024-04-07 13:26:45] INFO: Accessed [dashboard]
+[2024-04-07 13:26:46] INFO: course
+[2024-04-07 13:26:46] INFO: Accessed [course]
+[2024-04-07 13:26:48] INFO: dashboard
+[2024-04-07 13:26:48] INFO: Accessed [dashboard]
+[2024-04-07 13:26:49] INFO: course
+[2024-04-07 13:26:49] INFO: Accessed [course]
+[2024-04-07 13:26:50] INFO: course
+[2024-04-07 13:26:50] INFO: Accessed [course]
+[2024-04-07 13:26:51] INFO: scores
+[2024-04-07 13:26:51] INFO: Accessed [scores]
+[2024-04-07 13:26:52] INFO: course
+[2024-04-07 13:26:52] INFO: Accessed [course]
+[2024-04-07 13:26:52] INFO: scores
+[2024-04-07 13:26:52] INFO: Accessed [scores]
+[2024-04-07 13:26:53] INFO: course
+[2024-04-07 13:26:53] INFO: Accessed [course]
+[2024-04-07 13:26:54] INFO: accounts
+[2024-04-07 13:26:54] INFO: Accessed [accounts]
+[2024-04-07 13:26:55] INFO: course
+[2024-04-07 13:26:55] INFO: Accessed [course]
+[2024-04-07 13:26:56] INFO: dashboard
+[2024-04-07 13:26:56] INFO: Accessed [dashboard]
+[2024-04-07 13:26:56] INFO: course
+[2024-04-07 13:26:56] INFO: Accessed [course]
+[2024-04-07 13:26:57] INFO: course
+[2024-04-07 13:26:57] INFO: Accessed [course]
+[2024-04-07 13:28:33] INFO: scores
+[2024-04-07 13:28:33] INFO: Accessed [scores]
+[2024-04-07 13:28:36] INFO: course
+[2024-04-07 13:28:36] INFO: Accessed [course]
+[2024-04-07 13:28:37] INFO: dashboard
+[2024-04-07 13:28:37] INFO: Accessed [dashboard]
+[2024-04-07 13:28:38] INFO: course
+[2024-04-07 13:28:38] INFO: Accessed [course]
+[2024-04-07 13:28:55] INFO: dashboard
+[2024-04-07 13:28:55] INFO: Accessed [dashboard]
+[2024-04-07 13:28:56] INFO: accounts
+[2024-04-07 13:28:56] INFO: Accessed [accounts]
+[2024-04-07 13:28:57] INFO: dashboard
+[2024-04-07 13:28:57] INFO: Accessed [dashboard]
+[2024-04-07 13:28:58] INFO: course
+[2024-04-07 13:28:58] INFO: Accessed [course]
+[2024-04-07 13:29:00] INFO: scores
+[2024-04-07 13:29:00] INFO: Accessed [scores]
+[2024-04-07 13:29:02] INFO: course
+[2024-04-07 13:29:02] INFO: Accessed [course]
+[2024-04-07 13:29:07] INFO: scores
+[2024-04-07 13:29:07] INFO: Accessed [scores]
+[2024-04-07 13:29:08] INFO: course
+[2024-04-07 13:29:08] INFO: Accessed [course]
+[2024-04-07 13:29:09] INFO: course
+[2024-04-07 13:29:09] INFO: Accessed [course]
+[2024-04-07 13:29:18] INFO: course
+[2024-04-07 13:29:18] INFO: Accessed [course]
+[2024-04-07 13:29:19] INFO: scores
+[2024-04-07 13:29:19] INFO: Accessed [scores]
+[2024-04-07 13:29:21] INFO: course
+[2024-04-07 13:29:21] INFO: Accessed [course]
+[2024-04-07 13:29:24] INFO: course
+[2024-04-07 13:29:24] INFO: Accessed [course]
+[2024-04-07 13:29:26] INFO: course
+[2024-04-07 13:29:26] INFO: Accessed [course]
+[2024-04-07 13:29:27] INFO: course
+[2024-04-07 13:29:27] INFO: Accessed [course]
+[2024-04-07 13:29:27] INFO: course
+[2024-04-07 13:29:27] INFO: Accessed [course]
+[2024-04-07 13:29:29] INFO: course
+[2024-04-07 13:29:29] INFO: Accessed [course]
+[2024-04-07 13:29:29] INFO: course
+[2024-04-07 13:29:29] INFO: Accessed [course]
+[2024-04-07 13:29:30] INFO: course
+[2024-04-07 13:29:30] INFO: Accessed [course]
+[2024-04-07 13:29:30] INFO: course
+[2024-04-07 13:29:30] INFO: Accessed [course]
+[2024-04-07 13:29:34] INFO: course
+[2024-04-07 13:29:34] INFO: Accessed [course]
+[2024-04-07 13:29:34] INFO: course
+[2024-04-07 13:29:34] INFO: Accessed [course]
+[2024-04-07 13:29:38] INFO: course
+[2024-04-07 13:29:38] INFO: Accessed [course]
+[2024-04-07 13:29:39] INFO: course
+[2024-04-07 13:29:39] INFO: Accessed [course]
+[2024-04-07 13:29:41] INFO: course
+[2024-04-07 13:29:41] INFO: Accessed [course]
+[2024-04-07 13:29:46] INFO: course
+[2024-04-07 13:29:46] INFO: Accessed [course]
+[2024-04-07 13:29:46] INFO: course
+[2024-04-07 13:29:46] INFO: Accessed [course]
+[2024-04-07 13:29:48] INFO: course
+[2024-04-07 13:29:48] INFO: Accessed [course]
+[2024-04-07 13:29:49] INFO: course
+[2024-04-07 13:29:49] INFO: Accessed [course]
+[2024-04-07 13:29:50] INFO: course
+[2024-04-07 13:29:50] INFO: Accessed [course]
+[2024-04-07 13:29:50] INFO: course
+[2024-04-07 13:29:50] INFO: Accessed [course]
+[2024-04-07 13:29:51] INFO: course
+[2024-04-07 13:29:51] INFO: Accessed [course]
+[2024-04-07 13:29:51] INFO: course
+[2024-04-07 13:29:51] INFO: Accessed [course]
+[2024-04-07 13:29:52] INFO: course
+[2024-04-07 13:29:52] INFO: Accessed [course]
+[2024-04-07 13:40:00] INFO: course
+[2024-04-07 13:40:00] INFO: Accessed [course]
+[2024-04-07 13:40:01] INFO: course
+[2024-04-07 13:40:01] INFO: Accessed [course]
+[2024-04-07 13:40:04] INFO: course
+[2024-04-07 13:40:04] INFO: Accessed [course]
+[2024-04-07 13:40:05] INFO: course
+[2024-04-07 13:40:05] INFO: Accessed [course]
+[2024-04-07 13:40:10] INFO: course
+[2024-04-07 13:40:10] INFO: Accessed [course]
+[2024-04-07 13:40:12] INFO: course
+[2024-04-07 13:40:12] INFO: Accessed [course]
+[2024-04-07 13:40:12] INFO: course
+[2024-04-07 13:40:12] INFO: Accessed [course]
+[2024-04-07 13:48:25] INFO: course
+[2024-04-07 13:48:25] INFO: Accessed [course]
+[2024-04-07 13:49:00] INFO: course
+[2024-04-07 13:49:00] INFO: Accessed [course]
+[2024-04-07 13:49:33] INFO: course
+[2024-04-07 13:49:33] INFO: Accessed [course]
+[2024-04-07 13:49:36] INFO: chapter
+[2024-04-07 13:49:36] INFO: Accessed [chapter]
+[2024-04-07 13:49:38] INFO: course
+[2024-04-07 13:49:38] INFO: Accessed [course]
+[2024-04-07 13:49:40] INFO: lessons
+[2024-04-07 13:49:40] INFO: Accessed [lessons]
+[2024-04-07 13:49:41] INFO: course
+[2024-04-07 13:49:41] INFO: Accessed [course]
+[2024-04-07 13:49:42] INFO: course
+[2024-04-07 13:49:42] INFO: Accessed [course]
+[2024-04-07 13:49:46] INFO: dashboard
+[2024-04-07 13:49:46] INFO: Accessed [dashboard]
+[2024-04-07 13:49:48] INFO: course
+[2024-04-07 13:49:48] INFO: Accessed [course]
+[2024-04-07 13:49:49] INFO: dashboard
+[2024-04-07 13:49:49] INFO: Accessed [dashboard]
+[2024-04-07 13:49:51] INFO: course
+[2024-04-07 13:49:51] INFO: Accessed [course]
+[2024-04-07 13:56:57] INFO: course
+[2024-04-07 13:56:57] INFO: Accessed [course]
+[2024-04-07 14:12:53] INFO: course
+[2024-04-07 14:12:53] INFO: Accessed [course]
+[2024-04-07 14:13:05] INFO: course
+[2024-04-07 14:13:05] INFO: Accessed [course]
+[2024-04-07 14:14:08] INFO: course
+[2024-04-07 14:14:08] INFO: Accessed [course]
+[2024-04-07 14:14:11] INFO: course
+[2024-04-07 14:14:11] INFO: Accessed [course]
+[2024-04-07 14:15:37] INFO: course
+[2024-04-07 14:15:37] INFO: Accessed [course]
+[2024-04-07 14:15:44] INFO: course
+[2024-04-07 14:15:44] INFO: Accessed [course]
+[2024-04-07 14:17:00] INFO: course
+[2024-04-07 14:17:00] INFO: Accessed [course]
+[2024-04-07 14:17:02] INFO: course
+[2024-04-07 14:17:02] INFO: Accessed [course]
+[2024-04-07 14:17:04] INFO: course
+[2024-04-07 14:17:04] INFO: Accessed [course]
+[2024-04-07 14:18:33] INFO: course
+[2024-04-07 14:18:33] INFO: Accessed [course]
+[2024-04-07 14:18:36] INFO: course
+[2024-04-07 14:18:36] INFO: Accessed [course]
+[2024-04-07 14:18:36] INFO: course
+[2024-04-07 14:18:36] INFO: Accessed [course]
+[2024-04-07 14:18:38] INFO: course
+[2024-04-07 14:18:38] INFO: Accessed [course]
+[2024-04-07 14:18:39] INFO: course
+[2024-04-07 14:18:39] INFO: Accessed [course]
+[2024-04-07 14:18:48] INFO: course
+[2024-04-07 14:18:48] INFO: Accessed [course]
+[2024-04-07 14:18:48] INFO: course
+[2024-04-07 14:18:48] INFO: Accessed [course]
+[2024-04-07 14:19:08] INFO: course
+[2024-04-07 14:19:08] INFO: Accessed [course]
+[2024-04-07 14:19:11] INFO: course
+[2024-04-07 14:19:11] INFO: Accessed [course]
+[2024-04-07 14:19:12] INFO: course
+[2024-04-07 14:19:12] INFO: Accessed [course]
+[2024-04-07 14:19:14] INFO: course
+[2024-04-07 14:19:14] INFO: Accessed [course]
+[2024-04-07 14:19:16] INFO: course
+[2024-04-07 14:19:16] INFO: Accessed [course]
+[2024-04-07 14:19:17] INFO: course
+[2024-04-07 14:19:17] INFO: Accessed [course]
+[2024-04-07 14:19:20] INFO: chapter
+[2024-04-07 14:19:20] INFO: Accessed [chapter]
+[2024-04-07 14:19:22] INFO: course
+[2024-04-07 14:19:22] INFO: Accessed [course]
+[2024-04-07 14:19:23] INFO: course
+[2024-04-07 14:19:23] INFO: Accessed [course]
+[2024-04-07 14:19:25] INFO: course
+[2024-04-07 14:19:25] INFO: Accessed [course]
+[2024-04-07 14:19:26] INFO: course
+[2024-04-07 14:19:26] INFO: Accessed [course]
+[2024-04-07 14:19:27] INFO: course
+[2024-04-07 14:19:27] INFO: Accessed [course]
+[2024-04-07 14:19:28] INFO: course
+[2024-04-07 14:19:28] INFO: Accessed [course]
+[2024-04-07 14:19:29] INFO: course
+[2024-04-07 14:19:29] INFO: Accessed [course]
+[2024-04-07 14:19:31] INFO: course
+[2024-04-07 14:19:31] INFO: Accessed [course]
+[2024-04-07 14:19:31] INFO: course
+[2024-04-07 14:19:31] INFO: Accessed [course]
+[2024-04-07 14:20:54] INFO: course
+[2024-04-07 14:20:54] INFO: Accessed [course]
+[2024-04-07 14:21:01] INFO: course
+[2024-04-07 14:21:01] INFO: Accessed [course]
+[2024-04-07 14:21:13] INFO: course
+[2024-04-07 14:21:13] INFO: Accessed [course]
+[2024-04-07 14:21:14] INFO: course
+[2024-04-07 14:21:14] INFO: Accessed [course]
+[2024-04-07 14:21:14] INFO: course
+[2024-04-07 14:21:14] INFO: Accessed [course]
+[2024-04-07 14:21:16] INFO: course
+[2024-04-07 14:21:16] INFO: Accessed [course]
+[2024-04-07 14:21:18] INFO: course
+[2024-04-07 14:21:18] INFO: Accessed [course]
+[2024-04-07 14:21:18] INFO: course
+[2024-04-07 14:21:18] INFO: Accessed [course]
+[2024-04-07 14:21:19] INFO: course
+[2024-04-07 14:21:19] INFO: Accessed [course]
+[2024-04-07 14:21:52] INFO: course
+[2024-04-07 14:21:52] INFO: Accessed [course]
+[2024-04-07 14:22:01] INFO: course
+[2024-04-07 14:22:01] INFO: Accessed [course]
+[2024-04-07 14:22:04] INFO: course
+[2024-04-07 14:22:04] INFO: Accessed [course]
+[2024-04-07 14:22:14] INFO: course
+[2024-04-07 14:22:14] INFO: Accessed [course]
+[2024-04-07 14:22:15] INFO: course
+[2024-04-07 14:22:15] INFO: Accessed [course]
+[2024-04-07 14:22:15] INFO: course
+[2024-04-07 14:22:15] INFO: Accessed [course]
+[2024-04-07 14:22:16] INFO: course
+[2024-04-07 14:22:16] INFO: Accessed [course]
+[2024-04-07 14:22:18] INFO: course
+[2024-04-07 14:22:18] INFO: Accessed [course]
+[2024-04-07 14:22:18] INFO: course
+[2024-04-07 14:22:18] INFO: Accessed [course]
+[2024-04-07 14:22:19] INFO: course
+[2024-04-07 14:22:19] INFO: Accessed [course]
+[2024-04-07 14:24:25] INFO: course
+[2024-04-07 14:24:25] INFO: Accessed [course]
+[2024-04-07 14:24:26] INFO: course
+[2024-04-07 14:24:26] INFO: Accessed [course]
+[2024-04-07 14:24:26] INFO: course
+[2024-04-07 14:24:26] INFO: Accessed [course]
+[2024-04-07 14:24:28] INFO: course
+[2024-04-07 14:24:28] INFO: Accessed [course]
+[2024-04-07 14:24:29] INFO: course
+[2024-04-07 14:24:29] INFO: Accessed [course]
+[2024-04-07 14:24:29] INFO: course
+[2024-04-07 14:24:29] INFO: Accessed [course]
+[2024-04-07 14:24:30] INFO: course
+[2024-04-07 14:24:30] INFO: Accessed [course]
+[2024-04-07 14:24:44] INFO: course
+[2024-04-07 14:24:44] INFO: Accessed [course]
+[2024-04-07 14:24:56] INFO: course
+[2024-04-07 14:24:56] INFO: Accessed [course]
+[2024-04-07 14:24:57] INFO: course
+[2024-04-07 14:24:57] INFO: Accessed [course]
+[2024-04-07 14:24:58] INFO: course
+[2024-04-07 14:24:58] INFO: Accessed [course]
+[2024-04-07 14:24:59] INFO: course
+[2024-04-07 14:24:59] INFO: Accessed [course]
+[2024-04-07 14:24:59] INFO: course
+[2024-04-07 14:24:59] INFO: Accessed [course]
+[2024-04-07 14:25:00] INFO: course
+[2024-04-07 14:25:00] INFO: Accessed [course]
+[2024-04-07 14:25:01] INFO: course
+[2024-04-07 14:25:01] INFO: Accessed [course]
+[2024-04-07 14:25:08] INFO: course
+[2024-04-07 14:25:08] INFO: Accessed [course]
+[2024-04-07 14:25:09] INFO: course
+[2024-04-07 14:25:09] INFO: Accessed [course]
+[2024-04-07 14:25:09] INFO: course
+[2024-04-07 14:25:09] INFO: Accessed [course]
+[2024-04-07 14:25:10] INFO: course
+[2024-04-07 14:25:10] INFO: Accessed [course]
+[2024-04-07 14:25:11] INFO: course
+[2024-04-07 14:25:11] INFO: Accessed [course]
+[2024-04-07 14:25:18] INFO: course
+[2024-04-07 14:25:18] INFO: Accessed [course]
+[2024-04-07 14:25:19] INFO: course
+[2024-04-07 14:25:19] INFO: Accessed [course]
+[2024-04-07 14:25:20] INFO: course
+[2024-04-07 14:25:20] INFO: Accessed [course]
+[2024-04-07 14:25:21] INFO: course
+[2024-04-07 14:25:21] INFO: Accessed [course]
+[2024-04-07 14:25:21] INFO: course
+[2024-04-07 14:25:21] INFO: Accessed [course]
+[2024-04-07 14:25:22] INFO: course
+[2024-04-07 14:25:22] INFO: Accessed [course]
+[2024-04-07 14:25:22] INFO: course
+[2024-04-07 14:25:22] INFO: Accessed [course]
+[2024-04-07 14:25:38] INFO: course
+[2024-04-07 14:25:38] INFO: Accessed [course]
+[2024-04-07 14:25:40] INFO: course
+[2024-04-07 14:25:40] INFO: Accessed [course]
+[2024-04-07 14:25:40] INFO: course
+[2024-04-07 14:25:40] INFO: Accessed [course]
+[2024-04-07 14:25:41] INFO: course
+[2024-04-07 14:25:41] INFO: Accessed [course]
+[2024-04-07 14:25:41] INFO: course
+[2024-04-07 14:25:41] INFO: Accessed [course]
+[2024-04-07 14:25:42] INFO: course
+[2024-04-07 14:25:42] INFO: Accessed [course]
+[2024-04-07 14:25:42] INFO: course
+[2024-04-07 14:25:42] INFO: Accessed [course]
+[2024-04-07 14:25:43] INFO: course
+[2024-04-07 14:25:43] INFO: Accessed [course]
+[2024-04-07 14:25:43] INFO: course
+[2024-04-07 14:25:43] INFO: Accessed [course]
+[2024-04-07 14:25:43] INFO: course
+[2024-04-07 14:25:43] INFO: Accessed [course]
+[2024-04-07 14:25:44] INFO: course
+[2024-04-07 14:25:44] INFO: Accessed [course]
+[2024-04-07 14:25:44] INFO: course
+[2024-04-07 14:25:44] INFO: Accessed [course]
+[2024-04-07 14:25:44] INFO: course
+[2024-04-07 14:25:44] INFO: Accessed [course]
+[2024-04-07 14:25:45] INFO: course
+[2024-04-07 14:25:45] INFO: Accessed [course]
+[2024-04-07 14:25:46] INFO: course
+[2024-04-07 14:25:46] INFO: Accessed [course]
+[2024-04-07 14:25:46] INFO: course
+[2024-04-07 14:25:46] INFO: Accessed [course]
+[2024-04-07 14:25:48] INFO: course
+[2024-04-07 14:25:48] INFO: Accessed [course]
+[2024-04-07 14:26:03] INFO: course
+[2024-04-07 14:26:03] INFO: Accessed [course]
+[2024-04-07 14:26:04] INFO: course
+[2024-04-07 14:26:04] INFO: Accessed [course]
+[2024-04-07 14:26:05] INFO: course
+[2024-04-07 14:26:05] INFO: Accessed [course]
+[2024-04-07 14:26:06] INFO: course
+[2024-04-07 14:26:06] INFO: Accessed [course]
+[2024-04-07 14:26:07] INFO: course
+[2024-04-07 14:26:07] INFO: Accessed [course]
+[2024-04-07 14:26:20] INFO: course
+[2024-04-07 14:26:20] INFO: Accessed [course]
+[2024-04-07 14:26:21] INFO: course
+[2024-04-07 14:26:21] INFO: Accessed [course]
+[2024-04-07 14:26:22] INFO: course
+[2024-04-07 14:26:22] INFO: Accessed [course]
+[2024-04-07 14:26:50] INFO: course
+[2024-04-07 14:26:50] INFO: Accessed [course]
+[2024-04-07 14:26:51] INFO: course
+[2024-04-07 14:26:51] INFO: Accessed [course]
+[2024-04-07 14:26:53] INFO: course
+[2024-04-07 14:26:53] INFO: Accessed [course]
+[2024-04-07 14:27:16] INFO: course
+[2024-04-07 14:27:16] INFO: Accessed [course]
+[2024-04-07 14:27:19] INFO: course
+[2024-04-07 14:27:19] INFO: Accessed [course]
+[2024-04-07 14:27:22] INFO: course
+[2024-04-07 14:27:22] INFO: Accessed [course]
+[2024-04-07 14:28:21] INFO: course
+[2024-04-07 14:28:21] INFO: Accessed [course]
+[2024-04-07 14:28:23] INFO: course
+[2024-04-07 14:28:23] INFO: Accessed [course]
+[2024-04-07 14:28:24] INFO: course
+[2024-04-07 14:28:24] INFO: Accessed [course]
+[2024-04-07 14:31:26] INFO: course
+[2024-04-07 14:31:26] INFO: Accessed [course]
+[2024-04-07 14:31:27] INFO: course
+[2024-04-07 14:31:27] INFO: Accessed [course]
+[2024-04-07 14:31:27] INFO: course
+[2024-04-07 14:31:27] INFO: Accessed [course]
+[2024-04-07 14:31:36] INFO: course
+[2024-04-07 14:31:36] INFO: Accessed [course]
+[2024-04-07 14:31:38] INFO: course
+[2024-04-07 14:31:38] INFO: Accessed [course]
+[2024-04-07 14:31:39] INFO: course
+[2024-04-07 14:31:39] INFO: Accessed [course]
+[2024-04-07 14:31:41] INFO: course
+[2024-04-07 14:31:41] INFO: Accessed [course]
+[2024-04-07 14:31:52] INFO: course
+[2024-04-07 14:31:52] INFO: Accessed [course]
+[2024-04-07 14:31:55] INFO: course
+[2024-04-07 14:31:55] INFO: Accessed [course]
+[2024-04-07 14:32:16] INFO: course
+[2024-04-07 14:32:16] INFO: Accessed [course]
+[2024-04-07 14:32:17] INFO: course
+[2024-04-07 14:32:17] INFO: Accessed [course]
+[2024-04-07 14:32:20] INFO: course
+[2024-04-07 14:32:20] INFO: Accessed [course]
+[2024-04-07 14:32:22] INFO: course
+[2024-04-07 14:32:22] INFO: Accessed [course]
+[2024-04-07 14:32:24] INFO: course
+[2024-04-07 14:32:24] INFO: Accessed [course]
+[2024-04-07 14:32:25] INFO: course
+[2024-04-07 14:32:25] INFO: Accessed [course]
+[2024-04-07 14:32:29] INFO: course
+[2024-04-07 14:32:29] INFO: Accessed [course]
+[2024-04-07 14:32:31] INFO: course
+[2024-04-07 14:32:31] INFO: Accessed [course]
+[2024-04-07 14:32:33] INFO: course
+[2024-04-07 14:32:33] INFO: Accessed [course]
+[2024-04-07 14:37:05] INFO: course
+[2024-04-07 14:37:05] INFO: Accessed [course]
+[2024-04-07 14:37:06] INFO: course
+[2024-04-07 14:37:06] INFO: Accessed [course]
+[2024-04-07 14:37:08] INFO: course
+[2024-04-07 14:37:08] INFO: Accessed [course]
+[2024-04-07 14:37:10] INFO: course
+[2024-04-07 14:37:10] INFO: Accessed [course]
+[2024-04-07 14:37:10] INFO: course
+[2024-04-07 14:37:10] INFO: Accessed [course]
+[2024-04-07 14:37:16] INFO: course
+[2024-04-07 14:37:16] INFO: Accessed [course]
+[2024-04-07 14:37:19] INFO: course
+[2024-04-07 14:37:19] INFO: Accessed [course]
+[2024-04-07 14:37:19] INFO: course
+[2024-04-07 14:37:19] INFO: Accessed [course]
+[2024-04-07 14:37:22] INFO: course
+[2024-04-07 14:37:22] INFO: Accessed [course]
+[2024-04-07 14:37:26] INFO: course
+[2024-04-07 14:37:26] INFO: Accessed [course]
+[2024-04-07 14:37:27] INFO: course
+[2024-04-07 14:37:27] INFO: Accessed [course]
+[2024-04-07 14:37:32] INFO: course
+[2024-04-07 14:37:32] INFO: Accessed [course]
+[2024-04-07 14:40:41] INFO: course
+[2024-04-07 14:40:41] INFO: Accessed [course]
+[2024-04-07 14:40:42] INFO: course
+[2024-04-07 14:40:42] INFO: Accessed [course]
+[2024-04-07 14:40:44] INFO: course
+[2024-04-07 14:40:44] INFO: Accessed [course]
+[2024-04-07 14:40:50] INFO: dashboard
+[2024-04-07 14:40:50] INFO: Accessed [dashboard]
+[2024-04-07 14:40:53] INFO: logout
+[2024-04-07 14:40:53] INFO: Logging Out
+[2024-04-07 14:40:53] INFO: home
+[2024-04-07 14:40:53] INFO: Accessed [home]
+[2024-04-07 14:40:54] INFO: login
+[2024-04-07 14:40:54] INFO: Accessed [login]
+[2024-04-07 14:40:58] INFO: login
+[2024-04-07 14:40:58] INFO: Accessed [login]
+[2024-04-07 14:40:58] INFO: Successfully validated Google Sign-In token
+[2024-04-07 14:40:58] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-04-07 14:40:58] INFO: bindingString: sssi
+[2024-04-07 14:40:58] INFO: No rows were affected. Update may not have found a matching row.
+[2024-04-07 20:40:59] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-04-07 14:40:59] INFO: dashboard
+[2024-04-07 14:40:59] INFO: Accessed [dashboard]
+[2024-04-07 14:41:01] INFO: course
+[2024-04-07 14:41:01] INFO: Accessed [course]
+[2024-04-07 14:41:02] INFO: dashboard
+[2024-04-07 14:41:02] INFO: Accessed [dashboard]
+[2024-04-07 14:41:03] INFO: course
+[2024-04-07 14:41:03] INFO: Accessed [course]
+[2024-04-07 14:41:05] INFO: course
+[2024-04-07 14:41:05] INFO: Accessed [course]
+[2024-04-07 14:41:05] INFO: course
+[2024-04-07 14:41:05] INFO: Accessed [course]
+[2024-04-07 14:41:06] INFO: course
+[2024-04-07 14:41:06] INFO: Accessed [course]
+[2024-04-07 14:41:09] INFO: dashboard
+[2024-04-07 14:41:09] INFO: Accessed [dashboard]
+[2024-04-07 14:41:10] INFO: course
+[2024-04-07 14:41:10] INFO: Accessed [course]
+[2024-04-07 14:41:11] INFO: course
+[2024-04-07 14:41:11] INFO: Accessed [course]
+[2024-04-07 14:41:11] INFO: course
+[2024-04-07 14:41:11] INFO: Accessed [course]
+[2024-04-07 14:41:13] INFO: dashboard
+[2024-04-07 14:41:13] INFO: Accessed [dashboard]
+[2024-04-07 14:41:26] INFO: course
+[2024-04-07 14:41:26] INFO: Accessed [course]
+[2024-04-07 14:41:30] INFO: dashboard
+[2024-04-07 14:41:30] INFO: Accessed [dashboard]
+[2024-04-07 14:41:33] INFO: logout
+[2024-04-07 14:41:33] INFO: Logging Out
+[2024-04-07 14:41:33] INFO: home
+[2024-04-07 14:41:33] INFO: Accessed [home]
+[2024-04-07 14:41:34] INFO: login
+[2024-04-07 14:41:34] INFO: Accessed [login]
+[2024-04-07 14:41:36] INFO: login
+[2024-04-07 14:41:36] INFO: Accessed [login]
+[2024-04-07 14:41:36] INFO: Successfully validated Google Sign-In token
+[2024-04-07 14:41:36] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-04-07 14:41:36] INFO: bindingString: sssi
+[2024-04-07 14:41:36] INFO: No rows were affected. Update may not have found a matching row.
+[2024-04-07 20:41:36] INFO: Email sent to: stephenreganjames.layson@gmail.com
+[2024-04-07 14:41:36] INFO: dashboard
+[2024-04-07 14:41:36] INFO: Accessed [dashboard]
+[2024-04-07 14:49:10] INFO: course
+[2024-04-07 14:49:10] INFO: Accessed [course]
+[2024-04-07 14:49:13] INFO: chapter
+[2024-04-07 14:49:13] INFO: Accessed [chapter]
+[2024-04-07 14:49:17] INFO: course
+[2024-04-07 14:49:17] INFO: Accessed [course]
+[2024-04-07 14:49:18] INFO: course
+[2024-04-07 14:49:18] INFO: Accessed [course]
+[2024-04-07 14:49:18] INFO: dashboard
+[2024-04-07 14:49:18] INFO: Accessed [dashboard]
+[2024-04-07 14:49:19] INFO: accounts
+[2024-04-07 14:49:19] INFO: Accessed [accounts]
+[2024-04-07 14:49:20] INFO: dashboard
+[2024-04-07 14:49:20] INFO: Accessed [dashboard]
+[2024-04-07 14:49:21] INFO: course
+[2024-04-07 14:49:21] INFO: Accessed [course]
+[2024-04-07 14:49:23] INFO: course
+[2024-04-07 14:49:23] INFO: Accessed [course]
+[2024-04-07 14:49:26] INFO: course
+[2024-04-07 14:49:26] INFO: Accessed [course]
+[2024-04-07 14:49:31] INFO: course
+[2024-04-07 14:49:31] INFO: Accessed [course]
+[2024-04-08 22:40:28] INFO: home
+[2024-04-08 22:40:28] INFO: Accessed [home]
+[2024-04-08 22:40:29] INFO: login
+[2024-04-08 22:40:29] INFO: Accessed [login]
+[2024-04-08 22:40:29] INFO: dashboard
+[2024-04-08 22:40:29] INFO: Accessed [dashboard]
+[2024-04-08 22:40:33] INFO: course
+[2024-04-08 22:40:33] INFO: Accessed [course]
+[2024-04-08 22:40:36] INFO: course
+[2024-04-08 22:40:36] INFO: Accessed [course]
+[2024-04-08 22:40:38] INFO: course
+[2024-04-08 22:40:38] INFO: Accessed [course]
+[2024-04-08 22:40:42] INFO: course
+[2024-04-08 22:40:42] INFO: Accessed [course]
+[2024-04-08 22:40:43] INFO: course
+[2024-04-08 22:40:43] INFO: Accessed [course]
+[2024-04-08 22:40:48] INFO: chapter
+[2024-04-08 22:40:48] INFO: Accessed [chapter]
+[2024-04-08 22:40:54] INFO: lessons
+[2024-04-08 22:40:54] INFO: Accessed [lessons]
+[2024-04-08 22:41:06] INFO: lessons
+[2024-04-08 22:41:06] INFO: Accessed [lessons]
+[2024-04-08 22:41:24] INFO: lessons
+[2024-04-08 22:41:24] INFO: Accessed [lessons]
+[2024-04-08 22:41:25] INFO: chapter
+[2024-04-08 22:41:25] INFO: Accessed [chapter]
+[2024-04-08 22:41:27] INFO: lessons
+[2024-04-08 22:41:27] INFO: Accessed [lessons]
+[2024-04-08 22:43:23] INFO: dashboard
+[2024-04-08 22:43:23] INFO: Accessed [dashboard]
+[2024-04-08 22:43:24] INFO: course
+[2024-04-08 22:43:24] INFO: Accessed [course]
+[2024-04-08 22:43:27] INFO: dashboard
+[2024-04-08 22:43:27] INFO: Accessed [dashboard]
+[2024-04-08 22:43:31] INFO: accounts
+[2024-04-08 22:43:31] INFO: Accessed [accounts]
+[2024-04-08 22:46:08] INFO: accounts
+[2024-04-08 22:46:08] INFO: Accessed [accounts]
+[2024-04-08 22:46:09] INFO: accounts
+[2024-04-08 22:46:09] INFO: Accessed [accounts]
+[2024-04-08 22:46:10] INFO: accounts
+[2024-04-08 22:46:10] INFO: Accessed [accounts]
+[2024-04-08 22:46:10] INFO: accounts
+[2024-04-08 22:46:10] INFO: Accessed [accounts]
+[2024-04-08 22:46:10] INFO: accounts
+[2024-04-08 22:46:10] INFO: Accessed [accounts]
+[2024-04-08 22:47:29] INFO: accounts
+[2024-04-08 22:47:29] INFO: Accessed [accounts]
+[2024-04-08 22:50:58] INFO: accounts
+[2024-04-08 22:50:58] INFO: Accessed [accounts]
+[2024-04-08 22:50:58] INFO: accounts
+[2024-04-08 22:50:58] INFO: Accessed [accounts]
+[2024-04-08 22:50:59] INFO: accounts
+[2024-04-08 22:50:59] INFO: Accessed [accounts]
+[2024-04-08 22:51:25] INFO: accounts
+[2024-04-08 22:51:25] INFO: Accessed [accounts]
+[2024-04-08 22:51:46] INFO: accounts
+[2024-04-08 22:51:46] INFO: Accessed [accounts]
+[2024-04-08 22:51:47] INFO: dashboard
+[2024-04-08 22:51:47] INFO: Accessed [dashboard]
+[2024-04-08 22:51:47] INFO: accounts
+[2024-04-08 22:51:47] INFO: Accessed [accounts]
+[2024-04-08 22:51:48] INFO: course
+[2024-04-08 22:51:48] INFO: Accessed [course]
+[2024-04-08 22:51:49] INFO: logout
+[2024-04-08 22:51:49] INFO: Logging Out
+[2024-04-08 22:51:49] INFO: home
+[2024-04-08 22:51:49] INFO: Accessed [home]
+[2024-04-08 22:51:50] INFO: login
+[2024-04-08 22:51:50] INFO: Accessed [login]
+[2024-04-08 23:39:45] INFO: login
+[2024-04-08 23:39:45] INFO: Accessed [login]
+[2024-04-08 23:40:21] INFO: login
+[2024-04-08 23:40:21] INFO: Accessed [login]
+[2024-04-08 23:40:22] INFO: login
+[2024-04-08 23:40:22] INFO: Accessed [login]
+[2024-04-08 23:40:22] INFO: login
+[2024-04-08 23:40:22] INFO: Accessed [login]
+[2024-04-08 23:40:22] INFO: login
+[2024-04-08 23:40:22] INFO: Accessed [login]
+[2024-04-08 23:40:36] INFO: login
+[2024-04-08 23:40:36] INFO: Accessed [login]
+[2024-04-08 23:40:46] INFO: login
+[2024-04-08 23:40:46] INFO: Accessed [login]
+[2024-04-08 23:40:49] INFO: login
+[2024-04-08 23:40:49] INFO: Accessed [login]
+[2024-04-08 23:41:24] INFO: login
+[2024-04-08 23:41:24] INFO: Accessed [login]
+[2024-04-08 23:46:11] INFO: login
+[2024-04-08 23:46:11] INFO: Accessed [login]
+[2024-04-08 23:47:23] INFO: login
+[2024-04-08 23:47:23] INFO: Accessed [login]
+[2024-04-08 23:47:31] INFO: accounts
+[2024-04-08 23:47:31] INFO: Accessed [accounts]
+[2024-04-08 23:47:39] INFO: accounts
+[2024-04-08 23:47:39] INFO: Accessed [accounts]
