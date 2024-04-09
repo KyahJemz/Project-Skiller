@@ -14,10 +14,16 @@ if(SignUpBtn) {
         let FirstName = document.getElementById('signup-firstname').value;
         let LastName = document.getElementById('signup-lastname').value;
     
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
         if (!Email) {
             alert("Email Required");
             SignUpBtn.disabled = false;
-            return
+            return;
+        } else if (!emailPattern.test(Email)) {
+            alert("Invalid Email Format");
+            SignUpBtn.disabled = false;
+            return;
         }
 
         if (!FirstName) {
@@ -41,6 +47,7 @@ if(SignUpBtn) {
         AjaxRequest.sendRequest(data, BASE_URL + "?page=accounts&action=true")
             .then(response => {
                 setTimeout(() => {
+                    alert("Registration Success!, Please wait for an email confirmation of the approval.")
                     window.location.reload();
                 }, 500);
             })

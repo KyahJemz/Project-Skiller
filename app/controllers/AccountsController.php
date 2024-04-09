@@ -50,7 +50,55 @@ class AccountsController {
     }
 
     public function action($item = null, $course=null){
+        $logger = new Logger();
+    
+        $jsonPayload = file_get_contents("php://input");
 
+        $data = json_decode($jsonPayload, true);
+
+        if ($data === null) {
+            http_response_code(400);
+            exit;
+        } else {
+            if (!isset($data['Email']) || !isset($data['FirstName']) || !isset($data['LastName'])) {
+                echo "Error: Required fields are missing in the JSON payload.";
+                http_response_code(400);
+                exit;
+            }
+            $email = sanitizeInput(filter_var($data['Email'], FILTER_SANITIZE_EMAIL));
+            $firstName = sanitizeInput(filter_var($data['FirstName'], FILTER_SANITIZE_STRING));
+            $lastName = sanitizeInput(filter_var($data['LastName'], FILTER_SANITIZE_STRING));
+
+            $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
+            $accountModel = new AccountModel($db, $logger);
+
+            $isExist = $accountModel->getAccount([
+                'Email'=>$email
+            ]);
+
+            if (empty($isExist)) {
+                $accountModel->addAccount([
+                    'LastName'=>$lastName,
+                    'FirstName'=>$firstName,
+                    'Email'=>$email,
+                    'Role'=>'Student',
+                ]);
+                echo json_encode(['success' => true]);
+                http_response_code(200);
+
+                Email::sendMail([
+                    'ReceiverName' => 'Account Registration',
+                    'ReceiverEmail' => $email,
+                    'Message' => 'Thank you for registering with the Skiller Tutorial System. We\'re delighted to have you on board!\n\nwe want to inform you that your registration is now under process. Our team is reviewing the information you provided, and we\'ll notify you once your account has been approved.'
+                ]);
+
+                exit();
+            } else {
+                echo json_encode(['success' => false]);
+                http_response_code(400);
+                exit();
+            }
+        }
     }
 
     public function actionAdministrator($item = null, $course=null){
@@ -71,7 +119,6 @@ class AccountsController {
             }
             $email = sanitizeInput(filter_var($data['Email'], FILTER_SANITIZE_EMAIL));
             $type = sanitizeInput(filter_var($data['Type'], FILTER_SANITIZE_STRING));
-            $group = sanitizeInput(filter_var($data['Group'], FILTER_SANITIZE_NUMBER_INT));
 
             $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
             $accountModel = new AccountModel($db, $logger);
@@ -81,17 +128,15 @@ class AccountsController {
             ]);
 
             if (empty($isExist)) {
-                if($type ==="Teacher"){
+                if($type ==="Student"){
                     $accountModel->addAccount([
                         'Email'=>$email,
-                        'Role'=>'Teacher',
-                        'Group'=>$group
+                        'Role'=>'Student',
                     ]);
                 } elseif($type ==="Administrator"){
                     $accountModel->addAccount([
                         'Email'=>$email,
                         'Role'=>'Administrator',
-                        'Group'=>null
                     ]); 
                 }
                 echo json_encode(['success' => true]);
@@ -102,7 +147,21 @@ class AccountsController {
                     'ReceiverEmail' => $email,
                     'Message' => 'You can now login to Skiller: Tutorial System using this email as an '.$type.', Thank you!'
                 ]);
+                exit();
 
+            } elseif ($type ==="Approval"){
+                $accountModel->getAccount([
+                    'Id'=>$isExist['Id'],
+                    'IsApproved'=>1,
+                ]); 
+                echo json_encode(['success' => true]);
+                http_response_code(200);
+
+                Email::sendMail([
+                    'ReceiverName' => 'Registration Approved',
+                    'ReceiverEmail' => $email,
+                    'Message' => 'You can now login to Skiller: Tutorial System using this email as an '.$type.', Thank you!'
+                ]);
                 exit();
             } else {
                 echo json_encode(['success' => false]);

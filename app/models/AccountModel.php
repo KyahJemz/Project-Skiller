@@ -190,9 +190,9 @@ class AccountModel {
             $bindingString .= "s";
         }
 
-        if (isset($params['Group'])) {
-            $setColumns[] = "Group = ?"; 
-            $setValues[] = (int)$params['Group'];
+        if (isset($params['IsApproved'])) {
+            $setColumns[] = "IsApproved = ?"; 
+            $setValues[] = (int)$params['IsApproved'];
             $bindingString .= "i";
         }
 
@@ -248,21 +248,16 @@ class AccountModel {
     public function addAccount($params){
         $Email = $this->database->escape($params['Email']);
         $Role = $this->database->escape($params['Role']);
-        $Group = $this->database->escape($params['Group']);
-        $CurrentLesson = $this->database->escape($params['CurrentLesson']);
+        $FirstName = $this->database->escape($params['FirstName']?? null) ?? null;
+        $LastName = $this->database->escape($params['LastName']?? null) ?? null;
 
         $query ="";
-        if(empty($Group)){
-            $query = "INSERT INTO tbl_accounts (Email, Role) 
-            VALUES ('$Email', '$Role')";
+        if(!empty($FirstName)){
+            $query = "INSERT INTO tbl_accounts (Email, Role, FirstName, LastName, IsApproved) 
+            VALUES ('$Email', '$Role', '$FirstName', '$LastName', 0)";
         } else {
-            if(empty($CurrentChapter)){
-                $query = "INSERT INTO tbl_accounts (Email, Role, `Group`) 
-                VALUES ('$Email', '$Role', $Group)";
-            } else {
-                $query = "INSERT INTO tbl_accounts (Email, Role, `Group`, `CurrentLesson`) 
-                VALUES ('$Email', '$Role', $Group, '$CurrentLesson')";
-            }
+            $query = "INSERT INTO tbl_accounts (Email, Role, IsApproved) 
+            VALUES ('$Email', '$Role', 1)";
         }
 
         $stmt = $this->database->prepare($query);

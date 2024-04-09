@@ -4687,3 +4687,105 @@
 [2024-04-08 23:47:31] INFO: Accessed [accounts]
 [2024-04-08 23:47:39] INFO: accounts
 [2024-04-08 23:47:39] INFO: Accessed [accounts]
+[2024-04-09 07:15:42] INFO: home
+[2024-04-09 07:15:42] INFO: Accessed [home]
+[2024-04-09 07:16:26] INFO: login
+[2024-04-09 07:16:26] INFO: Accessed [login]
+[2024-04-09 07:17:04] INFO: accounts
+[2024-04-09 07:17:04] INFO: Accessed [accounts]
+[2024-04-09 07:17:07] INFO: accounts
+[2024-04-09 07:17:07] INFO: Accessed [accounts]
+[2024-04-09 07:28:34] INFO: accounts
+[2024-04-09 07:28:34] INFO: Accessed [accounts]
+[2024-04-09 07:28:36] ERROR: Email sent failed to: asd
+[2024-04-09 07:28:36] ERROR: [400] Client error: `POST https://api.sendinblue.com/v3/smtp/email` resulted in a `400 Bad Request` response:
+{"code":"invalid_parameter","message":"email is not valid in to"}
+
+
+[2024-04-09 07:28:36] INFO: login
+[2024-04-09 07:28:36] INFO: Accessed [login]
+[2024-04-09 07:29:34] INFO: login
+[2024-04-09 07:29:34] INFO: Accessed [login]
+[2024-04-09 07:29:38] INFO: accounts
+[2024-04-09 07:29:38] INFO: Accessed [accounts]
+[2024-04-09 07:29:39] ERROR: Email sent failed to: asfasf
+[2024-04-09 07:29:39] ERROR: [400] Client error: `POST https://api.sendinblue.com/v3/smtp/email` resulted in a `400 Bad Request` response:
+{"code":"invalid_parameter","message":"email is not valid in to"}
+
+
+[2024-04-09 07:29:41] INFO: login
+[2024-04-09 07:29:41] INFO: Accessed [login]
+[2024-04-09 07:31:07] INFO: login
+[2024-04-09 07:31:07] INFO: Accessed [login]
+[2024-04-09 07:31:26] INFO: accounts
+[2024-04-09 07:31:26] INFO: Accessed [accounts]
+[2024-04-09 07:31:26] INFO: Email sent to: asd@ss.ss
+[2024-04-09 07:31:29] INFO: login
+[2024-04-09 07:31:29] INFO: Accessed [login]
+[2024-04-09 07:38:00] INFO: login
+[2024-04-09 07:38:00] INFO: Accessed [login]
+[2024-04-09 07:38:19] INFO: login
+[2024-04-09 07:38:19] INFO: Accessed [login]
+[2024-04-09 07:39:48] INFO: login
+[2024-04-09 07:39:48] INFO: Accessed [login]
+[2024-04-09 07:39:48] INFO: Successfully validated Google Sign-In token
+[2024-04-09 07:39:48] INFO: query: UPDATE tbl_accounts SET FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-04-09 07:39:48] INFO: bindingString: sssi
+[2024-04-09 07:39:48] INFO: No rows were affected. Update may not have found a matching row.
+[2024-04-09 13:39:49] INFO: Email sent to: stephenreganjames.layson@gmail.com
+[2024-04-09 07:39:49] INFO: dashboard
+[2024-04-09 07:39:49] INFO: Accessed [dashboard]
+[2024-04-09 14:40:20] INFO: accounts
+[2024-04-09 14:40:20] INFO: Accessed [accounts]
+[2024-04-09 14:41:46] INFO: accounts
+[2024-04-09 14:41:46] INFO: Accessed [accounts]
+[2024-04-09 14:43:25] INFO: accounts
+[2024-04-09 14:43:25] INFO: Accessed [accounts]
+[2024-04-09 14:43:26] INFO: accounts
+[2024-04-09 14:43:26] INFO: Accessed [accounts]
+[2024-04-09 14:43:30] INFO: profile
+[2024-04-09 14:43:30] INFO: Accessed [profile]
+[2024-04-09 14:43:32] INFO: accounts
+[2024-04-09 14:43:32] INFO: Accessed [accounts]
+[2024-04-09 14:43:32] INFO: profile
+[2024-04-09 14:43:32] INFO: Accessed [profile]
+[2024-04-09 14:43:33] INFO: accounts
+[2024-04-09 14:43:33] INFO: Accessed [accounts]
+[2024-04-09 14:43:34] INFO: profile
+[2024-04-09 14:43:34] INFO: Accessed [profile]
+[2024-04-09 14:43:35] INFO: accounts
+[2024-04-09 14:43:35] INFO: Accessed [accounts]
+[2024-04-09 14:43:36] INFO: profile
+[2024-04-09 14:43:36] INFO: Accessed [profile]
+[2024-04-09 14:43:37] INFO: accounts
+[2024-04-09 14:43:37] INFO: Accessed [accounts]
+[2024-04-09 14:43:37] INFO: profile
+[2024-04-09 14:43:37] INFO: Accessed [profile]
+[2024-04-09 14:43:38] INFO: accounts
+[2024-04-09 14:43:38] INFO: Accessed [accounts]
+[2024-04-09 14:44:24] INFO: accounts
+[2024-04-09 14:44:24] INFO: Accessed [accounts]
+[2024-04-09 14:44:25] INFO: profile
+[2024-04-09 14:44:25] INFO: Accessed [profile]
+[2024-04-09 14:44:27] INFO: accounts
+[2024-04-09 14:44:27] INFO: Accessed [accounts]
+[2024-04-09 14:44:28] INFO: profile
+[2024-04-09 14:44:28] INFO: Accessed [profile]
+[2024-04-09 14:44:28] INFO: accounts
+[2024-04-09 14:44:28] INFO: Accessed [accounts]
+[2024-04-09 14:44:29] INFO: profile
+[2024-04-09 14:44:29] INFO: Accessed [profile]
+[2024-04-09 14:44:30] INFO: accounts
+[2024-04-09 14:44:30] INFO: Accessed [accounts]
+[2024-04-09 14:44:31] INFO: profile
+[2024-04-09 14:44:31] INFO: Accessed [profile]
+[2024-04-09 14:44:32] INFO: accounts
+[2024-04-09 14:44:32] INFO: Accessed [accounts]
+[2024-04-09 14:44:33] INFO: profile
+[2024-04-09 14:44:33] INFO: Accessed [profile]
+[2024-04-09 14:44:33] INFO: accounts
+[2024-04-09 14:44:33] INFO: Accessed [accounts]
+[2024-04-09 14:44:34] INFO: profile
+[2024-04-09 14:44:34] INFO: Accessed [profile]
+[2024-04-09 14:44:34] INFO: accounts
+[2024-04-09 14:44:34] INFO: Accessed [accounts]

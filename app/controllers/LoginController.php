@@ -29,10 +29,6 @@ class LoginController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function indexTeacher($item=null, $course=null) {
-        $this->index();
-    }
-
     public function indexAdministrator($item=null, $course=null) {
         $this->index();
     }
@@ -68,7 +64,7 @@ class LoginController {
                     $this->Error = "Login Failed, Account not registered!";
                     $this->index();
                 } else {
-                    if($accountData[0]['Disabled'] === 0){
+                    if($accountData[0]['Disabled'] === 0 && $accountData[0]['IsApproved'] === 1){
                         createSession([
                             'User_Id' => $accountData[0]['Id'],
                             'User_Email' => $decodedBody['email'],
@@ -127,7 +123,7 @@ class LoginController {
                         ]);
                         header("Location: ".BASE_URL."?page=dashboard");
                     } else {
-                        $this->Error = "Login Failed, Account disabled!";
+                        $this->Error = "Login Failed, Account disabled! or Account is waiting for approval!";
                         $this->index();
                     }
                 }

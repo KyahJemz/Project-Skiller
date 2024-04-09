@@ -58,7 +58,7 @@
                                         <div class="line"></div>
                                     </div>
 
-                                    <p class="text-center">Sign Up</p>
+                                    <p class="text-center">Registration</p>
 
                                     <div class="form-outline d-flex flex-column mb-4">
                                         <div class=" w-100 d-flex justify-content-between mb-2 gap-2">

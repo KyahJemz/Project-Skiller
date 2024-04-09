@@ -69,7 +69,6 @@
         let AdministratorsSearchElement = document.getElementById('AdministratorsSearch');
         let S_Search = "";
         let A_Search = "";
-        let ChaptersArray = JSON.parse(Chapters);
         let counterBgColor = 0;
 
         StudentsSearchElement.addEventListener('change', (e)=>{
@@ -106,8 +105,6 @@
                     if (S_Search) {
                         if (Name.toUpperCase().includes(S_Search.toUpperCase()) || Email.toUpperCase().includes(S_Search.toUpperCase())) {
                             let view = "";
-                            let TotalProgressPercentage = (((row?.progress?.FullProgress??0) / Math.max(row.progress.FullProgressTotal, 1)) * 100);
-                            let TotalChaptersCount = ChaptersArray.length;
                             view += `<a href="${BASE_URL}?page=profile&item=${row.account.Id}" class="list-group-item list-group-item-action flex-column align-items-start">`;
                             if (row.account.FirstName === null){
                                 view += `<h5>${row.account.Email??""}</h5>`;
@@ -119,8 +116,6 @@
                         } 
                     } else {
                             let view = "";
-                            let TotalProgressPercentage = (((row?.progress?.FullProgress??0) / Math.max(row.progress.FullProgressTotal, 1)) * 100);
-                            let TotalChaptersCount = ChaptersArray.length;
                             view += `<a href="${BASE_URL}?page=profile&item=${row.account.Id}" class="list-group-item list-group-item-action flex-column align-items-start">`;
                             if (row.account.FirstName === null){
                                 view += `<h5>${row.account.Email??""}</h5>`;
@@ -142,8 +137,8 @@
             AdministratorsArray.forEach(row => {
                 let Name = `${row.account.LastName}, ${row.account.FirstName} ${row.account.MiddleName??""}`;
                 let Email = `${row.account.Email}`;
-                if (T_Search) {
-                    if (Name.toUpperCase().includes(T_Search.toUpperCase()) || Email.toUpperCase().includes(T_Search.toUpperCase())) {
+                if (A_Search) {
+                    if (Name.toUpperCase().includes(A_Search.toUpperCase()) || Email.toUpperCase().includes(A_Search.toUpperCase())) {
                         let view = "";
                         view += `<a href="${BASE_URL}?page=profile&item=${row.account.Id}" class="list-group-item list-group-item-action flex-column align-items-start">`;
                         if (row.account.FirstName === null){
