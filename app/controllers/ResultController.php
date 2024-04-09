@@ -47,7 +47,7 @@ class ResultController {
 
         $data['title'] = "Skiller - Assessment Result";
 
-        $data['LessonNextToAccess'] = end($_SESSION['AllowedLessons']);
+       // $data['LessonNextToAccess'] = end($_SESSION['AllowedLessons']);
 
         echo '<script>';
         echo 'const BASE_URL=`'.BASE_URL.'`;';
@@ -58,13 +58,9 @@ class ResultController {
         include(__DIR__ . '/../views/result.php');
         include(__DIR__ . '/../views/footers/Default.php');
     }
-
-    public function indexTeacher($item = null, $course=null) {
-        $this->index($item);
-    }
-
+    
     public function indexAdministrator($item = null, $course=null) {
-        $this->index($item);
+        $this->index($item, $course);
     }
 
     public function action($item = null, $course=null) {

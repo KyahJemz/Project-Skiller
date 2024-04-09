@@ -4,7 +4,7 @@
         <div class="row">
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=course';?>">Course</a></li>
+                <li class="breadcrumb-item"><a class="text-dark" href="<?php echo BASE_URL .'?page=course&item='.$data['Course'].'&course='.$data['Course'];?>"><?php echo $data['CourseDetails']['CourseName']?></a></li>
                   <li class="breadcrumb-item active"><?php echo $data['ChapterRaw'][0]['Title'];?></li>
                 </ol>
               </nav>
@@ -43,7 +43,7 @@
                     echo '          </br>';
                     echo            nl2br($row['LessonDescription']);
                     echo '          </br>';
-                    echo '          <a class="btn btn-primary class="mt-2" href="'.BASE_URL.'?page=lessons&item='.$row['LessonId'].'">View</a>';
+                    echo '          <a class="btn btn-primary class="mt-2" href="'.BASE_URL.'?page=lessons&item='.$row['LessonId'].'&course='.$data['Course'].'">View</a>';
                     echo '          </br></br>';
                     echo '        </div>';
                     echo '    </div>';

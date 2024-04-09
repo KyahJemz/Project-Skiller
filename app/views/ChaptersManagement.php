@@ -21,7 +21,7 @@
                     echo '    </h2>';
                     echo '    <div id="a'.$row['Id'].'" class="accordion-collapse collapse">';
                     echo '        <div class="accordion-body">';
-                    echo '          <a class="btn btn-secondary class="my-2" href="'.BASE_URL.'?page=chapter&item='.$row['Id'].'">View Chapter</a>';
+                    echo '          <a class="btn btn-secondary class="my-2" href="'.BASE_URL.'?page=chapter&item='.$row['Id'].'&course='.$data['Course']['Id'].'">View Chapter</a>';
                     echo '</br></br>';
                     foreach ($data['Lessons'] as $row2){
                         if ($row2['ChapterId'] === $row['Id']){

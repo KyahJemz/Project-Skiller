@@ -19,7 +19,7 @@
             <?php if (empty($data['HasCourse'])) { ?>
                 <div id="MyCourses">
                     <?php foreach ($data['MyCourses'] as $key => $value) {
-                        echo '<a class="courses-card d-flex" href="'.BASE_URL.'?page=scores&item='.$value['Id'].'&course='.$value['Id'].'">';
+                        echo '<a class="courses-card d-flex" href="'.BASE_URL.'?page=scores&item='.$item.'&course='.$value['Id'].'">';
                         echo '  <img height="150" width="150" src="'. BASE_URL . ($value['CourseImage'] ? $value['CourseImage'] : 'images/defaultCourse.jpg') . '" alt="image">';
                         echo '  <div class="w-100 p-3">';
                         echo '      <h5>'.$value['CourseName'].'</h5>';
@@ -63,7 +63,7 @@
                         echo '<li class="list-group-item py-3">';
                         echo '      <div class="row">';
                         if($_SESSION['User_Role'] === "Teacher" || $_SESSION['User_Role'] === "Administrator" ) {
-                            echo '              <div class="col"><strong><a href="'.BASE_URL.'?page=result&item='.$row['ResultId'].'">'.$row['ActivityTitle']. '</a></strong></div>';   
+                            echo '              <div class="col"><strong><a href="'.BASE_URL.'?page=result&item='.$row['ResultId'].'&course='.$data['HasCourse'].'">'.$row['ActivityTitle']. '</a></strong></div>';   
                         } else {
                             echo '              <div class="col"><strong><a href="'.BASE_URL.'?page=activity&item='.$row['ActivityId'].'&course='.$data['HasCourse'].'">'.$row['ActivityTitle']. '</a></strong></div>';
                         }

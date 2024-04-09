@@ -49,19 +49,11 @@ class ProfileController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function indexTeacher($item = null, $course=null){
-        $this->index($item);
-    }
-
     public function indexAdministrator($item = null, $course=null){
         $this->index($item);
     }
 
     public function actionAdministrator($item = null, $course=null){
-        $this->actionTeacher($item);
-    }
-
-    public function actionTeacher($item = null, $course=null) {
         $logger = new Logger();
     
         $jsonPayload = file_get_contents("php://input");
@@ -89,10 +81,6 @@ class ProfileController {
             if($Action === "Reset") {
                 $progressModel = new ProgressModel($db, $logger);
                 $progressModel->ClearProgress(['Account_Id'=>$db->escape($Id)]);
-
-                $accountModel->resetCurrentLesson([
-                    'Id' => $db->escape($Id),
-                ]);
                 
                 Email::sendMail([
                     'Subject' => 'Account Progress Reset',

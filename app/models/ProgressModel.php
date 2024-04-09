@@ -186,6 +186,18 @@ class ProgressModel {
         }
     
         $stmt3->close();
+
+        $stmt4 = $this->database->prepare("DELETE FROM tbl_sections WHERE Account_Id = ?");
+        $stmt4->bind_param('i', $AccountId);
+        $stmt4->execute();
+    
+        if ($stmt4->error) {
+            $this->logger->log('Error executing third query: ' . $stmt4->error, 'error');
+            $stmt4->close();
+            return false;
+        }
+    
+        $stmt4->close();
     
         return true;
     }

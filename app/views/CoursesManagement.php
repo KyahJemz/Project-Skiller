@@ -9,7 +9,7 @@
         </div>
         <div id="MyCourses">
                 <?php foreach ($data['OtherCourses'] as $key => $value) {
-                    echo '<div class="courses-card d-flex" href="'.BASE_URL.'?page=course&item='.$value['Id'].'&course='.$value['Id'].'">';
+                    echo '<div class="courses-card bg-white rounded-3 p-2 d-flex" href="'.BASE_URL.'?page=course&item='.$value['Id'].'&course='.$value['Id'].'">';
                     echo '  <img height="150" width="150" src="'. BASE_URL . ($value['CourseImage'] ? $value['CourseImage'] : 'images/defaultCourse.jpg') . '" alt="image">';
                     echo '  <div class="w-100 p-3">';
                     echo '      <h5>'.$value['CourseName'].'</h5>';

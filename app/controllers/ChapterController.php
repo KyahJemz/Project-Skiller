@@ -53,6 +53,10 @@ class ChapterController {
         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         $lessonModel = new LessonModel($db, $logger);
         $progressModel = new ProgressModel($db, $logger);
+        $coursesModel = new CoursesModel($db, $logger);
+
+        $data['Course'] = $db->escape($course);
+        $data['CourseDetails'] = $coursesModel->getCourses(['Course_Id'=>$db->escape($course)])[0];
 
         $data['Chapter'] = $lessonModel->getChapterFull(['ChapterId'=>$db->escape($item)]);
 
