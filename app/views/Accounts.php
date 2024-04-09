@@ -30,7 +30,6 @@
         </div>
 
     </div>
-
     <script>
 
         let StudentBtn = document.getElementById('btn-students');
@@ -105,27 +104,85 @@
                     if (S_Search) {
                         if (Name.toUpperCase().includes(S_Search.toUpperCase()) || Email.toUpperCase().includes(S_Search.toUpperCase())) {
                             let view = "";
-                            view += `<a href="${BASE_URL}?page=profile&item=${row.account.Id}" class="list-group-item list-group-item-action flex-column align-items-start">`;
+                            view += `<a ${row.account.IsApproved === 1 ? 'href="'+BASE_URL+"?page=profile&item="+row.account.Id+'"' : "" } class="list-group-item list-group-item-action d-flex justify-content-between flex-row align-items-start">`;
                             if (row.account.FirstName === null){
-                                view += `<h5>${row.account.Email??""}</h5>`;
+                                view += `<h5><img class="mb-3 rounded-3 border iconPicture" src="${row.account.Image}" alt="">${row.account.Email??""}</h5>${row.account.IsApproved === 0 ? '<button class="btn btn-primary approveBtn" data-accountid="'+row.account.Id+'">Approve</button>' : '<p></p>' }`;
                             } else {
-                                view += `<h5>${titleCase(row?.account?.LastName??"")}, ${titleCase(row?.account?.FirstName??"")} ${titleCase(row?.account?.MiddleName??"")}</h5>`;
+                                view += `<h5><img class="mb-3 rounded-3 border iconPicture" src="${row.account.Image}" alt="">${titleCase(row?.account?.LastName??"")}, ${titleCase(row?.account?.FirstName??"")} ${titleCase(row?.account?.MiddleName??"")}</h5>${row.account.IsApproved === 0 ? '<button class="btn btn-primary approveBtn" data-accountid="'+row.account.Id+'">Approve</button>' : '<p></p>' }`;
                             }
                             view += `</a>`;
                             StudentsList.innerHTML += view;
                         } 
                     } else {
                             let view = "";
-                            view += `<a href="${BASE_URL}?page=profile&item=${row.account.Id}" class="list-group-item list-group-item-action flex-column align-items-start">`;
+                            view += `<a ${row.account.IsApproved === 1 ? 'href="'+BASE_URL+"?page=profile&item="+row.account.Id+'"' : "" } class="list-group-item list-group-item-action d-flex justify-content-between flex-row align-items-start">`;
                             if (row.account.FirstName === null){
-                                view += `<h5>${row.account.Email??""}</h5>`;
+                                view += `<h5><img class="mb-3 rounded-3 border iconPicture" src="${row.account.Image}" alt="">${row.account.Email??""}</h5>${row.account.IsApproved === 0 ? '<button class="btn btn-primary approveBtn" data-accountid="'+row.account.Id+'">Approve</button>' : '<p></p>' }`;
                             } else {
-                                view += `<h5>${titleCase(row?.account?.LastName??"")}, ${titleCase(row?.account?.FirstName??"")} ${titleCase(row?.account?.MiddleName??"")}</h5>`;
+                                view += `<h5><img class="mb-3 rounded-3 border iconPicture" src="${row.account.Image}" alt="">${titleCase(row?.account?.LastName??"")}, ${titleCase(row?.account?.FirstName??"")} ${titleCase(row?.account?.MiddleName??"")}</h5>${row.account.IsApproved === 0 ? '<button class="btn btn-primary approveBtn" data-accountid="'+row.account.Id+'">Approve</button>' : '<p></p>' }`;
                             }
                             view += `</a>`;
                             StudentsList.innerHTML += view;
                     }
                 }
+
+                function sendRequest(data, url) {
+                    return new Promise((resolve, reject) => {
+                        fetch(url, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(data),
+                        })
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(response.statusText);
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            console.log('--Server Response Success--', data); // For Logs
+                            resolve(data);
+                        })
+                        .catch(error => {
+                            console.log('--Server Response Error--', error); // For Logs
+                            reject(error);
+                        });
+                    });
+                }
+
+
+
+                let approveBtn = document.querySelectorAll(".approveBtn");
+                if(approveBtn) {
+                    approveBtn.forEach(element => {
+                        element.addEventListener('click', async (e)=>{
+                            let data = {
+                                'Id': e.target.dataset.accountid,
+                                'Type': 'Approval',
+                            };
+                            element.innerHTML = "Loading...";
+                            element.disabled = true;
+
+                            console.log(data);
+                            sendRequest(data, BASE_URL + "?page=accounts&action=true")
+                                .then(response => {
+                                    setTimeout(() => {
+                                        alert("Approval Complete!");
+                                        window.location.reload();
+                                    }, 2000);
+                                })
+                                .catch(error => {
+                                    setTimeout(() => {
+                                        alert("Approval Failed, Try again!");
+                                        window.location.reload();
+                                    }, 2000);
+                                })
+                        })
+                    });
+                }
+
             });
             if (StudentsList.innerHTML === "") {
                 StudentsList.innerHTML = "No items to show.";
@@ -142,9 +199,9 @@
                         let view = "";
                         view += `<a href="${BASE_URL}?page=profile&item=${row.account.Id}" class="list-group-item list-group-item-action flex-column align-items-start">`;
                         if (row.account.FirstName === null){
-                            view += `<h5>${row.account.Email??""}</h5>`;
+                            view += `<h5><img class="mb-3 rounded-3 border iconPicture" src="${row.account.Image}" alt="">${row.account.Email??""}</h5>`;
                         } else {
-                            view += `<h5>${titleCase(row.account.LastName)}, ${titleCase(row.account.FirstName)} ${titleCase(row.account.MiddleName??"")}</h5>`;
+                            view += `<h5><img class="mb-3 rounded-3 border iconPicture" src="${row.account.Image}" alt="">${titleCase(row.account.LastName)}, ${titleCase(row.account.FirstName)} ${titleCase(row.account.MiddleName??"")}</h5>`;
                         }
                         view += `</a>`;
                         AdministratorsList.innerHTML += view;
@@ -153,9 +210,9 @@
                     let view = "";
                         view += `<a href="${BASE_URL}?page=profile&item=${row.account.Id}" class="list-group-item list-group-item-action flex-column align-items-start">`;
                         if (row.account.FirstName === null){
-                            view += `<h5>${row.account.Email??""}</h5>`;
+                            view += `<h5><img class="mb-3 rounded-3 border iconPicture" src="${row.account.Image}" alt="">${row.account.Email??""}</h5>`;
                         } else {
-                            view += `<h5>${titleCase(row.account.LastName)}, ${titleCase(row.account.FirstName)} ${titleCase(row.account.MiddleName??"")}</h5>`;
+                            view += `<h5><img class="mb-3 rounded-3 border iconPicture" src="${row.account.Image}" alt="">${titleCase(row.account.LastName)}, ${titleCase(row.account.FirstName)} ${titleCase(row.account.MiddleName??"")}</h5>`;
                         }
                         view += `</a>`;
                         AdministratorsList.innerHTML += view;

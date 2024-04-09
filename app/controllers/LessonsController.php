@@ -82,24 +82,23 @@ class LessonsController {
         include(__DIR__ . '/../views/footers/Default.php');
     }
 
-    public function indexTeacher($item = null, $course=null){
+    public function indexAdministrator($item = null, $course=null){
         $logger = new Logger();
-
-        if (empty($item)) {
-            header('Location: '.BASE_URL.'?page=NotFound');
-            exit;
-        }
         
         $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
         $lessonModel = new LessonModel($db, $logger);
         $activityModel = new ActivityModel($db, $logger);
         $progressModel = new ProgressModel($db, $logger);
+        $coursesModel = new CoursesModel($db, $logger);
 
         $data['Lessons'] = $lessonModel->getLessonFull(['LessonId'=>$db->escape($item)]);
         if($data['Lessons'] === []){
             header('Location: '.BASE_URL.'?page=NotFound');
             exit;
         }
+
+        $data['Course'] = $db->escape($course);
+        $data['CourseDetails'] = $coursesModel->getCourses(['Course_Id'=>$db->escape($course)])[0];
 
         $data['Activities'] = $activityModel->getLessonActivities(['LessonId'=>$db->escape($item)]);
 
@@ -108,15 +107,11 @@ class LessonsController {
         echo '<script>';
         echo 'const BASE_URL=`'.BASE_URL.'`;';
         echo '</script>';
- 
+
         include(__DIR__ . '/../views/headers/Default.php');
         include(__DIR__ . '/../views/headers/SignedIn.php');
         include(__DIR__ . '/../views/lessons.php');
         include(__DIR__ . '/../views/footers/Default.php');
-    }
-
-    public function indexAdministrator($item = null, $course=null){
-        $this->indexTeacher($item);
     }
 
     public function actionAdministrator($item = null, $course=null){

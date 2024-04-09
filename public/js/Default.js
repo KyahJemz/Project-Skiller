@@ -79,9 +79,10 @@ if(StudentsSubmitAddAccountBtn) {
     
         let data = {
             'Email': Email,
+            'Type': "Student",
         };
     
-        AjaxRequest.sendRequest(data, BASE_URL + "?page=students&action=true")
+        AjaxRequest.sendRequest(data, BASE_URL + "?page=accounts&action=true")
             .then(response => {
                 setTimeout(() => {
                     window.location.reload();
@@ -115,7 +116,6 @@ if(AdministratorsSubmitAddAccountBtn) {
     
         let data = {
             'Email': Email,
-            'Group': '',
             'Type': 'Administrator'
         };
     

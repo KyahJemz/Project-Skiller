@@ -154,6 +154,7 @@ class AccountModel {
     }
 
     public function updateAccount($params) {
+
         $query = "UPDATE tbl_accounts SET";
 
         $setColumns = [];

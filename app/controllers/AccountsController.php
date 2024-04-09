@@ -112,20 +112,25 @@ class AccountsController {
             http_response_code(400);
             exit;
         } else {
-            if (!isset($data['Email']) || !isset($data['Type'])) {
+            if (!isset($data['Type'])) {
                 echo "Error: Required fields are missing in the JSON payload.";
                 http_response_code(400);
                 exit;
             }
-            $email = sanitizeInput(filter_var($data['Email'], FILTER_SANITIZE_EMAIL));
+            $email = sanitizeInput(filter_var($data['Email']??"", FILTER_SANITIZE_EMAIL)??null);
+            $id = sanitizeInput(filter_var($data['Id']??"", FILTER_SANITIZE_EMAIL))??null;
             $type = sanitizeInput(filter_var($data['Type'], FILTER_SANITIZE_STRING));
 
             $db = new Database(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
             $accountModel = new AccountModel($db, $logger);
-
             $isExist = $accountModel->getAccount([
                 'Email'=>$email
             ]);
+            if($type ==="Approval"){
+                $isExist = $accountModel->getAccountById([
+                    'Account_Id'=>$id
+                ]);
+            }
 
             if (empty($isExist)) {
                 if($type ==="Student"){
@@ -150,10 +155,11 @@ class AccountsController {
                 exit();
 
             } elseif ($type ==="Approval"){
-                $accountModel->getAccount([
-                    'Id'=>$isExist['Id'],
-                    'IsApproved'=>1,
-                ]); 
+                $accountModel->updateAccount([
+                    'Id' => isset($isExist[0]) ? isset($isExist[0]['Id']) ? $isExist[0]['Id'] : 0 : 0,
+                    'IsApproved' => 1,
+                ]);
+                
                 echo json_encode(['success' => true]);
                 http_response_code(200);
 
