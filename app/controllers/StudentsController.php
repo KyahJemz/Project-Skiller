@@ -6,6 +6,7 @@ require_once __DIR__.'/../models/ActivityModel.php';
 require_once __DIR__.'/../models/ProgressModel.php';
 require_once __DIR__.'/../../config/Database.php';
 
+// Not Used
 class StudentsController {
 
     public function indexTeacher($item = null, $course=null) {

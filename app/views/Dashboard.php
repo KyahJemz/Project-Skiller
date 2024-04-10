@@ -72,7 +72,7 @@
 
             <div class="row mt-3 p-3 rounded-3">
                 <h3>Skiller: Tutorial System</h3>
-                <p>The Skiller Tutorial System caters to senior high school students, specifically focusing on the subject of General Mathematics. Aligned with the K-12 curriculum mandated by the Department of Education in the Philippines, the platform is tailored to meet the academic needs of senior high school learners. By adhering to the curriculum guidelines, Skiller Tutorial System ensures comprehensive coverage of relevant topics, providing a structured and supportive online learning environment for students to excel in their General Mathematics studies.</p>
+                <p>The Skiller Tutorial System is designed for senior high school students, covering all subjects aligned with the K-12 curriculum mandated by the Department of Education in the Philippines. Our platform offers tailored support across various subjects, ensuring comprehensive coverage and adherence to curriculum guidelines. Whether it's Mathematics, Science, English, or any other subject, Skiller Tutorial System provides a structured and supportive online learning environment for students to excel in their studies.</p>
             </div>
 
             <hr>
@@ -82,24 +82,31 @@
                 <div class="row p-3 rounded-3">
                     <h3>Lets Start Learning</h3>
                     <div id="MyCourses">
-                        <?php foreach ($data['MyCourses'] as $key => $value) {
-                            $TotalProgressPercentage = number_format(((isset($value['Progress']['FullProgress']) ? $value['Progress']['FullProgress'] : 0) / max($value['Progress']['FullProgressTotal'], 1)) * 100, 2);
-                            $TotalChaptersCount = sizeof($value['Chapters']);
-                            echo '<a class="courses-card d-flex" href="'.BASE_URL.'?page=course&item='.$value['Details']['Id'].'&course='.$value['Details']['Id'].'">';
-                            echo '  <img height="150" width="150" src="'. BASE_URL . ($value['Details']['CourseImage'] ? $value['Details']['CourseImage'] : 'images/defaultCourse.jpg') . '" alt="image">';
-                            echo '  <div class="w-100 p-3">';
-                            echo '      <h5>'.$value['Details']['CourseName'].'</h5>';
-                            echo '      <div class="mt-2 mb-2">Your Progress: '.$TotalProgressPercentage.'%</div>';
-                            echo '      <div class="progress p-0 w-100">';
-                            foreach ($value['Chapters'] as $chapter) {
-                                $ChapterPercentage = number_format(((isset($value['Progress']['ChapterProgress'][$chapter["Id"]]) ? $value['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($value['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
-                                $adjustedWidth = (float)($ChapterPercentage * ((100 / $TotalChaptersCount)/100));
-                                echo '<div class="progress-bar '.getNextBgColor().'" role="progressbar" style="width: '.$adjustedWidth.'%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0"><strong>'.$ChapterPercentage.'%</strong></div>';
-                            }
-                            echo '      </div>';
-                            echo '  </div>';
-                            echo '</a>';
-                        } ?>
+                        <?php 
+                        if(!empty($data['MyCourses'])){
+                            foreach ($data['MyCourses'] as $key => $value) {
+                                $TotalProgressPercentage = number_format(((isset($value['Progress']['FullProgress']) ? $value['Progress']['FullProgress'] : 0) / max($value['Progress']['FullProgressTotal'], 1)) * 100, 2);
+                                $TotalChaptersCount = sizeof($value['Chapters']);
+                                echo '<a class="courses-card d-flex" href="'.BASE_URL.'?page=course&item='.$value['Details']['Id'].'&course='.$value['Details']['Id'].'">';
+                                echo '  <img height="150" width="150" src="'. BASE_URL . ($value['Details']['CourseImage'] ? $value['Details']['CourseImage'] : 'images/defaultCourse.jpg') . '" alt="image">';
+                                echo '  <div class="w-100 p-3">';
+                                echo '      <h5>'.$value['Details']['CourseName'].'</h5>';
+                                echo '      <div class="mt-2 mb-2">Your Progress: '.$TotalProgressPercentage.'%</div>';
+                                echo '      <div class="progress p-0 w-100">';
+                                foreach ($value['Chapters'] as $chapter) {
+                                    $ChapterPercentage = number_format(((isset($value['Progress']['ChapterProgress'][$chapter["Id"]]) ? $value['Progress']['ChapterProgress'][$chapter["Id"]] : 0) / max($value['Progress']['ChapterProgressTotal'][$chapter["Id"]], 1)) * 100, 2);
+                                    $adjustedWidth = (float)($ChapterPercentage * ((100 / $TotalChaptersCount)/100));
+                                    echo '<div class="progress-bar '.getNextBgColor().'" role="progressbar" style="width: '.$adjustedWidth.'%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="0"><strong>'.$ChapterPercentage.'%</strong></div>';
+                                }
+                                echo '      </div>';
+                                echo '  </div>';
+                                echo '</a>';
+                            } 
+                        } else {
+                            echo '<p>You are not enrolled in any course.</p>';
+
+                        }
+                        ?>
                     </div>
                 </div>
 

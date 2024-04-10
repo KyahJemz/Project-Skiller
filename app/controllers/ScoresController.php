@@ -18,7 +18,7 @@ class ScoresController {
 
         $UserCourses = $coursesModel->getUserCourses(['Account_Id'=>$_SESSION['User_Id']]);
         $data['MyCourses'] = $UserCourses;
-
+ 
         $data['title'] = "Skiller - My Scores";
 
         $data['HasCourse'] = $course;

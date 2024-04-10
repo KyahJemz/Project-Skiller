@@ -41,7 +41,7 @@
                     <div class="container">
                         <div class="carousel-caption text-start">
                             <h1>Subject Spotlight: General Mathematics Mastery</h1>
-                            <p>Master the fundamentals of General Mathematics with our comprehensive tutorials and practice sessions.</p>
+                            <p>Master the courses with our comprehensive tutorials and practice sessions.</p>
                         </div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
             <div class="row row-cols-1 row-cols-md-2 align-items-md-center bg-body-tertiary mt-5 px-5 rounded-3" id="Features">
                 <div class="col d-flex flex-column align-items-start gap-2">
                     <h2 class="fw-bold text-body-emphasis">Skiller: Tutorial System</h2>
-                    <p class="text-body-secondary">The Skiller Tutorial System caters to senior high school students, specifically focusing on the subject of General Mathematics. Aligned with the K-12 curriculum mandated by the Department of Education in the Philippines, the platform is tailored to meet the academic needs of senior high school learners. By adhering to the curriculum guidelines, Skiller Tutorial System ensures comprehensive coverage of relevant topics, providing a structured and supportive online learning environment for students to excel in their General Mathematics studies.</p>
+                    <p class="text-body-secondary">The Skiller Tutorial System is designed for senior high school students, covering all subjects aligned with the K-12 curriculum mandated by the Department of Education in the Philippines. Our platform offers tailored support across various subjects, ensuring comprehensive coverage and adherence to curriculum guidelines. Whether it's Mathematics, Science, English, or any other subject, Skiller Tutorial System provides a structured and supportive online learning environment for students to excel in their studies.</p>
                 </div>
 
                 <div class="row col p-5">
@@ -82,7 +82,7 @@
                                 </svg>
                             </div>
                             <h4 class="fw-semibold mb-0 text-body-emphasis">Educate</h4>
-                            <p class="text-body-secondary">Symbolizing the focus on providing knowledge and learning in the field of mathematics, emphasizing the educational aspect of the tutorial system.</p>
+                            <p class="text-body-secondary">Education is the process of imparting knowledge and skills to individuals, empowering them to grow intellectually and develop their understanding of the world around them.</p>
                         </div>
                         <div class="col d-flex flex-column gap-2">
                             <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3 p-2 w-25">
@@ -92,7 +92,7 @@
                                 </svg>
                             </div>
                             <h4 class="fw-semibold mb-0 text-body-emphasis">Acquires</h4>
-                            <p class="text-body-secondary">Signifying the process of gaining and acquiring mathematical skills, encouraging users to accumulate knowledge through the tutorial system.</p>
+                            <p class="text-body-secondary">Grasping involves comprehending or understanding something fully, often through mental effort or comprehension, allowing one to perceive and internalize complex concepts or ideas.</p>
                         </div>
                         <div class="col d-flex flex-column gap-2">
                             <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3 p-2 w-25">
@@ -101,7 +101,7 @@
                                 </svg>
                             </div>
                             <h4 class="fw-semibold mb-0 text-body-emphasis">Grasp</h4>
-                            <p class="text-body-secondary">Representing the idea of understanding and mastering mathematical concepts, reflecting the goal of helping users grasp key principles effectively.</p>
+                            <p class="text-body-secondary">Mastery is achieved through diligent practice and proficiency, signifying a high level of skill and expertise in a particular subject, craft, or activity, attained through dedication and perseverance.</p>
                         </div>
                         <div class="col d-flex flex-column gap-2">
                             <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3 p-2 w-25">
@@ -150,8 +150,8 @@
 
             <div class="row featurette mb-2 bg-body-tertiary mt-5 p-5 rounded-3" id="Lessons">
                 <div class="col-md-8">
-                    <h2 class="featurette-heading fw-normal lh-1">Week 1: Introduction to Functions</h2>
-                    <p class="lead">During the initial week, students embark on a foundational exploration of functions. The primary focus lies in representing real-life scenarios through mathematical functions. This involves acquiring the skills to evaluate functions for specific inputs and performing basic operations on them. The week also introduces the concept of function composition, providing students with problem-solving tools for a wide array of scenarios involving functions.</p>
+                    <h2 class="featurette-heading fw-normal lh-1">Welcome to Skiller Tutorial System!</h2>
+                    <p class="lead">Unlock Your Potential with Skiller! Join our comprehensive online learning platform designed for senior high school students. Explore a variety of subjects aligned with the K-12 curriculum and excel in your studies. With Skiller, you can access interactive lessons, practice quizzes, and educational resources that cater to different learning styles. Whether you're preparing for exams or seeking to deepen your understanding of key concepts, our platform provides the tools and support you need to achieve your academic goals.</p>
                 </div>
                 <div class="col-md-4">
                     <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400" height="400" src="<?php echo BASE_URL . 'images/l1.png'?>" alt="image" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"/>
@@ -159,8 +159,8 @@
             </div>
             <div class="row featurette mb-2 bg-body-tertiary p-5 rounded-3">
                 <div class="col-md-8 order-md-2">
-                    <h2 class="featurette-heading fw-normal lh-1">Week 2: Rational Functions and Equations</h2>
-                    <p class="lead">In the second week, attention shifts to a specific class of functions – rational functions. Students delve into the practical aspect of representing real-world situations through rational functions. The curriculum distinguishes between rational functions, equations, and inequalities, offering a nuanced understanding. Problem-solving skills are honed through the application of these functions, and students master the representation and analysis of rational functions through graphs.</p>
+                    <h2 class="featurette-heading fw-normal lh-1">Explore Diverse Subjects</h2>
+                    <p class="lead">Discover a world of knowledge with Skiller! From Mathematics to Science, English to Social Studies, our platform offers comprehensive tutorials tailored to your academic needs. Dive into engaging lessons led by experienced educators, explore real-world applications of theoretical concepts, and collaborate with fellow learners in discussion forums and group projects. With Skiller, the possibilities for learning are endless.</p>
                 </div>
                 <div class="col-md-4 order-md-1">
                     <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400" height="400" src="<?php echo BASE_URL . 'images/l2.png'?>" alt="image" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"/>
@@ -168,8 +168,8 @@
             </div>
             <div class="row featurette mb-2 bg-body-tertiary p-5 rounded-3">
                 <div class="col-md-8">
-                    <h2 class="featurette-heading fw-normal lh-1">Week 3: Inverse Functions</h2>
-                    <p class="lead">Week three introduces the intriguing world of inverse functions. Students explore the application of one-to-one functions in representing real-life situations and determining their inverses. Graphical representation becomes a focal point, providing a visual grasp of inverse relationships. This week cultivates problem-solving proficiency, enabling students to navigate challenges involving inverse functions with confidence.</p>
+                    <h2 class="featurette-heading fw-normal lh-1">Engaging Interactive Learning</h2>
+                    <p class="lead">Experience engaging learning like never before! Our interactive tutorials keep you actively involved in your studies, fostering better understanding and retention of key concepts. Engage in hands-on activities, simulations, and multimedia presentations that bring abstract ideas to life. Whether you're a visual learner, auditory learner, or kinesthetic learner, Skiller provides dynamic learning experiences that cater to your individual preferences and strengths.</p>
                 </div>
                 <div class="col-md-4">
                     <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400" height="400" src="<?php echo BASE_URL . 'images/l3.png'?>" alt="image" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"/>
@@ -177,8 +177,8 @@
             </div>
             <div class="row featurette mb-2 bg-body-tertiary p-5 rounded-3">
                 <div class="col-md-8 order-md-2">
-                    <h2 class="featurette-heading fw-normal lh-1">Week 4: Exponential Functions and Logarithmic Functions</h2>
-                    <p class="lead">The fourth week delves into the exponential and logarithmic realms. Students learn to translate real-world situations into the language of exponential functions and logarithms. The curriculum distinguishes between different types of equations and inequalities within these functions. Graphical analysis becomes crucial for understanding the behavior of exponential and logarithmic functions, reinforcing students' comprehension and problem-solving abilities in this domain.</p>
+                    <h2 class="featurette-heading fw-normal lh-1">Expert Guidance at Your Fingertips</h2>
+                    <p class="lead">Receive expert guidance from qualified instructors! Our team of experienced tutors is dedicated to helping you succeed, providing personalized support and feedback every step of the way. Connect with knowledgeable mentors who are passionate about teaching and committed to helping you reach your full potential. Whether you need assistance with homework assignments, exam preparation, or academic challenges, our tutors are here to assist you on your learning journey.</p>
                 </div>
                 <div class="col-md-4 order-md-1">
                     <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400" height="400" src="<?php echo BASE_URL . 'images/l4.png'?>" alt="image" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"/>
@@ -186,8 +186,8 @@
             </div>
             <div class="row featurette mb-2 bg-body-tertiary p-5 rounded-3">
                 <div class="col-md-8">
-                    <h2 class="featurette-heading fw-normal lh-1">Week 5: Financial Mathematics, Propositions, and Logic</h2>
-                    <p class="lead">The final week broadens the scope, intertwining mathematical concepts with real-world applications and logical reasoning. Students explore financial mathematics, delving into topics such as simple and compound interests, annuities, stocks, bonds, and loans. Simultaneously, the curriculum introduces the symbolic representation of propositions and the logical operations associated with them. The week culminates in an exploration of validity, fallacies, and various methods of proof, fostering both mathematical and logical reasoning skills.</p>
+                    <h2 class="featurette-heading fw-normal lh-1">Flexible Learning Anytime, Anywhere</h2>
+                    <p class="lead">Learn at your own pace, wherever you are! With Skiller Tutorial System, access high-quality learning resources anytime, anywhere, and tailor your study schedule to fit your lifestyle. Whether you prefer to study in the comfort of your home, during your commute, or at your favorite coffee shop, our platform is accessible from any device with internet connection. Take control of your education and embark on a journey of lifelong learning with Skiller.</p>
                 </div>
                 <div class="col-md-4">
                     <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="400" height="400" src="<?php echo BASE_URL . 'images/l5.png'?>" alt="image" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"/>

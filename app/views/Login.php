@@ -15,7 +15,7 @@
                     <div class="col-lg-7 mb-5 mb-lg-0">
                         <h1 class="my-5 display-3 fw-bold ls-tight text-primary">Skiller Tutorial System</h1>
                         <p style="color: hsl(217, 10%, 50.8%)">
-                        The Skiller Tutorial System caters to senior high school students, specifically focusing on the subject of General Mathematics. Aligned with the K-12 curriculum mandated by the Department of Education in the Philippines, the platform is tailored to meet the academic needs of senior high school learners. By adhering to the curriculum guidelines, Skiller Tutorial System ensures comprehensive coverage of relevant topics, providing a structured and supportive online learning environment for students to excel in their General Mathematics studies.
+                        The Skiller Tutorial System is designed for senior high school students, covering all subjects aligned with the K-12 curriculum mandated by the Department of Education in the Philippines. Our platform offers tailored support across various subjects, ensuring comprehensive coverage and adherence to curriculum guidelines. Whether it's Mathematics, Science, English, or any other subject, Skiller Tutorial System provides a structured and supportive online learning environment for students to excel in their studies.
                         </p>
                     </div>
 
