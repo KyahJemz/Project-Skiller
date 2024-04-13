@@ -1,6 +1,6 @@
 <body class="bg-body-secondary d-flex flex-column justify-content-between h-100">
     <div class="container flex-fill">
-        <h2 class="mb-3">Skiller: Tutorial System - General Mathematics</h2>
+        <h2 class="mb-3">Skiller: Tutorial System</h2>
         <div class="row">
             <div class="d-flex justify-content-between my-4">
                 <h3 class="mr-auto">Chapters:</h3>
