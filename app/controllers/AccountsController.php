@@ -165,8 +165,8 @@ class AccountsController {
 
                 Email::sendMail([
                     'ReceiverName' => 'Registration Approved',
-                    'ReceiverEmail' => $email,
-                    'Message' => 'You can now login to Skiller: Tutorial System using this email as an '.$type.', Thank you!'
+                    'ReceiverEmail' => $isExist[0]['Email'],
+                    'Message' => 'You can now login to Skiller: Tutorial System using this email as a student, Thank you!'
                 ]);
                 exit();
             } else {
