@@ -308,9 +308,10 @@ class ActivityModel {
         $Score = $this->database->escape($params['Score']);
         $Summary = $params['Summary'];
         $Total = $this->database->escape($params['Total']);
+        $IsRetake = $this->database->escape($params['IsRetake']);
     
-        $query = "INSERT INTO tbl_results (Activity_Id, Lesson_Id, Account_Id, Score, Summary, Total) 
-                  VALUES (?, ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO tbl_results (Activity_Id, Lesson_Id, Account_Id, Score, Summary, Total, IsRetake) 
+                  VALUES (?, ?, ?, ?, ?, ?, ?)";
     
         $stmt = $this->database->prepare($query);
     
@@ -319,7 +320,7 @@ class ActivityModel {
             return false;
         }
     
-        $stmt->bind_param('iiisss', $ActivityId, $LessonId, $AccountId, $Score, $Summary, $Total);
+        $stmt->bind_param('iiisssi', $ActivityId, $LessonId, $AccountId, $Score, $Summary, $Total, $IsRetake);
     
         $stmt->execute();
     

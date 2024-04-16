@@ -58,10 +58,6 @@ class ResultController {
         include(__DIR__ . '/../views/result.php');
         include(__DIR__ . '/../views/footers/Default.php');
     }
-    
-    public function indexAdministrator($item = null, $course=null) {
-        $this->index($item, $course);
-    }
 
     public function action($item = null, $course=null) {
         $logger = new Logger();
@@ -143,15 +139,6 @@ class ResultController {
                 }
             }
 
-            $Id = $activityModel->createActivityResult([
-                'ActivityId'=>$db->escape($ActivityId),
-                'LessonId'=>$db->escape($LessonId),
-                'AccountId'=>$db->escape($_SESSION['User_Id']),
-                'Score'=>$db->escape($score),
-                'Summary'=>json_encode($summary),
-                'Total'=>$db->escape($total),
-            ]);
-
             $activityModel->deleteActivityInProgress([
                 'ActivityId'=>$db->escape($ActivityId),
                 'LessonId'=>$db->escape($LessonId),
@@ -164,6 +151,16 @@ class ResultController {
                     'Activity_Id'=>$db->escape($ActivityId),
                     'Account_Id'=>$db->escape($_SESSION['User_Id']),
                     'Course_Id'=>$db->escape($course)
+                ]);
+
+                $Id = $activityModel->createActivityResult([
+                    'ActivityId'=>$db->escape($ActivityId),
+                    'LessonId'=>$db->escape($LessonId),
+                    'AccountId'=>$db->escape($_SESSION['User_Id']),
+                    'Score'=>$db->escape($score),
+                    'Summary'=>json_encode($summary),
+                    'Total'=>$db->escape($total),
+                    'IsRetake'=>0,
                 ]);
     
                 $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$db->escape($course)]);
@@ -186,36 +183,23 @@ class ResultController {
                     'Message' => 'You have completed your assessment in '.$Activity[0]['ActivityTitle'].'. You have scored '.$score.' out of '.$total.', Thank you!'
                 ]);
             } else { // failed
+                $Id = $activityModel->createActivityResult([
+                    'ActivityId'=>$db->escape($ActivityId),
+                    'LessonId'=>$db->escape($LessonId),
+                    'AccountId'=>$db->escape($_SESSION['User_Id']),
+                    'Score'=>$db->escape($score),
+                    'Summary'=>json_encode($summary),
+                    'Total'=>$db->escape($total),
+                    'IsRetake'=>1,
+                ]);
+
                 $logger->log('Sending assessment score to ' .$_SESSION['User_Email'], 'info');
                 Email::sendMail([
                     'Subject' => 'Assessment Score - Failed',
                     'ReceiverName' => $_SESSION['User_FirstName'],
                     'ReceiverEmail' => $_SESSION['User_Email'],
-                    'Message' => 'You have failed your assessment in '.$Activity[0]['ActivityTitle'].'. You have scored '.$score.' out of '.$total.', The system already sent an request for retake to your teacher. you may now continue reviewing this lesson before proceeding to the next lesson, Good luck!'
+                    'Message' => 'You have failed your assessment in '.$Activity[0]['ActivityTitle'].'. You have scored '.$score.' out of '.$total.', you may now retake this assessment before proceeding to the next lesson, Good luck!'
                 ]);
-
-                $WholeGroup = $accountModel->getAccountByGroup([
-                    'Group'=>$_SESSION['User_Group'],
-                ]);
-
-                $TeacherEmail = "";
-                $TeacherName = "";
-
-                foreach ($WholeGroup as $value) {
-                    if($value['Role'] === 'Teacher'){
-                        $TeacherEmail = $value['Email'];
-                        $TeacherName = $value['FirstName'];
-                    }
-                }
-
-                if (!empty($TeacherEmail) && !empty($TeacherName)){
-                    Email::sendMail([
-                        'Subject' => 'Assessment Retake Request',
-                        'ReceiverName' => $TeacherName,
-                        'ReceiverEmail' => $TeacherEmail,
-                        'Message' => 'Your student named "'.$_SESSION['User_FirstName'].' '.$_aSESSION['User_LastName'].'" have failed assessment in '.$Activity[0]['ActivityTitle'].'. With a score of '.$score.' out of '.$total.'. You may let the student continue by enabling the retake option to give another chance.'
-                    ]);
-                }
             }
 
             header('Location: '.BASE_URL.'?page=result&item='.$Id.'&course='.$db->escape($course));
@@ -223,7 +207,7 @@ class ResultController {
         }
     }
 
-    public function actionTeacher($item = null, $course=null){
+    public function indexAdministrator($item = null, $course=null){
         $logger = new Logger();
     
         $jsonPayload = file_get_contents("php://input");
