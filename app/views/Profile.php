@@ -77,6 +77,11 @@
                     }
                 }
             ?>
+            <div class="row">
+                <h4 class="row mt-5 border-top pt-3">Status</h4>
+                <p class="mt-3">Joined Date: <?php echo toFullDateAndTime($data['CreatedAt'])?></p>
+                <p>Last Login Date: <?php echo toFullDateAndTime($data['UpdatedAt'])?></p>
+            </div>
         </div>
     </div>
 

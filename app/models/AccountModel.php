@@ -161,6 +161,10 @@ class AccountModel {
         $setValues = [];
         $bindingString = "";
 
+        $setColumns[] = "Date = ?";
+        $setValues[] = date('Y-m-d H:i:s');
+        $bindingString .= "s";
+
         if (isset($params['FirstName'])) {
             $setColumns[] = "FirstName = ?";
             $setValues[] = $params['FirstName'];

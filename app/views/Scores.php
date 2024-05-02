@@ -67,10 +67,14 @@
                         } else {
                             echo '              <div class="col"><strong><a href="'.BASE_URL.'?page=activity&item='.$row['ActivityId'].'&course='.$data['HasCourse'].'">'.$row['ActivityTitle']. '</a></strong></div>';
                         }
-                        echo '              <div class="col">Score: <strong>'.$row['Score'].'/'.$row['Total'].'</strong></div>';
+                        echo '              <div class="col">';
+                        echo '                  Score: <strong>'.$row['Score'].'/'.$row['Total'].'</strong>';
+                        echo '              </div>';
                         echo '      </div>';
                         echo '      <div class="row">';
                         echo '              <div>'.$row['LessonTitle'].'</p>';
+                        echo ' Date Taken: <strong>'.toFullDateAndTime($row['TimeStarted']).'</strong><br>';
+                        echo ' Date Finished: <strong>'.toFullDateAndTime($row['Timestamp']).'</strong>';
                         echo '      </div>';
                         echo '</li>';
                     }

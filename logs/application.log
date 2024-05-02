@@ -1,0 +1,876 @@
+[2024-05-02 18:02:32] INFO: assessment
+[2024-05-02 18:02:32] INFO: Accessed [assessment]
+[2024-05-02 18:02:34] INFO: result
+[2024-05-02 18:02:34] INFO: Accessed [result]
+[2024-05-02 18:02:34] INFO: []
+[2024-05-02 18:02:34] INFO: Sending assessment score to s.stephen.layson@sscr.edu
+[2024-05-02 18:02:35] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 18:02:35] INFO: result
+[2024-05-02 18:02:35] INFO: Accessed [result]
+[2024-05-02 18:03:35] INFO: assessment
+[2024-05-02 18:03:35] INFO: Accessed [assessment]
+[2024-05-02 18:03:36] INFO: result
+[2024-05-02 18:03:36] INFO: Accessed [result]
+[2024-05-02 18:03:36] INFO: []
+[2024-05-02 18:03:36] INFO: Sending assessment score to s.stephen.layson@sscr.edu
+[2024-05-02 18:03:38] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 18:03:38] INFO: result
+[2024-05-02 18:03:38] INFO: Accessed [result]
+[2024-05-02 18:03:58] INFO: assessment
+[2024-05-02 18:03:58] INFO: Accessed [assessment]
+[2024-05-02 18:03:59] INFO: assessment
+[2024-05-02 18:03:59] INFO: Accessed [assessment]
+[2024-05-02 18:04:05] INFO: result
+[2024-05-02 18:04:05] INFO: Accessed [result]
+[2024-05-02 18:04:05] INFO: [{"ActivityId":1,"ActivityQuestions":"[{\"QuestionId\":\"75\",\"Question\":\"How do functions help in problem-solving?\",\"QuestionOptions\":[\"A) By making problems more difficult\",\"B) By providing step-by-step instructions\",\"C) By expressing relationships between variables\",\"D) By avoiding simulations and predictions\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"69\",\"Question\":\"What invisible entities work behind the scenes in music, cooking, and GPS navigation?\",\"QuestionOptions\":[\"A) Functions\",\"B) Ingredients\",\"C) Musicians\",\"D) Algorithms\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"82\",\"Question\":\"How do functions contribute to understanding physics phenomena?\",\"QuestionOptions\":[\"A) By adding complexity to equations\",\"B) By expressing relationships between physical quantities\",\"C) By avoiding mathematical models\",\"D) By eliminating the need for simulations\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"86\",\"Question\":\"What is the role of functions in simulating real-world phenomena?\",\"QuestionOptions\":[\"A) To complicate simulations\",\"B) To provide inaccurate results\",\"C) To express relationships between variables in a simulation\",\"D) To eliminate the need for simulations\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"61\",\"Question\":\"What is a function?\",\"QuestionOptions\":[\"A) A machine that produces inputs\",\"B) A recipe for cooking\",\"C) A mathematical concept that relates inputs to outputs\",\"D) A musical note\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"87\",\"Question\":\"Why are functions considered fundamental building blocks?\",\"QuestionOptions\":[\"A) Because they add complexity to problems\",\"B) Because they express relationships between variables\",\"C) Because they avoid problem-solving\",\"D) Because they eliminate the need for predictions\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"72\",\"Question\":\"In economics, what determines the price of a good or service?\",\"QuestionOptions\":[\"A) Market demand\",\"B) Market competition\",\"C) Quantity supplied and demanded\",\"D) Government regulations\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"70\",\"Question\":\"What do functions contribute to making the world?\",\"QuestionOptions\":[\"A) More chaotic\",\"B) More predictable and manageable\",\"C) More complex\",\"D) More difficult to understand\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"89\",\"Question\":\"How do functions contribute to understanding weather patterns?\",\"QuestionOptions\":[\"A) By providing inaccurate predictions\",\"B) By expressing relationships between meteorological variables\",\"C) By avoiding mathematical models\",\"D) By eliminating the need for simulations\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"65\",\"Question\":\"In GPS navigation, what are the inputs of the function?\",\"QuestionOptions\":[\"A) The starting location and desired destination\",\"B) The turn-by-turn instructions\",\"C) The road conditions\",\"D) The GPS device\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"67\",\"Question\":\"What is the benefit of breaking down problems into smaller functions?\",\"QuestionOptions\":[\"A) It makes them more complex\",\"B) It makes them easier to solve and analyze\",\"C) It increases the number of variables\",\"D) It decreases problem-solving skills\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"78\",\"Question\":\"What is a real-world example of a function?\",\"QuestionOptions\":[\"A) Cooking recipe\",\"B) Spaghetti and meatballs\",\"C) Kitchen appliances\",\"D) Food packaging\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"83\",\"Question\":\"In computer science, what do functions allow programmers to do?\",\"QuestionOptions\":[\"A) To write more code\",\"B) To complicate algorithms\",\"C) To break down tasks into manageable parts\",\"D) To avoid solving problems\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"68\",\"Question\":\"Why are functions essential in fields like engineering and data science?\",\"QuestionOptions\":[\"A) To complicate problem-solving\",\"B) To decrease problem-solving skills\",\"C) To express relationships between variables\",\"D) To avoid simulations and predictions\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"90\",\"Question\":\"What is the primary function of functions in mathematics?\",\"QuestionOptions\":[\"A) To make calculations more complex\",\"B) To express relationships between mathematical variables\",\"C) To avoid solving mathematical problems\",\"D) To eliminate the need for mathematical models\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"63\",\"Question\":\"What aspect of a musical note can be represented by a function?\",\"QuestionOptions\":[\"A) Its color\",\"B) Its shape\",\"C) Its pitch\",\"D) Its texture\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"88\",\"Question\":\"What do functions allow scientists to do in biology?\",\"QuestionOptions\":[\"A) To avoid studying living organisms\",\"B) To express relationships between biological variables\",\"C) To increase the number of unknowns\",\"D) To eliminate the need for experimentation\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"84\",\"Question\":\"What do functions provide in the field of engineering?\",\"QuestionOptions\":[\"A) Solutions to problems\",\"B) Complexity to equations\",\"C) Relationships between variables\",\"D) Predictions about market behavior\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"80\",\"Question\":\"What is the primary purpose of functions in music?\",\"QuestionOptions\":[\"A) To confuse listeners\",\"B) To create harmony\",\"C) To increase volume\",\"D) To eliminate melodies\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"73\",\"Question\":\"What aspect of a recipe can be compared to the operation of a function?\",\"QuestionOptions\":[\"A) Mixing ingredients\",\"B) Reading instructions\",\"C) Choosing utensils\",\"D) Setting the table\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"64\",\"Question\":\"What do supply and demand curves in economics represent?\",\"QuestionOptions\":[\"A) Inputs and outputs\",\"B) Cost and benefit\",\"C) Quantity supplied and demanded\",\"D) Market equilibrium\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"79\",\"Question\":\"How do functions contribute to simplifying complex tasks?\",\"QuestionOptions\":[\"A) By adding more variables\",\"B) By providing step-by-step instructions\",\"C) By increasing unpredictability\",\"D) By eliminating simulations\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"71\",\"Question\":\"What fundamental concept does a function relate?\",\"QuestionOptions\":[\"A) Inputs and outputs\",\"B) Ingredients and recipes\",\"C) Notes and melodies\",\"D) Directions and destinations\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"85\",\"Question\":\"How do functions contribute to data analysis in finance?\",\"QuestionOptions\":[\"A) By making data analysis more complicated\",\"B) By providing a framework for expressing relationships between financial variables\",\"C) By avoiding mathematical models\",\"D) By eliminating the need for simulations\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"62\",\"Question\":\"In cooking, what represents the input of a function?\",\"QuestionOptions\":[\"A) The final dish\",\"B) The instructions\",\"C) The amount of each ingredient\",\"D) The cooking process\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"74\",\"Question\":\"What allows economists to predict market behavior?\",\"QuestionOptions\":[\"A) Supply and demand curves\",\"B) Government regulations\",\"C) Random fluctuations\",\"D) Historical data\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"76\",\"Question\":\"What is the role of functions in GPS navigation?\",\"QuestionOptions\":[\"A) To complicate routes\",\"B) To increase traffic\",\"C) To calculate the optimal route\",\"D) To decrease problem-solving skills\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"77\",\"Question\":\"What is a significant benefit of understanding functions?\",\"QuestionOptions\":[\"A) It reduces the need for predictions\",\"B) It increases problem-solving skills\",\"C) It complicates problem-solving\",\"D) It eliminates the need for simulations\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"66\",\"Question\":\"How do functions help in modeling real-world phenomena?\",\"QuestionOptions\":[\"A) By simplifying complex tasks\",\"B) By expressing relationships between variables\",\"C) By providing turn-by-turn instructions\",\"D) By calculating market equilibrium\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null},{\"QuestionId\":\"81\",\"Question\":\"What is the essential characteristic of a function?\",\"QuestionOptions\":[\"A) It always produces the same output for a given input\",\"B) It operates without any input\",\"C) It produces random outputs\",\"D) It changes its operation based on the input\"],\"QuestionPoints\":\"1\",\"QuestionImage\":null}]","ActivityAnswers":"[[\"A) By making problems more difficult\"],[\"A) Functions\"],[\"B) By expressing relationships between physical quantities\"],[\"B) To provide inaccurate results\"],[\"B) A recipe for cooking\"],[\"A) Because they add complexity to problems\"],[\"B) Market competition\"],[\"A) More chaotic\"],[\"B) By expressing relationships between meteorological variables\"],[\"B) The turn-by-turn instructions\"],[\"B) It makes them easier to solve and analyze\"],[\"B) Spaghetti and meatballs\"],[\"A) To write more code\"],[\"A) To complicate problem-solving\"],[\"B) To express relationships between mathematical variables\"],[\"B) Its shape\"],[\"B) To express relationships between biological variables\"],[\"B) Complexity to equations\"],[\"D) To eliminate melodies\"],[\"B) Reading instructions\"],[\"B) Cost and benefit\"],[\"B) By providing step-by-step instructions\"],[\"B) Ingredients and recipes\"],[\"B) By providing a framework for expressing relationships between financial variables\"],[\"B) The instructions\"],[\"B) Government regulations\"],[\"C) To calculate the optimal route\"],[\"B) It increases problem-solving skills\"],[\"B) By expressing relationships between variables\"],[\"A) It always produces the same output for a given input\"]]","ActivityLastAttempt":"2024-05-03 00:03:59","CreatedAt":"2024-05-03 00:03:59"}]
+[2024-05-02 18:04:06] INFO: Sending assessment score to s.stephen.layson@sscr.edu
+[2024-05-02 18:04:06] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 18:04:06] INFO: result
+[2024-05-02 18:04:06] INFO: Accessed [result]
+[2024-05-02 18:04:54] INFO: assessment
+[2024-05-02 18:04:54] INFO: Accessed [assessment]
+[2024-05-02 18:04:56] INFO: assessment
+[2024-05-02 18:04:56] INFO: Accessed [assessment]
+[2024-05-02 18:04:57] INFO: assessment
+[2024-05-02 18:04:57] INFO: Accessed [assessment]
+[2024-05-02 18:04:57] INFO: result
+[2024-05-02 18:04:57] INFO: Accessed [result]
+[2024-05-02 18:04:57] INFO: "2024-05-03 00:04:56"
+[2024-05-02 18:04:58] INFO: Sending assessment score to s.stephen.layson@sscr.edu
+[2024-05-02 18:04:59] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 18:04:59] INFO: result
+[2024-05-02 18:04:59] INFO: Accessed [result]
+[2024-05-02 18:06:33] INFO: assessment
+[2024-05-02 18:06:33] INFO: Accessed [assessment]
+[2024-05-02 18:06:35] INFO: assessment
+[2024-05-02 18:06:35] INFO: Accessed [assessment]
+[2024-05-02 18:06:35] INFO: assessment
+[2024-05-02 18:06:35] INFO: Accessed [assessment]
+[2024-05-02 18:06:37] INFO: result
+[2024-05-02 18:06:37] INFO: Accessed [result]
+[2024-05-02 18:06:37] INFO: "2024-05-03 00:06:35"
+[2024-05-02 18:06:37] INFO: Sending assessment score to s.stephen.layson@sscr.edu
+[2024-05-02 18:06:38] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 18:06:38] INFO: result
+[2024-05-02 18:06:38] INFO: Accessed [result]
+[2024-05-02 18:07:38] INFO: assessment
+[2024-05-02 18:07:38] INFO: Accessed [assessment]
+[2024-05-02 18:07:40] INFO: assessment
+[2024-05-02 18:07:40] INFO: Accessed [assessment]
+[2024-05-02 18:07:50] INFO: result
+[2024-05-02 18:07:50] INFO: Accessed [result]
+[2024-05-02 18:07:50] INFO: "2024-05-03 00:07:40"
+[2024-05-02 18:07:50] INFO: Sending assessment score to s.stephen.layson@sscr.edu
+[2024-05-02 18:07:51] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 18:07:51] INFO: result
+[2024-05-02 18:07:51] INFO: Accessed [result]
+[2024-05-02 18:09:14] INFO: assessment
+[2024-05-02 18:09:14] INFO: Accessed [assessment]
+[2024-05-02 18:09:14] INFO: assessment
+[2024-05-02 18:09:14] INFO: Accessed [assessment]
+[2024-05-02 18:09:16] INFO: result
+[2024-05-02 18:09:16] INFO: Accessed [result]
+[2024-05-02 18:09:16] INFO: "2024-05-03 00:09:14"
+[2024-05-02 18:09:16] INFO: Sending assessment score to s.stephen.layson@sscr.edu
+[2024-05-02 18:09:17] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 18:09:17] INFO: result
+[2024-05-02 18:09:17] INFO: Accessed [result]
+[2024-05-02 18:13:28] INFO: result
+[2024-05-02 18:13:28] INFO: Accessed [result]
+[2024-05-02 18:14:32] INFO: result
+[2024-05-02 18:14:32] INFO: Accessed [result]
+[2024-05-02 18:14:33] INFO: activity
+[2024-05-02 18:14:33] INFO: Accessed [activity]
+[2024-05-02 18:14:36] INFO: assessment
+[2024-05-02 18:14:36] INFO: Accessed [assessment]
+[2024-05-02 18:14:49] INFO: activity
+[2024-05-02 18:14:49] INFO: Accessed [activity]
+[2024-05-02 18:14:49] INFO: result
+[2024-05-02 18:14:49] INFO: Accessed [result]
+[2024-05-02 18:14:54] INFO: result
+[2024-05-02 18:14:54] INFO: Accessed [result]
+[2024-05-02 18:16:36] INFO: scores
+[2024-05-02 18:16:36] INFO: Accessed [scores]
+[2024-05-02 18:16:37] INFO: scores
+[2024-05-02 18:16:37] INFO: Accessed [scores]
+[2024-05-02 18:16:38] INFO: scores
+[2024-05-02 18:16:38] INFO: Accessed [scores]
+[2024-05-02 18:16:39] INFO: activity
+[2024-05-02 18:16:39] INFO: Accessed [activity]
+[2024-05-02 18:16:44] INFO: scores
+[2024-05-02 18:16:44] INFO: Accessed [scores]
+[2024-05-02 18:16:45] INFO: scores
+[2024-05-02 18:16:45] INFO: Accessed [scores]
+[2024-05-02 18:16:46] INFO: scores
+[2024-05-02 18:16:46] INFO: Accessed [scores]
+[2024-05-02 18:16:47] INFO: activity
+[2024-05-02 18:16:47] INFO: Accessed [activity]
+[2024-05-02 18:16:49] INFO: assessment
+[2024-05-02 18:16:49] INFO: Accessed [assessment]
+[2024-05-02 18:16:51] INFO: activity
+[2024-05-02 18:16:51] INFO: Accessed [activity]
+[2024-05-02 18:16:51] INFO: scores
+[2024-05-02 18:16:51] INFO: Accessed [scores]
+[2024-05-02 18:16:51] INFO: scores
+[2024-05-02 18:16:51] INFO: Accessed [scores]
+[2024-05-02 18:18:56] INFO: scores
+[2024-05-02 18:18:56] INFO: Accessed [scores]
+[2024-05-02 18:18:57] INFO: activity
+[2024-05-02 18:18:57] INFO: Accessed [activity]
+[2024-05-02 18:49:59] INFO: scores
+[2024-05-02 18:49:59] INFO: Accessed [scores]
+[2024-05-02 18:50:02] INFO: scores
+[2024-05-02 18:50:02] INFO: Accessed [scores]
+[2024-05-02 18:50:02] INFO: scores
+[2024-05-02 18:50:02] INFO: Accessed [scores]
+[2024-05-02 18:50:04] INFO: activity
+[2024-05-02 18:50:04] INFO: Accessed [activity]
+[2024-05-02 18:50:20] INFO: assessment
+[2024-05-02 18:50:21] INFO: Accessed [assessment]
+[2024-05-02 18:50:22] INFO: assessment
+[2024-05-02 18:50:22] INFO: Accessed [assessment]
+[2024-05-02 18:50:23] INFO: assessment
+[2024-05-02 18:50:23] INFO: Accessed [assessment]
+[2024-05-02 18:50:23] INFO: assessment
+[2024-05-02 18:50:23] INFO: Accessed [assessment]
+[2024-05-02 18:50:24] INFO: assessment
+[2024-05-02 18:50:24] INFO: Accessed [assessment]
+[2024-05-02 18:50:25] INFO: assessment
+[2024-05-02 18:50:25] INFO: Accessed [assessment]
+[2024-05-02 18:50:26] INFO: assessment
+[2024-05-02 18:50:26] INFO: Accessed [assessment]
+[2024-05-02 18:50:27] INFO: assessment
+[2024-05-02 18:50:27] INFO: Accessed [assessment]
+[2024-05-02 18:50:27] INFO: assessment
+[2024-05-02 18:50:27] INFO: Accessed [assessment]
+[2024-05-02 18:50:29] INFO: assessment
+[2024-05-02 18:50:29] INFO: Accessed [assessment]
+[2024-05-02 18:50:30] INFO: assessment
+[2024-05-02 18:50:30] INFO: Accessed [assessment]
+[2024-05-02 18:50:30] INFO: assessment
+[2024-05-02 18:50:30] INFO: Accessed [assessment]
+[2024-05-02 18:50:31] INFO: assessment
+[2024-05-02 18:50:31] INFO: Accessed [assessment]
+[2024-05-02 18:50:31] INFO: assessment
+[2024-05-02 18:50:31] INFO: Accessed [assessment]
+[2024-05-02 18:50:32] INFO: assessment
+[2024-05-02 18:50:32] INFO: Accessed [assessment]
+[2024-05-02 18:50:33] INFO: assessment
+[2024-05-02 18:50:33] INFO: Accessed [assessment]
+[2024-05-02 18:50:33] INFO: assessment
+[2024-05-02 18:50:33] INFO: Accessed [assessment]
+[2024-05-02 18:50:34] INFO: assessment
+[2024-05-02 18:50:34] INFO: Accessed [assessment]
+[2024-05-02 18:50:35] INFO: assessment
+[2024-05-02 18:50:35] INFO: Accessed [assessment]
+[2024-05-02 18:50:36] INFO: assessment
+[2024-05-02 18:50:36] INFO: Accessed [assessment]
+[2024-05-02 18:50:37] INFO: assessment
+[2024-05-02 18:50:37] INFO: Accessed [assessment]
+[2024-05-02 18:50:37] INFO: assessment
+[2024-05-02 18:50:37] INFO: Accessed [assessment]
+[2024-05-02 18:50:38] INFO: assessment
+[2024-05-02 18:50:38] INFO: Accessed [assessment]
+[2024-05-02 18:50:40] INFO: assessment
+[2024-05-02 18:50:40] INFO: Accessed [assessment]
+[2024-05-02 18:50:41] INFO: assessment
+[2024-05-02 18:50:41] INFO: Accessed [assessment]
+[2024-05-02 18:50:42] INFO: assessment
+[2024-05-02 18:50:42] INFO: Accessed [assessment]
+[2024-05-02 18:50:43] INFO: assessment
+[2024-05-02 18:50:43] INFO: Accessed [assessment]
+[2024-05-02 18:50:44] INFO: assessment
+[2024-05-02 18:50:44] INFO: Accessed [assessment]
+[2024-05-02 18:50:45] INFO: assessment
+[2024-05-02 18:50:45] INFO: Accessed [assessment]
+[2024-05-02 18:50:45] INFO: assessment
+[2024-05-02 18:50:45] INFO: Accessed [assessment]
+[2024-05-02 18:50:46] INFO: assessment
+[2024-05-02 18:50:46] INFO: Accessed [assessment]
+[2024-05-02 18:50:47] INFO: result
+[2024-05-02 18:50:47] INFO: Accessed [result]
+[2024-05-02 18:50:47] INFO: "2024-05-03 00:50:22"
+[2024-05-02 18:50:47] INFO: Sending assessment score to s.stephen.layson@sscr.edu
+[2024-05-02 18:50:48] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 18:50:48] INFO: result
+[2024-05-02 18:50:48] INFO: Accessed [result]
+[2024-05-02 18:55:43] INFO: chapter
+[2024-05-02 18:55:43] INFO: Accessed [chapter]
+[2024-05-02 18:55:56] INFO: lessons
+[2024-05-02 18:55:56] INFO: Accessed [lessons]
+[2024-05-02 18:55:58] INFO: chapter
+[2024-05-02 18:55:58] INFO: Accessed [chapter]
+[2024-05-02 18:56:43] INFO: lessons
+[2024-05-02 18:56:43] INFO: Accessed [lessons]
+[2024-05-02 18:56:51] INFO: activity
+[2024-05-02 18:56:51] INFO: Accessed [activity]
+[2024-05-02 18:56:54] INFO: lessons
+[2024-05-02 18:56:54] INFO: Accessed [lessons]
+[2024-05-02 18:56:55] INFO: activity
+[2024-05-02 18:56:55] INFO: Accessed [activity]
+[2024-05-02 18:57:01] INFO: lessons
+[2024-05-02 18:57:01] INFO: Accessed [lessons]
+[2024-05-02 18:57:03] INFO: chapter
+[2024-05-02 18:57:03] INFO: Accessed [chapter]
+[2024-05-02 18:57:08] INFO: lessons
+[2024-05-02 18:57:08] INFO: Accessed [lessons]
+[2024-05-02 18:58:14] INFO: activity
+[2024-05-02 18:58:14] INFO: Accessed [activity]
+[2024-05-02 18:58:15] INFO: assessment
+[2024-05-02 18:58:15] INFO: Accessed [assessment]
+[2024-05-02 18:58:17] INFO: assessment
+[2024-05-02 18:58:17] INFO: Accessed [assessment]
+[2024-05-02 18:58:18] INFO: assessment
+[2024-05-02 18:58:18] INFO: Accessed [assessment]
+[2024-05-02 18:58:19] INFO: assessment
+[2024-05-02 18:58:19] INFO: Accessed [assessment]
+[2024-05-02 18:58:20] INFO: assessment
+[2024-05-02 18:58:20] INFO: Accessed [assessment]
+[2024-05-02 18:58:22] INFO: assessment
+[2024-05-02 18:58:22] INFO: Accessed [assessment]
+[2024-05-02 18:58:22] INFO: assessment
+[2024-05-02 18:58:22] INFO: Accessed [assessment]
+[2024-05-02 18:58:23] INFO: assessment
+[2024-05-02 18:58:23] INFO: Accessed [assessment]
+[2024-05-02 18:58:24] INFO: assessment
+[2024-05-02 18:58:24] INFO: Accessed [assessment]
+[2024-05-02 18:58:25] INFO: assessment
+[2024-05-02 18:58:25] INFO: Accessed [assessment]
+[2024-05-02 18:58:25] INFO: assessment
+[2024-05-02 18:58:25] INFO: Accessed [assessment]
+[2024-05-02 18:58:27] INFO: assessment
+[2024-05-02 18:58:27] INFO: Accessed [assessment]
+[2024-05-02 18:58:28] INFO: assessment
+[2024-05-02 18:58:28] INFO: Accessed [assessment]
+[2024-05-02 18:58:29] INFO: assessment
+[2024-05-02 18:58:29] INFO: Accessed [assessment]
+[2024-05-02 18:58:30] INFO: assessment
+[2024-05-02 18:58:30] INFO: Accessed [assessment]
+[2024-05-02 18:58:30] INFO: assessment
+[2024-05-02 18:58:30] INFO: Accessed [assessment]
+[2024-05-02 18:58:31] INFO: assessment
+[2024-05-02 18:58:31] INFO: Accessed [assessment]
+[2024-05-02 18:58:32] INFO: assessment
+[2024-05-02 18:58:32] INFO: Accessed [assessment]
+[2024-05-02 18:58:32] INFO: assessment
+[2024-05-02 18:58:32] INFO: Accessed [assessment]
+[2024-05-02 18:58:33] INFO: assessment
+[2024-05-02 18:58:33] INFO: Accessed [assessment]
+[2024-05-02 18:58:34] INFO: assessment
+[2024-05-02 18:58:34] INFO: Accessed [assessment]
+[2024-05-02 18:58:34] INFO: assessment
+[2024-05-02 18:58:34] INFO: Accessed [assessment]
+[2024-05-02 18:58:35] INFO: assessment
+[2024-05-02 18:58:35] INFO: Accessed [assessment]
+[2024-05-02 18:58:36] INFO: assessment
+[2024-05-02 18:58:36] INFO: Accessed [assessment]
+[2024-05-02 18:58:37] INFO: assessment
+[2024-05-02 18:58:37] INFO: Accessed [assessment]
+[2024-05-02 18:58:38] INFO: assessment
+[2024-05-02 18:58:38] INFO: Accessed [assessment]
+[2024-05-02 18:58:38] INFO: assessment
+[2024-05-02 18:58:38] INFO: Accessed [assessment]
+[2024-05-02 18:58:39] INFO: assessment
+[2024-05-02 18:58:39] INFO: Accessed [assessment]
+[2024-05-02 18:58:41] INFO: assessment
+[2024-05-02 18:58:41] INFO: Accessed [assessment]
+[2024-05-02 18:58:41] INFO: assessment
+[2024-05-02 18:58:41] INFO: Accessed [assessment]
+[2024-05-02 18:58:42] INFO: assessment
+[2024-05-02 18:58:42] INFO: Accessed [assessment]
+[2024-05-02 18:58:44] INFO: assessment
+[2024-05-02 18:58:44] INFO: Accessed [assessment]
+[2024-05-02 18:58:46] INFO: result
+[2024-05-02 18:58:46] INFO: Accessed [result]
+[2024-05-02 18:58:46] INFO: "2024-05-03 00:58:17"
+[2024-05-02 18:58:46] INFO: Sending assessment score to s.stephen.layson@sscr.edu
+[2024-05-02 18:58:46] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 18:58:47] INFO: result
+[2024-05-02 18:58:47] INFO: Accessed [result]
+[2024-05-02 18:59:44] INFO: result
+[2024-05-02 18:59:44] INFO: Accessed [result]
+[2024-05-02 18:59:50] INFO: activity
+[2024-05-02 18:59:50] INFO: Accessed [activity]
+[2024-05-02 18:59:51] INFO: assessment
+[2024-05-02 18:59:51] INFO: Accessed [assessment]
+[2024-05-02 18:59:53] INFO: logout
+[2024-05-02 18:59:53] INFO: Logging Out
+[2024-05-02 18:59:53] INFO: home
+[2024-05-02 18:59:53] INFO: Accessed [home]
+[2024-05-02 18:59:54] INFO: login
+[2024-05-02 18:59:54] INFO: Accessed [login]
+[2024-05-02 18:59:57] INFO: login
+[2024-05-02 18:59:57] INFO: Accessed [login]
+[2024-05-02 18:59:57] INFO: Successfully validated Google Sign-In token
+[2024-05-02 18:59:57] INFO: query: UPDATE tbl_accounts SET Date = ?, FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-05-02 18:59:57] INFO: bindingString: ssssi
+[2024-05-02 18:59:57] INFO: Update successful
+[2024-05-03 00:59:58] INFO: Email sent to: stephenreganjames.layson@gmail.com
+[2024-05-02 18:59:58] INFO: dashboard
+[2024-05-02 18:59:58] INFO: Accessed [dashboard]
+[2024-05-02 18:59:59] INFO: course
+[2024-05-02 18:59:59] INFO: Accessed [course]
+[2024-05-02 19:00:01] INFO: chapter
+[2024-05-02 19:00:01] INFO: Accessed [chapter]
+[2024-05-02 19:00:03] INFO: lessons
+[2024-05-02 19:00:03] INFO: Accessed [lessons]
+[2024-05-02 19:00:05] INFO: assessment
+[2024-05-02 19:00:05] INFO: Accessed [assessment]
+[2024-05-02 19:00:34] INFO: assessment
+[2024-05-02 19:00:34] INFO: Accessed [assessment]
+[2024-05-02 19:00:34] INFO: assessment
+[2024-05-02 19:00:34] INFO: Accessed [assessment]
+[2024-05-02 19:00:36] INFO: assessment
+[2024-05-02 19:00:36] INFO: Accessed [assessment]
+[2024-05-02 19:00:37] INFO: assessment
+[2024-05-02 19:00:37] INFO: Accessed [assessment]
+[2024-05-02 19:00:38] INFO: assessment
+[2024-05-02 19:00:38] INFO: Accessed [assessment]
+[2024-05-02 19:00:39] INFO: assessment
+[2024-05-02 19:00:39] INFO: Accessed [assessment]
+[2024-05-02 19:00:39] INFO: assessment
+[2024-05-02 19:00:39] INFO: Accessed [assessment]
+[2024-05-02 19:00:40] INFO: assessment
+[2024-05-02 19:00:40] INFO: Accessed [assessment]
+[2024-05-02 19:00:46] INFO: dashboard
+[2024-05-02 19:00:46] INFO: Accessed [dashboard]
+[2024-05-02 19:00:48] INFO: course
+[2024-05-02 19:00:48] INFO: Accessed [course]
+[2024-05-02 19:00:49] INFO: logout
+[2024-05-02 19:00:49] INFO: Logging Out
+[2024-05-02 19:00:49] INFO: home
+[2024-05-02 19:00:49] INFO: Accessed [home]
+[2024-05-02 19:00:49] INFO: login
+[2024-05-02 19:00:49] INFO: Accessed [login]
+[2024-05-02 19:00:53] INFO: login
+[2024-05-02 19:00:53] INFO: Accessed [login]
+[2024-05-02 19:00:53] INFO: Successfully validated Google Sign-In token
+[2024-05-02 19:00:53] INFO: query: UPDATE tbl_accounts SET Date = ?, FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-05-02 19:00:53] INFO: bindingString: ssssi
+[2024-05-02 19:00:53] INFO: Update successful
+[2024-05-03 01:00:53] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 19:00:53] INFO: dashboard
+[2024-05-02 19:00:53] INFO: Accessed [dashboard]
+[2024-05-02 19:00:56] INFO: course
+[2024-05-02 19:00:56] INFO: Accessed [course]
+[2024-05-02 19:00:57] INFO: lessons
+[2024-05-02 19:00:57] INFO: Accessed [lessons]
+[2024-05-02 19:00:59] INFO: activity
+[2024-05-02 19:00:59] INFO: Accessed [activity]
+[2024-05-02 19:01:00] INFO: assessment
+[2024-05-02 19:01:00] INFO: Accessed [assessment]
+[2024-05-02 19:01:01] INFO: assessment
+[2024-05-02 19:01:01] INFO: Accessed [assessment]
+[2024-05-02 19:01:02] INFO: assessment
+[2024-05-02 19:01:02] INFO: Accessed [assessment]
+[2024-05-02 19:01:02] INFO: assessment
+[2024-05-02 19:01:02] INFO: Accessed [assessment]
+[2024-05-02 19:01:03] INFO: assessment
+[2024-05-02 19:01:03] INFO: Accessed [assessment]
+[2024-05-02 19:01:04] INFO: assessment
+[2024-05-02 19:01:04] INFO: Accessed [assessment]
+[2024-05-02 19:01:05] INFO: assessment
+[2024-05-02 19:01:05] INFO: Accessed [assessment]
+[2024-05-02 19:01:06] INFO: assessment
+[2024-05-02 19:01:06] INFO: Accessed [assessment]
+[2024-05-02 19:01:06] INFO: assessment
+[2024-05-02 19:01:06] INFO: Accessed [assessment]
+[2024-05-02 19:01:08] INFO: assessment
+[2024-05-02 19:01:08] INFO: Accessed [assessment]
+[2024-05-02 19:01:08] INFO: assessment
+[2024-05-02 19:01:08] INFO: Accessed [assessment]
+[2024-05-02 19:01:09] INFO: assessment
+[2024-05-02 19:01:09] INFO: Accessed [assessment]
+[2024-05-02 19:01:10] INFO: assessment
+[2024-05-02 19:01:10] INFO: Accessed [assessment]
+[2024-05-02 19:01:10] INFO: assessment
+[2024-05-02 19:01:10] INFO: Accessed [assessment]
+[2024-05-02 19:01:11] INFO: assessment
+[2024-05-02 19:01:11] INFO: Accessed [assessment]
+[2024-05-02 19:01:12] INFO: assessment
+[2024-05-02 19:01:12] INFO: Accessed [assessment]
+[2024-05-02 19:01:13] INFO: assessment
+[2024-05-02 19:01:13] INFO: Accessed [assessment]
+[2024-05-02 19:01:14] INFO: assessment
+[2024-05-02 19:01:14] INFO: Accessed [assessment]
+[2024-05-02 19:01:14] INFO: assessment
+[2024-05-02 19:01:14] INFO: Accessed [assessment]
+[2024-05-02 19:01:16] INFO: assessment
+[2024-05-02 19:01:16] INFO: Accessed [assessment]
+[2024-05-02 19:01:17] INFO: assessment
+[2024-05-02 19:01:17] INFO: Accessed [assessment]
+[2024-05-02 19:01:17] INFO: assessment
+[2024-05-02 19:01:17] INFO: Accessed [assessment]
+[2024-05-02 19:01:18] INFO: assessment
+[2024-05-02 19:01:18] INFO: Accessed [assessment]
+[2024-05-02 19:01:18] INFO: assessment
+[2024-05-02 19:01:18] INFO: Accessed [assessment]
+[2024-05-02 19:01:20] INFO: assessment
+[2024-05-02 19:01:20] INFO: Accessed [assessment]
+[2024-05-02 19:01:20] INFO: assessment
+[2024-05-02 19:01:20] INFO: Accessed [assessment]
+[2024-05-02 19:01:20] INFO: assessment
+[2024-05-02 19:01:20] INFO: Accessed [assessment]
+[2024-05-02 19:01:22] INFO: assessment
+[2024-05-02 19:01:22] INFO: Accessed [assessment]
+[2024-05-02 19:01:22] INFO: assessment
+[2024-05-02 19:01:22] INFO: Accessed [assessment]
+[2024-05-02 19:01:23] INFO: assessment
+[2024-05-02 19:01:23] INFO: Accessed [assessment]
+[2024-05-02 19:01:24] INFO: assessment
+[2024-05-02 19:01:24] INFO: Accessed [assessment]
+[2024-05-02 19:01:24] INFO: assessment
+[2024-05-02 19:01:24] INFO: Accessed [assessment]
+[2024-05-02 19:01:25] INFO: result
+[2024-05-02 19:01:25] INFO: Accessed [result]
+[2024-05-02 19:01:25] INFO: "2024-05-03 01:01:01"
+[2024-05-02 19:01:25] INFO: Sending assessment score to s.stephen.layson@sscr.edu
+[2024-05-02 19:01:26] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 19:01:26] INFO: result
+[2024-05-02 19:01:26] INFO: Accessed [result]
+[2024-05-02 19:01:28] INFO: course
+[2024-05-02 19:01:28] INFO: Accessed [course]
+[2024-05-02 19:01:29] INFO: lessons
+[2024-05-02 19:01:29] INFO: Accessed [lessons]
+[2024-05-02 19:01:34] INFO: activity
+[2024-05-02 19:01:34] INFO: Accessed [activity]
+[2024-05-02 19:01:36] INFO: assessment
+[2024-05-02 19:01:36] INFO: Accessed [assessment]
+[2024-05-02 19:01:37] INFO: assessment
+[2024-05-02 19:01:37] INFO: Accessed [assessment]
+[2024-05-02 19:01:38] INFO: assessment
+[2024-05-02 19:01:38] INFO: Accessed [assessment]
+[2024-05-02 19:01:39] INFO: assessment
+[2024-05-02 19:01:39] INFO: Accessed [assessment]
+[2024-05-02 19:01:39] INFO: assessment
+[2024-05-02 19:01:39] INFO: Accessed [assessment]
+[2024-05-02 19:01:41] INFO: assessment
+[2024-05-02 19:01:41] INFO: Accessed [assessment]
+[2024-05-02 19:01:41] INFO: assessment
+[2024-05-02 19:01:41] INFO: Accessed [assessment]
+[2024-05-02 19:01:42] INFO: assessment
+[2024-05-02 19:01:42] INFO: Accessed [assessment]
+[2024-05-02 19:01:43] INFO: assessment
+[2024-05-02 19:01:43] INFO: Accessed [assessment]
+[2024-05-02 19:01:44] INFO: assessment
+[2024-05-02 19:01:44] INFO: Accessed [assessment]
+[2024-05-02 19:01:44] INFO: assessment
+[2024-05-02 19:01:44] INFO: Accessed [assessment]
+[2024-05-02 19:01:45] INFO: assessment
+[2024-05-02 19:01:45] INFO: Accessed [assessment]
+[2024-05-02 19:01:46] INFO: assessment
+[2024-05-02 19:01:46] INFO: Accessed [assessment]
+[2024-05-02 19:01:47] INFO: assessment
+[2024-05-02 19:01:47] INFO: Accessed [assessment]
+[2024-05-02 19:01:48] INFO: assessment
+[2024-05-02 19:01:48] INFO: Accessed [assessment]
+[2024-05-02 19:01:49] INFO: assessment
+[2024-05-02 19:01:49] INFO: Accessed [assessment]
+[2024-05-02 19:01:49] INFO: assessment
+[2024-05-02 19:01:49] INFO: Accessed [assessment]
+[2024-05-02 19:01:50] INFO: assessment
+[2024-05-02 19:01:50] INFO: Accessed [assessment]
+[2024-05-02 19:01:51] INFO: assessment
+[2024-05-02 19:01:51] INFO: Accessed [assessment]
+[2024-05-02 19:01:52] INFO: assessment
+[2024-05-02 19:01:52] INFO: Accessed [assessment]
+[2024-05-02 19:01:52] INFO: assessment
+[2024-05-02 19:01:52] INFO: Accessed [assessment]
+[2024-05-02 19:01:53] INFO: assessment
+[2024-05-02 19:01:53] INFO: Accessed [assessment]
+[2024-05-02 19:01:54] INFO: assessment
+[2024-05-02 19:01:54] INFO: Accessed [assessment]
+[2024-05-02 19:01:55] INFO: assessment
+[2024-05-02 19:01:55] INFO: Accessed [assessment]
+[2024-05-02 19:01:55] INFO: assessment
+[2024-05-02 19:01:55] INFO: Accessed [assessment]
+[2024-05-02 19:01:56] INFO: assessment
+[2024-05-02 19:01:56] INFO: Accessed [assessment]
+[2024-05-02 19:01:57] INFO: assessment
+[2024-05-02 19:01:57] INFO: Accessed [assessment]
+[2024-05-02 19:01:59] INFO: assessment
+[2024-05-02 19:01:59] INFO: Accessed [assessment]
+[2024-05-02 19:01:59] INFO: assessment
+[2024-05-02 19:01:59] INFO: Accessed [assessment]
+[2024-05-02 19:02:00] INFO: assessment
+[2024-05-02 19:02:00] INFO: Accessed [assessment]
+[2024-05-02 19:02:01] INFO: assessment
+[2024-05-02 19:02:01] INFO: Accessed [assessment]
+[2024-05-02 19:02:02] INFO: result
+[2024-05-02 19:02:02] INFO: Accessed [result]
+[2024-05-02 19:02:02] INFO: "2024-05-03 01:01:37"
+[2024-05-02 19:02:02] INFO: Sending assessment score to s.stephen.layson@sscr.edu
+[2024-05-02 19:02:03] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 19:02:03] INFO: result
+[2024-05-02 19:02:03] INFO: Accessed [result]
+[2024-05-02 19:02:14] INFO: scores
+[2024-05-02 19:02:14] INFO: Accessed [scores]
+[2024-05-02 19:02:15] INFO: scores
+[2024-05-02 19:02:15] INFO: Accessed [scores]
+[2024-05-02 19:02:16] INFO: scores
+[2024-05-02 19:02:16] INFO: Accessed [scores]
+[2024-05-02 19:02:21] INFO: scores
+[2024-05-02 19:02:21] INFO: Accessed [scores]
+[2024-05-02 19:02:22] INFO: scores
+[2024-05-02 19:02:22] INFO: Accessed [scores]
+[2024-05-02 19:02:23] INFO: scores
+[2024-05-02 19:02:23] INFO: Accessed [scores]
+[2024-05-02 19:02:27] INFO: scores
+[2024-05-02 19:02:27] INFO: Accessed [scores]
+[2024-05-02 19:02:27] INFO: scores
+[2024-05-02 19:02:27] INFO: Accessed [scores]
+[2024-05-02 19:02:29] INFO: scores
+[2024-05-02 19:02:29] INFO: Accessed [scores]
+[2024-05-02 19:02:33] INFO: activity
+[2024-05-02 19:02:33] INFO: Accessed [activity]
+[2024-05-02 19:02:36] INFO: scores
+[2024-05-02 19:02:36] INFO: Accessed [scores]
+[2024-05-02 19:14:17] INFO: scores
+[2024-05-02 19:14:17] INFO: Accessed [scores]
+[2024-05-02 19:14:31] INFO: scores
+[2024-05-02 19:14:31] INFO: Accessed [scores]
+[2024-05-02 19:14:36] INFO: scores
+[2024-05-02 19:14:36] INFO: Accessed [scores]
+[2024-05-02 19:15:05] INFO: scores
+[2024-05-02 19:15:05] INFO: Accessed [scores]
+[2024-05-02 19:15:33] INFO: scores
+[2024-05-02 19:15:33] INFO: Accessed [scores]
+[2024-05-02 19:15:43] INFO: scores
+[2024-05-02 19:15:43] INFO: Accessed [scores]
+[2024-05-02 19:16:02] INFO: scores
+[2024-05-02 19:16:02] INFO: Accessed [scores]
+[2024-05-02 19:16:04] INFO: activity
+[2024-05-02 19:16:04] INFO: Accessed [activity]
+[2024-05-02 19:16:05] INFO: scores
+[2024-05-02 19:16:05] INFO: Accessed [scores]
+[2024-05-02 19:16:06] INFO: scores
+[2024-05-02 19:16:06] INFO: Accessed [scores]
+[2024-05-02 19:16:09] INFO: scores
+[2024-05-02 19:16:09] INFO: Accessed [scores]
+[2024-05-02 19:16:11] INFO: scores
+[2024-05-02 19:16:11] INFO: Accessed [scores]
+[2024-05-02 19:16:17] INFO: logout
+[2024-05-02 19:16:17] INFO: Logging Out
+[2024-05-02 19:16:17] INFO: home
+[2024-05-02 19:16:17] INFO: Accessed [home]
+[2024-05-02 19:16:18] INFO: login
+[2024-05-02 19:16:18] INFO: Accessed [login]
+[2024-05-02 19:16:21] INFO: login
+[2024-05-02 19:16:21] INFO: Accessed [login]
+[2024-05-02 19:16:21] INFO: Successfully validated Google Sign-In token
+[2024-05-02 19:16:21] INFO: query: UPDATE tbl_accounts SET Date = ?, FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-05-02 19:16:21] INFO: bindingString: ssssi
+[2024-05-02 19:16:21] INFO: Update successful
+[2024-05-03 01:16:23] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 19:16:23] INFO: dashboard
+[2024-05-02 19:16:23] INFO: Accessed [dashboard]
+[2024-05-02 19:16:24] INFO: logout
+[2024-05-02 19:16:24] INFO: Logging Out
+[2024-05-02 19:16:24] INFO: home
+[2024-05-02 19:16:24] INFO: Accessed [home]
+[2024-05-02 19:16:25] INFO: login
+[2024-05-02 19:16:25] INFO: Accessed [login]
+[2024-05-02 19:16:28] INFO: login
+[2024-05-02 19:16:28] INFO: Accessed [login]
+[2024-05-02 19:16:28] INFO: Successfully validated Google Sign-In token
+[2024-05-02 19:16:28] INFO: query: UPDATE tbl_accounts SET Date = ?, FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-05-02 19:16:28] INFO: bindingString: ssssi
+[2024-05-02 19:16:28] INFO: Update successful
+[2024-05-03 01:16:28] INFO: Email sent to: stephenreganjames.layson@gmail.com
+[2024-05-02 19:16:28] INFO: dashboard
+[2024-05-02 19:16:28] INFO: Accessed [dashboard]
+[2024-05-02 19:16:31] INFO: accounts
+[2024-05-02 19:16:31] INFO: Accessed [accounts]
+[2024-05-02 19:16:32] INFO: profile
+[2024-05-02 19:16:32] INFO: Accessed [profile]
+[2024-05-02 19:16:34] INFO: scores
+[2024-05-02 19:16:34] INFO: Accessed [scores]
+[2024-05-02 19:16:35] INFO: scores
+[2024-05-02 19:16:35] INFO: Accessed [scores]
+[2024-05-02 19:16:37] INFO: result
+[2024-05-02 19:16:37] INFO: Accessed [result]
+[2024-05-02 19:16:47] INFO: result
+[2024-05-02 19:16:47] INFO: Accessed [result]
+[2024-05-02 19:16:50] INFO: scores
+[2024-05-02 19:16:50] INFO: Accessed [scores]
+[2024-05-02 19:16:52] INFO: result
+[2024-05-02 19:16:52] INFO: Accessed [result]
+[2024-05-02 19:16:54] INFO: scores
+[2024-05-02 19:16:54] INFO: Accessed [scores]
+[2024-05-02 19:16:59] INFO: result
+[2024-05-02 19:16:59] INFO: Accessed [result]
+[2024-05-02 19:17:01] INFO: scores
+[2024-05-02 19:17:01] INFO: Accessed [scores]
+[2024-05-02 19:17:07] INFO: result
+[2024-05-02 19:17:07] INFO: Accessed [result]
+[2024-05-02 19:17:08] INFO: scores
+[2024-05-02 19:17:08] INFO: Accessed [scores]
+[2024-05-02 19:17:10] INFO: result
+[2024-05-02 19:17:10] INFO: Accessed [result]
+[2024-05-02 19:17:11] INFO: scores
+[2024-05-02 19:17:11] INFO: Accessed [scores]
+[2024-05-02 19:17:13] INFO: result
+[2024-05-02 19:17:13] INFO: Accessed [result]
+[2024-05-02 19:17:15] INFO: result
+[2024-05-02 19:17:15] INFO: Accessed [result]
+[2024-05-02 19:17:16] INFO: result
+[2024-05-02 19:17:16] INFO: Accessed [result]
+[2024-05-02 19:17:17] INFO: scores
+[2024-05-02 19:17:17] INFO: Accessed [scores]
+[2024-05-02 19:17:20] INFO: result
+[2024-05-02 19:17:20] INFO: Accessed [result]
+[2024-05-02 19:17:22] INFO: scores
+[2024-05-02 19:17:22] INFO: Accessed [scores]
+[2024-05-02 19:17:57] INFO: result
+[2024-05-02 19:17:57] INFO: Accessed [result]
+[2024-05-02 19:19:46] INFO: result
+[2024-05-02 19:19:46] INFO: Accessed [result]
+[2024-05-02 19:22:36] INFO: result
+[2024-05-02 19:22:36] INFO: Accessed [result]
+[2024-05-02 19:22:49] INFO: course
+[2024-05-02 19:22:49] INFO: Accessed [course]
+[2024-05-02 19:22:50] INFO: accounts
+[2024-05-02 19:22:50] INFO: Accessed [accounts]
+[2024-05-02 19:22:51] INFO: profile
+[2024-05-02 19:22:51] INFO: Accessed [profile]
+[2024-05-02 19:22:53] INFO: scores
+[2024-05-02 19:22:53] INFO: Accessed [scores]
+[2024-05-02 19:22:54] INFO: scores
+[2024-05-02 19:22:54] INFO: Accessed [scores]
+[2024-05-02 19:22:55] INFO: result
+[2024-05-02 19:22:55] INFO: Accessed [result]
+[2024-05-02 19:29:30] INFO: result
+[2024-05-02 19:29:30] INFO: Accessed [result]
+[2024-05-02 19:29:37] INFO: logout
+[2024-05-02 19:29:37] INFO: Logging Out
+[2024-05-02 19:29:37] INFO: home
+[2024-05-02 19:29:37] INFO: Accessed [home]
+[2024-05-02 19:29:38] INFO: login
+[2024-05-02 19:29:38] INFO: Accessed [login]
+[2024-05-02 19:29:40] INFO: login
+[2024-05-02 19:29:40] INFO: Accessed [login]
+[2024-05-02 19:29:40] INFO: Successfully validated Google Sign-In token
+[2024-05-02 19:29:40] INFO: query: UPDATE tbl_accounts SET Date = ?, FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-05-02 19:29:40] INFO: bindingString: ssssi
+[2024-05-02 19:29:40] INFO: Update successful
+[2024-05-03 01:29:41] INFO: Email sent to: stephenreganjames.layson@gmail.com
+[2024-05-02 19:29:41] INFO: dashboard
+[2024-05-02 19:29:41] INFO: Accessed [dashboard]
+[2024-05-02 19:29:44] INFO: accounts
+[2024-05-02 19:29:44] INFO: Accessed [accounts]
+[2024-05-02 19:29:45] INFO: profile
+[2024-05-02 19:29:45] INFO: Accessed [profile]
+[2024-05-02 19:29:49] INFO: scores
+[2024-05-02 19:29:49] INFO: Accessed [scores]
+[2024-05-02 19:29:50] INFO: scores
+[2024-05-02 19:29:50] INFO: Accessed [scores]
+[2024-05-02 19:29:54] INFO: logout
+[2024-05-02 19:29:54] INFO: Logging Out
+[2024-05-02 19:29:54] INFO: home
+[2024-05-02 19:29:54] INFO: Accessed [home]
+[2024-05-02 19:43:10] INFO: login
+[2024-05-02 19:43:10] INFO: Accessed [login]
+[2024-05-02 19:43:15] INFO: login
+[2024-05-02 19:43:15] INFO: Accessed [login]
+[2024-05-02 19:43:15] INFO: Successfully validated Google Sign-In token
+[2024-05-02 19:43:15] INFO: query: UPDATE tbl_accounts SET Date = ?, FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-05-02 19:43:15] INFO: bindingString: ssssi
+[2024-05-02 19:43:15] INFO: Update successful
+[2024-05-03 01:43:16] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 19:43:16] INFO: dashboard
+[2024-05-02 19:43:16] INFO: Accessed [dashboard]
+[2024-05-02 20:05:22] INFO: course
+[2024-05-02 20:05:22] INFO: Accessed [course]
+[2024-05-02 20:05:26] INFO: lessons
+[2024-05-02 20:05:26] INFO: Accessed [lessons]
+[2024-05-02 20:05:30] INFO: activity
+[2024-05-02 20:05:30] INFO: Accessed [activity]
+[2024-05-02 20:05:32] INFO: lessons
+[2024-05-02 20:05:32] INFO: Accessed [lessons]
+[2024-05-02 20:05:34] INFO: activity
+[2024-05-02 20:05:34] INFO: Accessed [activity]
+[2024-05-02 20:05:35] INFO: chapter
+[2024-05-02 20:05:35] INFO: Accessed [chapter]
+[2024-05-02 20:05:37] INFO: course
+[2024-05-02 20:05:37] INFO: Accessed [course]
+[2024-05-02 20:05:38] INFO: scores
+[2024-05-02 20:05:38] INFO: Accessed [scores]
+[2024-05-02 20:05:39] INFO: scores
+[2024-05-02 20:05:39] INFO: Accessed [scores]
+[2024-05-02 20:05:40] INFO: scores
+[2024-05-02 20:05:40] INFO: Accessed [scores]
+[2024-05-02 20:05:42] INFO: dashboard
+[2024-05-02 20:05:42] INFO: Accessed [dashboard]
+[2024-05-02 20:05:43] INFO: scores
+[2024-05-02 20:05:43] INFO: Accessed [scores]
+[2024-05-02 20:05:45] INFO: scores
+[2024-05-02 20:05:45] INFO: Accessed [scores]
+[2024-05-02 20:05:45] INFO: scores
+[2024-05-02 20:05:45] INFO: Accessed [scores]
+[2024-05-02 20:05:46] INFO: scores
+[2024-05-02 20:05:46] INFO: Accessed [scores]
+[2024-05-02 20:05:51] INFO: scores
+[2024-05-02 20:05:51] INFO: Accessed [scores]
+[2024-05-02 20:05:53] INFO: scores
+[2024-05-02 20:05:53] INFO: Accessed [scores]
+[2024-05-02 20:05:54] INFO: scores
+[2024-05-02 20:05:54] INFO: Accessed [scores]
+[2024-05-02 20:05:59] INFO: logout
+[2024-05-02 20:05:59] INFO: Logging Out
+[2024-05-02 20:05:59] INFO: home
+[2024-05-02 20:05:59] INFO: Accessed [home]
+[2024-05-02 20:06:01] INFO: login
+[2024-05-02 20:06:01] INFO: Accessed [login]
+[2024-05-02 20:07:09] INFO: login
+[2024-05-02 20:07:09] INFO: Accessed [login]
+[2024-05-02 20:07:09] INFO: Successfully validated Google Sign-In token
+[2024-05-02 20:07:09] INFO: query: UPDATE tbl_accounts SET Date = ?, FirstName = ?, LastName = ?, Image = ? WHERE Id = ?
+[2024-05-02 20:07:09] INFO: bindingString: ssssi
+[2024-05-02 20:07:09] INFO: Update successful
+[2024-05-03 02:07:10] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 20:07:10] INFO: dashboard
+[2024-05-02 20:07:10] INFO: Accessed [dashboard]
+[2024-05-02 20:07:12] INFO: course
+[2024-05-02 20:07:12] INFO: Accessed [course]
+[2024-05-02 20:07:13] INFO: lessons
+[2024-05-02 20:07:13] INFO: Accessed [lessons]
+[2024-05-02 20:07:15] INFO: chapter
+[2024-05-02 20:07:15] INFO: Accessed [chapter]
+[2024-05-02 20:07:17] INFO: lessons
+[2024-05-02 20:07:17] INFO: Accessed [lessons]
+[2024-05-02 20:07:18] INFO: chapter
+[2024-05-02 20:07:18] INFO: Accessed [chapter]
+[2024-05-02 20:07:19] INFO: lessons
+[2024-05-02 20:07:19] INFO: Accessed [lessons]
+[2024-05-02 20:07:20] INFO: chapter
+[2024-05-02 20:07:20] INFO: Accessed [chapter]
+[2024-05-02 20:07:21] INFO: lessons
+[2024-05-02 20:07:21] INFO: Accessed [lessons]
+[2024-05-02 20:07:22] INFO: chapter
+[2024-05-02 20:07:22] INFO: Accessed [chapter]
+[2024-05-02 20:07:23] INFO: course
+[2024-05-02 20:07:23] INFO: Accessed [course]
+[2024-05-02 20:07:25] INFO: lessons
+[2024-05-02 20:07:25] INFO: Accessed [lessons]
+[2024-05-02 20:07:26] INFO: chapter
+[2024-05-02 20:07:26] INFO: Accessed [chapter]
+[2024-05-02 20:07:27] INFO: lessons
+[2024-05-02 20:07:27] INFO: Accessed [lessons]
+[2024-05-02 20:07:27] INFO: chapter
+[2024-05-02 20:07:27] INFO: Accessed [chapter]
+[2024-05-02 20:07:28] INFO: lessons
+[2024-05-02 20:07:28] INFO: Accessed [lessons]
+[2024-05-02 20:07:29] INFO: chapter
+[2024-05-02 20:07:29] INFO: Accessed [chapter]
+[2024-05-02 20:07:31] INFO: lessons
+[2024-05-02 20:07:31] INFO: Accessed [lessons]
+[2024-05-02 20:07:32] INFO: course
+[2024-05-02 20:07:32] INFO: Accessed [course]
+[2024-05-02 20:07:33] INFO: lessons
+[2024-05-02 20:07:33] INFO: Accessed [lessons]
+[2024-05-02 20:07:34] INFO: course
+[2024-05-02 20:07:34] INFO: Accessed [course]
+[2024-05-02 20:07:35] INFO: lessons
+[2024-05-02 20:07:35] INFO: Accessed [lessons]
+[2024-05-02 20:07:35] INFO: course
+[2024-05-02 20:07:35] INFO: Accessed [course]
+[2024-05-02 20:07:36] INFO: lessons
+[2024-05-02 20:07:36] INFO: Accessed [lessons]
+[2024-05-02 20:07:37] INFO: course
+[2024-05-02 20:07:37] INFO: Accessed [course]
+[2024-05-02 20:07:38] INFO: lessons
+[2024-05-02 20:07:38] INFO: Accessed [lessons]
+[2024-05-02 20:07:39] INFO: course
+[2024-05-02 20:07:39] INFO: Accessed [course]
+[2024-05-02 20:07:40] INFO: lessons
+[2024-05-02 20:07:40] INFO: Accessed [lessons]
+[2024-05-02 20:07:41] INFO: course
+[2024-05-02 20:07:41] INFO: Accessed [course]
+[2024-05-02 20:07:43] INFO: lessons
+[2024-05-02 20:07:43] INFO: Accessed [lessons]
+[2024-05-02 20:07:44] INFO: course
+[2024-05-02 20:07:44] INFO: Accessed [course]
+[2024-05-02 20:07:45] INFO: lessons
+[2024-05-02 20:07:45] INFO: Accessed [lessons]
+[2024-05-02 20:07:46] INFO: course
+[2024-05-02 20:07:46] INFO: Accessed [course]
+[2024-05-02 20:07:47] INFO: lessons
+[2024-05-02 20:07:47] INFO: Accessed [lessons]
+[2024-05-02 20:07:48] INFO: chapter
+[2024-05-02 20:07:48] INFO: Accessed [chapter]
+[2024-05-02 20:07:49] INFO: course
+[2024-05-02 20:07:49] INFO: Accessed [course]
+[2024-05-02 20:07:51] INFO: lessons
+[2024-05-02 20:07:51] INFO: Accessed [lessons]
+[2024-05-02 20:07:52] INFO: chapter
+[2024-05-02 20:07:52] INFO: Accessed [chapter]
+[2024-05-02 20:07:53] INFO: lessons
+[2024-05-02 20:07:53] INFO: Accessed [lessons]
+[2024-05-02 20:07:54] INFO: chapter
+[2024-05-02 20:07:54] INFO: Accessed [chapter]
+[2024-05-02 20:07:56] INFO: lessons
+[2024-05-02 20:07:56] INFO: Accessed [lessons]
+[2024-05-02 20:07:57] INFO: chapter
+[2024-05-02 20:07:57] INFO: Accessed [chapter]
+[2024-05-02 20:07:58] INFO: course
+[2024-05-02 20:07:58] INFO: Accessed [course]
+[2024-05-02 20:08:06] INFO: lessons
+[2024-05-02 20:08:06] INFO: Accessed [lessons]
+[2024-05-02 20:08:07] INFO: chapter
+[2024-05-02 20:08:07] INFO: Accessed [chapter]
+[2024-05-02 20:08:09] INFO: lessons
+[2024-05-02 20:08:09] INFO: Accessed [lessons]
+[2024-05-02 20:08:10] INFO: chapter
+[2024-05-02 20:08:10] INFO: Accessed [chapter]
+[2024-05-02 20:08:11] INFO: lessons
+[2024-05-02 20:08:11] INFO: Accessed [lessons]
+[2024-05-02 20:08:11] INFO: chapter
+[2024-05-02 20:08:11] INFO: Accessed [chapter]
+[2024-05-02 20:08:12] INFO: lessons
+[2024-05-02 20:08:12] INFO: Accessed [lessons]
+[2024-05-02 20:08:13] INFO: chapter
+[2024-05-02 20:08:13] INFO: Accessed [chapter]
+[2024-05-02 20:08:14] INFO: course
+[2024-05-02 20:08:14] INFO: Accessed [course]
+[2024-05-02 20:08:21] INFO: lessons
+[2024-05-02 20:08:21] INFO: Accessed [lessons]
+[2024-05-02 20:08:22] INFO: chapter
+[2024-05-02 20:08:22] INFO: Accessed [chapter]
+[2024-05-02 20:10:05] INFO: chapter
+[2024-05-02 20:10:05] INFO: Accessed [chapter]
+[2024-05-02 20:10:07] INFO: lessons
+[2024-05-02 20:10:07] INFO: Accessed [lessons]
+[2024-05-02 20:10:07] INFO: course
+[2024-05-02 20:10:07] INFO: Accessed [course]
+[2024-05-02 20:10:09] INFO: lessons
+[2024-05-02 20:10:09] INFO: Accessed [lessons]
+[2024-05-02 20:10:10] INFO: course
+[2024-05-02 20:10:10] INFO: Accessed [course]
+[2024-05-02 20:10:12] INFO: certificate
+[2024-05-02 20:10:12] INFO: Accessed [certificate]
+[2024-05-02 20:10:12] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 20:14:53] INFO: course
+[2024-05-02 20:14:53] INFO: Accessed [course]
+[2024-05-02 20:14:54] INFO: certificate
+[2024-05-02 20:14:54] INFO: Accessed [certificate]
+[2024-05-02 20:17:01] INFO: course
+[2024-05-02 20:17:01] INFO: Accessed [course]
+[2024-05-02 20:17:02] INFO: certificate
+[2024-05-02 20:17:19] INFO: course
+[2024-05-02 20:17:19] INFO: Accessed [course]
+[2024-05-02 20:17:21] INFO: certificate
+[2024-05-02 20:17:21] INFO: Accessed [certificate]
+[2024-05-02 20:17:21] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 20:17:33] INFO: certificate
+[2024-05-02 20:17:33] INFO: Accessed [certificate]
+[2024-05-02 20:17:54] INFO: course
+[2024-05-02 20:17:54] INFO: Accessed [course]
+[2024-05-02 20:17:56] INFO: course
+[2024-05-02 20:17:56] INFO: Accessed [course]
+[2024-05-02 20:17:57] INFO: certificate
+[2024-05-02 20:17:57] INFO: Accessed [certificate]
+[2024-05-02 20:17:58] INFO: Email sent to: s.stephen.layson@sscr.edu
+[2024-05-02 20:18:12] INFO: certificate
+[2024-05-02 20:18:12] INFO: Accessed [certificate]
+[2024-05-02 20:18:22] INFO: certificate
+[2024-05-02 20:18:22] INFO: Accessed [certificate]

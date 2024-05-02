@@ -47,7 +47,9 @@ class ResultController {
 
         $data['title'] = "Skiller - Assessment Result";
 
-       // $data['LessonNextToAccess'] = end($_SESSION['AllowedLessons']);
+        // $data['LessonNextToAccess'] = end($_SESSION['AllowedLessons']);
+
+        
 
         echo '<script>';
         echo 'const BASE_URL=`'.BASE_URL.'`;';
@@ -57,6 +59,10 @@ class ResultController {
         include(__DIR__ . '/../views/headers/SignedIn.php');
         include(__DIR__ . '/../views/result.php');
         include(__DIR__ . '/../views/footers/Default.php');
+    }
+
+    public function indexAdministrator($item = null, $course=null){
+        $this->index($item, $course);
     }
 
     public function action($item = null, $course=null) {
@@ -139,6 +145,11 @@ class ResultController {
                 }
             }
 
+            $InProgress = $activityModel->getActivityHasProgress([
+                'ActivityId'=> $ActivityId,
+                'AccountId'=> $_SESSION['User_Id']
+            ]);
+
             $activityModel->deleteActivityInProgress([
                 'ActivityId'=>$db->escape($ActivityId),
                 'LessonId'=>$db->escape($LessonId),
@@ -160,8 +171,10 @@ class ResultController {
                     'Score'=>$db->escape($score),
                     'Summary'=>json_encode($summary),
                     'Total'=>$db->escape($total),
-                    'IsRetake'=>0,
+                    'IsRetake'=>1,
+                    'TimeStarted' => $InProgress[0]['CreatedAt'].''
                 ]);
+                $logger->log(json_encode($InProgress[0]['CreatedAt']), 'info');
     
                 $data['Progress'] = $progressModel->getAllMyProgress(['Account_Id'=>$_SESSION['User_Id'], 'Course_Id'=>$db->escape($course)]);
 
@@ -191,7 +204,9 @@ class ResultController {
                     'Summary'=>json_encode($summary),
                     'Total'=>$db->escape($total),
                     'IsRetake'=>1,
+                    'TimeStarted' => $InProgress[0]['CreatedAt'].''
                 ]);
+                $logger->log(json_encode($InProgress[0]['CreatedAt']), 'info');
 
                 $logger->log('Sending assessment score to ' .$_SESSION['User_Email'], 'info');
                 Email::sendMail([
@@ -207,7 +222,7 @@ class ResultController {
         }
     }
 
-    public function indexAdministrator($item = null, $course=null){
+    public function actionAdministrator($item = null, $course=null){
         $logger = new Logger();
     
         $jsonPayload = file_get_contents("php://input");

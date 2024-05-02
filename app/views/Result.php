@@ -61,6 +61,9 @@
                 $lastResult = end($data['Result']);
                 $lastResultId = $lastResult['Id'];
 
+                $Timestamp = $lastResult['Timestamp'];
+                $TimeStarted = $lastResult['TimeStarted'];
+
                 $score = $lastResult['Score'];
                 $total = $lastResult['Total'];
                 $averageScore = ($total > 0) ? round(($score / $total) * 100, 2) : 0;
@@ -75,28 +78,35 @@
                     $colorClass = 'text-danger'; // red
                 }
 
+                echo '<p>Date Started: <strong>' . toFullDateAndTime($TimeStarted) . '</strong></p>';
+
+                echo '<p>Date Finished: <strong>' . toFullDateAndTime($Timestamp) . '</strong></p>';
+
                 echo '<p>Scored <span class="' . $colorClass . '"><strong>' . $score .'</strong></span> out of <strong>'. $total .' items</strong>, with an average of <span class="' . $colorClass . '"><strong>'.$averageScore.'%</strong></span></p>';
 
                 echo '<p>Retakes: <strong>' . (sizeof($data['PastAttempts']) - 1) . '</strong></p>';
 
                 if ($_SESSION['User_Role'] === "Teacher" || $_SESSION['User_Role'] === "Administrator"){
-                    if($lastResult['IsRetake'] === 0){
-                        echo '<div><button id="ResultRetakeBtn" class="btn btn-danger" data-tostate="Enable" data-result="'.$lastResult['Id'].'">Enable Retake</button></div>';
-                    } else {
-                        echo '<div><button id="ResultRetakeBtn" class="btn btn-danger" data-tostate="Disable" data-result="'.$lastResult['Id'].'">Disable Retake</button></div>';
-                    }
+                    // if($lastResult['IsRetake'] === 0){
+                    //     echo '<div><button id="ResultRetakeBtn" class="btn btn-danger" data-tostate="Enable" data-result="'.$lastResult['Id'].'">Enable Retake</button></div>';
+                    // } else {
+                    //     echo '<div><button id="ResultRetakeBtn" class="btn btn-danger" data-tostate="Disable" data-result="'.$lastResult['Id'].'">Disable Retake</button></div>';
+                    // }
+                } else {
+                   
                 }
             ?>
 
             <!-- NEXT LESSON -->
             <?php 
                 if($_SESSION['User_Role'] === "Student") {
-                    if ((int)$data['Result'][0]['Lesson_Id'] === 21){
-                        echo '<div><a class="btn btn-primary" href="'.BASE_URL.'?page=course&item='.$data['Course'].'&course='.$data['Course'].'">Back To Course</a></div>';
-                    } else {
-                        echo '<div><a class="btn btn-primary" href="'.BASE_URL.'?page=lessons&item='. $data['LessonNextToAccess'].'">Go to next lesson</a></div>';
+                    if ($averageScore >= 75) {
+                        echo '<div><a class="btn btn-primary" href="'.BASE_URL.'?page=course&item='.$data['Course'].'&course='.$data['Course'].'">Go to next lesson</a></div>';
                     }
+                    echo '<div><a class="btn btn-primary mt-3" href="'.BASE_URL.'?page=activity&item='.$data['Course'].'&course='.$data['Course'].'">Retake</a></div>';
                 }
+
+              
             ?>
         </div>
 

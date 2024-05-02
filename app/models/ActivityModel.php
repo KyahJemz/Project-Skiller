@@ -77,6 +77,7 @@ class ActivityModel {
             results.Score as Score,
             results.Total as Total,
             results.Timestamp as Timestamp,
+            results.TimeStarted as TimeStarted,
             activity.Id as ActivityId,
             activity.Title as ActivityTitle,
             lessons.Id as LessonId,
@@ -274,7 +275,8 @@ class ActivityModel {
             tbl_inprogress.Activity_Id as ActivityId,
             tbl_inprogress.Questions as ActivityQuestions,
             tbl_inprogress.Answers as ActivityAnswers,
-            tbl_inprogress.LastAttempt as ActivityLastAttempt
+            tbl_inprogress.LastAttempt as ActivityLastAttempt,
+            tbl_inprogress.CreatedAt as CreatedAt
         FROM tbl_inprogress
         WHERE tbl_inprogress.Activity_Id = $ActivityId AND tbl_inprogress.Account_Id = $AccountId";
     
@@ -309,9 +311,10 @@ class ActivityModel {
         $Summary = $params['Summary'];
         $Total = $this->database->escape($params['Total']);
         $IsRetake = $this->database->escape($params['IsRetake']);
+        $TimeStarted = $this->database->escape($params['TimeStarted']);
     
-        $query = "INSERT INTO tbl_results (Activity_Id, Lesson_Id, Account_Id, Score, Summary, Total, IsRetake) 
-                  VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $query = "INSERT INTO tbl_results (Activity_Id, Lesson_Id, Account_Id, Score, Summary, Total, IsRetake, TimeStarted) 
+                  VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     
         $stmt = $this->database->prepare($query);
     
@@ -320,7 +323,7 @@ class ActivityModel {
             return false;
         }
     
-        $stmt->bind_param('iiisssi', $ActivityId, $LessonId, $AccountId, $Score, $Summary, $Total, $IsRetake);
+        $stmt->bind_param('iiisssis', $ActivityId, $LessonId, $AccountId, $Score, $Summary, $Total, $IsRetake, $TimeStarted);
     
         $stmt->execute();
     

@@ -45,6 +45,7 @@ class CertificateController {
         $Percentage = number_format(((isset($data['Progress']['FullProgress']) ? $data['Progress']['FullProgress'] : 0) / max($data['Progress']['FullProgressTotal'], 1)) * 100, 2);
 
         if ((int)$Percentage === 100){
+            $LinkFileName = '?page=certificate&item='.$item.'&course='.$course;
             $filename = __DIR__.'./../../public/certificates/certificate_'.$item.'_'.$course.'.pdf';
             // $logger->log("FINDING::: ".$filename, 'info');
             if (file_exists($filename)) {
@@ -59,7 +60,10 @@ class CertificateController {
                     'Subject' => 'Certificate Of Completion',
                     'ReceiverName' => $data['Account'][0]['FirstName'] . ' ' . $data['Account'][0]['LastName'],
                     'ReceiverEmail' => $data['Account'][0]['Email'],
-                    'Message' => 'Congratulations! ,You have completed your course. You can now view your certificate in your portal, Thank you!'
+                    'Message' => '
+                        <p><b>Congratulations!</b> ,You have completed your course. You can now view your certificate in your portal, Thank you!<p>
+                        <a href="'.BASE_URL.$LinkFileName.'">View Certificate<a>
+                    ',
                 ]);
                 PDF::createPdf(['certName'=>$data['Account'][0]['FirstName'] . ' ' . $data['Account'][0]['LastName'], 'certId'=>$data['Account'][0]['Id'], 'certCourseId'=>$data['CourseDetails']['Id'], 'certCourse'=>$data['CourseDetails']['CourseName']]);
                 header('Content-Type: application/pdf');

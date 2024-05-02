@@ -35,4 +35,8 @@ function CheckLesson($LessonId){
     }
 }
 
+function NextLessonId(){
+    
+}
+
 ?>

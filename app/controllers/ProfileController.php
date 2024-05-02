@@ -37,6 +37,9 @@ class ProfileController {
         $data['disabled'] = $account[0]['Disabled'];
         $data['email'] = $account[0]['Email'];
 
+        $data['CreatedAt'] = $account[0]['CreatedAt'];
+        $data['UpdatedAt'] = $account[0]['UpdatedAt'];
+
         $data['title'] = "Skiller: ".$account[0]['LastName'];
 
         echo '<script>';
