@@ -340,7 +340,7 @@ class CoursesModel {
                 $this->logger->log('Error preparing query: ' . $this->database->error, 'error');
                 return [];
             }
-            $stmt->bind_param('i', $ChapterId);
+            $stmt->bind_param('i', $CourseId);
             $stmt->execute();
             $result = $stmt->get_result();
             if (!$result) {
@@ -405,15 +405,15 @@ class CoursesModel {
                 $stmtTable6->close();
             }
             
-            $queryTable7 = "DELETE FROM tbl_chapter WHERE Id = ?";
+            $queryTable7 = "DELETE FROM tbl_chapter WHERE Course_Id = ?";
             $stmtTable7 = $this->database->prepare($queryTable7);
-            $stmtTable7->bind_param('i', $ChapterId);
+            $stmtTable7->bind_param('i', $CourseId);
             $stmtTable7->execute();
             $stmtTable7->close();
 
             $queryTable7 = "DELETE FROM tbl_courses WHERE Id = ?";
             $stmtTable7 = $this->database->prepare($queryTable7);
-            $stmtTable7->bind_param('i', $ChapterId);
+            $stmtTable7->bind_param('i', $CourseId);
             $stmtTable7->execute();
             $stmtTable7->close();
 
