@@ -150,7 +150,10 @@ class AccountsController {
                 Email::sendMail([
                     'ReceiverName' => 'New Account',
                     'ReceiverEmail' => $email,
-                    'Message' => 'You can now login to Skiller: Tutorial System using this email as an '.$type.', Thank you!'
+                    'Message' => '
+                        <p>You can now login to Skiller: Tutorial System using this email as an '.$type.', Thank you!</p>
+                        <a href="'.BASE_URL.'/?page=login">Login Here<a>
+                    ',
                 ]);
                 exit();
 
@@ -166,7 +169,10 @@ class AccountsController {
                 Email::sendMail([
                     'ReceiverName' => 'Registration Approved',
                     'ReceiverEmail' => $isExist[0]['Email'],
-                    'Message' => 'You can now login to Skiller: Tutorial System using this email as a student, Thank you!'
+                    'Message' => '
+                        <p>You can now login to Skiller: Tutorial System using this email as a student, Thank you!</p>
+                        <a href="'.BASE_URL.'/?page=login">Login Here<a>
+                        ',
                 ]);
                 exit();
             } else {

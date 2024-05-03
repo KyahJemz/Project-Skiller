@@ -874,3 +874,17 @@
 [2024-05-02 20:18:12] INFO: Accessed [certificate]
 [2024-05-02 20:18:22] INFO: certificate
 [2024-05-02 20:18:22] INFO: Accessed [certificate]
+[2024-05-03 12:49:18] INFO: home
+[2024-05-03 12:49:18] INFO: Accessed [home]
+[2024-05-03 12:49:19] INFO: login
+[2024-05-03 12:49:19] INFO: Accessed [login]
+[2024-05-03 12:49:19] INFO: dashboard
+[2024-05-03 12:49:19] INFO: Accessed [dashboard]
+[2024-05-03 12:49:25] INFO: logout
+[2024-05-03 12:49:25] INFO: Logging Out
+[2024-05-03 12:49:25] INFO: home
+[2024-05-03 12:49:25] INFO: Accessed [home]
+[2024-05-03 12:49:25] INFO: login
+[2024-05-03 12:49:25] INFO: Accessed [login]
+[2024-05-03 12:49:34] INFO: login
+[2024-05-03 12:49:34] INFO: Accessed [login]

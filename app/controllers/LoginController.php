@@ -118,7 +118,9 @@ class LoginController {
                                         <li>Ip Address -> '.$ip_address.'</li>
                                     </ul>
                                     <p>If this was you, then you don\'t have to do anything.</p>
-                                    <p>If you don\'t recognize this activity, please change your Google Account Password.</p>',
+                                    <p>If you don\'t recognize this activity, please change your Google Account Password.</p>
+                                    <p>Link: '.BASE_URL.'</p>
+                                    ',
                             'Footer' => '',
                         ]);
                         header("Location: ".BASE_URL."?page=dashboard");
