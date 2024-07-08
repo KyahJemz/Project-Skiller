@@ -1,0 +1,14 @@
+mga pre eto guide
+1 - lagay muna ang skiller folder sa htdocs
+2 - create database name = "skillerdb"
+3 - after ma create click yung sql tabi nung structures sa taas
+4 - then paste lahat ng sql codes then uncheck "Enable foreign key checks"  then click "GO" to submit
+5 - open the accounts table
+6 - change the email administrato for a real gmail account
+7 - cange te completedstudent for a real gmail account
+9 - gmail account will be used to sign in
+
+
+FOR ANSWERS
+
+https://docs.google.com/spreadsheets/d/1uCt5qXOYYsPHB3hFf-FTULUgfGz1EQT39vJmaT2e-xc/edit#gid=0
